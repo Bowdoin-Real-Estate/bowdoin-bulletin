@@ -1,9 +1,15 @@
 {
-  "updated": "2026-11-18T02:39:27+00:00",
+  "updated": "2026-11-18T11:12:09+00:00",
   "_help": "'categories' is refreshed automatically every day by the GitHub Action. Put your own hand-picked stories in 'editors_picks' (title, url, source, blurb) – those are never overwritten.",
   "editors_picks": [],
   "categories": {
     "Real Estate": [
+      {
+        "title": "KeyCrew Media Taps Gibson Sotheby's Chuck Silverston for Greater Boston Real Estate Coverage",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZXJyV0k5dm1wWGxxWWxycUsweXpkOWlFUmtXUFpuVkR1Yzg3N2hqSXl1U3VnSElOQ2NWM1JJMVRwQkJRbldJUEVOR055SnNOeWNBY3Y0VG83ZUY0bzdzdHN4bVd1czNxNTFrUVFIRGJUbTBQSV9uOHNLckdRZ0c4dHpNbTE4RkhCc3JMaFUtQlJ5MHlVWVlWM1FZdFNkUW9MMlFXQUVwZWNweHJrbTY2TS1aWGRsSWJKYmlFVTNLRENZRVBuSFE?oc=5",
+        "source": "citybuzz -",
+        "published": "2026-11-18T09:10:13+00:00"
+      },
       {
         "title": "Residential transformation planned for 98 Beacon St. in Worcester",
         "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWVNHY1lUUjEwY19pZ2NhYjM3ZVpNa2RnZHhJTVNSRlc1RlJybTIyQUpldzBIVXNSM0lUU1NNR0kyaXowN1czYk5IOE1QSElUSWR0aGFSVHNYaGUwaDctVDk4d0FvQnJJY0RXUjEzTXppbU9rRlV3blBUdDhBazJ5Ry1XMmk?oc=5",
@@ -33,59 +39,47 @@
         "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSGRpTk9idmJfMUoyeVdNSlhKb0tEOXBYSkRTMzZXUHoyeUVWazJWV0VhX1kxTl9uaVlGazNoSHowQUkzUVBDRXpINmd3QkpRVGpGVEczd09vNUoxRHdPRlpicmFQRWpXSXRJRmpkRGNfZmZTZ092eWFMUzc1S0dRVU9ad1FoYVBDYTZVUmZSdVFLbERYRUJTWXRmZkpEQjVfWnhhQ2NLYmVmRHV2QzNjTg?oc=5",
         "source": "Green Street News",
         "published": "2026-11-17T19:27:18+00:00"
-      },
-      {
-        "title": "The neighborhoods where property values dip every holiday season and bounce back fastest",
-        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPa3pKemc5bkVBcVJ0Q1JsMTFwQVFYcHNueVZxUUlHaGRFb2c4a05PUGZUQVo0Tkc0NURuU25UeFVwTERSazNiT2kwbThjc0VuQVJNVEl3dFV0WC1sSWZKYmpjSTRSSTlXazdocEZVemhtSTdsemNxaXZCVC01SFhLaXpVcnJ3QVRYaDZPSDZjVkZfZmV1V1puYnlSR2LSAZwBQVVfeXFMT2t6SnpnOW5FQXFSdENSbDExcEFRWHBzbnlWcVFJR2hkRW9nOGtOT1BmVEFaNE5HNDVEblNuVHhVcExEUmszYk9pMG04Y3NFbkFSTVRJd3RVdFgtbElmSmJqY0k0Ukk5V2s3aHBGVXpobUk3bHpjcWl2QlQtNUhYS2l6VXJyd0FUWGg2T0g2Y1ZGX2ZldVdabmJ5Ukdi?oc=5",
-        "source": "Boston 25 News",
-        "published": "2026-11-17T15:30:06+00:00"
       }
     ],
     "Boston": [
       {
-        "title": "The second victim recovered from the Threemile River in Taunton following a crash last week has been identified.",
-        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNS01TaDQxMDd2dm1yeDNEOVlyMllSTjh5ME1kNUJaRFVLSHMwTVhVTWdfWUwyOUlJdV9CRFF2TkRxUGN1cDJ0YjAtS05VQVpYdVJyMllEQ3lDRGhUaUh2UklFTkU5SklINFN0S0l3d19UZlpYazhsTzdRaWhhRnRyZi1xOGFBQlZfVWtkVUg4cjVBcHlpc0NfNkJ1cy1Kay1oZEJtVnRKa2VRMnhmb0VZdzBxU0JYN2dPNi1SekRiYXE2S2F5YWt2U2hKQm44UVJjdjl4VHJYcVBWZw?oc=5",
-        "source": "Facebook",
-        "published": "2026-11-18T02:26:17+00:00"
-      },
-      {
-        "title": "Jake Bauers says the city of Boston figured into his decision to sign with the Red Sox",
-        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxONHo5TEFNTWpvbFZnN0F6elpJSncwUnlHejBiLV9XQnRkampLLWwtSndqY2gwLXVwLUVRaTlwZElnQkZ2aUJlYTF2WUtWSWhpemwxcXdoOFB5cVUxenRNNVRfX3M1QVY1dkJlZWl5MjNaYzZ2NVhKdEtlV0pLdS1LR3VWZjBfNmFNQlNELWpsUnNCdXZJNzYwLU9Sa1BPbjdick5SRzhtaTVLX19ZS0NyUUFnN1J5a3U5anVTRlFiR0pmNXZKVE1ma0ptdjl3UDFWbXJOb1E4b0Y0Yk0?oc=5",
-        "source": "Boston.com",
-        "published": "2026-11-18T02:14:52+00:00"
-      },
-      {
-        "title": "Red Sox Have Pressing Adley Rutschman Question to Answer",
-        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPdUtxdWl3Tm1IQjhaUjJpUHlueW9IVDJfM0J6YklhcmFSNm9kVUtUT3BLSHpOVF9nUHZwU2pQaVB0dW83anRkT0ZfZ2xwNi1QYUtCZlg4dmdMWFVKSkpKSjlOY2RvR09JX2Utb0xITXgzdUk3MGIyMlFTZ0dtTmdEaVJUVjY1b1JMNWMwQlVjYTFUaUYxdDIxZk5YUXhUdw?oc=5",
-        "source": "Sports Illustrated",
-        "published": "2026-11-18T01:00:17+00:00"
-      },
-      {
-        "title": "Trump heads to China, betting on unscripted diplomacy with Xi and Putin",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNX2tNY3JTZXFJcHBYRzV2SDlic2wxb1JyaHV0YWI1MWI3bFNyU1NPZWZUdjVza1VyRVJlMzV1N2x0Q0FJclkwMjZZakJ3N1hzY3ktY3BZd0dqSDdRNmM4YXF4dllES2lkVFEwTXpHTHM5d1g5dGc3SjRzWXhIQ1JwY043czZlSUxFTW9Oczhn0gGiAUFVX3lxTE9ia1FxRkkwVm9pZ1ZfZ3dzZ3VLT0tQd2I2ZGJmZUlzQ2g1U3U2U1RrNzBibHlUWkZHaU9NUkRHb1dxQjh6OGU3V2FHSDdxYUxhbUlsM045ekdidkJVR3k5dW5FVWVxY1cySlIzbFZYUm5UOHVDYUktb2pGUWRFNExqVUZxUkpGYXlZY0h6a3lKa3RrcjVmT1M2dGVONUN0U1hsZw?oc=5",
+        "title": "How to save money on Thanksgiving dinner without sacrificing",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbVVKYXRyc3dkWVpvRzlCQjJxdDFMeEhhcUtMU2FQQmpJSWtRVl9ZcGNUbzBEczZlcUhZMVFQd01SN1NsdmlGSTJCazhibTV3cUxyUllaT1dBMDJ3X1VUcDdkWnZTSnJjVzJHRl9NYUtUcGhVWDFrMzMyZUROMk5pUlBpYVhEMXp6a3UyOGdPaDhyVHhoSzl0ZkFvRzZ2SDBPaWRNOVNwaS1uVnp3eFF1S1BrbFpEazVvbnlNZFpKMNIB0wFBVV95cUxQX1lzZDFTc2RzNnpLa0hJc3Nqc3JyeFhWVnAzbC1pLVh1ME9qRnBCTko3enBjdGJFbGJ6OUl1OEtZbG9yVlgyLVRmYURmT1ZEeVlIdGlFTmZzWHV5NUNqQVQ1Y2o3cjFCUkllTU9XSnV1UUlTWGtCYmlMdFAwQmI1SG5TbjF6dUFzN21SLUVZRGpCMWU1LVBSRGpVN01UbmFRYTlGZHFOSXdmdUtCakZKY2FpLVNVTlVpT1QxZ0tEenBzMzVyakltZlJuWktMd2xxY2JV?oc=5",
         "source": "Boston 25 News",
-        "published": "2026-11-18T00:46:00+00:00"
+        "published": "2026-11-18T11:07:24+00:00"
       },
       {
-        "title": "Boston 25 News. . Shaynah and Greg take you behind the scenes on a busy Tuesday night!",
-        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPZmw3NHdURG1EUmhTMmVoTWdsSHJOZ0JWYjBBUjd2TXd4MkNoNzNWQlpVeDZiVk9fTkhSTkJTNXY3ZDduRExWc0dJS0E5enJvcnZ2ZklRTkR6NEc0WGZPOVdOX3YxbE5kOWFhcGJMOVRhTC14OTM5UUMxaG5aZmZqQjJxVEd4TW5GYUk5Tkx5U2YyTG15eUlKN0U1SjI2Z01FeXlxcWpFaGxGOXJuMllweWFLN18ydFp1dWtabUhFYmtYLUFXUk9PNlFB?oc=5",
-        "source": "Facebook",
-        "published": "2026-11-18T00:45:56+00:00"
+        "title": "Boston 25 Morning Forecast",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOa0JTaFpHNWJ2MG9QZUg2R2FUeUNFNjJWcGZsV21jMmhLWngxYk9MSkhld0g3TzlNaVlpT1JRZU1fOE5wYnJmYVBJaXlpUERMa2NqXzlmZDhHa093WHI5THhSTGRkdGZWQmozNXZKQ284bTktNW5wSEhTTmt0c3lSaDkyNzM3VmxsVURUd1FReHJnNlFFWUQ4NDdxVVRDeWhWOW0wbmlyUk5maWIya2dqMXRaamJuQVk?oc=5",
+        "source": "Boston 25 News",
+        "published": "2026-11-18T10:55:02+00:00"
       },
       {
-        "title": "Nexamp seeks to upgrade solar farm with battery storage system near Niagara Falls",
-        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOd3JfNDIzRUxBTXQ3UEFBYUkxdDFoS1pxcXVLOVFVSnota2lYQ2VCLVNESVo1WHhHZFVhZ0lBNWQwR2ctaTlxemtRenEwWjd0U2RCUGc3UUJmb2I1TTdBVVRaN1BuU05CTVQ4NGFmcTBXODZTUWU1MVJEdUlQWkFjbnU0eFhmbVh4by01bi1jT2JVcGNJU1gtdy1CdUhPVG8?oc=5",
+        "title": "Developers resume Roxbury mixed-use project after legal victory, but rising costs force a redesign",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNRzVfU0R5d09YWWxJSGRoZ2Y0cm5sLU5uMDRtWE1feFFlaUFMM3ptRkU5dEJsbGVLbHZTTzY0UUcxTDUzeEVUei10MmtPYURtNmpTLUdlZWFTSXAzSVl5bHBNeFZfZGx5Qy0tMUNjQnhMVUVqOVgwUzIzbERlcGtENUNGSXdPWkpHR0ZWVHdnV3JvWDdFVHRrTG8wYkhuLVJQNFU0TzNHSXVXdw?oc=5",
         "source": "The Business Journals",
-        "published": "2026-11-18T00:43:00+00:00"
+        "published": "2026-11-18T10:45:00+00:00"
+      },
+      {
+        "title": "Car hits pole in Wilmington, bringing wires down",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBaZ05NbU16M0loLXhCX0Nod2lpbk9hVmxIMUw3ZGVwQTV3NS12bTd5RmREX0VuRVd6UldzTGNsWkF4T2ozYk5VX0J5ZWcxUTNnTEpJR1V5Rm1HNndIbklkUFlkQWwzeU01dzZ1U2VDb0h0SmZwbFIzeEpR?oc=5",
+        "source": "WHDH",
+        "published": "2026-11-18T10:41:44+00:00"
+      },
+      {
+        "title": "So many doctors, so few available appointments",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1HRFJTNzBZTTB5bEFEM0N1N3FZcDF2bXlqbWtSempzRlNYbnlyZGM4dk5wak1adUNNeGlpTElYV1ZUbDdZVnlLX3ZiRWFlejB6RkdRWWkwMWZXQ2RaQWhOdTJfU01sYlJLWVNwUmhIUGVPZTFt?oc=5",
+        "source": "The Boston Globe",
+        "published": "2026-11-18T10:39:51+00:00"
+      },
+      {
+        "title": "Next Weather: WBZ morning forecast for Nov. 18, 2026",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxORlIzdGFlX0UzVmt2NmhnM1lmbkFFMDQyMDRmQWYwQ0ZWb3duY1gweWtBSWs5R2xOaGVLM2poNThYSVdNT0VtbHE5dmNtdGlIT28yanlwN2FTYndaX09iS2x0OXFOZHRfX1JCZ1gyN0V6MG9NcGtXNVFsYkZkU01qbkR0N0VPdjhlTGFsQ1hLV0s?oc=5",
+        "source": "CBS News",
+        "published": "2026-11-18T10:22:00+00:00"
       }
     ],
     "Around Town": [
-      {
-        "title": "The second victim recovered from the Threemile River in Taunton following a crash last week has been identified.",
-        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNS01TaDQxMDd2dm1yeDNEOVlyMllSTjh5ME1kNUJaRFVLSHMwTVhVTWdfWUwyOUlJdV9CRFF2TkRxUGN1cDJ0YjAtS05VQVpYdVJyMllEQ3lDRGhUaUh2UklFTkU5SklINFN0S0l3d19UZlpYazhsTzdRaWhhRnRyZi1xOGFBQlZfVWtkVUg4cjVBcHlpc0NfNkJ1cy1Kay1oZEJtVnRKa2VRMnhmb0VZdzBxU0JYN2dPNi1SekRiYXE2S2F5YWt2U2hKQm44UVJjdjl4VHJYcVBWZw?oc=5",
-        "source": "Facebook",
-        "published": "2026-11-18T02:26:17+00:00"
-      },
       {
         "title": "Winthrop Varsity Football @ Norwell",
         "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQ3VSM05hcGtVc0ptSXRzSEJTdTNjOFlHaUlQanR4Wk10U0h5NGpfbzZTTmxEQVc0dEFtTVdRVWpKVjYwa0N1ai1pazNfS0JFRjl1cEdLUzBFMHFYZWRSNTk5WFQ3Wlgzb2xSbDZMXzVQQmJmNFhJc0lDTzJSTUVPdnNVVUpkT2hoZ1o4SlpNTEdiTW4xY0E3WXdzbG13SUQwanotNEZhOFFCTHdMZHFzcGRn?oc=5",
@@ -115,10 +109,72 @@
         "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9oNWt3RzIyb2FQTlhqcy1Mc2RnT1Rkd2ZGeWVKVUhDWVdYSGRIS3B5WklZMWtqT1BhSVFIVHUxcHN4NXF6WFBKSGRrZHdmYkNMY254d0dJd290UnlsbEZlRHB3?oc=5",
         "source": "NFHS Network",
         "published": "2026-11-15T13:50:44+00:00"
+      },
+      {
+        "title": "Joanne Marie McDuffee Obituary (2026) - Winthrop, MA - Buonfiglio Funeral Home - Revere",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOa2dKUnBhSVNxVk42MTF5Q1ZLZmxXTXNCYVkyQWdlVDVxeEpuNkZwTWxQTTk0YndSY0lKWVNTd0NmVVp0VEgwOFpXamlQbXBxUlpBcXZzUndCSWM0cGtkbHlpQnRxbkhlelFabnVHNDBGWUJYSllIU3lzY0tJUUVMRzQtNjc?oc=5",
+        "source": "Legacy | Obituary",
+        "published": "2026-11-15T08:00:00+00:00"
       }
     ]
   },
   "pool": [
+    {
+      "title": "How to save money on Thanksgiving dinner without sacrificing",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbVVKYXRyc3dkWVpvRzlCQjJxdDFMeEhhcUtMU2FQQmpJSWtRVl9ZcGNUbzBEczZlcUhZMVFQd01SN1NsdmlGSTJCazhibTV3cUxyUllaT1dBMDJ3X1VUcDdkWnZTSnJjVzJHRl9NYUtUcGhVWDFrMzMyZUROMk5pUlBpYVhEMXp6a3UyOGdPaDhyVHhoSzl0ZkFvRzZ2SDBPaWRNOVNwaS1uVnp3eFF1S1BrbFpEazVvbnlNZFpKMNIB0wFBVV95cUxQX1lzZDFTc2RzNnpLa0hJc3Nqc3JyeFhWVnAzbC1pLVh1ME9qRnBCTko3enBjdGJFbGJ6OUl1OEtZbG9yVlgyLVRmYURmT1ZEeVlIdGlFTmZzWHV5NUNqQVQ1Y2o3cjFCUkllTU9XSnV1UUlTWGtCYmlMdFAwQmI1SG5TbjF6dUFzN21SLUVZRGpCMWU1LVBSRGpVN01UbmFRYTlGZHFOSXdmdUtCakZKY2FpLVNVTlVpT1QxZ0tEenBzMzVyakltZlJuWktMd2xxY2JV?oc=5",
+      "source": "Boston 25 News",
+      "published": "2026-11-18T11:07:24+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-18T11:12:09+00:00"
+    },
+    {
+      "title": "Boston 25 Morning Forecast",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOa0JTaFpHNWJ2MG9QZUg2R2FUeUNFNjJWcGZsV21jMmhLWngxYk9MSkhld0g3TzlNaVlpT1JRZU1fOE5wYnJmYVBJaXlpUERMa2NqXzlmZDhHa093WHI5THhSTGRkdGZWQmozNXZKQ284bTktNW5wSEhTTmt0c3lSaDkyNzM3VmxsVURUd1FReHJnNlFFWUQ4NDdxVVRDeWhWOW0wbmlyUk5maWIya2dqMXRaamJuQVk?oc=5",
+      "source": "Boston 25 News",
+      "published": "2026-11-18T10:55:02+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-18T11:12:09+00:00"
+    },
+    {
+      "title": "Developers resume Roxbury mixed-use project after legal victory, but rising costs force a redesign",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNRzVfU0R5d09YWWxJSGRoZ2Y0cm5sLU5uMDRtWE1feFFlaUFMM3ptRkU5dEJsbGVLbHZTTzY0UUcxTDUzeEVUei10MmtPYURtNmpTLUdlZWFTSXAzSVl5bHBNeFZfZGx5Qy0tMUNjQnhMVUVqOVgwUzIzbERlcGtENUNGSXdPWkpHR0ZWVHdnV3JvWDdFVHRrTG8wYkhuLVJQNFU0TzNHSXVXdw?oc=5",
+      "source": "The Business Journals",
+      "published": "2026-11-18T10:45:00+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-18T11:12:09+00:00"
+    },
+    {
+      "title": "Car hits pole in Wilmington, bringing wires down",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBaZ05NbU16M0loLXhCX0Nod2lpbk9hVmxIMUw3ZGVwQTV3NS12bTd5RmREX0VuRVd6UldzTGNsWkF4T2ozYk5VX0J5ZWcxUTNnTEpJR1V5Rm1HNndIbklkUFlkQWwzeU01dzZ1U2VDb0h0SmZwbFIzeEpR?oc=5",
+      "source": "WHDH",
+      "published": "2026-11-18T10:41:44+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-18T11:12:09+00:00"
+    },
+    {
+      "title": "So many doctors, so few available appointments",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1HRFJTNzBZTTB5bEFEM0N1N3FZcDF2bXlqbWtSempzRlNYbnlyZGM4dk5wak1adUNNeGlpTElYV1ZUbDdZVnlLX3ZiRWFlejB6RkdRWWkwMWZXQ2RaQWhOdTJfU01sYlJLWVNwUmhIUGVPZTFt?oc=5",
+      "source": "The Boston Globe",
+      "published": "2026-11-18T10:39:51+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-18T11:12:09+00:00"
+    },
+    {
+      "title": "Next Weather: WBZ morning forecast for Nov. 18, 2026",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxORlIzdGFlX0UzVmt2NmhnM1lmbkFFMDQyMDRmQWYwQ0ZWb3duY1gweWtBSWs5R2xOaGVLM2poNThYSVdNT0VtbHE5dmNtdGlIT28yanlwN2FTYndaX09iS2x0OXFOZHRfX1JCZ1gyN0V6MG9NcGtXNVFsYkZkU01qbkR0N0VPdjhlTGFsQ1hLV0s?oc=5",
+      "source": "CBS News",
+      "published": "2026-11-18T10:22:00+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-18T11:12:09+00:00"
+    },
+    {
+      "title": "KeyCrew Media Taps Gibson Sotheby's Chuck Silverston for Greater Boston Real Estate Coverage",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZXJyV0k5dm1wWGxxWWxycUsweXpkOWlFUmtXUFpuVkR1Yzg3N2hqSXl1U3VnSElOQ2NWM1JJMVRwQkJRbldJUEVOR055SnNOeWNBY3Y0VG83ZUY0bzdzdHN4bVd1czNxNTFrUVFIRGJUbTBQSV9uOHNLckdRZ0c4dHpNbTE4RkhCc3JMaFUtQlJ5MHlVWVlWM1FZdFNkUW9MMlFXQUVwZWNweHJrbTY2TS1aWGRsSWJKYmlFVTNLRENZRVBuSFE?oc=5",
+      "source": "citybuzz -",
+      "published": "2026-11-18T09:10:13+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-18T11:12:09+00:00"
+    },
     {
       "title": "Jake Bauers says the city of Boston figured into his decision to sign with the Red Sox",
       "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxONHo5TEFNTWpvbFZnN0F6elpJSncwUnlHejBiLV9XQnRkampLLWwtSndqY2gwLXVwLUVRaTlwZElnQkZ2aUJlYTF2WUtWSWhpemwxcXdoOFB5cVUxenRNNVRfX3M1QVY1dkJlZWl5MjNaYzZ2NVhKdEtlV0pLdS1LR3VWZjBfNmFNQlNELWpsUnNCdXZJNzYwLU9Sa1BPbjdick5SRzhtaTVLX19ZS0NyUUFnN1J5a3U5anVTRlFiR0pmNXZKVE1ma0ptdjl3UDFWbXJOb1E4b0Y0Yk0?oc=5",
@@ -262,6 +318,14 @@
       "published": "2026-11-15T13:50:44+00:00",
       "category": "Winthrop & North Shore",
       "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "Joanne Marie McDuffee Obituary (2026) - Winthrop, MA - Buonfiglio Funeral Home - Revere",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOa2dKUnBhSVNxVk42MTF5Q1ZLZmxXTXNCYVkyQWdlVDVxeEpuNkZwTWxQTTk0YndSY0lKWVNTd0NmVVp0VEgwOFpXamlQbXBxUlpBcXZzUndCSWM0cGtkbHlpQnRxbkhlelFabnVHNDBGWUJYSllIU3lzY0tJUUVMRzQtNjc?oc=5",
+      "source": "Legacy | Obituary",
+      "published": "2026-11-15T08:00:00+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-18T11:12:09+00:00"
     }
   ]
 }
