@@ -1,6 +1,267 @@
 {
-  "updated": null,
+  "updated": "2026-11-18T02:30:21+00:00",
   "_help": "'categories' is refreshed automatically every day by the GitHub Action. Put your own hand-picked stories in 'editors_picks' (title, url, source, blurb) – those are never overwritten.",
   "editors_picks": [],
-  "categories": {}
+  "categories": {
+    "Real Estate": [
+      {
+        "title": "Residential transformation planned for 98 Beacon St. in Worcester",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWVNHY1lUUjEwY19pZ2NhYjM3ZVpNa2RnZHhJTVNSRlc1RlJybTIyQUpldzBIVXNSM0lUU1NNR0kyaXowN1czYk5IOE1QSElUSWR0aGFSVHNYaGUwaDctVDk4d0FvQnJJY0RXUjEzTXppbU9rRlV3blBUdDhBazJ5Ry1XMmk?oc=5",
+        "source": "Boston Agent Magazine",
+        "published": "2026-11-17T21:48:59+00:00"
+      },
+      {
+        "title": "Central Mass. town gets $100K grant to plan future of Anna Maria campus",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNU25LWmZiLWNqcEhfSVVwUFFlYktDWXUzRmY2YTdLOHJFOUk2c3gyUFBvZHpLclB3ZG1PN2VMNV9fNFhyWW1WZDhMaEpPM1NHTm9VYkZ5NzV6dXhKVVhpdERhRG5wdG5BMWFOcDhvZDFvOEJNaWk3azhyM0NaYUpQa2NRZGdXVjBhNG4ycWFjQWFXNVA4NUpSTVc3WHFma3o2dkdJU08tUGlzZk11cm9tWlBDSlFwVEpSYlhB?oc=5",
+        "source": "MassLive",
+        "published": "2026-11-17T20:36:00+00:00"
+      },
+      {
+        "title": "Reveler Development Provides New Space for Portland’s Bayside Opportunity Center",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQRVNSTG1BYkh0Qk1iNkR1UFVWcjBBOEp3Uk5HYXZjVUZfWXRRTmhGMEQyanFrcDFFOUpVMFNEdVNzeXBXNndabkYxMEZGQ0dDNmhNSzVOcGwwc0JMYUdwVkFnYXRvVnFkSm56Qjd2andZeUtPZ2FKNkVLZlRJXzVZOG5PTm9hUFhSYTNCZmZKQUh3SVhwMlhvalNJYUtiNHZ1ZURHY1JJcVNZV01nLVBKYkdyV1U?oc=5",
+        "source": "Boston Real Estate Times",
+        "published": "2026-11-17T20:32:50+00:00"
+      },
+      {
+        "title": "The Peabody Companies appoints David McGuill as senior director of operations",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1sSzREYk00Q2VyTEJrRGhzbzRuSGNic1NMS0NXWHczWFBqTDM0SDROXzdSM0Nwek9MaUFiREEwcm44aWlNd2l4ei10cmE2aTdDRXhKTmpPQmQtS2ZCR1BjZDFNUElJRnFBY0s5aC03QVZNWlpZY2NKdTVn?oc=5",
+        "source": "Boston Agent Magazine",
+        "published": "2026-11-17T20:18:56+00:00"
+      },
+      {
+        "title": "Family-owned apartment complex in historic Boston neighborhood hits market",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSGRpTk9idmJfMUoyeVdNSlhKb0tEOXBYSkRTMzZXUHoyeUVWazJWV0VhX1kxTl9uaVlGazNoSHowQUkzUVBDRXpINmd3QkpRVGpGVEczd09vNUoxRHdPRlpicmFQRWpXSXRJRmpkRGNfZmZTZ092eWFMUzc1S0dRVU9ad1FoYVBDYTZVUmZSdVFLbERYRUJTWXRmZkpEQjVfWnhhQ2NLYmVmRHV2QzNjTg?oc=5",
+        "source": "Green Street News",
+        "published": "2026-11-17T19:27:18+00:00"
+      },
+      {
+        "title": "The neighborhoods where property values dip every holiday season and bounce back fastest",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPa3pKemc5bkVBcVJ0Q1JsMTFwQVFYcHNueVZxUUlHaGRFb2c4a05PUGZUQVo0Tkc0NURuU25UeFVwTERSazNiT2kwbThjc0VuQVJNVEl3dFV0WC1sSWZKYmpjSTRSSTlXazdocEZVemhtSTdsemNxaXZCVC01SFhLaXpVcnJ3QVRYaDZPSDZjVkZfZmV1V1puYnlSR2LSAZwBQVVfeXFMT2t6SnpnOW5FQXFSdENSbDExcEFRWHBzbnlWcVFJR2hkRW9nOGtOT1BmVEFaNE5HNDVEblNuVHhVcExEUmszYk9pMG04Y3NFbkFSTVRJd3RVdFgtbElmSmJqY0k0Ukk5V2s3aHBGVXpobUk3bHpjcWl2QlQtNUhYS2l6VXJyd0FUWGg2T0g2Y1ZGX2ZldVdabmJ5Ukdi?oc=5",
+        "source": "Boston 25 News",
+        "published": "2026-11-17T15:30:06+00:00"
+      }
+    ],
+    "Boston": [
+      {
+        "title": "Jake Bauers says the city of Boston figured into his decision to sign with the Red Sox",
+        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxONHo5TEFNTWpvbFZnN0F6elpJSncwUnlHejBiLV9XQnRkampLLWwtSndqY2gwLXVwLUVRaTlwZElnQkZ2aUJlYTF2WUtWSWhpemwxcXdoOFB5cVUxenRNNVRfX3M1QVY1dkJlZWl5MjNaYzZ2NVhKdEtlV0pLdS1LR3VWZjBfNmFNQlNELWpsUnNCdXZJNzYwLU9Sa1BPbjdick5SRzhtaTVLX19ZS0NyUUFnN1J5a3U5anVTRlFiR0pmNXZKVE1ma0ptdjl3UDFWbXJOb1E4b0Y0Yk0?oc=5",
+        "source": "Boston.com",
+        "published": "2026-11-18T02:14:52+00:00"
+      },
+      {
+        "title": "Red Sox Have Pressing Adley Rutschman Question to Answer",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPdUtxdWl3Tm1IQjhaUjJpUHlueW9IVDJfM0J6YklhcmFSNm9kVUtUT3BLSHpOVF9nUHZwU2pQaVB0dW83anRkT0ZfZ2xwNi1QYUtCZlg4dmdMWFVKSkpKSjlOY2RvR09JX2Utb0xITXgzdUk3MGIyMlFTZ0dtTmdEaVJUVjY1b1JMNWMwQlVjYTFUaUYxdDIxZk5YUXhUdw?oc=5",
+        "source": "Sports Illustrated",
+        "published": "2026-11-18T01:00:17+00:00"
+      },
+      {
+        "title": "Trump heads to China, betting on unscripted diplomacy with Xi and Putin",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNX2tNY3JTZXFJcHBYRzV2SDlic2wxb1JyaHV0YWI1MWI3bFNyU1NPZWZUdjVza1VyRVJlMzV1N2x0Q0FJclkwMjZZakJ3N1hzY3ktY3BZd0dqSDdRNmM4YXF4dllES2lkVFEwTXpHTHM5d1g5dGc3SjRzWXhIQ1JwY043czZlSUxFTW9Oczhn0gGiAUFVX3lxTE9ia1FxRkkwVm9pZ1ZfZ3dzZ3VLT0tQd2I2ZGJmZUlzQ2g1U3U2U1RrNzBibHlUWkZHaU9NUkRHb1dxQjh6OGU3V2FHSDdxYUxhbUlsM045ekdidkJVR3k5dW5FVWVxY1cySlIzbFZYUm5UOHVDYUktb2pGUWRFNExqVUZxUkpGYXlZY0h6a3lKa3RrcjVmT1M2dGVONUN0U1hsZw?oc=5",
+        "source": "Boston 25 News",
+        "published": "2026-11-18T00:46:00+00:00"
+      },
+      {
+        "title": "Boston 25 News. . Shaynah and Greg take you behind the scenes on a busy Tuesday night!",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPZmw3NHdURG1EUmhTMmVoTWdsSHJOZ0JWYjBBUjd2TXd4MkNoNzNWQlpVeDZiVk9fTkhSTkJTNXY3ZDduRExWc0dJS0E5enJvcnZ2ZklRTkR6NEc0WGZPOVdOX3YxbE5kOWFhcGJMOVRhTC14OTM5UUMxaG5aZmZqQjJxVEd4TW5GYUk5Tkx5U2YyTG15eUlKN0U1SjI2Z01FeXlxcWpFaGxGOXJuMllweWFLN18ydFp1dWtabUhFYmtYLUFXUk9PNlFB?oc=5",
+        "source": "Facebook",
+        "published": "2026-11-18T00:45:56+00:00"
+      },
+      {
+        "title": "Nexamp seeks to upgrade solar farm with battery storage system near Niagara Falls",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOd3JfNDIzRUxBTXQ3UEFBYUkxdDFoS1pxcXVLOVFVSnota2lYQ2VCLVNESVo1WHhHZFVhZ0lBNWQwR2ctaTlxemtRenEwWjd0U2RCUGc3UUJmb2I1TTdBVVRaN1BuU05CTVQ4NGFmcTBXODZTUWU1MVJEdUlQWkFjbnU0eFhmbVh4by01bi1jT2JVcGNJU1gtdy1CdUhPVG8?oc=5",
+        "source": "The Business Journals",
+        "published": "2026-11-18T00:43:00+00:00"
+      },
+      {
+        "title": "[[LIVESTERAM!!NOW) Los Angeles Kings v Boston Bruins 𝐋𝐈𝐕𝐄 Ｓｔｒｅａｍｓ",
+        "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxNVEI4eS1hSnFHWEVINW90a1A4QjlwandHMGpxR2Yzd2tGdXpiR2pwMFRoUUlydU96NVMwVVBmSVF2dXcwTGxjdVkwSDVrMTRoSUN0dGFGSFN5dWdIMlNYM2c1X2RPcXhzYUJvNlBzajl5T0R2T3NkbG5fYlpuaElqRFlCZGJvNkdfbkJBSmNBMFhwaFEyd3RmVkhDN1d4b2thUUNBVXVIRnJrRE50T05aTmNOak5lNURpMFBfZUhyQnpCdHhJS19uaWxuNFZKbFZJS3dXdWNaeEpkdXFZR0N0a24yVlpPa3FramcyRXNXZXRLWUJNYTJhVjhWcEtMclhuNVRwWXAxWGRHbld6cWZDTV8yNFVCY3Z2NXVFQXJMSDVhU25SdTFDWXBTbHFXdl9kVmFla0t1WXh3RllnSlRtRUlkX3BiVm1HUDQ3OEZR?oc=5",
+        "source": "Comité Asesor de Vacunas de la AEP",
+        "published": "2026-11-18T00:39:07+00:00"
+      }
+    ],
+    "Winthrop & North Shore": [
+      {
+        "title": "Winthrop Varsity Football @ Norwell",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQ3VSM05hcGtVc0ptSXRzSEJTdTNjOFlHaUlQanR4Wk10U0h5NGpfbzZTTmxEQVc0dEFtTVdRVWpKVjYwa0N1ai1pazNfS0JFRjl1cEdLUzBFMHFYZWRSNTk5WFQ3Wlgzb2xSbDZMXzVQQmJmNFhJc0lDTzJSTUVPdnNVVUpkT2hoZ1o4SlpNTEdiTW4xY0E3WXdzbG13SUQwanotNEZhOFFCTHdMZHFzcGRn?oc=5",
+        "source": "MaxPreps",
+        "published": "2026-11-17T20:51:11+00:00"
+      },
+      {
+        "title": "The second victim recovered from the Threemile River in Taunton following a crash last week has been identified.",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNS01TaDQxMDd2dm1yeDNEOVlyMllSTjh5ME1kNUJaRFVLSHMwTVhVTWdfWUwyOUlJdV9CRFF2TkRxUGN1cDJ0YjAtS05VQVpYdVJyMllEQ3lDRGhUaUh2UklFTkU5SklINFN0S0l3d19UZlpYazhsTzdRaWhhRnRyZi1xOGFBQlZfVWtkVUg4cjVBcHlpc0NfNkJ1cy1Kay1oZEJtVnRKa2VRMnhmb0VZdzBxU0JYN2dPNi1SekRiYXE2S2F5YWt2U2hKQm44UVJjdjl4VHJYcVBWZw?oc=5",
+        "source": "Facebook",
+        "published": "2026-11-17T20:00:05+00:00"
+      },
+      {
+        "title": "Althea Alling Obituary - (1921-2026)",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAxQWVFeXI2OEtZX09OY1BGRmF1RDdtdU9vUE1YbnNLb3d0MzhqZlFxblVQYWEtVFZrUXBLbUZLd1FKWHhvbm5oZk9WM3RnTU96YjZNck1jSU16Ui1CQ0s2Zw?oc=5",
+        "source": "Lowell Sun",
+        "published": "2026-11-17T09:26:43+00:00"
+      },
+      {
+        "title": "Locals have come to play on the gridiron",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE91RWdJSXNUb1ZNREpBOEptSGJIRmpxak90T3duYWptX0ptMDZrel95MFF6WEhkWGlxSG5jUzl1dzExSmlBTGhQRVRhUElvQmt1eXQ2MUlQaFljcExlNFpUQ2FYVnNUOEd3UkpZQzVuSThwLUZDNllhWm91UjFyQQ?oc=5",
+        "source": "Itemlive",
+        "published": "2026-11-16T23:23:38+00:00"
+      },
+      {
+        "title": "MIAA announces sites for 2026 football state semifinals",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxON19HU3kwSDlLdFNONk1Ub19DMUhFS2VZV01rMmluSnpyZTZUT1JuM2g0ck90YWNuUERCTmdvemlyWHZ3d3E5UzRJUDlaOE56NEtjY0UwWVhmYmZ6Y2FjSnZZNFFSYWpUVGsxc05tdndfVjFpc0tEVVpJZXZnZlFia29WdHJFdE92WWZjbEtVUmhTRGtqNnpzUWlZdEpVeFlKN0E5NHVIS3NuYVZCdEJv?oc=5",
+        "source": "MassLive",
+        "published": "2026-11-15T21:38:00+00:00"
+      },
+      {
+        "title": "Team Highlights: 2026 MIAA Football Playoffs Winthrop High School vs. Bellingham High School - Winthrop",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9oNWt3RzIyb2FQTlhqcy1Mc2RnT1Rkd2ZGeWVKVUhDWVdYSGRIS3B5WklZMWtqT1BhSVFIVHUxcHN4NXF6WFBKSGRrZHdmYkNMY254d0dJd290UnlsbEZlRHB3?oc=5",
+        "source": "NFHS Network",
+        "published": "2026-11-15T13:50:44+00:00"
+      }
+    ]
+  },
+  "pool": [
+    {
+      "title": "Jake Bauers says the city of Boston figured into his decision to sign with the Red Sox",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxONHo5TEFNTWpvbFZnN0F6elpJSncwUnlHejBiLV9XQnRkampLLWwtSndqY2gwLXVwLUVRaTlwZElnQkZ2aUJlYTF2WUtWSWhpemwxcXdoOFB5cVUxenRNNVRfX3M1QVY1dkJlZWl5MjNaYzZ2NVhKdEtlV0pLdS1LR3VWZjBfNmFNQlNELWpsUnNCdXZJNzYwLU9Sa1BPbjdick5SRzhtaTVLX19ZS0NyUUFnN1J5a3U5anVTRlFiR0pmNXZKVE1ma0ptdjl3UDFWbXJOb1E4b0Y0Yk0?oc=5",
+      "source": "Boston.com",
+      "published": "2026-11-18T02:14:52+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "Red Sox Have Pressing Adley Rutschman Question to Answer",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPdUtxdWl3Tm1IQjhaUjJpUHlueW9IVDJfM0J6YklhcmFSNm9kVUtUT3BLSHpOVF9nUHZwU2pQaVB0dW83anRkT0ZfZ2xwNi1QYUtCZlg4dmdMWFVKSkpKSjlOY2RvR09JX2Utb0xITXgzdUk3MGIyMlFTZ0dtTmdEaVJUVjY1b1JMNWMwQlVjYTFUaUYxdDIxZk5YUXhUdw?oc=5",
+      "source": "Sports Illustrated",
+      "published": "2026-11-18T01:00:17+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "Trump heads to China, betting on unscripted diplomacy with Xi and Putin",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNX2tNY3JTZXFJcHBYRzV2SDlic2wxb1JyaHV0YWI1MWI3bFNyU1NPZWZUdjVza1VyRVJlMzV1N2x0Q0FJclkwMjZZakJ3N1hzY3ktY3BZd0dqSDdRNmM4YXF4dllES2lkVFEwTXpHTHM5d1g5dGc3SjRzWXhIQ1JwY043czZlSUxFTW9Oczhn0gGiAUFVX3lxTE9ia1FxRkkwVm9pZ1ZfZ3dzZ3VLT0tQd2I2ZGJmZUlzQ2g1U3U2U1RrNzBibHlUWkZHaU9NUkRHb1dxQjh6OGU3V2FHSDdxYUxhbUlsM045ekdidkJVR3k5dW5FVWVxY1cySlIzbFZYUm5UOHVDYUktb2pGUWRFNExqVUZxUkpGYXlZY0h6a3lKa3RrcjVmT1M2dGVONUN0U1hsZw?oc=5",
+      "source": "Boston 25 News",
+      "published": "2026-11-18T00:46:00+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "Boston 25 News. . Shaynah and Greg take you behind the scenes on a busy Tuesday night!",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPZmw3NHdURG1EUmhTMmVoTWdsSHJOZ0JWYjBBUjd2TXd4MkNoNzNWQlpVeDZiVk9fTkhSTkJTNXY3ZDduRExWc0dJS0E5enJvcnZ2ZklRTkR6NEc0WGZPOVdOX3YxbE5kOWFhcGJMOVRhTC14OTM5UUMxaG5aZmZqQjJxVEd4TW5GYUk5Tkx5U2YyTG15eUlKN0U1SjI2Z01FeXlxcWpFaGxGOXJuMllweWFLN18ydFp1dWtabUhFYmtYLUFXUk9PNlFB?oc=5",
+      "source": "Facebook",
+      "published": "2026-11-18T00:45:56+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "Nexamp seeks to upgrade solar farm with battery storage system near Niagara Falls",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOd3JfNDIzRUxBTXQ3UEFBYUkxdDFoS1pxcXVLOVFVSnota2lYQ2VCLVNESVo1WHhHZFVhZ0lBNWQwR2ctaTlxemtRenEwWjd0U2RCUGc3UUJmb2I1TTdBVVRaN1BuU05CTVQ4NGFmcTBXODZTUWU1MVJEdUlQWkFjbnU0eFhmbVh4by01bi1jT2JVcGNJU1gtdy1CdUhPVG8?oc=5",
+      "source": "The Business Journals",
+      "published": "2026-11-18T00:43:00+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "[[LIVESTERAM!!NOW) Los Angeles Kings v Boston Bruins 𝐋𝐈𝐕𝐄 Ｓｔｒｅａｍｓ",
+      "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxNVEI4eS1hSnFHWEVINW90a1A4QjlwandHMGpxR2Yzd2tGdXpiR2pwMFRoUUlydU96NVMwVVBmSVF2dXcwTGxjdVkwSDVrMTRoSUN0dGFGSFN5dWdIMlNYM2c1X2RPcXhzYUJvNlBzajl5T0R2T3NkbG5fYlpuaElqRFlCZGJvNkdfbkJBSmNBMFhwaFEyd3RmVkhDN1d4b2thUUNBVXVIRnJrRE50T05aTmNOak5lNURpMFBfZUhyQnpCdHhJS19uaWxuNFZKbFZJS3dXdWNaeEpkdXFZR0N0a24yVlpPa3FramcyRXNXZXRLWUJNYTJhVjhWcEtMclhuNVRwWXAxWGRHbld6cWZDTV8yNFVCY3Z2NXVFQXJMSDVhU25SdTFDWXBTbHFXdl9kVmFla0t1WXh3RllnSlRtRUlkX3BiVm1HUDQ3OEZR?oc=5",
+      "source": "Comité Asesor de Vacunas de la AEP",
+      "published": "2026-11-18T00:39:07+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "Residential transformation planned for 98 Beacon St. in Worcester",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWVNHY1lUUjEwY19pZ2NhYjM3ZVpNa2RnZHhJTVNSRlc1RlJybTIyQUpldzBIVXNSM0lUU1NNR0kyaXowN1czYk5IOE1QSElUSWR0aGFSVHNYaGUwaDctVDk4d0FvQnJJY0RXUjEzTXppbU9rRlV3blBUdDhBazJ5Ry1XMmk?oc=5",
+      "source": "Boston Agent Magazine",
+      "published": "2026-11-17T21:48:59+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "Winthrop Varsity Football @ Norwell",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQ3VSM05hcGtVc0ptSXRzSEJTdTNjOFlHaUlQanR4Wk10U0h5NGpfbzZTTmxEQVc0dEFtTVdRVWpKVjYwa0N1ai1pazNfS0JFRjl1cEdLUzBFMHFYZWRSNTk5WFQ3Wlgzb2xSbDZMXzVQQmJmNFhJc0lDTzJSTUVPdnNVVUpkT2hoZ1o4SlpNTEdiTW4xY0E3WXdzbG13SUQwanotNEZhOFFCTHdMZHFzcGRn?oc=5",
+      "source": "MaxPreps",
+      "published": "2026-11-17T20:51:11+00:00",
+      "category": "Winthrop & North Shore",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "Central Mass. town gets $100K grant to plan future of Anna Maria campus",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNU25LWmZiLWNqcEhfSVVwUFFlYktDWXUzRmY2YTdLOHJFOUk2c3gyUFBvZHpLclB3ZG1PN2VMNV9fNFhyWW1WZDhMaEpPM1NHTm9VYkZ5NzV6dXhKVVhpdERhRG5wdG5BMWFOcDhvZDFvOEJNaWk3azhyM0NaYUpQa2NRZGdXVjBhNG4ycWFjQWFXNVA4NUpSTVc3WHFma3o2dkdJU08tUGlzZk11cm9tWlBDSlFwVEpSYlhB?oc=5",
+      "source": "MassLive",
+      "published": "2026-11-17T20:36:00+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "Reveler Development Provides New Space for Portland’s Bayside Opportunity Center",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQRVNSTG1BYkh0Qk1iNkR1UFVWcjBBOEp3Uk5HYXZjVUZfWXRRTmhGMEQyanFrcDFFOUpVMFNEdVNzeXBXNndabkYxMEZGQ0dDNmhNSzVOcGwwc0JMYUdwVkFnYXRvVnFkSm56Qjd2andZeUtPZ2FKNkVLZlRJXzVZOG5PTm9hUFhSYTNCZmZKQUh3SVhwMlhvalNJYUtiNHZ1ZURHY1JJcVNZV01nLVBKYkdyV1U?oc=5",
+      "source": "Boston Real Estate Times",
+      "published": "2026-11-17T20:32:50+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "The Peabody Companies appoints David McGuill as senior director of operations",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1sSzREYk00Q2VyTEJrRGhzbzRuSGNic1NMS0NXWHczWFBqTDM0SDROXzdSM0Nwek9MaUFiREEwcm44aWlNd2l4ei10cmE2aTdDRXhKTmpPQmQtS2ZCR1BjZDFNUElJRnFBY0s5aC03QVZNWlpZY2NKdTVn?oc=5",
+      "source": "Boston Agent Magazine",
+      "published": "2026-11-17T20:18:56+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "The second victim recovered from the Threemile River in Taunton following a crash last week has been identified.",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNS01TaDQxMDd2dm1yeDNEOVlyMllSTjh5ME1kNUJaRFVLSHMwTVhVTWdfWUwyOUlJdV9CRFF2TkRxUGN1cDJ0YjAtS05VQVpYdVJyMllEQ3lDRGhUaUh2UklFTkU5SklINFN0S0l3d19UZlpYazhsTzdRaWhhRnRyZi1xOGFBQlZfVWtkVUg4cjVBcHlpc0NfNkJ1cy1Kay1oZEJtVnRKa2VRMnhmb0VZdzBxU0JYN2dPNi1SekRiYXE2S2F5YWt2U2hKQm44UVJjdjl4VHJYcVBWZw?oc=5",
+      "source": "Facebook",
+      "published": "2026-11-17T20:00:05+00:00",
+      "category": "Winthrop & North Shore",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "Family-owned apartment complex in historic Boston neighborhood hits market",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSGRpTk9idmJfMUoyeVdNSlhKb0tEOXBYSkRTMzZXUHoyeUVWazJWV0VhX1kxTl9uaVlGazNoSHowQUkzUVBDRXpINmd3QkpRVGpGVEczd09vNUoxRHdPRlpicmFQRWpXSXRJRmpkRGNfZmZTZ092eWFMUzc1S0dRVU9ad1FoYVBDYTZVUmZSdVFLbERYRUJTWXRmZkpEQjVfWnhhQ2NLYmVmRHV2QzNjTg?oc=5",
+      "source": "Green Street News",
+      "published": "2026-11-17T19:27:18+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "The neighborhoods where property values dip every holiday season and bounce back fastest",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPa3pKemc5bkVBcVJ0Q1JsMTFwQVFYcHNueVZxUUlHaGRFb2c4a05PUGZUQVo0Tkc0NURuU25UeFVwTERSazNiT2kwbThjc0VuQVJNVEl3dFV0WC1sSWZKYmpjSTRSSTlXazdocEZVemhtSTdsemNxaXZCVC01SFhLaXpVcnJ3QVRYaDZPSDZjVkZfZmV1V1puYnlSR2LSAZwBQVVfeXFMT2t6SnpnOW5FQXFSdENSbDExcEFRWHBzbnlWcVFJR2hkRW9nOGtOT1BmVEFaNE5HNDVEblNuVHhVcExEUmszYk9pMG04Y3NFbkFSTVRJd3RVdFgtbElmSmJqY0k0Ukk5V2s3aHBGVXpobUk3bHpjcWl2QlQtNUhYS2l6VXJyd0FUWGg2T0g2Y1ZGX2ZldVdabmJ5Ukdi?oc=5",
+      "source": "Boston 25 News",
+      "published": "2026-11-17T15:30:06+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "Althea Alling Obituary - (1921-2026)",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAxQWVFeXI2OEtZX09OY1BGRmF1RDdtdU9vUE1YbnNLb3d0MzhqZlFxblVQYWEtVFZrUXBLbUZLd1FKWHhvbm5oZk9WM3RnTU96YjZNck1jSU16Ui1CQ0s2Zw?oc=5",
+      "source": "Lowell Sun",
+      "published": "2026-11-17T09:26:43+00:00",
+      "category": "Winthrop & North Shore",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "Locals have come to play on the gridiron",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE91RWdJSXNUb1ZNREpBOEptSGJIRmpxak90T3duYWptX0ptMDZrel95MFF6WEhkWGlxSG5jUzl1dzExSmlBTGhQRVRhUElvQmt1eXQ2MUlQaFljcExlNFpUQ2FYVnNUOEd3UkpZQzVuSThwLUZDNllhWm91UjFyQQ?oc=5",
+      "source": "Itemlive",
+      "published": "2026-11-16T23:23:38+00:00",
+      "category": "Winthrop & North Shore",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "MIAA announces sites for 2026 football state semifinals",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxON19HU3kwSDlLdFNONk1Ub19DMUhFS2VZV01rMmluSnpyZTZUT1JuM2g0ck90YWNuUERCTmdvemlyWHZ3d3E5UzRJUDlaOE56NEtjY0UwWVhmYmZ6Y2FjSnZZNFFSYWpUVGsxc05tdndfVjFpc0tEVVpJZXZnZlFia29WdHJFdE92WWZjbEtVUmhTRGtqNnpzUWlZdEpVeFlKN0E5NHVIS3NuYVZCdEJv?oc=5",
+      "source": "MassLive",
+      "published": "2026-11-15T21:38:00+00:00",
+      "category": "Winthrop & North Shore",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "Team Highlights: 2026 MIAA Football Playoffs Winthrop High School vs. Bellingham High School - Winthrop",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9oNWt3RzIyb2FQTlhqcy1Mc2RnT1Rkd2ZGeWVKVUhDWVdYSGRIS3B5WklZMWtqT1BhSVFIVHUxcHN4NXF6WFBKSGRrZHdmYkNMY254d0dJd290UnlsbEZlRHB3?oc=5",
+      "source": "NFHS Network",
+      "published": "2026-11-15T13:50:44+00:00",
+      "category": "Winthrop & North Shore",
+      "first_seen": "2026-11-18T02:30:21+00:00"
+    }
+  ]
 }

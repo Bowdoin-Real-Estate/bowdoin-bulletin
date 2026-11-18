@@ -1,10 +1,38 @@
 {
-  "updated": null,
+  "updated": "2026-11-18T02:30:21+00:00",
   "_help": "Mortgage rates refresh automatically (Freddie Mac weekly survey via FRED). 'local_stats' is yours to fill in from MLS each issue – leave value blank to hide a stat.",
-  "rates": {},
+  "rates": {
+    "30yr": {
+      "rate": 7.11,
+      "date": "2026-11-12",
+      "previous": 7.18,
+      "change": -0.07
+    },
+    "15yr": {
+      "rate": 6.45,
+      "date": "2026-11-12",
+      "previous": 6.57,
+      "change": -0.12
+    }
+  },
   "local_stats": [
-    { "label": "Winthrop median sale price", "value": "", "change": "", "period": "" },
-    { "label": "Avg. days on market", "value": "", "change": "", "period": "" },
-    { "label": "Homes sold last month", "value": "", "change": "", "period": "" }
+    {
+      "label": "Winthrop median sale price",
+      "value": "",
+      "change": "",
+      "period": ""
+    },
+    {
+      "label": "Avg. days on market",
+      "value": "",
+      "change": "",
+      "period": ""
+    },
+    {
+      "label": "Homes sold last month",
+      "value": "",
+      "change": "",
+      "period": ""
+    }
   ]
 }
