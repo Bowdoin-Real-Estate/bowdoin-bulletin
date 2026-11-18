@@ -46,7 +46,7 @@
         <span><a href="tel:${esc((b.phone || '').replace(/\D/g, ''))}">${esc(b.phone)}</a> · <a href="mailto:${esc(b.email)}">${esc(b.email)}</a></span>
       </div></div>
       <header class="masthead"><div class="wrap">
-        <a class="brand" href="index.html"><div><div class="brand-name">${esc(c.newsletter_name)}</div><div class="brand-sub">by ${esc(b.name)}</div></div></a>
+        <a class="brand" href="index.html"><img class="brand-logo" src="${esc(b.logo)}" alt="${esc(b.name)}"><div><div class="brand-name">${esc(c.newsletter_name)}</div><div class="brand-sub">${esc(c.frequency || 'weekly')} newsletter</div></div></a>
         <button class="menu-btn" aria-label="Menu">☰ Menu</button>
         <nav class="main">${nav.map(([h, t, k]) => `<a href="${h}" class="${k === page ? 'active' : ''}">${t}</a>`).join('')}
           <a class="cta" href="index.html#subscribe">Subscribe</a></nav>
@@ -57,7 +57,7 @@
         <div class="foot-grid">
           <div>
             <a class="logo-chip" href="${esc(b.website)}" target="_blank" rel="noopener"><img src="${esc(b.logo)}" alt="${esc(b.name)}" onerror="this.parentNode.textContent='${esc(b.name)}'"></a>
-            <p style="margin-top:14px">${esc(c.newsletter_name)} is a free ${esc(c.frequency || 'weekly')} newsletter from ${esc(b.name)}: a Winthrop-based real estate team helping buyers, sellers and renters across Greater Boston and the North Shore.</p>
+            <p style="margin-top:14px">${esc(c.newsletter_name)} is a free ${esc(c.frequency || 'weekly')} newsletter from ${esc(b.name)}: a Winthrop-based real estate team helping buyers, sellers and renters across Greater Boston, the North Shore and the South Shore.</p>
             <p>${esc(b.address)}<br><a href="tel:${esc((b.phone || '').replace(/\D/g, ''))}">${esc(b.phone)}</a> · <a href="mailto:${esc(b.email)}">${esc(b.email)}</a></p>
             ${b.instagram ? `<p><a href="${esc(b.instagram)}" target="_blank" rel="noopener">Instagram →</a></p>` : ''}
           </div>
