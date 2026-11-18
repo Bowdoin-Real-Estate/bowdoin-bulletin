@@ -167,6 +167,16 @@ def sync_news(cfg):
         cats[feed["category"]] = items[:per]
         print(f"  news: {feed['category']} – {len(cats[feed['category']])} items")
     news["categories"] = cats
+    # Rolling 8-day pool of every headline seen, so editors can pick from the whole week (admin.html)
+    pool = {p["url"]: p for p in news.get("pool", [])}
+    for cat, items in cats.items():
+        for it in items:
+            if it["url"] not in pool:
+                pool[it["url"]] = {**it, "category": cat, "first_seen": NOW}
+    cutoff = datetime.now(timezone.utc).timestamp() - 8 * 86400
+    keep = [p for p in pool.values() if datetime.fromisoformat(p.get("first_seen") or NOW).timestamp() >= cutoff]
+    keep.sort(key=lambda x: x.get("published") or x.get("first_seen") or "", reverse=True)
+    news["pool"] = keep[:200]
     news["updated"] = NOW
     save("news.json", news, compare_keys_ignore=())
 
