@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Editor · The Bowdoin Bulletin</title>
+<link rel="icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .ed-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:start}
+  @media (max-width:960px){.ed-grid{grid-template-columns:1fr}}
+  .cand{display:grid;grid-template-columns:1fr auto;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+  .cand:last-child{border-bottom:0}
+  .cand a{color:var(--ink);font-weight:600;text-decoration:none}
+  .cand a:hover{color:var(--harbor)}
+  .cand.picked{opacity:.45}
+  .pick{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;background:#fff}
+  .pick textarea,.pick input,.field{width:100%;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit;font-size:.92rem}
+  .pick textarea{min-height:54px;margin-top:8px;resize:vertical}
+  .pick .row{display:flex;gap:6px;align-items:center;justify-content:space-between}
+  .ib{background:none;border:1px solid var(--line);border-radius:8px;padding:4px 9px;cursor:pointer;font:600 .85rem var(--sans);color:var(--ink)}
+  .ib:hover{border-color:var(--brass);color:var(--brass)}
+  .scroll{max-height:70vh;overflow:auto;padding-right:6px}
+  .sticky{position:sticky;top:90px}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 18px;border-radius:999px;font-weight:600;display:none;z-index:99}
+  label.f{display:block;font-weight:600;font-size:.88rem;margin:10px 0 4px}
+</style>
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+  <a class="brand" href="index.html"><div><div class="brand-name">Bulletin Editor</div><div class="brand-sub">Private · for Jenny &amp; LeighAnn</div></div></a>
+  <nav class="main" style="display:flex"><a href="index.html" target="_blank">View site ↗</a><a href="#" id="signout" style="display:none">Sign out</a></nav>
+</div></header>
+
+<main class="wrap" style="padding:28px 20px 60px">
+  <!-- Sign in -->
+  <section id="login" class="card pad" style="max-width:560px;margin:40px auto;display:none">
+    <span class="eyebrow">Sign in</span>
+    <h2 style="margin-top:8px">Welcome to the Bulletin editor</h2>
+    <p class="muted">Paste the editor key Jake set up for you. You only need to do this once on each computer or phone.</p>
+    <label class="f">Who's editing?</label>
+    <select id="who" class="field"><option>Jenny</option><option>LeighAnn</option><option>Jake</option></select>
+    <label class="f">Editor key</label>
+    <input id="tok" class="field" type="password" placeholder="github_pat_…" autocomplete="off">
+    <p style="margin-top:14px"><button class="btn brass" id="go">Sign in</button></p>
+    <p class="small muted" id="loginmsg"></p>
+  </section>
+
+  <!-- Editor -->
+  <section id="editor" style="display:none">
+    <div class="sec-head"><div><span class="eyebrow" id="weeklabel"></span><h2>Choose this week's stories</h2></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn ghost sm" id="copy">📋 Copy for email</button><button class="btn brass" id="save">Publish to site</button></div></div>
+    <p class="small muted" id="status" style="margin-top:-10px"></p>
+
+    <div class="ed-grid">
+      <div class="card pad">
+        <div class="row" style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center">
+          <h3 style="margin:0">Story ideas <span class="muted small" id="count"></span></h3>
+          <div style="display:flex;gap:8px;flex-wrap:wrap"><select id="cat" class="field" style="width:auto"></select><input id="q" class="field" style="width:180px" placeholder="Search…"></div>
+        </div>
+        <p class="small muted" style="margin:6px 0 0">Collected automatically every morning from the past week's news. Click <b>Add</b> to put a story in the Bulletin.</p>
+        <div class="scroll" id="cands" style="margin-top:8px"></div>
+        <details style="margin-top:16px"><summary style="cursor:pointer;font-weight:600">＋ Add your own story or link</summary>
+          <label class="f">Headline</label><input id="nt" class="field">
+          <label class="f">Link</label><input id="nu" class="field" placeholder="https://">
+          <label class="f">Source (optional)</label><input id="ns" class="field" placeholder="Boston Globe, Winthrop Transcript…">
+          <p style="margin-top:10px"><button class="btn sm" id="addown">Add to this week</button></p>
+        </details>
+      </div>
+
+      <div class="sticky">
+        <div class="card pad">
+          <h3 style="margin:0 0 4px">This week's Bulletin <span class="muted small" id="pcount"></span></h3>
+          <p class="small muted" style="margin:0 0 12px">Reorder with the arrows. Add a one-line take so readers know why it matters. These show first on the site's Headlines section.</p>
+          <div id="picks"></div>
+          <p class="small muted" id="unsaved" style="color:var(--bad);display:none">You have unpublished changes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="toast" id="toast"></div>
+
+<script>
+(function () {
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  // Repo is worked out from the site address (owner.github.io/repo); fallback below.
+  const host = location.hostname.endsWith('github.io') ? location.hostname.split('.')[0] : 'Bowdoin-Real-Estate';
+  const repoName = location.hostname.endsWith('github.io') ? (location.pathname.split('/')[1] || 'bowdoin-bulletin') : 'bowdoin-bulletin';
+  const API = `https://api.github.com/repos/${host}/${repoName}/contents/data/news.json`;
+  const store = { get: (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} }, del: (k) => { try { localStorage.removeItem(k); } catch (e) {} } };
+  let token = store.get('bb-editor-token'), who = store.get('bb-editor-who') || 'Jenny';
+  let news = null, sha = null, picks = [], dirty = false;
+
+  const b64dec = (s) => new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\n/g, '')), (c) => c.charCodeAt(0)));
+  const b64enc = (s) => { const bytes = new TextEncoder().encode(s); let bin = ''; bytes.forEach((b) => bin += String.fromCharCode(b)); return btoa(bin); };
+  const gh = (url, opts = {}) => fetch(url, { ...opts, headers: { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json', ...(opts.headers || {}) } });
+  function toast(t) { const el = $('#toast'); el.textContent = t; el.style.display = 'block'; clearTimeout(el._t); el._t = setTimeout(() => el.style.display = 'none', 2600); }
+  function weekOf() { const d = new Date(); const day = d.getDay(); const fri = new Date(d); fri.setDate(d.getDate() + ((5 - day + 7) % 7)); return fri.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }); }
+  function setDirty(v) { dirty = v; $('#unsaved').style.display = v ? 'block' : 'none'; }
+  window.addEventListener('beforeunload', (e) => { if (dirty) { e.preventDefault(); e.returnValue = ''; } });
+
+  async function load() {
+    const r = await gh(API + '?ref=main&t=' + Date.now());
+    if (r.status === 401 || r.status === 403 || r.status === 404) throw new Error('That key didn\'t work. Check it has access to the bowdoin-bulletin repository.');
+    if (!r.ok) throw new Error('GitHub error ' + r.status);
+    const j = await r.json(); sha = j.sha; news = JSON.parse(b64dec(j.content));
+    picks = (news.editors_picks || []).map((p) => ({ ...p }));
+    $('#weeklabel').textContent = 'Week of ' + weekOf() + ' · editing as ' + who;
+    $('#status').textContent = news.updated ? 'Story ideas last refreshed ' + new Date(news.updated).toLocaleString() : 'Story ideas appear after the first daily sync runs.';
+    const pool = candidates(); const cats = [...new Set(pool.map((p) => p.category).filter(Boolean))];
+    $('#cat').innerHTML = '<option value="">All topics</option>' + cats.map((c) => `<option>${esc(c)}</option>`).join('');
+    renderCands(); renderPicks(); setDirty(false);
+  }
+  function candidates() {
+    if (news.pool && news.pool.length) return news.pool;
+    const out = []; Object.entries(news.categories || {}).forEach(([c, items]) => items.forEach((i) => out.push({ ...i, category: c }))); return out;
+  }
+  function renderCands() {
+    const q = $('#q').value.toLowerCase(), cat = $('#cat').value, chosen = new Set(picks.map((p) => p.url));
+    const list = candidates().filter((p) => (!cat || p.category === cat) && (!q || (p.title + ' ' + p.source).toLowerCase().includes(q)));
+    $('#count').textContent = '(' + list.length + ')';
+    $('#cands').innerHTML = list.length ? list.map((p, i) => `<div class="cand ${chosen.has(p.url) ? 'picked' : ''}"><div><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>
+        <div class="small muted">${esc(p.source || '')}${p.category ? ' · ' + esc(p.category) : ''}${p.published ? ' · ' + new Date(p.published).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }) : ''}</div></div>
+        <div>${chosen.has(p.url) ? '<span class="small muted">Added ✓</span>' : `<button class="ib" data-add="${esc(p.url)}">Add</button>`}</div></div>`).join('')
+      : '<div class="empty small">No story ideas match.</div>';
+  }
+  function renderPicks() {
+    $('#pcount').textContent = '(' + picks.length + ')';
+    $('#picks').innerHTML = picks.length ? picks.map((p, i) => `<div class="pick"><div class="row"><b style="font-size:.95rem">${i + 1}. ${esc(p.title)}</b>
+        <span style="white-space:nowrap"><button class="ib" data-up="${i}" title="Move up">↑</button> <button class="ib" data-down="${i}" title="Move down">↓</button> <button class="ib" data-del="${i}" title="Remove">✕</button></span></div>
+        <div class="small muted">${esc(p.source || '')} · <a href="${esc(p.url)}" target="_blank" rel="noopener">open</a></div>
+        <textarea data-blurb="${i}" placeholder="Our take (optional): why it matters to buyers, sellers or neighbors…">${esc(p.blurb || '')}</textarea></div>`).join('')
+      : '<div class="empty small">No stories picked yet. Add some from the left.</div>';
+  }
+  document.addEventListener('click', (e) => {
+    const t = e.target;
+    if (t.dataset.add) { const p = candidates().find((x) => x.url === t.dataset.add); if (p) { picks.push({ title: p.title, url: p.url, source: p.source || '', category: p.category || '', blurb: '' }); setDirty(true); renderPicks(); renderCands(); } }
+    if (t.dataset.up) { const i = +t.dataset.up; if (i > 0) { [picks[i - 1], picks[i]] = [picks[i], picks[i - 1]]; setDirty(true); renderPicks(); } }
+    if (t.dataset.down) { const i = +t.dataset.down; if (i < picks.length - 1) { [picks[i + 1], picks[i]] = [picks[i], picks[i + 1]]; setDirty(true); renderPicks(); } }
+    if (t.dataset.del) { picks.splice(+t.dataset.del, 1); setDirty(true); renderPicks(); renderCands(); }
+  });
+  document.addEventListener('input', (e) => { if (e.target.dataset.blurb) { picks[+e.target.dataset.blurb].blurb = e.target.value; setDirty(true); } });
+  $('#q').addEventListener('input', renderCands); $('#cat').addEventListener('change', renderCands);
+  $('#addown').onclick = () => {
+    const t = $('#nt').value.trim(), u = $('#nu').value.trim();
+    if (!t || !/^https?:\/\//.test(u)) return toast('Add a headline and a full link (https://…)');
+    picks.push({ title: t, url: u, source: $('#ns').value.trim(), category: 'Our pick', blurb: '' }); ['#nt', '#nu', '#ns'].forEach((s) => $(s).value = ''); setDirty(true); renderPicks(); renderCands();
+  };
+
+  $('#save').onclick = async () => {
+    $('#save').disabled = true; $('#save').textContent = 'Publishing…';
+    try {
+      // re-read first so we never overwrite the morning sync or the other editor
+      const r = await gh(API + '?ref=main&t=' + Date.now()); const j = await r.json(); const latest = JSON.parse(b64dec(j.content));
+      latest.editors_picks = picks.map(({ title, url, source, blurb, category }) => ({ title, url, source, blurb, category }));
+      latest.picks_updated = new Date().toISOString(); latest.picks_by = who;
+      const put = await gh(API, { method: 'PUT', body: JSON.stringify({ message: `Bulletin picks for week of ${weekOf()} (by ${who})`, content: b64enc(JSON.stringify(latest, null, 2) + '\n'), sha: j.sha, branch: 'main' }) });
+      if (!put.ok) throw new Error(put.status === 409 ? 'Someone else just saved. Reload and try again.' : 'Save failed (' + put.status + ')');
+      sha = (await put.json()).content.sha; news = latest; setDirty(false);
+      toast('Published! The site updates in about a minute.');
+    } catch (e) { toast(e.message); }
+    $('#save').disabled = false; $('#save').textContent = 'Publish to site';
+  };
+
+  $('#copy').onclick = async () => {
+    if (!picks.length) return toast('Pick some stories first');
+    const html = '<h2>📰 Worth a read this week</h2><ul>' + picks.map((p) => `<li><a href="${esc(p.url)}"><b>${esc(p.title)}</b></a>${p.source ? ' <i>(' + esc(p.source) + ')</i>' : ''}${p.blurb ? '<br>' + esc(p.blurb) : ''}</li>`).join('') + '</ul>';
+    const text = 'Worth a read this week\n\n' + picks.map((p) => `• ${p.title}${p.source ? ' (' + p.source + ')' : ''}\n  ${p.url}${p.blurb ? '\n  ' + p.blurb : ''}`).join('\n\n');
+    try { await navigator.clipboard.write([new ClipboardItem({ 'text/html': new Blob([html], { type: 'text/html' }), 'text/plain': new Blob([text], { type: 'text/plain' }) })]); }
+    catch (e) { try { await navigator.clipboard.writeText(text); } catch (e2) { return toast('Copy blocked by the browser'); } }
+    toast('Copied! Paste it into your email.');
+  };
+
+  $('#go').onclick = async () => {
+    token = $('#tok').value.trim(); who = $('#who').value;
+    if (!token) return;
+    $('#loginmsg').textContent = 'Checking…';
+    try { await load(); store.set('bb-editor-token', token); store.set('bb-editor-who', who); show(true); }
+    catch (e) { $('#loginmsg').textContent = e.message; }
+  };
+  $('#signout').onclick = (e) => { e.preventDefault(); store.del('bb-editor-token'); location.reload(); };
+  function show(ed) { $('#login').style.display = ed ? 'none' : 'block'; $('#editor').style.display = ed ? 'block' : 'none'; $('#signout').style.display = ed ? '' : 'none'; }
+
+  if (token) load().then(() => show(true)).catch(() => show(false)); else show(false);
+  $('#who').value = who;
+})();
+</script>
+</body>
+</html>
