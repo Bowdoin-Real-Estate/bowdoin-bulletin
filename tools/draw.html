@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Trivia winner picker</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>textarea{width:100%;min-height:180px;font:13px/1.4 ui-monospace,monospace;padding:12px;border-radius:10px;border:1px solid var(--line)}
+label{display:block;font-weight:600;margin:14px 0 6px} select,input[type=datetime-local]{padding:9px;border-radius:10px;border:1px solid var(--line);font:inherit;width:100%}
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:12px} td,th{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left}
+.winner{font:600 2.2rem var(--serif);margin:8px 0}</style>
+</head>
+<body>
+<main><section class="block"><div class="wrap" style="max-width:880px">
+  <span class="eyebrow">Private tool · not linked from the site</span>
+  <h1 style="margin-top:10px">Trivia winner picker</h1>
+  <p class="muted">Open the Google Sheet of trivia entries → File → Download → CSV, then load it below. Scores are <b>re-checked against the answer key</b> in <code>data/trivia.json</code>, so nobody can fake a score. Nothing leaves this browser.</p>
+
+  <label>1. Entries CSV <input type="file" id="file" accept=".csv,text/csv" style="font-weight:400;width:auto"></label>
+  <textarea id="csv" placeholder="Paste CSV here (with header row)"></textarea>
+
+  <div class="grid g3" style="gap:10px">
+    <div><label>Week (question set)</label><select id="set"></select></div>
+    <div><label>Email column</label><select id="emailCol"></select></div>
+    <div><label>Name column</label><select id="nameCol"></select></div>
+    <div><label>Town column</label><select id="townCol"></select></div>
+    <div><label>Answers column</label><select id="ansCol"></select></div>
+    <div><label>Seconds column</label><select id="secCol"></select></div>
+    <div><label>Set ID column</label><select id="setCol"></select></div>
+    <div><label>Timestamp column</label><select id="tsCol"></select></div>
+    <div><label>Entries close (optional)</label><input type="datetime-local" id="to"></div>
+  </div>
+  <p class="small muted">Only rows for the chosen week count, the <b>first</b> entry per email is kept (replays are ignored), and rows after the closing time are dropped.</p>
+  <label style="font-weight:400"><input type="checkbox" id="exclude"> Exclude these emails (staff, family), one per line:</label>
+  <textarea id="excl" style="min-height:60px" placeholder="leighann@bowdoinrealestate.com"></textarea>
+
+  <p style="margin-top:18px"><button class="btn brass" id="go">🏆 Rank entries &amp; pick winner</button></p>
+  <div id="out"></div>
+</div></section></main>
+<script>
+const $ = (s) => document.querySelector(s);
+let trivia = { sets: [] }, rows = [];
+fetch('../data/trivia.json?v=' + Date.now()).then((r) => r.json()).then((t) => { trivia = t;
+  $('#set').innerHTML = t.sets.slice().reverse().map((s) => `<option value="${s.id}">${s.id} – ${s.title}</option>`).join(''); });
+function parseCSV(text) {
+  const out = []; let row = [], f = '', q = false;
+  for (let i = 0; i < text.length; i++) { const c = text[i];
+    if (q) { if (c === '"') { if (text[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true; else if (c === ',') { row.push(f); f = ''; }
+    else if (c === '\n' || c === '\r') { if (c === '\r' && text[i + 1] === '\n') i++; row.push(f); out.push(row); row = []; f = ''; }
+    else f += c; }
+  if (f || row.length) { row.push(f); out.push(row); }
+  return out.filter((r) => r.some((x) => x.trim()));
+}
+function refresh() {
+  rows = parseCSV($('#csv').value.trim()); if (!rows.length) return;
+  const head = rows[0];
+  const opts = (re) => '<option value="-1">—</option>' + head.map((h, i) => `<option value="${i}" ${re.test(h) ? 'selected' : ''}>${h}</option>`).join('');
+  $('#emailCol').innerHTML = opts(/e-?mail/i); $('#nameCol').innerHTML = opts(/^name|full name/i); $('#townCol').innerHTML = opts(/town|city/i);
+  $('#ansCol').innerHTML = opts(/answer/i); $('#secCol').innerHTML = opts(/sec|time taken|seconds/i); $('#setCol').innerHTML = opts(/set|week/i); $('#tsCol').innerHTML = opts(/timestamp/i);
+}
+$('#csv').addEventListener('input', refresh);
+$('#file').addEventListener('change', async (e) => { $('#csv').value = await e.target.files[0].text(); refresh(); });
+function rand(n) { const a = new Uint32Array(1); const lim = Math.floor(0xffffffff / n) * n; do crypto.getRandomValues(a); while (a[0] >= lim); return a[0] % n; }
+$('#go').addEventListener('click', () => {
+  if (rows.length < 2) return alert('Load the entries CSV first.');
+  const c = (id) => +$('#' + id).value;
+  const [ei, ni, wi, ai, si, sid, ti] = ['emailCol', 'nameCol', 'townCol', 'ansCol', 'secCol', 'setCol', 'tsCol'].map(c);
+  if (ei < 0 || ai < 0 || si < 0) return alert('Pick the email, answers and seconds columns.');
+  const set = trivia.sets.find((s) => s.id === $('#set').value); if (!set) return alert('Pick a week.');
+  const to = $('#to').value ? new Date($('#to').value) : null;
+  const excl = new Set($('#exclude').checked ? $('#excl').value.toLowerCase().split(/\s+/).filter(Boolean) : []);
+  const seen = new Set(), pool = []; let skipped = 0;
+  rows.slice(1).forEach((r) => {
+    const em = (r[ei] || '').trim().toLowerCase();
+    if (!em.includes('@') || excl.has(em)) { skipped++; return; }
+    if (sid >= 0 && r[sid] && r[sid].trim() !== set.id) { skipped++; return; }
+    if (to && ti >= 0) { const d = new Date(r[ti]); if (!isNaN(d) && d > to) { skipped++; return; } }
+    if (seen.has(em)) { skipped++; return; } seen.add(em);
+    const ans = (r[ai] || '').split(',').map((x) => parseInt(x, 10));
+    const score = set.questions.reduce((s, q, k) => s + (ans[k] === q.answer ? 1 : 0), 0);
+    pool.push({ email: em, name: ni >= 0 ? r[ni] : '', town: wi >= 0 ? r[wi] : '', score, secs: parseFloat(r[si]) || 9999 });
+  });
+  if (!pool.length) return $('#out').innerHTML = '<div class="notice">No eligible entries for that week.</div>';
+  pool.sort((a, b) => b.score - a.score || a.secs - b.secs);
+  const top = pool.filter((p) => p.score === pool[0].score && p.secs === pool[0].secs);
+  const w = top.length > 1 ? top[rand(top.length)] : top[0];
+  const stamp = new Date().toLocaleString(), n = set.questions.length;
+  const short = (w.name.split(' ')[0] || '') + (w.name.split(' ')[1] ? ' ' + w.name.split(' ')[1][0] + '.' : '');
+  $('#out').innerHTML = `<div class="give" style="margin-top:10px"><span class="eyebrow">Winner · ${set.title}</span><div class="winner">🏆 ${w.name || w.email}</div>
+    <div>${w.email}${w.town ? ' · ' + w.town : ''} · <b>${w.score}/${n}</b> in ${w.secs}s</div>
+    ${top.length > 1 ? `<p class="small">Exact tie between ${top.length} players: winner chosen at random.</p>` : ''}
+    <p class="small muted">${pool.length} eligible players · ${skipped} rows skipped · ${stamp}</p>
+    <p class="small">Add to <code>data/config.json → giveaway.past_winners</code>:<br><code>{ "date": "${new Date().toISOString().slice(0, 10)}", "name": "${short}", "town": "${w.town}", "score": "${w.score}/${n} in ${Math.round(w.secs)}s" }</code></p>
+    <button class="btn sm ghost" id="dl">Download results record</button></div>
+    <h3 style="margin-top:24px">Leaderboard</h3><table><tr><th>#</th><th>Name</th><th>Town</th><th>Score</th><th>Seconds</th></tr>
+    ${pool.slice(0, 25).map((p, i) => `<tr><td>${i + 1}</td><td>${p.name}</td><td>${p.town}</td><td>${p.score}/${n}</td><td>${p.secs}</td></tr>`).join('')}</table>`;
+  $('#dl').onclick = () => { const txt = `Trivia ${set.id} – ranked ${stamp}\nWinner: ${w.name} <${w.email}> ${w.town} ${w.score}/${n} ${w.secs}s\n\n` + pool.map((p, i) => `${i + 1}. ${p.name} <${p.email}> ${p.town} ${p.score}/${n} ${p.secs}s`).join('\n');
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'text/plain' })); a.download = 'trivia-results-' + set.id + '.txt'; a.click(); };
+});
+</script>
+</body>
+</html>
