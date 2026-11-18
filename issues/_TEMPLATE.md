@@ -39,9 +39,9 @@ _[A local business you love.]_
 
 _[Seasonal maintenance tip.]_
 
-## 🎁 This week's giveaway
+## 🧠 This week's Boston Trivia Challenge
 
-{{giveaway}}
+{{trivia}}
 
 ## 💬 Ask an agent
 
@@ -55,6 +55,6 @@ SHORTCODES you can use anywhere in an issue:
   {{listings}}           -> grid of all current listings
   {{events:4}}           -> next 4 upcoming events
   {{rates}}              -> current mortgage rates
-  {{giveaway}}           -> giveaway entry box
+  {{trivia}}             -> weekly trivia box with countdown
   {{signup}}             -> newsletter signup box
 -->
