@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T02:30:21+00:00",
+  "updated": "2026-11-18T02:39:27+00:00",
   "_help": "'categories' is refreshed automatically every day by the GitHub Action. Put your own hand-picked stories in 'editors_picks' (title, url, source, blurb) – those are never overwritten.",
   "editors_picks": [],
   "categories": {
@@ -8,7 +8,7 @@
         "title": "Residential transformation planned for 98 Beacon St. in Worcester",
         "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWVNHY1lUUjEwY19pZ2NhYjM3ZVpNa2RnZHhJTVNSRlc1RlJybTIyQUpldzBIVXNSM0lUU1NNR0kyaXowN1czYk5IOE1QSElUSWR0aGFSVHNYaGUwaDctVDk4d0FvQnJJY0RXUjEzTXppbU9rRlV3blBUdDhBazJ5Ry1XMmk?oc=5",
         "source": "Boston Agent Magazine",
-        "published": "2026-11-17T21:48:59+00:00"
+        "published": "2026-11-18T00:08:56+00:00"
       },
       {
         "title": "Central Mass. town gets $100K grant to plan future of Anna Maria campus",
@@ -43,6 +43,12 @@
     ],
     "Boston": [
       {
+        "title": "The second victim recovered from the Threemile River in Taunton following a crash last week has been identified.",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNS01TaDQxMDd2dm1yeDNEOVlyMllSTjh5ME1kNUJaRFVLSHMwTVhVTWdfWUwyOUlJdV9CRFF2TkRxUGN1cDJ0YjAtS05VQVpYdVJyMllEQ3lDRGhUaUh2UklFTkU5SklINFN0S0l3d19UZlpYazhsTzdRaWhhRnRyZi1xOGFBQlZfVWtkVUg4cjVBcHlpc0NfNkJ1cy1Kay1oZEJtVnRKa2VRMnhmb0VZdzBxU0JYN2dPNi1SekRiYXE2S2F5YWt2U2hKQm44UVJjdjl4VHJYcVBWZw?oc=5",
+        "source": "Facebook",
+        "published": "2026-11-18T02:26:17+00:00"
+      },
+      {
         "title": "Jake Bauers says the city of Boston figured into his decision to sign with the Red Sox",
         "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxONHo5TEFNTWpvbFZnN0F6elpJSncwUnlHejBiLV9XQnRkampLLWwtSndqY2gwLXVwLUVRaTlwZElnQkZ2aUJlYTF2WUtWSWhpemwxcXdoOFB5cVUxenRNNVRfX3M1QVY1dkJlZWl5MjNaYzZ2NVhKdEtlV0pLdS1LR3VWZjBfNmFNQlNELWpsUnNCdXZJNzYwLU9Sa1BPbjdick5SRzhtaTVLX19ZS0NyUUFnN1J5a3U5anVTRlFiR0pmNXZKVE1ma0ptdjl3UDFWbXJOb1E4b0Y0Yk0?oc=5",
         "source": "Boston.com",
@@ -71,26 +77,20 @@
         "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOd3JfNDIzRUxBTXQ3UEFBYUkxdDFoS1pxcXVLOVFVSnota2lYQ2VCLVNESVo1WHhHZFVhZ0lBNWQwR2ctaTlxemtRenEwWjd0U2RCUGc3UUJmb2I1TTdBVVRaN1BuU05CTVQ4NGFmcTBXODZTUWU1MVJEdUlQWkFjbnU0eFhmbVh4by01bi1jT2JVcGNJU1gtdy1CdUhPVG8?oc=5",
         "source": "The Business Journals",
         "published": "2026-11-18T00:43:00+00:00"
-      },
-      {
-        "title": "[[LIVESTERAM!!NOW) Los Angeles Kings v Boston Bruins 𝐋𝐈𝐕𝐄 Ｓｔｒｅａｍｓ",
-        "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxNVEI4eS1hSnFHWEVINW90a1A4QjlwandHMGpxR2Yzd2tGdXpiR2pwMFRoUUlydU96NVMwVVBmSVF2dXcwTGxjdVkwSDVrMTRoSUN0dGFGSFN5dWdIMlNYM2c1X2RPcXhzYUJvNlBzajl5T0R2T3NkbG5fYlpuaElqRFlCZGJvNkdfbkJBSmNBMFhwaFEyd3RmVkhDN1d4b2thUUNBVXVIRnJrRE50T05aTmNOak5lNURpMFBfZUhyQnpCdHhJS19uaWxuNFZKbFZJS3dXdWNaeEpkdXFZR0N0a24yVlpPa3FramcyRXNXZXRLWUJNYTJhVjhWcEtMclhuNVRwWXAxWGRHbld6cWZDTV8yNFVCY3Z2NXVFQXJMSDVhU25SdTFDWXBTbHFXdl9kVmFla0t1WXh3RllnSlRtRUlkX3BiVm1HUDQ3OEZR?oc=5",
-        "source": "Comité Asesor de Vacunas de la AEP",
-        "published": "2026-11-18T00:39:07+00:00"
       }
     ],
-    "Winthrop & North Shore": [
+    "Around Town": [
+      {
+        "title": "The second victim recovered from the Threemile River in Taunton following a crash last week has been identified.",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNS01TaDQxMDd2dm1yeDNEOVlyMllSTjh5ME1kNUJaRFVLSHMwTVhVTWdfWUwyOUlJdV9CRFF2TkRxUGN1cDJ0YjAtS05VQVpYdVJyMllEQ3lDRGhUaUh2UklFTkU5SklINFN0S0l3d19UZlpYazhsTzdRaWhhRnRyZi1xOGFBQlZfVWtkVUg4cjVBcHlpc0NfNkJ1cy1Kay1oZEJtVnRKa2VRMnhmb0VZdzBxU0JYN2dPNi1SekRiYXE2S2F5YWt2U2hKQm44UVJjdjl4VHJYcVBWZw?oc=5",
+        "source": "Facebook",
+        "published": "2026-11-18T02:26:17+00:00"
+      },
       {
         "title": "Winthrop Varsity Football @ Norwell",
         "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQ3VSM05hcGtVc0ptSXRzSEJTdTNjOFlHaUlQanR4Wk10U0h5NGpfbzZTTmxEQVc0dEFtTVdRVWpKVjYwa0N1ai1pazNfS0JFRjl1cEdLUzBFMHFYZWRSNTk5WFQ3Wlgzb2xSbDZMXzVQQmJmNFhJc0lDTzJSTUVPdnNVVUpkT2hoZ1o4SlpNTEdiTW4xY0E3WXdzbG13SUQwanotNEZhOFFCTHdMZHFzcGRn?oc=5",
         "source": "MaxPreps",
         "published": "2026-11-17T20:51:11+00:00"
-      },
-      {
-        "title": "The second victim recovered from the Threemile River in Taunton following a crash last week has been identified.",
-        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNS01TaDQxMDd2dm1yeDNEOVlyMllSTjh5ME1kNUJaRFVLSHMwTVhVTWdfWUwyOUlJdV9CRFF2TkRxUGN1cDJ0YjAtS05VQVpYdVJyMllEQ3lDRGhUaUh2UklFTkU5SklINFN0S0l3d19UZlpYazhsTzdRaWhhRnRyZi1xOGFBQlZfVWtkVUg4cjVBcHlpc0NfNkJ1cy1Kay1oZEJtVnRKa2VRMnhmb0VZdzBxU0JYN2dPNi1SekRiYXE2S2F5YWt2U2hKQm44UVJjdjl4VHJYcVBWZw?oc=5",
-        "source": "Facebook",
-        "published": "2026-11-17T20:00:05+00:00"
       },
       {
         "title": "Althea Alling Obituary - (1921-2026)",
