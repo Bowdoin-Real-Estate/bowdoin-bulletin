@@ -1,6 +1,6 @@
 {
   "newsletter_name": "The Bowdoin Bulletin",
-  "tagline": "Real estate, local news & things to do around Boston and the North Shore",
+  "tagline": "Real estate, local news & things to do around Greater Boston",
   "frequency": "weekly",
   "site_url": "https://bowdoin-real-estate.github.io/bowdoin-bulletin/",
 
@@ -67,7 +67,7 @@
   "news_feeds": [
     { "category": "Real Estate", "url": "https://news.google.com/rss/search?q=Boston+OR+Massachusetts+real+estate+housing+market+when:7d&hl=en-US&gl=US&ceid=US:en" },
     { "category": "Boston", "url": "https://news.google.com/rss/search?q=Boston+news+when:3d&hl=en-US&gl=US&ceid=US:en" },
-    { "category": "Winthrop & North Shore", "url": "https://news.google.com/rss/search?q=Winthrop+MA+OR+Revere+OR+%22East+Boston%22+OR+Lynn+OR+Swampscott+when:7d&hl=en-US&gl=US&ceid=US:en" }
+    { "category": "Around Town", "url": "https://news.google.com/rss/search?q=Winthrop+MA+OR+Revere+OR+%22East+Boston%22+OR+Lynn+OR+Swampscott+when:7d&hl=en-US&gl=US&ceid=US:en" }
   ],
   "news_per_category": 6
 }
