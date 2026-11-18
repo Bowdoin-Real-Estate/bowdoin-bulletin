@@ -1,6 +1,6 @@
 # The Bowdoin Bulletin
 
-The newsletter website for **Bowdoin Real Estate Partners**: real estate news, Boston & North Shore headlines, local events, featured listings pulled from [bowdoinrealestate.com](https://www.bowdoinrealestate.com), and a weekly timed **Boston Trivia Challenge** where the top score wins an Amazon gift card.
+The newsletter website for **Bowdoin Real Estate Partners**: real estate news, Greater Boston headlines, local events, featured listings pulled from [bowdoinrealestate.com](https://www.bowdoinrealestate.com), and a weekly timed **Boston Trivia Challenge** where the top score wins an Amazon gift card.
 
 It's a plain static site: no build step, no server. GitHub Pages hosts it for free, and a GitHub Action refreshes listings, headlines and mortgage rates every morning.
 
@@ -81,7 +81,7 @@ Until this is set up, players get a "Send my score" button that emails their res
 `scripts/sync.py`, run by `.github/workflows/sync.yml`:
 
 - **Listings**: reads the [company listings page](https://www.bowdoinrealestate.com/bowdoin-real-estate-partners/listings), visits each property, and saves price/beds/baths/photo/agent. Your `featured` and `note` (e.g. "New price", "Open house Sat") edits are kept. If the site ever changes layout and nothing is found, the old listings stay up.
-- **Headlines**: Google News feeds for Boston/MA real estate, Boston news, and Winthrop & North Shore. Change the searches in `config.json → news_feeds` (any RSS feed works).
+- **Headlines**: Google News feeds for Boston/MA real estate, Boston news, and local town news ("Around Town"). Change the searches in `config.json → news_feeds` (any RSS feed works).
 - **Mortgage rates**: Freddie Mac's weekly survey via FRED.
 
 ## 5. Customize
