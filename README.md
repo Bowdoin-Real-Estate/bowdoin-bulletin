@@ -1,0 +1,3 @@
+# The Bowdoin Bulletin
+
+Setting up...
