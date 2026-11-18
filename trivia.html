@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weekly Boston Trivia</title>
+<meta name="description" content="Think you know Boston? Play the weekly timed Boston Trivia Challenge from Bowdoin Real Estate Partners. Top score wins an Amazon gift card.">
+<meta property="og:title" content="Weekly Boston Trivia Challenge"><meta property="og:description" content="10 questions. 15 seconds each. Top score wins an Amazon gift card.">
+<link rel="icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/app.js" defer></script>
+</head>
+<body data-page="trivia">
+<main>
+  <section class="hero" style="padding:44px 0 30px"><div class="wrap two-col" style="align-items:center">
+    <div>
+      <span class="eyebrow">New questions every week</span>
+      <h1 style="margin-top:12px">The <span data-r="name"></span></h1>
+      <p class="lead">How well do you know Boston? <span data-r="n"></span> questions, <span data-r="secs"></span> seconds each. The highest score of the week wins a <span data-r="prize"></span>. If there's a tie, the fastest time wins.</p>
+    </div>
+    <div id="giveaway"></div>
+  </div></section>
+
+  <section class="block" id="play"><div class="wrap two-col">
+    <div id="game"></div>
+    <div>
+      <div class="card pad">
+        <span class="eyebrow">How it works</span>
+        <ol style="margin:10px 0 0;padding-left:20px">
+          <li><b>Play once a week.</b> Your first game is your official entry.</li>
+          <li><b>Beat the clock.</b> <span data-r="secs"></span> seconds per question. Unanswered questions count as wrong.</li>
+          <li><b>Top score wins.</b> Ties go to the fastest total time. Entries close <span data-r="day"></span> at <span data-r="time"></span> ET.</li>
+          <li><b>Winner announced</b> in the next issue (first name, last initial and town).</li>
+        </ol>
+      </div>
+      <div class="card pad" style="margin-top:20px">
+        <span class="eyebrow">Hall of fame</span>
+        <h3 style="margin-top:8px">Recent champions</h3>
+        <div id="winners"></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="block" id="rules"><div class="wrap prose" style="font-size:.95rem">
+    <span class="eyebrow">The fine print</span>
+    <h1 style="font-size:2rem;margin-top:10px">Official Rules: <span data-r="name"></span></h1>
+    <!-- TEMPLATE: have an attorney review these rules before launch. Values come from data/config.json. -->
+    <p><b>NO PURCHASE OR PAYMENT OF ANY KIND IS NECESSARY TO ENTER OR WIN. VOID WHERE PROHIBITED.</b></p>
+    <p><b>1. Sponsor.</b> <span data-r="sponsor"></span>, <span data-r="address"></span> ("Sponsor").</p>
+    <p><b>2. Eligibility.</b> Open to legal residents of <span data-r="area"></span> who are at least <span data-r="age"></span> years old at the time of entry. Employees and agents of Sponsor and members of their immediate families and households are not eligible.</p>
+    <p><b>3. Contest period.</b> The contest runs in <span data-r="freq"></span> rounds. Each round opens when that round's questions are posted on this page and closes <span data-r="day"></span> at <span data-r="time"></span> Eastern Time.</p>
+    <p><b>4. How to enter.</b> Play the trivia game on this page and submit your name, email and town. Limit one (1) official entry per person and per email address per round. Only your first completed game in a round counts. Later games are practice only. Entries made using multiple identities, scripts, bots or other automated means are void.</p>
+    <p><b>5. Judging.</b> This is a game of skill. Each correct answer earns one point, and unanswered questions earn zero points. The eligible entrant with the highest score wins. If two or more entrants tie, the entrant with the lowest total answer time wins. If a tie remains, the winner is chosen by random drawing among the tied entrants. Sponsor's decisions are final.</p>
+    <p><b>6. Prize.</b> One (1) <span data-r="prize"></span> (approximate retail value: <span data-r="value"></span>) per round. No substitution or cash equivalent except at Sponsor's discretion. Gift cards are subject to the issuer's terms and conditions. Amazon is not a sponsor of, and is not affiliated with, this contest.</p>
+    <p><b>7. Notification.</b> The potential winner will be notified by email within 3 business days of the round closing and must respond within 7 days. Otherwise the prize goes to the next-ranked entrant. The winner's first name, last initial, town and score may be published in the newsletter and on this website.</p>
+    <p><b>8. General.</b> By entering, participants agree to these Official Rules. Sponsor is not responsible for technical failures, lost or incomplete entries, or network issues. Sponsor may disqualify anyone who tampers with the game or entry process, and may cancel or modify a round if its integrity is compromised. Winners are responsible for any applicable taxes.</p>
+    <p><b>9. Privacy.</b> Information collected is used to run the contest and, if you opt in, to send the newsletter. Sponsor does not sell your personal information.</p>
+    <p><b>10. Winners list.</b> For the name of a round's winner, email <span data-r="email"></span> within 30 days of the round closing.</p>
+  </div></section>
+</main>
+</body>
+</html>
