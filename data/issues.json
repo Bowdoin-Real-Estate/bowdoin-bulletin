@@ -1,0 +1,12 @@
+{
+  "_help": "Newest first. Each issue is a Markdown file in /issues. Copy issues/_TEMPLATE.md to start a new one, then add a line here.",
+  "issues": [
+    {
+      "id": "2026-11-20-welcome",
+      "number": 1,
+      "date": "2026-11-20",
+      "title": "Welcome to The Bowdoin Bulletin",
+      "summary": "What's in store every week, a featured Winthrop listing, and our first gift card giveaway."
+    }
+  ]
+}

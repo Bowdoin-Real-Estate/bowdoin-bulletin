@@ -1,0 +1,73 @@
+{
+  "newsletter_name": "The Bowdoin Bulletin",
+  "tagline": "Real estate, local news & things to do around Boston and the North Shore",
+  "frequency": "weekly",
+  "site_url": "https://bowdoin-real-estate.github.io/bowdoin-bulletin/",
+
+  "brokerage": {
+    "name": "Bowdoin Real Estate Partners",
+    "website": "https://www.bowdoinrealestate.com",
+    "logo": "https://brndna-prod.s3.us-east-2.amazonaws.com/logos/brokerage/qqoeOxto20YeJ4pOu4V8xGbUeln1/logo.svg",
+    "phone": "(617) 207-2765",
+    "email": "admin@bowdoinrealestate.com",
+    "address": "207 Hagman Rd, Winthrop, MA 02152",
+    "instagram": "https://www.instagram.com/bowdoinrealestate",
+    "listings_page": "https://www.bowdoinrealestate.com/bowdoin-real-estate-partners/listings",
+    "links": {
+      "Search homes": "https://www.bowdoinrealestate.com/listings",
+      "What's my home worth?": "https://www.bowdoinrealestate.com/home-valuation",
+      "Buyer's guide": "https://www.bowdoinrealestate.com/bowdoin-buyers-guide",
+      "Set listing alerts": "https://www.bowdoinrealestate.com/set-alerts",
+      "Mortgage calculator": "https://www.bowdoinrealestate.com/mortgage-calculator",
+      "Rentals": "https://www.bowdoinrealestate.com/listings?type=lease",
+      "Neighborhoods": "https://www.bowdoinrealestate.com/neighborhoods",
+      "In the community": "https://www.bowdoinrealestate.com/bowdoin-in-the-community"
+    },
+    "agents": [
+      { "name": "LeighAnn Eruzione", "phone": "(617) 799-4810", "email": "leighann@bowdoinrealestate.com", "aliases": ["Leighann Eruzione"] },
+      { "name": "Jenny Golic", "phone": "(617) 913-3164", "email": "jenny@bowdoinrealestate.com", "website": "https://www.jennygolicrealtor.com" },
+      { "name": "Chrissy D'Ambrosio", "phone": "(617) 797-3344", "email": "chrissy@bowdoinrealestate.com", "aliases": ["Christine D'Ambrosio"] }
+    ]
+  },
+
+  "signup": {
+    "_help": "provider: 'mailchimp' (paste the form action URL from Mailchimp's embedded form), 'link' (any signup page: Beehiiv, Substack, Google Form...), or 'none'.",
+    "provider": "none",
+    "action_url": "",
+    "link_url": ""
+  },
+
+  "giveaway": {
+    "_help": "Weekly Boston Trivia Challenge. Questions live in data/trivia.json. Scores are sent to a Google Form (see README). draw_weekday: 0=Sun ... 5=Fri.",
+    "enabled": true,
+    "game_name": "Boston Trivia Challenge",
+    "prize": "$50 Amazon gift card",
+    "prize_value": "$50.00",
+    "frequency": "weekly",
+    "draw_weekday": 5,
+    "draw_time": "12:00",
+    "score_form": {
+      "action_url": "",
+      "fields": { "name": "", "email": "", "town": "", "score": "", "seconds": "", "answers": "", "set_id": "", "newsletter_optin": "" }
+    },
+    "eligible_area": "Massachusetts",
+    "min_age": 18,
+    "past_winners": [
+      { "date": "2026-11-13", "name": "Sample W.", "town": "Winthrop", "score": "10/10 in 61s", "sample": true }
+    ]
+  },
+
+  "forms": {
+    "_help": "Paste Google Form (or other) links here. Leave blank to fall back to email.",
+    "submit_event_url": "",
+    "ask_an_agent_url": "",
+    "business_spotlight_url": ""
+  },
+
+  "news_feeds": [
+    { "category": "Real Estate", "url": "https://news.google.com/rss/search?q=Boston+OR+Massachusetts+real+estate+housing+market+when:7d&hl=en-US&gl=US&ceid=US:en" },
+    { "category": "Boston", "url": "https://news.google.com/rss/search?q=Boston+news+when:3d&hl=en-US&gl=US&ceid=US:en" },
+    { "category": "Winthrop & North Shore", "url": "https://news.google.com/rss/search?q=Winthrop+MA+OR+Revere+OR+%22East+Boston%22+OR+Lynn+OR+Swampscott+when:7d&hl=en-US&gl=US&ceid=US:en" }
+  ],
+  "news_per_category": 6
+}

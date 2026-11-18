@@ -1,0 +1,40 @@
+{
+  "_help": "Add a new 'set' each week. The game shows the newest set whose 'start' date has arrived, so you can load several weeks ahead. answer = index of the correct option (0 = first). 'fact' shows after each question. Players see answers after playing, so keep each week's set fresh.",
+  "seconds_per_question": 15,
+  "sets": [
+    {
+      "id": "2026-w47",
+      "start": "2026-11-17",
+      "title": "Boston Basics",
+      "questions": [
+        { "q": "In what year did the Boston Tea Party take place?", "options": ["1765", "1770", "1773", "1776"], "answer": 2, "fact": "On December 16, 1773, colonists dumped 342 chests of tea into Boston Harbor." },
+        { "q": "Which is the oldest public park in the United States?", "options": ["Boston Common", "Franklin Park", "Central Park", "The Public Garden"], "answer": 0, "fact": "Boston Common dates to 1634, when it was used as shared grazing land for cattle." },
+        { "q": "The Boston Marathon is run on which holiday?", "options": ["Memorial Day", "Patriots' Day", "Evacuation Day", "Columbus Day"], "answer": 1, "fact": "Patriots' Day falls on the third Monday in April in Massachusetts." },
+        { "q": "What's the nickname of Fenway Park's left-field wall?", "options": ["The Big Green", "The Pesky Pole", "The Wall of Fame", "The Green Monster"], "answer": 3, "fact": "The Green Monster stands about 37 feet tall." },
+        { "q": "Which ship, docked in Charlestown, is the world's oldest commissioned warship still afloat?", "options": ["USS Constitution", "USS Massachusetts", "HMS Victory", "USS Cassin Young"], "answer": 0, "fact": "\"Old Ironsides\" was launched in 1797." },
+        { "q": "Roughly how long is the Freedom Trail?", "options": ["1 mile", "2.5 miles", "5 miles", "7.5 miles"], "answer": 1, "fact": "The red-brick line connects 16 historic sites." },
+        { "q": "What is the oldest public school in America, founded in 1635?", "options": ["Phillips Academy", "Harvard College", "Boston Latin School", "English High School"], "answer": 2, "fact": "Boston Latin School predates Harvard by a year." },
+        { "q": "The town of Winthrop is named after John Winthrop. Who was he?", "options": ["A Revolutionary War general", "Founding governor of the Massachusetts Bay Colony", "Boston's first mayor", "A Mayflower passenger"], "answer": 1, "fact": "John Winthrop led the Puritans who settled Boston in 1630." },
+        { "q": "Where can you ride the famous Swan Boats?", "options": ["Jamaica Pond", "The Charles River Esplanade", "Castle Island", "The Public Garden"], "answer": 3, "fact": "The Swan Boats have been run by the same family since 1877." },
+        { "q": "In what year did the Great Molasses Flood hit Boston's North End?", "options": ["1899", "1919", "1929", "1938"], "answer": 1, "fact": "A storage tank burst in January 1919, sending a wave of molasses through the streets." }
+      ]
+    },
+    {
+      "id": "2026-w48",
+      "start": "2026-11-21",
+      "title": "Revolution & Landmarks",
+      "questions": [
+        { "q": "Boston's nickname \"Beantown\" comes from what?", "options": ["Coffee bean importers", "Baked beans slow-cooked in molasses", "A famous bean farm in Roxbury", "Fenway's old bean-shaped scoreboard"], "answer": 1, "fact": "Boston was a hub of the molasses trade, and baked beans became a local staple." },
+        { "q": "In what year did Paul Revere make his famous midnight ride?", "options": ["1770", "1773", "1775", "1781"], "answer": 2, "fact": "The ride took place on the night of April 18, 1775." },
+        { "q": "\"One if by land, two if by sea\" referred to what, hung in the Old North Church?", "options": ["Flags", "Bells", "Lanterns", "Bedsheets"], "answer": 2, "fact": "Two lanterns signaled that British troops were crossing the Charles by boat." },
+        { "q": "Logan International Airport is in which Boston neighborhood?", "options": ["South Boston", "Charlestown", "East Boston", "Dorchester"], "answer": 2, "fact": "Logan sits on filled land between East Boston and Winthrop." },
+        { "q": "The Bunker Hill Monument actually stands on which hill?", "options": ["Breed's Hill", "Beacon Hill", "Copp's Hill", "Mission Hill"], "answer": 0, "fact": "Most of the 1775 battle was fought on Breed's Hill, but the name stuck." },
+        { "q": "The Massachusetts State House dome is covered in what?", "options": ["Copper", "Brass", "Gold leaf", "Yellow paint"], "answer": 2, "fact": "The dome was covered in gold leaf in 1874. It was painted gray during WWII to hide it from possible attacks." },
+        { "q": "In what year did Fenway Park open?", "options": ["1901", "1912", "1923", "1934"], "answer": 1, "fact": "Fenway opened in April 1912, days after the Titanic sank." },
+        { "q": "Where is the \"Make Way for Ducklings\" statue?", "options": ["Boston Common", "The Public Garden", "Faneuil Hall", "The Arnold Arboretum"], "answer": 1, "fact": "The bronze Mrs. Mallard and her eight ducklings were installed in 1987." },
+        { "q": "The Zakim Bridge crosses which river?", "options": ["Mystic River", "Neponset River", "Charles River", "Chelsea Creek"], "answer": 2, "fact": "Its full name is the Leonard P. Zakim Bunker Hill Memorial Bridge." },
+        { "q": "Boston opened America's first subway in 1897. Under which street?", "options": ["Washington Street", "Tremont Street", "Boylston Street", "Commonwealth Avenue"], "answer": 1, "fact": "The Tremont Street Subway is still in use today as part of the Green Line." }
+      ]
+    }
+  ]
+}

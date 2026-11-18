@@ -1,0 +1,70 @@
+{
+  "updated": "2026-11-17T21:00:00-05:00",
+  "source": "https://www.bowdoinrealestate.com/bowdoin-real-estate-partners/listings",
+  "listings": [
+    {
+      "mls": "73592852",
+      "address": "44 Bowdoin Street",
+      "city": "Winthrop, MA 02152",
+      "price": 989000,
+      "beds": 3,
+      "baths": 3.5,
+      "sqft": 2180,
+      "type": "Single Family",
+      "status": "Active",
+      "agent": "Jenny Golic",
+      "url": "https://www.bowdoinrealestate.com/property/44-bowdoin-street-winthrop-73592852",
+      "image": "https://cdn.repliers.io/mlspin/IMG-73592852_1.jpg?class=large",
+      "featured": true,
+      "note": ""
+    },
+    {
+      "mls": "73599589",
+      "address": "9 Lincoln St",
+      "city": "Winthrop, MA 02152",
+      "price": 730000,
+      "beds": 3,
+      "baths": 1.5,
+      "sqft": 1406,
+      "type": "Single Family",
+      "status": "Active",
+      "agent": "Chrissy D'Ambrosio",
+      "url": "https://www.bowdoinrealestate.com/property/9-lincoln-st-winthrop-73599589",
+      "image": "https://cdn.repliers.io/mlspin/IMG-73599589_1.jpg?class=large",
+      "featured": false,
+      "note": ""
+    },
+    {
+      "mls": "73563560",
+      "address": "12 Sewall Ave #2B",
+      "city": "Winthrop, MA 02152",
+      "price": 549000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 874,
+      "type": "Condo",
+      "status": "Active",
+      "agent": "LeighAnn Eruzione",
+      "url": "https://www.bowdoinrealestate.com/property/12-sewall-ave-unit-2b-winthrop-73563560",
+      "image": "https://cdn.repliers.io/mlspin/IMG-73563560_1.jpg?class=large",
+      "featured": false,
+      "note": "New price"
+    },
+    {
+      "mls": "73560385",
+      "address": "546 Shirley St",
+      "city": "Winthrop, MA 02152",
+      "price": 765000,
+      "beds": 4,
+      "baths": 2.5,
+      "sqft": 1933,
+      "type": "Single Family",
+      "status": "Active",
+      "agent": "Chrissy D'Ambrosio",
+      "url": "https://www.bowdoinrealestate.com/property/546-shirley-st-winthrop-73560385",
+      "image": "https://cdn.repliers.io/mlspin/IMG-73560385_1.jpg?class=large",
+      "featured": false,
+      "note": ""
+    }
+  ]
+}

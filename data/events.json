@@ -1,0 +1,89 @@
+{
+  "_help": "Add one entry per event. Required: title, start (YYYY-MM-DDTHH:MM). Optional: end, location, town, category, cost, url, description, kid_friendly, featured. Categories: Community, Kids & Family, Blood Drive, Food & Drink, Music & Arts, Holiday, Sports & Fitness, Fundraiser, Open House. Delete the SAMPLE events before launch. Past events hide automatically.",
+  "events": [
+    {
+      "title": "SAMPLE – Community Blood Drive",
+      "start": "2026-11-21T10:00",
+      "end": "2026-11-21T15:00",
+      "location": "Town Hall, 1 Metcalf Square",
+      "town": "Winthrop",
+      "category": "Blood Drive",
+      "cost": "Free",
+      "url": "https://www.redcrossblood.org/give.html/find-drive",
+      "description": "Give blood, save lives. Walk-ins welcome; appointments recommended.",
+      "kid_friendly": false,
+      "featured": true,
+      "sample": true
+    },
+    {
+      "title": "SAMPLE – Holiday Tree Lighting",
+      "start": "2026-12-05T17:00",
+      "end": "2026-12-05T19:00",
+      "location": "Town Center",
+      "town": "Winthrop",
+      "category": "Holiday",
+      "cost": "Free",
+      "url": "",
+      "description": "Carols, cocoa and a visit from Santa. Bring the kids!",
+      "kid_friendly": true,
+      "featured": true,
+      "sample": true
+    },
+    {
+      "title": "SAMPLE – Toddler Story Time",
+      "start": "2026-11-24T10:30",
+      "end": "2026-11-24T11:15",
+      "location": "Public Library",
+      "town": "Winthrop",
+      "category": "Kids & Family",
+      "cost": "Free",
+      "url": "",
+      "description": "Stories, songs and crafts for ages 0–5.",
+      "kid_friendly": true,
+      "featured": false,
+      "sample": true
+    },
+    {
+      "title": "SAMPLE – Open House: 44 Bowdoin Street",
+      "start": "2026-11-22T11:00",
+      "end": "2026-11-22T12:30",
+      "location": "44 Bowdoin Street",
+      "town": "Winthrop",
+      "category": "Open House",
+      "cost": "Free",
+      "url": "https://www.bowdoinrealestate.com/property/44-bowdoin-street-winthrop-73592852",
+      "description": "Stop by and tour this 3 bed / 3.5 bath single family with Jenny.",
+      "kid_friendly": false,
+      "featured": false,
+      "sample": true
+    },
+    {
+      "title": "SAMPLE – Thanksgiving Food Drive Drop-off",
+      "start": "2026-11-23T09:00",
+      "end": "2026-11-25T17:00",
+      "location": "207 Hagman Rd",
+      "town": "Winthrop",
+      "category": "Fundraiser",
+      "cost": "Bring a non-perishable",
+      "url": "",
+      "description": "Drop off canned goods at the Bowdoin office. Everything goes to the local food pantry.",
+      "kid_friendly": true,
+      "featured": false,
+      "sample": true
+    },
+    {
+      "title": "SAMPLE – Ice Skating on the Frog Pond",
+      "start": "2026-11-28T12:00",
+      "end": "2026-11-28T16:00",
+      "location": "Boston Common Frog Pond",
+      "town": "Boston",
+      "category": "Sports & Fitness",
+      "cost": "$",
+      "url": "",
+      "description": "A classic Boston winter afternoon. Skate rentals available.",
+      "kid_friendly": true,
+      "featured": false,
+      "sample": true
+    }
+  ]
+}

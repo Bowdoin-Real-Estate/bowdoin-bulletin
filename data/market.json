@@ -1,0 +1,10 @@
+{
+  "updated": null,
+  "_help": "Mortgage rates refresh automatically (Freddie Mac weekly survey via FRED). 'local_stats' is yours to fill in from MLS each issue – leave value blank to hide a stat.",
+  "rates": {},
+  "local_stats": [
+    { "label": "Winthrop median sale price", "value": "", "change": "", "period": "" },
+    { "label": "Avg. days on market", "value": "", "change": "", "period": "" },
+    { "label": "Homes sold last month", "value": "", "change": "", "period": "" }
+  ]
+}

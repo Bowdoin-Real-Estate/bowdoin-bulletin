@@ -1,0 +1,6 @@
+{
+  "updated": null,
+  "_help": "'categories' is refreshed automatically every day by the GitHub Action. Put your own hand-picked stories in 'editors_picks' (title, url, source, blurb) – those are never overwritten.",
+  "editors_picks": [],
+  "categories": {}
+}
