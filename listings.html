@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Listings</title>
+<meta name="description" content="Current listings from Bowdoin Real Estate Partners in Winthrop and across Greater Boston.">
+<link rel="icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/app.js" defer></script>
+</head>
+<body data-page="listings">
+<main>
+  <section class="hero" style="padding:44px 0 30px"><div class="wrap">
+    <span class="eyebrow">Bowdoin Real Estate Partners</span>
+    <h1 style="margin-top:12px">Our current listings</h1>
+    <p class="lead">Pulled straight from bowdoinrealestate.com. Click any home for photos, details and to book a showing.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn" id="search-btn" href="#" target="_blank" rel="noopener">Search all homes</a>
+      <a class="btn ghost" id="alerts-btn" href="#" target="_blank" rel="noopener">Get listing alerts</a>
+      <a class="btn ghost" id="value-btn" href="#" target="_blank" rel="noopener">What's my home worth?</a>
+    </div>
+    <p class="small muted" id="updated" style="margin-top:12px"></p>
+  </div></section>
+  <section class="block"><div class="wrap"><div class="grid g3" id="all-listings"></div></div></section>
+  <section class="block"><div class="wrap" id="signup-box"></div></section>
+</main>
+</body>
+</html>
