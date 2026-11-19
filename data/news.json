@@ -1,85 +1,109 @@
 {
-  "updated": "2026-11-18T11:12:09+00:00",
+  "updated": "2026-11-19T11:08:01+00:00",
   "_help": "'categories' is refreshed automatically every day by the GitHub Action. Put your own hand-picked stories in 'editors_picks' (title, url, source, blurb) – those are never overwritten.",
   "editors_picks": [],
   "categories": {
     "Real Estate": [
       {
-        "title": "KeyCrew Media Taps Gibson Sotheby's Chuck Silverston for Greater Boston Real Estate Coverage",
-        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZXJyV0k5dm1wWGxxWWxycUsweXpkOWlFUmtXUFpuVkR1Yzg3N2hqSXl1U3VnSElOQ2NWM1JJMVRwQkJRbldJUEVOR055SnNOeWNBY3Y0VG83ZUY0bzdzdHN4bVd1czNxNTFrUVFIRGJUbTBQSV9uOHNLckdRZ0c4dHpNbTE4RkhCc3JMaFUtQlJ5MHlVWVlWM1FZdFNkUW9MMlFXQUVwZWNweHJrbTY2TS1aWGRsSWJKYmlFVTNLRENZRVBuSFE?oc=5",
-        "source": "citybuzz -",
-        "published": "2026-11-18T09:10:13+00:00"
+        "title": "318,159 Simon Property Group, Inc. $SPG Shares Sold by Boston Partners",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQS3Y2QUtHb01RR3lBQmRYNG9zQmxjMUVKcVVXUmJlZmFJRTVTNnVWQnhYZm43cW5RY09TczdnMmxhZ1FxZHpNVVl1dmQwTlRqWVhrM3RYeFpYRDRhRk52SkdBUmx5bnFnTXk4d1ljc2Q1VTRTSEUwM2pGN0JLTkp0N2liSENleGhXck03R0ZQN2ItclctMmxqMG15WE1uWHRzaERXRThMUGpIdmVwNUg4VHVzMzBMSG5IMlJiUWdHMnZMZ0gxQUE?oc=5",
+        "source": "MarketBeat",
+        "published": "2026-11-19T10:39:23+00:00"
       },
       {
-        "title": "Residential transformation planned for 98 Beacon St. in Worcester",
-        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWVNHY1lUUjEwY19pZ2NhYjM3ZVpNa2RnZHhJTVNSRlc1RlJybTIyQUpldzBIVXNSM0lUU1NNR0kyaXowN1czYk5IOE1QSElUSWR0aGFSVHNYaGUwaDctVDk4d0FvQnJJY0RXUjEzTXppbU9rRlV3blBUdDhBazJ5Ry1XMmk?oc=5",
-        "source": "Boston Agent Magazine",
-        "published": "2026-11-18T00:08:56+00:00"
+        "title": "Flight to Quality Leaves Persistent Glut of Aging Office Space",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBIcUxROFVvcEp6UXY5X05yNERsdDNuQTJlWVRfenZBc2lwNXhobllSenZTLWxRVjFUM0pPQk1CSWFuaUV0d0k3Sk9PTkVHR2x3REZzaVZDLXVVMGVxWFhiQmZaWXhOM1ZCVl9j?oc=5",
+        "source": "CommercialCafe",
+        "published": "2026-11-19T07:28:46+00:00"
       },
       {
-        "title": "Central Mass. town gets $100K grant to plan future of Anna Maria campus",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNU25LWmZiLWNqcEhfSVVwUFFlYktDWXUzRmY2YTdLOHJFOUk2c3gyUFBvZHpLclB3ZG1PN2VMNV9fNFhyWW1WZDhMaEpPM1NHTm9VYkZ5NzV6dXhKVVhpdERhRG5wdG5BMWFOcDhvZDFvOEJNaWk3azhyM0NaYUpQa2NRZGdXVjBhNG4ycWFjQWFXNVA4NUpSTVc3WHFma3o2dkdJU08tUGlzZk11cm9tWlBDSlFwVEpSYlhB?oc=5",
-        "source": "MassLive",
-        "published": "2026-11-17T20:36:00+00:00"
-      },
-      {
-        "title": "Reveler Development Provides New Space for Portland’s Bayside Opportunity Center",
-        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQRVNSTG1BYkh0Qk1iNkR1UFVWcjBBOEp3Uk5HYXZjVUZfWXRRTmhGMEQyanFrcDFFOUpVMFNEdVNzeXBXNndabkYxMEZGQ0dDNmhNSzVOcGwwc0JMYUdwVkFnYXRvVnFkSm56Qjd2andZeUtPZ2FKNkVLZlRJXzVZOG5PTm9hUFhSYTNCZmZKQUh3SVhwMlhvalNJYUtiNHZ1ZURHY1JJcVNZV01nLVBKYkdyV1U?oc=5",
+        "title": "BankOZK Takes Ownership of Vacant Somerville Lab Building After Sale Falls Through",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQjJvVFpoSjByZXFvUTFOMGJmcEVxY21XVWIzdWhMUGkzdnh4djd2TlZBSWc3Rm5RTXRRWEhua2RVTlhvWno3SDR1dVZWZE5CZjdfWVc5cExBSU02MUJzOHdLRXFsb3RDeXVXMFo0b0R0TzNRdHBGc2p5N0dUeTI2czdEcmZRVUVzX1FHOWFvM1AwMzFhMHNlbmFXTUhsOVV2dm5oTy0zMWo2MWhEYWxvb2trS2U3c0xs?oc=5",
         "source": "Boston Real Estate Times",
-        "published": "2026-11-17T20:32:50+00:00"
+        "published": "2026-11-18T19:35:19+00:00"
       },
       {
-        "title": "The Peabody Companies appoints David McGuill as senior director of operations",
-        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1sSzREYk00Q2VyTEJrRGhzbzRuSGNic1NMS0NXWHczWFBqTDM0SDROXzdSM0Nwek9MaUFiREEwcm44aWlNd2l4ei10cmE2aTdDRXhKTmpPQmQtS2ZCR1BjZDFNUElJRnFBY0s5aC03QVZNWlpZY2NKdTVn?oc=5",
-        "source": "Boston Agent Magazine",
-        "published": "2026-11-17T20:18:56+00:00"
+        "title": "Bulfinch Taps CBRE to Market 213,000-Square-Foot Lab and Office Building in Needham",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPS2s5c0pFSmxGY0tvdl9MelBLZkpsaGlrT3FXc0xmZlZaZGpqMmcwWUYxYjFHbkJ3NVNQTy1XRVdMNlVkQ0Q3dDFQQkpaSGRxSDduOHMtUzgyNWJlYk9PU1k1UzhCWDFJVkRLTl9vRDkxVWwtRDZmUmRyUjFzY1RYdHpWRjYyTThCRkZXMW8zdDluNzR3WDdJSnFxSDFLR3lNOG0yTWlVWVpSQmdqQnpoVzlfRXE2Mk5s?oc=5",
+        "source": "Boston Real Estate Times",
+        "published": "2026-11-18T19:08:12+00:00"
       },
       {
-        "title": "Family-owned apartment complex in historic Boston neighborhood hits market",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSGRpTk9idmJfMUoyeVdNSlhKb0tEOXBYSkRTMzZXUHoyeUVWazJWV0VhX1kxTl9uaVlGazNoSHowQUkzUVBDRXpINmd3QkpRVGpGVEczd09vNUoxRHdPRlpicmFQRWpXSXRJRmpkRGNfZmZTZ092eWFMUzc1S0dRVU9ad1FoYVBDYTZVUmZSdVFLbERYRUJTWXRmZkpEQjVfWnhhQ2NLYmVmRHV2QzNjTg?oc=5",
-        "source": "Green Street News",
-        "published": "2026-11-17T19:27:18+00:00"
+        "title": "In Greater Boston’s pricey housing market, a guest room is a luxury. How do you host the holidays?",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNQkhtWGZNZ1NNMkg4MlBvaWxWM21jWGJrYkFOQzB1bDBJNmY2bkZFZDhORVpQSGhKZkZuVW8zUEt1eHMwcmxYeHNqQ1gzSndGLVdwQzNOSzhaTUpteXRaeGY3bHlRUnU1VmpCTHZnUGJEaFh5Rm5zUlQ5Q2t1dFllTVVWb2F4M050RzlubjFIeHhnX1lxYVcw?oc=5",
+        "source": "Boston.com",
+        "published": "2026-11-18T19:00:00+00:00"
+      },
+      {
+        "title": "Experts, homeowners and real estate professionals weigh in on Question 7 after narrow failure to pass",
+        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQem11bk1HWlZOZmRtcVA3NEY5RENIeHJUTS1RUzNmc091ZlR5VVh1TXMtSEVmQUIyQUxaTWttbWxMcWJxcGY4bkdNdHYzT21IZDRmSks4MHVVdkhaTTNQZENwdWd3eDNFeS1yMVoyNHBEYndmeWY4RG4yaUg5VzVvNE5Rd3AyYnFnWjI4U29DVUFxSHZvcGNQaVRvT2k4LWlCUU9JTnlIRTFORV9RMm81eHNHbHBuMjkxcTZuUHNJaGs3dkNjZkw4YjZmenk3QzBWSmotM3J3?oc=5",
+        "source": "The Bay State Banner",
+        "published": "2026-11-18T18:58:23+00:00"
       }
     ],
     "Boston": [
       {
-        "title": "How to save money on Thanksgiving dinner without sacrificing",
-        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbVVKYXRyc3dkWVpvRzlCQjJxdDFMeEhhcUtMU2FQQmpJSWtRVl9ZcGNUbzBEczZlcUhZMVFQd01SN1NsdmlGSTJCazhibTV3cUxyUllaT1dBMDJ3X1VUcDdkWnZTSnJjVzJHRl9NYUtUcGhVWDFrMzMyZUROMk5pUlBpYVhEMXp6a3UyOGdPaDhyVHhoSzl0ZkFvRzZ2SDBPaWRNOVNwaS1uVnp3eFF1S1BrbFpEazVvbnlNZFpKMNIB0wFBVV95cUxQX1lzZDFTc2RzNnpLa0hJc3Nqc3JyeFhWVnAzbC1pLVh1ME9qRnBCTko3enBjdGJFbGJ6OUl1OEtZbG9yVlgyLVRmYURmT1ZEeVlIdGlFTmZzWHV5NUNqQVQ1Y2o3cjFCUkllTU9XSnV1UUlTWGtCYmlMdFAwQmI1SG5TbjF6dUFzN21SLUVZRGpCMWU1LVBSRGpVN01UbmFRYTlGZHFOSXdmdUtCakZKY2FpLVNVTlVpT1QxZ0tEenBzMzVyakltZlJuWktMd2xxY2JV?oc=5",
+        "title": "Photos: 60th CMA red carpet arrivals",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOM3ZlNGJKdkEtRUgyTkRGTTRHeFJNZndWTlQ4WlIzbEc1blkyWVNwX2hWVkgtal8xdkNjdG1kUnc1M1Qwa05wUHpTaXl2Q1l0Y1J2TXlKdFpXemFNQVVSSkdka1J5M05CRVo3aV9fYTNkQnFLemxVY29GcGkzQW4xX2ZxaWRzMnFsekJLSUFLcG50YVpW?oc=5",
         "source": "Boston 25 News",
-        "published": "2026-11-18T11:07:24+00:00"
+        "published": "2026-11-19T11:00:57+00:00"
       },
       {
-        "title": "Boston 25 Morning Forecast",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOa0JTaFpHNWJ2MG9QZUg2R2FUeUNFNjJWcGZsV21jMmhLWngxYk9MSkhld0g3TzlNaVlpT1JRZU1fOE5wYnJmYVBJaXlpUERMa2NqXzlmZDhHa093WHI5THhSTGRkdGZWQmozNXZKQ284bTktNW5wSEhTTmt0c3lSaDkyNzM3VmxsVURUd1FReHJnNlFFWUQ4NDdxVVRDeWhWOW0wbmlyUk5maWIya2dqMXRaamJuQVk?oc=5",
-        "source": "Boston 25 News",
-        "published": "2026-11-18T10:55:02+00:00"
-      },
-      {
-        "title": "Developers resume Roxbury mixed-use project after legal victory, but rising costs force a redesign",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNRzVfU0R5d09YWWxJSGRoZ2Y0cm5sLU5uMDRtWE1feFFlaUFMM3ptRkU5dEJsbGVLbHZTTzY0UUcxTDUzeEVUei10MmtPYURtNmpTLUdlZWFTSXAzSVl5bHBNeFZfZGx5Qy0tMUNjQnhMVUVqOVgwUzIzbERlcGtENUNGSXdPWkpHR0ZWVHdnV3JvWDdFVHRrTG8wYkhuLVJQNFU0TzNHSXVXdw?oc=5",
-        "source": "The Business Journals",
-        "published": "2026-11-18T10:45:00+00:00"
-      },
-      {
-        "title": "Car hits pole in Wilmington, bringing wires down",
-        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBaZ05NbU16M0loLXhCX0Nod2lpbk9hVmxIMUw3ZGVwQTV3NS12bTd5RmREX0VuRVd6UldzTGNsWkF4T2ozYk5VX0J5ZWcxUTNnTEpJR1V5Rm1HNndIbklkUFlkQWwzeU01dzZ1U2VDb0h0SmZwbFIzeEpR?oc=5",
-        "source": "WHDH",
-        "published": "2026-11-18T10:41:44+00:00"
-      },
-      {
-        "title": "So many doctors, so few available appointments",
-        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1HRFJTNzBZTTB5bEFEM0N1N3FZcDF2bXlqbWtSempzRlNYbnlyZGM4dk5wak1adUNNeGlpTElYV1ZUbDdZVnlLX3ZiRWFlejB6RkdRWWkwMWZXQ2RaQWhOdTJfU01sYlJLWVNwUmhIUGVPZTFt?oc=5",
+        "title": "A public safety exodus in Providence",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQMVRDTExfbS1GWUJjZ1ByS1RNU29QVVhBczBkelVPSkJXTHZlei0xTVp6SThUWERwd0JIeGczQjhEWUZXMnRyWHJnMGFGcUF2N0JfVjdoS1Rvd2Z1d1ZoQTR4NzFybmhaNS1YZnl4U2FzRXVRSHNsTFZKeHh3WVZIN1M1dDEtcDdyN3BWQThCajdGeGthN1pwQW8xcFJpVnZuQjVvVWdxYkZGdHliSEE?oc=5",
         "source": "The Boston Globe",
-        "published": "2026-11-18T10:39:51+00:00"
+        "published": "2026-11-19T10:57:09+00:00"
       },
       {
-        "title": "Next Weather: WBZ morning forecast for Nov. 18, 2026",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxORlIzdGFlX0UzVmt2NmhnM1lmbkFFMDQyMDRmQWYwQ0ZWb3duY1gweWtBSWs5R2xOaGVLM2poNThYSVdNT0VtbHE5dmNtdGlIT28yanlwN2FTYndaX09iS2x0OXFOZHRfX1JCZ1gyN0V6MG9NcGtXNVFsYkZkU01qbkR0N0VPdjhlTGFsQ1hLV0s?oc=5",
+        "title": "Advocates launch new websites to help consumers compare R.I. nursing homes, assisted living facilities",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWkpDV05ual9pc1dJTzExRlNNTDZvcXpPOVNoX0Q5SHRVaVRUUWxqQ29SUGtNQkVHZ29aanlpRHU3MVh4a2NTOTJKeXY0bUwwWDBtVzZHSjBNY19hOXFxQlZ3NFJGNGN6ckduNHFwX1h4aE5fN3YwNDRLelZ4RGVBTU12SHd0RzNRSzB6OUE5cDAzbmhLVkZtZTgzTFJhWjh1aHc?oc=5",
+        "source": "The Boston Globe",
+        "published": "2026-11-19T10:55:35+00:00"
+      },
+      {
+        "title": "The best things to do in and around Boston this weekend",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOZmtRc2l1UkF1U25xTFk2czMyd0JzdXZNLVVVU3lLdUdRbGlwNHRKcng5a25zRFRCNjV3OHdET09YZ3F5MUpJRHdPS3dCeFhJMWF2bmpta0Y1ZnMwNGZLeW1QN01yOHI5Q3ZhZ3lEQk1UQTd4dmcwM3NVX1BtLUFCMEdESQ?oc=5",
+        "source": "The Boston Globe",
+        "published": "2026-11-19T10:52:30+00:00"
+      },
+      {
+        "title": "Next Weather: WBZ morning forecast for Nov. 19, 2026",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQOTUwQnp3RjRzdHY3ckY3X2F0cE4xNUVscmlCRHF5dlR5MDlVNElXdkE0MlQ4UUNyMENRSXVfRkxKY3VfMHE4eEpOSjJBeEM5ZDFGMmZBRVBLVU1aWVNGR0N5MzNST2l6MEVpOE1KMGd3dGt3SXVwYVhkRVA3bG1FemVjbXhiTmtnRnNlS3g5TEY?oc=5",
         "source": "CBS News",
-        "published": "2026-11-18T10:22:00+00:00"
+        "published": "2026-11-19T10:51:00+00:00"
+      },
+      {
+        "title": "Former Sen. Ben Sasse’s memoir on surviving cancer, co-written with his daughter, is set for March 9",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQbkRVV1VkT3JDMnJGZ09LUS16Zmw3OW1OajFPX2g1ZzUwRl9vODVwMnVyUkRqSnA5bWljTFQyWG4xTTZmVVNNS1VFV3gwTTgwQUZDbVN4QWJGTkFhWmdmc01YUWVuUGk2NUs1MUtfempEVVRwXzNlc3BGVDlCUHcwZWdiY25LYXU3Q2dZU2JR0gGiAUFVX3lxTE40dWRoNmtsanpjMVN6UW80VFV4YVZDVWk5V1VmUG9uZVNSa1Q1NU5EYTlDSFRZWUFLLXY0NU9feUZicHp6dm1pcmpzbUFvdndjczk2SlFDUmVMTjVVb1J0TE5FSHpnc3dRM1dtRGdWd0M5VUJNTkE5U2prb2dCRUlTR1h5aDJmQXdkUm15cTJia3BmckItc1V2LUFaNHRrOG9OUQ?oc=5",
+        "source": "Boston 25 News",
+        "published": "2026-11-19T10:03:39+00:00"
       }
     ],
     "Around Town": [
+      {
+        "title": "Peter GANGEMI Obituary (1928 - 2026) - Malden, MA - Boston Globe",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOE84ZGRKc2hicGNRNU9kVEdBNWNCWWJ5U18ycV8tWG5EdlcyZmpSa1VaUDRQb2hpQndTNHgxZ3VoTGJpcXBnZXhPeHJEZXAxa0xqWmFxa1JZT2RYc2FFLW91Zjc3UU92R1FYYTFNMk5URXNpMnBfb0VOeU9ZcW83WldMUmx5NGM1YkxIdlNOd2VBOXE2UXBJMElPTlpPU3lsX2JV?oc=5",
+        "source": "Legacy | Obituary",
+        "published": "2026-11-18T22:10:18+00:00"
+      },
+      {
+        "title": "Game Teaser: 2026 MIAA Div 6 Football Semifinal Winthrop vs. Norwell Highlights",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9FOThkXzBmRVVRa05qX0pEMUkzNWphN3lFdVQ3bkxfUXk2T3FjaVh4NjVMeWpDUlA2VFJVaVcxcmVhcDhQVVBuV0Npb3lGM3pvRDREbkw3MlBYSTg1THdYd2hB?oc=5",
+        "source": "NFHS Network",
+        "published": "2026-11-18T17:21:44+00:00"
+      },
+      {
+        "title": "Do or Die: 2027 New England U.S. Open Cup Qualifying Final",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOT01DdkpDVUZ1c0lkVTF1Tm1BNTRuandJeGEwcExFU0t1amJIZkkxSGQxbjAtbUp6X2F0MnhkOEV1bjRCU0RyczQ2cGNwMlE3RHJzZkVCMGJ0cDFOM2thWUZJUEVEa3ozUnJ3dE56NFFEMG03Q2VzWl9sa3REbURwZnRjWWgwTXViZEVTd0lmNVhUdU5F?oc=5",
+        "source": "The Blazing Musket",
+        "published": "2026-11-18T16:48:41+00:00"
+      },
+      {
+        "title": "The Ultimate Prom and Bridal celebrates 57 years",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNmFqQjRXMDBlNWFFNms0N2huT0lSMVVOak16U0Fka2ZRWjlHcmswMlhJdGtZd3BjRHJrZDA5SGFMR3BScVctZ3I2cHhuU0tmZGFtOVZEMnhNbWxFc1NJRndMdWZQd1ItdmhNU1h1UG01NkFWOXdwd2piUGc2dFdSUzRfUTZEa2pqSml2akh3?oc=5",
+        "source": "Revere Journal",
+        "published": "2026-11-18T14:11:22+00:00"
+      },
       {
         "title": "Winthrop Varsity Football @ Norwell",
         "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQ3VSM05hcGtVc0ptSXRzSEJTdTNjOFlHaUlQanR4Wk10U0h5NGpfbzZTTmxEQVc0dEFtTVdRVWpKVjYwa0N1ai1pazNfS0JFRjl1cEdLUzBFMHFYZWRSNTk5WFQ3Wlgzb2xSbDZMXzVQQmJmNFhJc0lDTzJSTUVPdnNVVUpkT2hoZ1o4SlpNTEdiTW4xY0E3WXdzbG13SUQwanotNEZhOFFCTHdMZHFzcGRn?oc=5",
@@ -87,38 +111,142 @@
         "published": "2026-11-17T20:51:11+00:00"
       },
       {
-        "title": "Althea Alling Obituary - (1921-2026)",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAxQWVFeXI2OEtZX09OY1BGRmF1RDdtdU9vUE1YbnNLb3d0MzhqZlFxblVQYWEtVFZrUXBLbUZLd1FKWHhvbm5oZk9WM3RnTU96YjZNck1jSU16Ui1CQ0s2Zw?oc=5",
-        "source": "Lowell Sun",
-        "published": "2026-11-17T09:26:43+00:00"
-      },
-      {
-        "title": "Locals have come to play on the gridiron",
-        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE91RWdJSXNUb1ZNREpBOEptSGJIRmpxak90T3duYWptX0ptMDZrel95MFF6WEhkWGlxSG5jUzl1dzExSmlBTGhQRVRhUElvQmt1eXQ2MUlQaFljcExlNFpUQ2FYVnNUOEd3UkpZQzVuSThwLUZDNllhWm91UjFyQQ?oc=5",
-        "source": "Itemlive",
-        "published": "2026-11-16T23:23:38+00:00"
-      },
-      {
-        "title": "MIAA announces sites for 2026 football state semifinals",
-        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxON19HU3kwSDlLdFNONk1Ub19DMUhFS2VZV01rMmluSnpyZTZUT1JuM2g0ck90YWNuUERCTmdvemlyWHZ3d3E5UzRJUDlaOE56NEtjY0UwWVhmYmZ6Y2FjSnZZNFFSYWpUVGsxc05tdndfVjFpc0tEVVpJZXZnZlFia29WdHJFdE92WWZjbEtVUmhTRGtqNnpzUWlZdEpVeFlKN0E5NHVIS3NuYVZCdEJv?oc=5",
-        "source": "MassLive",
-        "published": "2026-11-15T21:38:00+00:00"
-      },
-      {
-        "title": "Team Highlights: 2026 MIAA Football Playoffs Winthrop High School vs. Bellingham High School - Winthrop",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9oNWt3RzIyb2FQTlhqcy1Mc2RnT1Rkd2ZGeWVKVUhDWVdYSGRIS3B5WklZMWtqT1BhSVFIVHUxcHN4NXF6WFBKSGRrZHdmYkNMY254d0dJd290UnlsbEZlRHB3?oc=5",
-        "source": "NFHS Network",
-        "published": "2026-11-15T13:50:44+00:00"
-      },
-      {
-        "title": "Joanne Marie McDuffee Obituary (2026) - Winthrop, MA - Buonfiglio Funeral Home - Revere",
-        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOa2dKUnBhSVNxVk42MTF5Q1ZLZmxXTXNCYVkyQWdlVDVxeEpuNkZwTWxQTTk0YndSY0lKWVNTd0NmVVp0VEgwOFpXamlQbXBxUlpBcXZzUndCSWM0cGtkbHlpQnRxbkhlelFabnVHNDBGWUJYSllIU3lzY0tJUUVMRzQtNjc?oc=5",
-        "source": "Legacy | Obituary",
-        "published": "2026-11-15T08:00:00+00:00"
+        "title": "2nd victim identified after vehicle crashes into Mass. river",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPY19RdGprU3Q1bFRvTnlrYjV3ZV9FTWlBZGZpUXp6NjdCSmY4S0xTR1FtbXNzdE5YaEEyM09aem42T0ZuMXNnTS1oQlNoZFRUcHc5OXZ4X2NTT0ppd01mWlhDYTZjMkR0ZVJ4QU1LanhoLVNPZ3F2N0szWHNJLUNZRGNVeU5iWk9WclpPaEF1VXNweHpTM0x5LXBfeE1Lamdac2x0RmNlcWc3V2s?oc=5",
+        "source": "WCVB",
+        "published": "2026-11-17T17:09:00+00:00"
       }
     ]
   },
   "pool": [
+    {
+      "title": "Photos: 60th CMA red carpet arrivals",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOM3ZlNGJKdkEtRUgyTkRGTTRHeFJNZndWTlQ4WlIzbEc1blkyWVNwX2hWVkgtal8xdkNjdG1kUnc1M1Qwa05wUHpTaXl2Q1l0Y1J2TXlKdFpXemFNQVVSSkdka1J5M05CRVo3aV9fYTNkQnFLemxVY29GcGkzQW4xX2ZxaWRzMnFsekJLSUFLcG50YVpW?oc=5",
+      "source": "Boston 25 News",
+      "published": "2026-11-19T11:00:57+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "A public safety exodus in Providence",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQMVRDTExfbS1GWUJjZ1ByS1RNU29QVVhBczBkelVPSkJXTHZlei0xTVp6SThUWERwd0JIeGczQjhEWUZXMnRyWHJnMGFGcUF2N0JfVjdoS1Rvd2Z1d1ZoQTR4NzFybmhaNS1YZnl4U2FzRXVRSHNsTFZKeHh3WVZIN1M1dDEtcDdyN3BWQThCajdGeGthN1pwQW8xcFJpVnZuQjVvVWdxYkZGdHliSEE?oc=5",
+      "source": "The Boston Globe",
+      "published": "2026-11-19T10:57:09+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "Advocates launch new websites to help consumers compare R.I. nursing homes, assisted living facilities",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWkpDV05ual9pc1dJTzExRlNNTDZvcXpPOVNoX0Q5SHRVaVRUUWxqQ29SUGtNQkVHZ29aanlpRHU3MVh4a2NTOTJKeXY0bUwwWDBtVzZHSjBNY19hOXFxQlZ3NFJGNGN6ckduNHFwX1h4aE5fN3YwNDRLelZ4RGVBTU12SHd0RzNRSzB6OUE5cDAzbmhLVkZtZTgzTFJhWjh1aHc?oc=5",
+      "source": "The Boston Globe",
+      "published": "2026-11-19T10:55:35+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "The best things to do in and around Boston this weekend",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOZmtRc2l1UkF1U25xTFk2czMyd0JzdXZNLVVVU3lLdUdRbGlwNHRKcng5a25zRFRCNjV3OHdET09YZ3F5MUpJRHdPS3dCeFhJMWF2bmpta0Y1ZnMwNGZLeW1QN01yOHI5Q3ZhZ3lEQk1UQTd4dmcwM3NVX1BtLUFCMEdESQ?oc=5",
+      "source": "The Boston Globe",
+      "published": "2026-11-19T10:52:30+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "Next Weather: WBZ morning forecast for Nov. 19, 2026",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQOTUwQnp3RjRzdHY3ckY3X2F0cE4xNUVscmlCRHF5dlR5MDlVNElXdkE0MlQ4UUNyMENRSXVfRkxKY3VfMHE4eEpOSjJBeEM5ZDFGMmZBRVBLVU1aWVNGR0N5MzNST2l6MEVpOE1KMGd3dGt3SXVwYVhkRVA3bG1FemVjbXhiTmtnRnNlS3g5TEY?oc=5",
+      "source": "CBS News",
+      "published": "2026-11-19T10:51:00+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "318,159 Simon Property Group, Inc. $SPG Shares Sold by Boston Partners",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQS3Y2QUtHb01RR3lBQmRYNG9zQmxjMUVKcVVXUmJlZmFJRTVTNnVWQnhYZm43cW5RY09TczdnMmxhZ1FxZHpNVVl1dmQwTlRqWVhrM3RYeFpYRDRhRk52SkdBUmx5bnFnTXk4d1ljc2Q1VTRTSEUwM2pGN0JLTkp0N2liSENleGhXck03R0ZQN2ItclctMmxqMG15WE1uWHRzaERXRThMUGpIdmVwNUg4VHVzMzBMSG5IMlJiUWdHMnZMZ0gxQUE?oc=5",
+      "source": "MarketBeat",
+      "published": "2026-11-19T10:39:23+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "Former Sen. Ben Sasse’s memoir on surviving cancer, co-written with his daughter, is set for March 9",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQbkRVV1VkT3JDMnJGZ09LUS16Zmw3OW1OajFPX2g1ZzUwRl9vODVwMnVyUkRqSnA5bWljTFQyWG4xTTZmVVNNS1VFV3gwTTgwQUZDbVN4QWJGTkFhWmdmc01YUWVuUGk2NUs1MUtfempEVVRwXzNlc3BGVDlCUHcwZWdiY25LYXU3Q2dZU2JR0gGiAUFVX3lxTE40dWRoNmtsanpjMVN6UW80VFV4YVZDVWk5V1VmUG9uZVNSa1Q1NU5EYTlDSFRZWUFLLXY0NU9feUZicHp6dm1pcmpzbUFvdndjczk2SlFDUmVMTjVVb1J0TE5FSHpnc3dRM1dtRGdWd0M5VUJNTkE5U2prb2dCRUlTR1h5aDJmQXdkUm15cTJia3BmckItc1V2LUFaNHRrOG9OUQ?oc=5",
+      "source": "Boston 25 News",
+      "published": "2026-11-19T10:03:39+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "Flight to Quality Leaves Persistent Glut of Aging Office Space",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBIcUxROFVvcEp6UXY5X05yNERsdDNuQTJlWVRfenZBc2lwNXhobllSenZTLWxRVjFUM0pPQk1CSWFuaUV0d0k3Sk9PTkVHR2x3REZzaVZDLXVVMGVxWFhiQmZaWXhOM1ZCVl9j?oc=5",
+      "source": "CommercialCafe",
+      "published": "2026-11-19T07:28:46+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "Peter GANGEMI Obituary (1928 - 2026) - Malden, MA - Boston Globe",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOE84ZGRKc2hicGNRNU9kVEdBNWNCWWJ5U18ycV8tWG5EdlcyZmpSa1VaUDRQb2hpQndTNHgxZ3VoTGJpcXBnZXhPeHJEZXAxa0xqWmFxa1JZT2RYc2FFLW91Zjc3UU92R1FYYTFNMk5URXNpMnBfb0VOeU9ZcW83WldMUmx5NGM1YkxIdlNOd2VBOXE2UXBJMElPTlpPU3lsX2JV?oc=5",
+      "source": "Legacy | Obituary",
+      "published": "2026-11-18T22:10:18+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "BankOZK Takes Ownership of Vacant Somerville Lab Building After Sale Falls Through",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQjJvVFpoSjByZXFvUTFOMGJmcEVxY21XVWIzdWhMUGkzdnh4djd2TlZBSWc3Rm5RTXRRWEhua2RVTlhvWno3SDR1dVZWZE5CZjdfWVc5cExBSU02MUJzOHdLRXFsb3RDeXVXMFo0b0R0TzNRdHBGc2p5N0dUeTI2czdEcmZRVUVzX1FHOWFvM1AwMzFhMHNlbmFXTUhsOVV2dm5oTy0zMWo2MWhEYWxvb2trS2U3c0xs?oc=5",
+      "source": "Boston Real Estate Times",
+      "published": "2026-11-18T19:35:19+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "Bulfinch Taps CBRE to Market 213,000-Square-Foot Lab and Office Building in Needham",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPS2s5c0pFSmxGY0tvdl9MelBLZkpsaGlrT3FXc0xmZlZaZGpqMmcwWUYxYjFHbkJ3NVNQTy1XRVdMNlVkQ0Q3dDFQQkpaSGRxSDduOHMtUzgyNWJlYk9PU1k1UzhCWDFJVkRLTl9vRDkxVWwtRDZmUmRyUjFzY1RYdHpWRjYyTThCRkZXMW8zdDluNzR3WDdJSnFxSDFLR3lNOG0yTWlVWVpSQmdqQnpoVzlfRXE2Mk5s?oc=5",
+      "source": "Boston Real Estate Times",
+      "published": "2026-11-18T19:08:12+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "In Greater Boston’s pricey housing market, a guest room is a luxury. How do you host the holidays?",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNQkhtWGZNZ1NNMkg4MlBvaWxWM21jWGJrYkFOQzB1bDBJNmY2bkZFZDhORVpQSGhKZkZuVW8zUEt1eHMwcmxYeHNqQ1gzSndGLVdwQzNOSzhaTUpteXRaeGY3bHlRUnU1VmpCTHZnUGJEaFh5Rm5zUlQ5Q2t1dFllTVVWb2F4M050RzlubjFIeHhnX1lxYVcw?oc=5",
+      "source": "Boston.com",
+      "published": "2026-11-18T19:00:00+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "Experts, homeowners and real estate professionals weigh in on Question 7 after narrow failure to pass",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQem11bk1HWlZOZmRtcVA3NEY5RENIeHJUTS1RUzNmc091ZlR5VVh1TXMtSEVmQUIyQUxaTWttbWxMcWJxcGY4bkdNdHYzT21IZDRmSks4MHVVdkhaTTNQZENwdWd3eDNFeS1yMVoyNHBEYndmeWY4RG4yaUg5VzVvNE5Rd3AyYnFnWjI4U29DVUFxSHZvcGNQaVRvT2k4LWlCUU9JTnlIRTFORV9RMm81eHNHbHBuMjkxcTZuUHNJaGs3dkNjZkw4YjZmenk3QzBWSmotM3J3?oc=5",
+      "source": "The Bay State Banner",
+      "published": "2026-11-18T18:58:23+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "Game Teaser: 2026 MIAA Div 6 Football Semifinal Winthrop vs. Norwell Highlights",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9FOThkXzBmRVVRa05qX0pEMUkzNWphN3lFdVQ3bkxfUXk2T3FjaVh4NjVMeWpDUlA2VFJVaVcxcmVhcDhQVVBuV0Npb3lGM3pvRDREbkw3MlBYSTg1THdYd2hB?oc=5",
+      "source": "NFHS Network",
+      "published": "2026-11-18T17:21:44+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "Do or Die: 2027 New England U.S. Open Cup Qualifying Final",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOT01DdkpDVUZ1c0lkVTF1Tm1BNTRuandJeGEwcExFU0t1amJIZkkxSGQxbjAtbUp6X2F0MnhkOEV1bjRCU0RyczQ2cGNwMlE3RHJzZkVCMGJ0cDFOM2thWUZJUEVEa3ozUnJ3dE56NFFEMG03Q2VzWl9sa3REbURwZnRjWWgwTXViZEVTd0lmNVhUdU5F?oc=5",
+      "source": "The Blazing Musket",
+      "published": "2026-11-18T16:48:41+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
+    {
+      "title": "The Ultimate Prom and Bridal celebrates 57 years",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNmFqQjRXMDBlNWFFNms0N2huT0lSMVVOak16U0Fka2ZRWjlHcmswMlhJdGtZd3BjRHJrZDA5SGFMR3BScVctZ3I2cHhuU0tmZGFtOVZEMnhNbWxFc1NJRndMdWZQd1ItdmhNU1h1UG01NkFWOXdwd2piUGc2dFdSUzRfUTZEa2pqSml2akh3?oc=5",
+      "source": "Revere Journal",
+      "published": "2026-11-18T14:11:22+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-19T11:08:01+00:00"
+    },
     {
       "title": "How to save money on Thanksgiving dinner without sacrificing",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbVVKYXRyc3dkWVpvRzlCQjJxdDFMeEhhcUtMU2FQQmpJSWtRVl9ZcGNUbzBEczZlcUhZMVFQd01SN1NsdmlGSTJCazhibTV3cUxyUllaT1dBMDJ3X1VUcDdkWnZTSnJjVzJHRl9NYUtUcGhVWDFrMzMyZUROMk5pUlBpYVhEMXp6a3UyOGdPaDhyVHhoSzl0ZkFvRzZ2SDBPaWRNOVNwaS1uVnp3eFF1S1BrbFpEazVvbnlNZFpKMNIB0wFBVV95cUxQX1lzZDFTc2RzNnpLa0hJc3Nqc3JyeFhWVnAzbC1pLVh1ME9qRnBCTko3enBjdGJFbGJ6OUl1OEtZbG9yVlgyLVRmYURmT1ZEeVlIdGlFTmZzWHV5NUNqQVQ1Y2o3cjFCUkllTU9XSnV1UUlTWGtCYmlMdFAwQmI1SG5TbjF6dUFzN21SLUVZRGpCMWU1LVBSRGpVN01UbmFRYTlGZHFOSXdmdUtCakZKY2FpLVNVTlVpT1QxZ0tEenBzMzVyakltZlJuWktMd2xxY2JV?oc=5",
@@ -278,6 +406,14 @@
       "published": "2026-11-17T19:27:18+00:00",
       "category": "Real Estate",
       "first_seen": "2026-11-18T02:30:21+00:00"
+    },
+    {
+      "title": "2nd victim identified after vehicle crashes into Mass. river",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPY19RdGprU3Q1bFRvTnlrYjV3ZV9FTWlBZGZpUXp6NjdCSmY4S0xTR1FtbXNzdE5YaEEyM09aem42T0ZuMXNnTS1oQlNoZFRUcHc5OXZ4X2NTT0ppd01mWlhDYTZjMkR0ZVJ4QU1LanhoLVNPZ3F2N0szWHNJLUNZRGNVeU5iWk9WclpPaEF1VXNweHpTM0x5LXBfeE1Lamdac2x0RmNlcWc3V2s?oc=5",
+      "source": "WCVB",
+      "published": "2026-11-17T17:09:00+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-19T11:08:01+00:00"
     },
     {
       "title": "The neighborhoods where property values dip every holiday season and bounce back fastest",
