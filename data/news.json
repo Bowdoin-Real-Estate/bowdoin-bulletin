@@ -1,9 +1,15 @@
 {
-  "updated": "2026-11-21T10:54:10+00:00",
+  "updated": "2026-11-22T10:53:16+00:00",
   "_help": "'categories' is refreshed automatically every day by the GitHub Action. Put your own hand-picked stories in 'editors_picks' (title, url, source, blurb) – those are never overwritten.",
   "editors_picks": [],
   "categories": {
     "Real Estate": [
+      {
+        "title": "Homes in a ‘low-priced town’ in Greater Boston are now $600,000, a new report says. Here are five striking findings.",
+        "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOM2NsamRJYW10aWpBandVLUpYZkFnZTNlcXdJV2N6VlNzVHRhMVg5eUJkMDNrX0VrcC1CNjhFdXJwcXpNcWQ4Y013TExNaDVSX3FBMVR1R2hvY0JWQl9zaG5ydnd0MzFQXzk1MHBGSGJhWmN3X1hrOU9OakpiWTk4NUJIaVlBb3c3dVNpZHZxUG5NTHlMZGtKQTc4RHVELXIwcFJNRE0xWldfbHdnWW8wYjk4UnJ4RFBUaVhWNW93Rlg2X3NsYngtbFpQZlRzWU9MUWw2TjZDbVlnLURsQXJLMEZLR0dGVi1QNkc4VzdLSmh5bUFMRTdZZnJR?oc=5",
+        "source": "Boston.com",
+        "published": "2026-11-22T10:00:00+00:00"
+      },
       {
         "title": "Denver Investor Big 4 Properties Buys Fenway Apartment Complex for $193 Million",
         "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVnlYNERDUlI0X2R4ZFlIRUhCaFpfX0xZOU9Cb1AtYVhWS1l2ZmpQc09nZklkRGtLZ2UtRGtBTVphYlM4akQ4bGE0eXhRRUVZZFJVUWt0UHF4dUlmZEdPQ01ERzY5M3loYURySUtKdkhveHNLR2VWNll4cE5OVmI0RjcxZklLM1VrSWowXy1QZjR3amVjd1VHWFkwWDFHQXlZZG1rSTlKdUhWY0E0dVFDTXJtUQ?oc=5",
@@ -33,92 +39,182 @@
         "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPUFlnb0JjY2tvUHVYeEVqdVhUNm84bnpISjRpV1FldlI0b292Y3dwVUJ0RUo4cHVvemZrRzNpeVRQa2hUc3BZMzFpbU5GVS0yS3BDMXk0TzNZcFVFekRIeGtfZThBT1F0UmExZFhMNFBPemJNc21LcVZOVHpnc3AxOVpSMXZSNlg4RlctWDNHbzhYWVBicGlIQjhuTWRlN1BlVmJuNm1QRkJhTm9PcVBrMGRObC1jVG8?oc=5",
         "source": "Boston Real Estate Times",
         "published": "2026-11-20T18:52:38+00:00"
-      },
-      {
-        "title": "Today's Mortgage Rates: November 20, 2026",
-        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5rdmpsVUwtTnZNcjlIbUQ5a0oyZDlUSV9IV1ZYQy0yOHViOEttMVlsTXlfUVEwcXBibVcycFRJZTY2WEhfM2Voby0xbVpIVUtMZ05j?oc=5",
-        "source": "MONEY",
-        "published": "2026-11-20T12:34:00+00:00"
       }
     ],
     "Boston": [
       {
-        "title": "Today in Boston Celtics history: Reggie Lewis, Cedric Maxwell born",
-        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPLUlqMEtVZXZ1dmNkMFJaTFppNlU5WlBDTS1STkNrSUxnTTE2Z2hXaHR2bnViMERzMVF6d2FUdks5bkpLRzdkZUxZQ0k1TjIza19Qd1hteFlHYWFBTVRNdXhOSlB6RVo5YkpvckF1bnJoajVvaG1uNzZKRDNmSUlXSmM3d2tpMDRya3ZudA?oc=5",
+        "title": "Fire at Indonesian candy factory leaves 3 dead, dozens of workers unaccounted for",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOcDVuOERSNW9OLU1nTjNZMHk2aUxTb0tDMEduMmRsQjlmN0pUUlJ4SDQyQzZ1UHoyUTEwbVhsVXo4aGlBMlpmQmJIWk54a0IzNG9keGNEOVlwbDFoNm1Ydmg2SDg0TVkxYnBOeFVfZUZ0RkJjM3VoanBXRFZxSkdndURQVng?oc=5",
+        "source": "The Boston Globe",
+        "published": "2026-11-22T10:33:34+00:00"
+      },
+      {
+        "title": "Bruins vs. Caps RECAP: Boston explodes for a 7-5 WIN!",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOaVpSUlFuY2pjaU5oamJJSnUwYk5wcks1OHRiWHZCQlpDalM0Sm5kbHV3djNiUUpmOTZ6Zjc1U2g3NGJMazZHMU9ETWdVOVk1bkpBSEE1TThrSU90M0hRSFN2SXlQdVFxUjg0YWdFcFVmWF9lVW03NERsSWpTci1SNXB3?oc=5",
         "source": "Yahoo Sports",
-        "published": "2026-11-21T10:02:22+00:00"
+        "published": "2026-11-22T10:32:44+00:00"
       },
       {
-        "title": "Immigrants with protected status losing benefits",
-        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNQUVTVDY5VEVoUElfaUdzM0Y0T2Z5S2pUcW16MjJCWmM5UlRYRGE3NmhpOWRUYVFZUmNheGhNeWNESXVSQ1RKT3JibXJ6R09Gb05HLXZEWkJrVEFfVkFnWFJOaXVCUlNYVmx5RUZnWm9hcUpvY29YWTRJdTc0WENCczNkRVp2em9lcmtWdi0teWZqdC03SDlOa0dWQ3pJemZ1eDRxbERxaGN4QWoxUWJHcXZFN3V5VjdEQjZoWXNtUXZGWTl0Ul9EN1RGQnM0WV83bFhEbFVn?oc=5",
-        "source": "Eagle-Tribune",
-        "published": "2026-11-21T10:00:00+00:00"
+        "title": "Today in Boston Celtics history: Bradley debuts; Ford 1st 4-point play; Naulls passes",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOMllKRnRYYkt5QXNWQ05oby1kVi0yek5Ed1F2QVB4NVpKd2JQTHktNFdMUXhaUkw3QnAxQW5nb3NOZkJkd2ZxaVhCR3VRc3BmS1lxSm00bzExOURKNU9XV2ZMRWg3d2VRcU94WHNhcW83OU9PRENIWTRhRkN5ZnI4bXhTOVVZcEEwZUlyNER3?oc=5",
+        "source": "Yahoo Sports",
+        "published": "2026-11-22T10:03:36+00:00"
       },
       {
-        "title": "Red Sox sign 4 players, tender contracts to Duran, Rutschman and more",
-        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5XT1ZIZGdVLXZ0U1BqSkRvaFhxZzgxMTJQM3dXa01yUTNvZ29SemhieWp0cjhZLThrMW5BVmFPbHFxN1BKem5NRFNHMTdTcnMxX2NucGZVQ0N2d3NMYURDeTc2MFRDUzZoQVllQ0UxWndDNGpjMVHSAYIBQVVfeXFMUDJPbUE0QWZhc3F5X2Q3aTFxcmh0bE1LSU9FakJIRmNld253RzdZNEJ2dkhXaHNBVk80S2NiRy1jZkNpX3RGM3ltT1MzU01VWW9jXzA3YkRDQ2w2ODdWMHpKVy02YndIVGMwYnhNc2J2SlZCa1lCbmFpUVFoY3llaGI0dw?oc=5",
-        "source": "MLB.com",
-        "published": "2026-11-21T09:39:27+00:00"
+        "title": "Homes in a ‘low-priced town’ in Greater Boston are now $600,000, a new report says. Here are five striking findings.",
+        "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOM2NsamRJYW10aWpBandVLUpYZkFnZTNlcXdJV2N6VlNzVHRhMVg5eUJkMDNrX0VrcC1CNjhFdXJwcXpNcWQ4Y013TExNaDVSX3FBMVR1R2hvY0JWQl9zaG5ydnd0MzFQXzk1MHBGSGJhWmN3X1hrOU9OakpiWTk4NUJIaVlBb3c3dVNpZHZxUG5NTHlMZGtKQTc4RHVELXIwcFJNRE0xWldfbHdnWW8wYjk4UnJ4RFBUaVhWNW93Rlg2X3NsYngtbFpQZlRzWU9MUWw2TjZDbVlnLURsQXJLMEZLR0dGVi1QNkc4VzdLSmh5bUFMRTdZZnJR?oc=5",
+        "source": "Boston.com",
+        "published": "2026-11-22T10:00:00+00:00"
       },
       {
-        "title": "Nelson CROSS Obituary (2026) - Medford, MA - Boston Globe",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPMzU1LXVNUDM2RFM5Sm5fenhpbVVVZjA4V19lMGdDT21qUVd0U1ItazVWN0M0dDRsbGxxRHZzcWYtR0pmYk5ZMm1rZHFkaExiNnY4ZGZYaFFZb256a3lSaGMyeVRPZlA5ZUNYWXk4ODZRMllLYlk1Snd1YllDUVVRTkM0ZzktYk5jbC1tVkl5UEE?oc=5",
-        "source": "Legacy | Obituary",
-        "published": "2026-11-21T09:14:02+00:00"
+        "title": "Looking set for an easy road win, Celtics crumble in third quarter in stunning loss to NBA-worst Kings",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd3Rfbm15aVZONnNhMU9KSjNrZkV5TDJseFhXWFcyS2MyY2p5cXR1Q3N3elJPS1JQUG5WWk9QaHBGRkR6SnhVdEw0VkhDRFI5YWVFOHl6LXRxZXh1NnlWWGM4Um52QWlrRjFSc2xfaTNPVmozSGJNbGNwX2h3RDdvcVhCRW1xZE5mQ0d4RW1zY0o?oc=5",
+        "source": "The Boston Globe",
+        "published": "2026-11-22T09:37:01+00:00"
       },
       {
-        "title": "Gas station cuts price to $2.99 a gallon to give back to community during holidays",
-        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPU2lER09QWmwtVEg4akJaZGR2TGczWFNEQVlOcnVWZFZ2UHd4SktKWHZoNkw4VEx6eWZURTBlLXpNZ191ZUhaZWM0MUxXVHdOWFN3LTV5SDlEMXNxMThsVkU4dm5uTnk5N1lVX213cGcwMl9KMjFfVTJZNV9nTk8yUVgxcDZ3RHRoVV9sZk9YWldQQjRZMWxzRDRDejVOdHBJcVItQnNKRdIBuwFBVV95cUxPTU1QTmkzMkQyWk02M2doVV94dWVyV2x5ekpVOGFYNDlNNmdHYU1tS1dldE5ZTlFtZklnOHVnZHJOZFJ6bnJSMkkxTlFZcE1PRUZpeGRYTkVpWWZoR2tMS09NWmRNNFdqaWNRVURWSzVXcWpaME51ZjVHZzJ2b3I3Umhncl81WjBLMktOdXM2eEVuSE5XRTlDd1F1U01ER3JnS1ZXNmthbzVBR3dzSG5oWmdlUTJTSkx1ZHBV?oc=5",
-        "source": "WVIR",
-        "published": "2026-11-21T08:01:00+00:00"
-      },
-      {
-        "title": "Gas station owner: Best way to support community",
-        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUFI2S2tkUFozRUpaSS1pTXZjQVVucDhkc1BnOE9mZzlMOWVyaE1SUTluVkpQRUdkSl8xRTl0SGNvS1FRTWh5WXM3dV9MbzR3MXlvcG1JVjJfZ3BYczdWSGptTHlQVmd6cVJlN0Z5cVlaZzFOdFdhTzVJZmFWR0RoaDhSY3hQWHpkU3hz?oc=5",
-        "source": "KXII",
-        "published": "2026-11-21T08:00:00+00:00"
+        "title": "DISGUSTING: Boston Celtics LOSE To Sacramento Kings After DISASTER 3rd Quarter",
+        "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxNYThVZnI3N2c0NkVDUDBYQ1pvdjhBNUVNdnFEc04yLWRkTlU4anppREctLTRtaDFpQnJEbDBqdEZ6VmpjSnZmeVVnRU5ULUhKX3JDb1hldTZEX25Ea08xLTRWcUhJUy1BNWJXVTlmRmlPR0drb0FTUEVCNkVxUmRITFBZUlctNzh4NzcwVzdNVmJVSTc1RzV5RUxBaExfWDZxeDQ4SWhlTHYxbGFzem5mU3BjRXJYZk53M1BQNUd5M0c4eWprWnhhWVhxQVRDd1ZORDh4Q3FYSDAwYkVUZGRoaGZjMU43dGNoVEc1bVBrUUloR3EwQkFza00zLXF1WF91Y0x3azJPQkUyR2QtVHloNXpNU3E5Zw?oc=5",
+        "source": "kcentv.com",
+        "published": "2026-11-22T09:08:05+00:00"
       }
     ],
     "Around Town": [
       {
-        "title": "Saugus Girls JV Basketball @ Winthrop",
-        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQZ2U5RnhZNVhNeUJHWXJpVXFxU1VvazkwTVJQWVBkd2RYQWhncWVLQUZkQXY1WWRVVmhORVNlZE8zMUo5eUNGTWVzZmVMbW9ndTFKRzY4SFg0cVB1MnBRNFVqak0yTFk2OGYtcjRRaUNsTjdaRkVZcGRYcHdiUVVrTHdkaWZSWlVqanZCUTFjb3FReHNJRC1zQVRvWXJYdUVuWWNkdDl3dWQ3RHBBLWs5RV9lbXdrNkF2M3E1cWo5dw?oc=5",
+        "title": "2026 Massachusetts high school football final scores from state semifinals",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZ0todnZjTjhiNjdPZzQxTXhIaWQwdFNPdU5oLVRFOUxVdkRZMTcyQVNVY01GX3JWR0hSQUdxOE1Kci1LVFJ3Y2pOZWtBRnhuTnBiUGdxU2E2X3h6NEgxS082OGJ1TFczR3FRUm1sZmNsSzFpam50RWxVUk9sZEFSREFfbEhIMWVORWpxQk5DMU9DWkVDUUp1VTJua3d6UVNDQ0dfTHBncDdsNVB1WFFtVTN5Yw?oc=5",
+        "source": "High School Football America",
+        "published": "2026-11-22T06:13:36+00:00"
+      },
+      {
+        "title": "Thomas Desjardins Obituary (1967 - 2026) - Watertown, CT - Republican American",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNT2w4OUFWX0JpS0wzZTJPZUZnblhtQlFpTUtVeDItajlZZElWZTFCWlRoY0pOYmU0TzRlYWRkYVhyU3BPQmttSGRfdGlVYTE0MFBOazBTZTZBTjZJcmRwZzBUMHA1aTZmMzJHOUtkSnJfMHVXWE93TG9Uelc2M0FCMk9YOGhPTGt4eEpCSjBCU2o?oc=5",
+        "source": "Legacy | Obituary",
+        "published": "2026-11-22T00:15:08+00:00"
+      },
+      {
+        "title": "2026 MIAA Div 6 Football Semifinal Winthrop vs. Norwell - 11/21/2026 | Watch Live & On Demand",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB5bndzZDM5Z1ptLU1qS3V6RGFCemtEdDlaaXFFUXAyV3Z4SHFhY2dKZUkwUVhkd2lteFh5bUF5bDdQdDhiTWNpcU9XOGhhVEhxZ1N3Ukw2Qlk2em5hTGF1c0Q2WQ?oc=5",
+        "source": "NFHS Network",
+        "published": "2026-11-21T23:47:54+00:00"
+      },
+      {
+        "title": "Pauline Ober Obituary (1928 - 2026) - Legacy Remembers",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNSUNvOU5Ia0dvZmxENFVZcHFydVRmSy1pRWNmeTdjbmRXRXlmMko2OWpEWF9aRE5SanM3TWF0WV9DZHNDVUs1SXhpR0hydHlVTFphdkNGb0FvVmduWWZKVlk0Q2dSaUdzcmIxMlhrQ2FxT0xxbzFaV1JWeU1Hbl90Yjh5Vkd2SG1Fc2F4dTI5RQ?oc=5",
+        "source": "Legacy | Obituary",
+        "published": "2026-11-21T22:59:58+00:00"
+      },
+      {
+        "title": "Revere Girls Varsity Basketball @ Winthrop",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQY05QSzFqVVVkcmNXZVNrNDFtNVhUTnd0UVl2WXNOTXY3MlUwVHI3QnY2V2RPT2pURmpjSktuYXF5a0FNUHNZZkV4M0FtZFVhSVVBSVhYeTdkODhNWlM0WGlzaGcxeGNpSklXNVl0aGFia054Z21IUFlvcmhScm1iNDZla2kyb0dfNW5TeU1rampZZ0xBODRHNjFEUVlLQk9IS3hFQUhZMFZtS1hqT0R4S2txQjQydmp4?oc=5",
         "source": "MaxPreps",
-        "published": "2026-11-20T16:07:21+00:00"
+        "published": "2026-11-21T22:28:29+00:00"
       },
       {
-        "title": "Althea Alling Obituary - (1921-2026)",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAxQWVFeXI2OEtZX09OY1BGRmF1RDdtdU9vUE1YbnNLb3d0MzhqZlFxblVQYWEtVFZrUXBLbUZLd1FKWHhvbm5oZk9WM3RnTU96YjZNck1jSU16Ui1CQ0s2Zw?oc=5",
-        "source": "Lowell Sun",
-        "published": "2026-11-20T07:16:40+00:00"
-      },
-      {
-        "title": "Winthrop Varsity Football @ Norwell",
-        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQ3VSM05hcGtVc0ptSXRzSEJTdTNjOFlHaUlQanR4Wk10U0h5NGpfbzZTTmxEQVc0dEFtTVdRVWpKVjYwa0N1ai1pazNfS0JFRjl1cEdLUzBFMHFYZWRSNTk5WFQ3Wlgzb2xSbDZMXzVQQmJmNFhJc0lDTzJSTUVPdnNVVUpkT2hoZ1o4SlpNTEdiTW4xY0E3WXdzbG13SUQwanotNEZhOFFCTHdMZHFzcGRn?oc=5",
-        "source": "MaxPreps",
-        "published": "2026-11-20T00:41:03+00:00"
-      },
-      {
-        "title": "Town Council keeps single tax rate for residential, commercial properties",
-        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOTjRlU2plc01Qd3h2Y0NWMDJiWEdldUx4YVRGOHd3Q01pRlhxZkNnek4zejNKWFN4WVM2c2xkS3h4aC1pQTFpT0lmeGloVDNjVUZPVzIxVWJxOXVZSHBFOFUtcW1JQjZpUGk2NHBfc211Y3lZcC16VVJYYUsybG5ZQ25uNDFKQU5ZRlcwMzdkR1BWR0RLdy04ZVpieW9pcklWeUhwNC1TMl94d3FULWw4d2JoT3FCZ9IBuwFBVV95cUxNSkNFaXFIMUVONFpWWmNkVlBoTHh3NWg4d2x3LVZhQVJ2b1dYS2t2bHAzNWhOeTBYdnpXV1dlaTM1UTc1UlgxaWxHZE5iSUw1YTlnbFVwbDM0SWk3T2p1OG0wb0tiMEl2Nkg1a1VrOXpBZDA1UnowWFA0RmhUUzJsX2R0WkZOUFhCVlNkMGpCWUxIZXVqeW1hdzhSd3NNeHRfeXJPNWVJUkNnbkxZZTJGRy1yclF4WGVWaElJ?oc=5",
-        "source": "Winthrop Transcript",
-        "published": "2026-11-19T18:01:34+00:00"
-      },
-      {
-        "title": "Winthrop police warn against fraud schemes",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPQ1V3b1N1a1lVZ3N1aVBvNWNlcDV4b1p3U1V2NGk5cmNYeXM1NEJZd3RNSkNTY1N1NFBodHJzNUhvWGR5c3FNTVotNl9tYzZuZThUM1BTdEk3ZDNha0JoY2hIaW5WLWUyUEJpSER4WmNnaVF4Ykc5bkU5dHE3cGh6YWFpNjZhejdpaG1sbGdn0gGTAUFVX3lxTE1JOEp6ZDNyLVVSZGVpMnBhTXBzTFJ0T0hCVEZWSHFuQ0ZTRnhHRU5Ya09GLTMyWHZTeEFxX0V3dmYzNVFobzB3eXd2emFvUmlwTjhNdlVXMTNteXdJeWRlVUl0MVc1SjBsMjMtb251WkZUbnZsQ3R6NmYxSmdGZDliUzdqYVlkM1M5S0VpVWxqTlV3TQ?oc=5",
-        "source": "Winthrop Transcript",
-        "published": "2026-11-19T18:01:34+00:00"
-      },
-      {
-        "title": "The Ultimate Prom and Bridal celebrates 57 years",
-        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOa3hWa053a0JLNUp2Q0E4dXBkbXRGT295Y0E0RWw5NFdMd29SX1JvU1dLdmdLODJQQ0lVZnNyYlY1SjBSRDdZNWIwSXdqNU43TWlwSDF5el9mSXlETW8wdzlvWXdFa3RoelkyVllXUjRzU3B6eTFQVlVsQXpkd2s1bkRrdnBjS0NraFZiOF91TF9pWWFkcWfSAZsBQVVfeXFMUEo0RGhOWGh4TEFSQTVZT3BjcXJBVXBnQUhjclRhbmVjcE5xRnFlM1hLUUFaYW5jVlEwN2ZyMHh3MnVNNmpuLTlIMll4dlJ3dWNGTlNBNzFTZTBsbUNxQzJVM1R1dkMtSEIxbUxxOFd4Z0pQS2FmNnF6RGtBekQ1OFMwQVFSZ1ZHazdWMmYyWnFXZmJURlJhOFdyeFE?oc=5",
-        "source": "Winthrop Transcript",
-        "published": "2026-11-19T15:40:33+00:00"
+        "title": "MIAA high school football semifinal scoreboard",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYUZZQms1X2RWU3JFY0g0VFh1TjU0NFpWSkt4QThlbnBib3A0MUY4NW9pLWdxZkhoTnVaemREY2hjOVExdHVwNWN2Uy1qZE80QmJrOEdOZVNLMFNHYWpIZjAtRy1PVGVWRE9PWm5mRFJHbHBlYW9saEtjR3Vxbllqdm5TTFNVSXBTMXFxb1dhYUdMRERydURZa1pMdnFKQmRKNGo2dUc0NUFwWlA0MDVYLU9LckFlT19mQjc1SF9vSTVqQQ?oc=5",
+        "source": "The Patriot Ledger",
+        "published": "2026-11-21T10:10:33+00:00"
       }
     ]
   },
   "pool": [
+    {
+      "title": "Fire at Indonesian candy factory leaves 3 dead, dozens of workers unaccounted for",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOcDVuOERSNW9OLU1nTjNZMHk2aUxTb0tDMEduMmRsQjlmN0pUUlJ4SDQyQzZ1UHoyUTEwbVhsVXo4aGlBMlpmQmJIWk54a0IzNG9keGNEOVlwbDFoNm1Ydmg2SDg0TVkxYnBOeFVfZUZ0RkJjM3VoanBXRFZxSkdndURQVng?oc=5",
+      "source": "The Boston Globe",
+      "published": "2026-11-22T10:33:34+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-22T10:53:16+00:00"
+    },
+    {
+      "title": "Bruins vs. Caps RECAP: Boston explodes for a 7-5 WIN!",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOaVpSUlFuY2pjaU5oamJJSnUwYk5wcks1OHRiWHZCQlpDalM0Sm5kbHV3djNiUUpmOTZ6Zjc1U2g3NGJMazZHMU9ETWdVOVk1bkpBSEE1TThrSU90M0hRSFN2SXlQdVFxUjg0YWdFcFVmWF9lVW03NERsSWpTci1SNXB3?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-22T10:32:44+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-22T10:53:16+00:00"
+    },
+    {
+      "title": "Today in Boston Celtics history: Bradley debuts; Ford 1st 4-point play; Naulls passes",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOMllKRnRYYkt5QXNWQ05oby1kVi0yek5Ed1F2QVB4NVpKd2JQTHktNFdMUXhaUkw3QnAxQW5nb3NOZkJkd2ZxaVhCR3VRc3BmS1lxSm00bzExOURKNU9XV2ZMRWg3d2VRcU94WHNhcW83OU9PRENIWTRhRkN5ZnI4bXhTOVVZcEEwZUlyNER3?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-22T10:03:36+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-22T10:53:16+00:00"
+    },
+    {
+      "title": "Homes in a ‘low-priced town’ in Greater Boston are now $600,000, a new report says. Here are five striking findings.",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOM2NsamRJYW10aWpBandVLUpYZkFnZTNlcXdJV2N6VlNzVHRhMVg5eUJkMDNrX0VrcC1CNjhFdXJwcXpNcWQ4Y013TExNaDVSX3FBMVR1R2hvY0JWQl9zaG5ydnd0MzFQXzk1MHBGSGJhWmN3X1hrOU9OakpiWTk4NUJIaVlBb3c3dVNpZHZxUG5NTHlMZGtKQTc4RHVELXIwcFJNRE0xWldfbHdnWW8wYjk4UnJ4RFBUaVhWNW93Rlg2X3NsYngtbFpQZlRzWU9MUWw2TjZDbVlnLURsQXJLMEZLR0dGVi1QNkc4VzdLSmh5bUFMRTdZZnJR?oc=5",
+      "source": "Boston.com",
+      "published": "2026-11-22T10:00:00+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-22T10:53:16+00:00"
+    },
+    {
+      "title": "Looking set for an easy road win, Celtics crumble in third quarter in stunning loss to NBA-worst Kings",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd3Rfbm15aVZONnNhMU9KSjNrZkV5TDJseFhXWFcyS2MyY2p5cXR1Q3N3elJPS1JQUG5WWk9QaHBGRkR6SnhVdEw0VkhDRFI5YWVFOHl6LXRxZXh1NnlWWGM4Um52QWlrRjFSc2xfaTNPVmozSGJNbGNwX2h3RDdvcVhCRW1xZE5mQ0d4RW1zY0o?oc=5",
+      "source": "The Boston Globe",
+      "published": "2026-11-22T09:37:01+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-22T10:53:16+00:00"
+    },
+    {
+      "title": "DISGUSTING: Boston Celtics LOSE To Sacramento Kings After DISASTER 3rd Quarter",
+      "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxNYThVZnI3N2c0NkVDUDBYQ1pvdjhBNUVNdnFEc04yLWRkTlU4anppREctLTRtaDFpQnJEbDBqdEZ6VmpjSnZmeVVnRU5ULUhKX3JDb1hldTZEX25Ea08xLTRWcUhJUy1BNWJXVTlmRmlPR0drb0FTUEVCNkVxUmRITFBZUlctNzh4NzcwVzdNVmJVSTc1RzV5RUxBaExfWDZxeDQ4SWhlTHYxbGFzem5mU3BjRXJYZk53M1BQNUd5M0c4eWprWnhhWVhxQVRDd1ZORDh4Q3FYSDAwYkVUZGRoaGZjMU43dGNoVEc1bVBrUUloR3EwQkFza00zLXF1WF91Y0x3azJPQkUyR2QtVHloNXpNU3E5Zw?oc=5",
+      "source": "kcentv.com",
+      "published": "2026-11-22T09:08:05+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-22T10:53:16+00:00"
+    },
+    {
+      "title": "2026 Massachusetts high school football final scores from state semifinals",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZ0todnZjTjhiNjdPZzQxTXhIaWQwdFNPdU5oLVRFOUxVdkRZMTcyQVNVY01GX3JWR0hSQUdxOE1Kci1LVFJ3Y2pOZWtBRnhuTnBiUGdxU2E2X3h6NEgxS082OGJ1TFczR3FRUm1sZmNsSzFpam50RWxVUk9sZEFSREFfbEhIMWVORWpxQk5DMU9DWkVDUUp1VTJua3d6UVNDQ0dfTHBncDdsNVB1WFFtVTN5Yw?oc=5",
+      "source": "High School Football America",
+      "published": "2026-11-22T06:13:36+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-22T10:53:16+00:00"
+    },
+    {
+      "title": "Thomas Desjardins Obituary (1967 - 2026) - Watertown, CT - Republican American",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNT2w4OUFWX0JpS0wzZTJPZUZnblhtQlFpTUtVeDItajlZZElWZTFCWlRoY0pOYmU0TzRlYWRkYVhyU3BPQmttSGRfdGlVYTE0MFBOazBTZTZBTjZJcmRwZzBUMHA1aTZmMzJHOUtkSnJfMHVXWE93TG9Uelc2M0FCMk9YOGhPTGt4eEpCSjBCU2o?oc=5",
+      "source": "Legacy | Obituary",
+      "published": "2026-11-22T00:15:08+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-22T10:53:16+00:00"
+    },
+    {
+      "title": "2026 MIAA Div 6 Football Semifinal Winthrop vs. Norwell - 11/21/2026 | Watch Live & On Demand",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB5bndzZDM5Z1ptLU1qS3V6RGFCemtEdDlaaXFFUXAyV3Z4SHFhY2dKZUkwUVhkd2lteFh5bUF5bDdQdDhiTWNpcU9XOGhhVEhxZ1N3Ukw2Qlk2em5hTGF1c0Q2WQ?oc=5",
+      "source": "NFHS Network",
+      "published": "2026-11-21T23:47:54+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-22T10:53:16+00:00"
+    },
+    {
+      "title": "Pauline Ober Obituary (1928 - 2026) - Legacy Remembers",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNSUNvOU5Ia0dvZmxENFVZcHFydVRmSy1pRWNmeTdjbmRXRXlmMko2OWpEWF9aRE5SanM3TWF0WV9DZHNDVUs1SXhpR0hydHlVTFphdkNGb0FvVmduWWZKVlk0Q2dSaUdzcmIxMlhrQ2FxT0xxbzFaV1JWeU1Hbl90Yjh5Vkd2SG1Fc2F4dTI5RQ?oc=5",
+      "source": "Legacy | Obituary",
+      "published": "2026-11-21T22:59:58+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-22T10:53:16+00:00"
+    },
+    {
+      "title": "Revere Girls Varsity Basketball @ Winthrop",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQY05QSzFqVVVkcmNXZVNrNDFtNVhUTnd0UVl2WXNOTXY3MlUwVHI3QnY2V2RPT2pURmpjSktuYXF5a0FNUHNZZkV4M0FtZFVhSVVBSVhYeTdkODhNWlM0WGlzaGcxeGNpSklXNVl0aGFia054Z21IUFlvcmhScm1iNDZla2kyb0dfNW5TeU1rampZZ0xBODRHNjFEUVlLQk9IS3hFQUhZMFZtS1hqT0R4S2txQjQydmp4?oc=5",
+      "source": "MaxPreps",
+      "published": "2026-11-21T22:28:29+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-22T10:53:16+00:00"
+    },
+    {
+      "title": "MIAA high school football semifinal scoreboard",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYUZZQms1X2RWU3JFY0g0VFh1TjU0NFpWSkt4QThlbnBib3A0MUY4NW9pLWdxZkhoTnVaemREY2hjOVExdHVwNWN2Uy1qZE80QmJrOEdOZVNLMFNHYWpIZjAtRy1PVGVWRE9PWm5mRFJHbHBlYW9saEtjR3Vxbllqdm5TTFNVSXBTMXFxb1dhYUdMRERydURZa1pMdnFKQmRKNGo2dUc0NUFwWlA0MDVYLU9LckFlT19mQjc1SF9vSTVqQQ?oc=5",
+      "source": "The Patriot Ledger",
+      "published": "2026-11-21T10:10:33+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-22T10:53:16+00:00"
+    },
     {
       "title": "Today in Boston Celtics history: Reggie Lewis, Cedric Maxwell born",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPLUlqMEtVZXZ1dmNkMFJaTFppNlU5WlBDTS1STkNrSUxnTTE2Z2hXaHR2bnViMERzMVF6d2FUdks5bkpLRzdkZUxZQ0k1TjIza19Qd1hteFlHYWFBTVRNdXhOSlB6RVo5YkpvckF1bnJoajVvaG1uNzZKRDNmSUlXSmM3d2tpMDRya3ZudA?oc=5",
