@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-20T11:10:37+00:00",
-  "_help": "Mortgage rates refresh automatically (Freddie Mac weekly survey via FRED). 'local_stats' is yours to fill in from MLS each issue – leave value blank to hide a stat.",
+  "_help": "Edited from admin.html → Market. Mortgage rates refresh automatically (Freddie Mac weekly survey via FRED). Fill in local_stats values to show them; blank values are hidden.",
   "rates": {
     "30yr": {
       "rate": 7.28,
@@ -17,7 +17,13 @@
   },
   "local_stats": [
     {
-      "label": "Winthrop median sale price",
+      "label": "Median single-family price",
+      "value": "",
+      "change": "",
+      "period": ""
+    },
+    {
+      "label": "Median condo price",
       "value": "",
       "change": "",
       "period": ""
@@ -27,12 +33,15 @@
       "value": "",
       "change": "",
       "period": ""
-    },
-    {
-      "label": "Homes sold last month",
-      "value": "",
-      "change": "",
-      "period": ""
     }
-  ]
+  ],
+  "headline": "The market, in brief",
+  "note": "Fall is typically when inventory peaks around Greater Boston, which gives buyers more homes to choose from and puts more pressure on sellers to price right from day one. Across Massachusetts, prices have held steady to slightly up this year.\n\nThinking about buying or selling in the new year? Now is a great time to start planning.",
+  "note_source": "",
+  "cta": {
+    "title": "Want property alerts & market updates?",
+    "text": "Register at bowdoinrealestate.com to get new-listing alerts, market info and more.",
+    "label": "Register at bowdoinrealestate.com",
+    "url": "https://www.bowdoinrealestate.com"
+  }
 }
