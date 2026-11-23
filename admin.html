@@ -331,7 +331,10 @@
         { k: 'expert.name', label: 'Name' }, { k: 'expert.title', label: 'Title', ph: 'Attorney, Partner…' }, { k: 'expert.firm', label: 'Firm' },
         { k: 'expert.bio', label: 'One-line bio', type: 'textarea', rows: 2 }, { k: 'expert.photo', label: 'Headshot', type: 'image' }, { k: 'expert.website', label: 'Website or contact link', ph: 'https://' },
         { label: 'The Q&A', type: 'heading', k: '_h2' },
-        { k: 'intro', label: 'Intro (1–2 sentences)', type: 'textarea', rows: 2 },
+        { k: 'dek', label: 'Subtitle', ph: 'New ADU laws, zoning changes, and what homeowners should know.' },
+        { k: 'teaser', label: 'Email teaser (shown in the newsletter instead of question previews; blank line between paragraphs)', type: 'textarea', rows: 8 },
+        { k: 'cta', label: 'Button label', ph: 'Read the full Q&A' },
+        { k: 'intro', label: 'Intro on the full Q&A page (1–2 sentences)', type: 'textarea', rows: 2 },
         { k: 'questions', type: 'qa' },
         { k: 'teaser_count', label: 'How many questions to preview in the email', type: 'number' },
         { k: 'disclaimer', label: 'Disclaimer', type: 'textarea', rows: 2 },
@@ -471,9 +474,10 @@
     if (q) {
       const e = q.expert || {}, n = (q.questions || []).length, href = 'qa.html?id=' + encodeURIComponent(q.id);
       rows.push(divider);
-      rows.push(sec(`${kick(q.kicker || 'Ask the Attorney')}${title(q.title)}${e.name ? p(`<b>${h(e.name)}</b>${(e.title || e.firm) ? ', ' + h([e.title, e.firm].filter(Boolean).join(', ')) : ''}`, `font-size:14px;color:${C.muted}`) : ''}
-        ${(q.questions || []).slice(0, Math.min(q.teaser_count || 1, 2)).map((x) => `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:14px"><tr><td width="3" bgcolor="${C.sage}" style="background:${C.sage}"></td><td style="padding:4px 0 4px 14px"><div style="font-family:${serif};font-size:18px;line-height:1.35;color:${C.ink}">Q. ${h(x.q)}</div><div style="font-family:${sans};font-size:14px;line-height:1.55;color:${C.text};margin-top:4px">${h(trim(x.a, 220))}</div></td></tr></table>`).join('')}
-        ${btn(href, `Read all ${n} answers`, C.sage)}`));
+      rows.push(sec(`${kick(q.kicker || 'Ask the Attorney')}${title(q.title)}${q.dek ? p(`<i>${h(q.dek)}</i>`, `font-size:16px;color:${C.muted}`) : ''}${e.name ? p(`<b>${h(e.name)}</b>${(e.title || e.firm) ? ', ' + h([e.title, e.firm].filter(Boolean).join(', ')) : ''}`, `font-size:14px;color:${C.muted}`) : ''}
+        ${q.teaser ? q.teaser.split(/\n\s*\n/).map((x) => p(h(x.trim()))).join('') : ''}
+        ${(q.questions || []).slice(0, q.teaser ? 0 : Math.min(q.teaser_count || 1, 2)).map((x) => `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:14px"><tr><td width="3" bgcolor="${C.sage}" style="background:${C.sage}"></td><td style="padding:4px 0 4px 14px"><div style="font-family:${serif};font-size:18px;line-height:1.35;color:${C.ink}">Q. ${h(x.q)}</div><div style="font-family:${sans};font-size:14px;line-height:1.55;color:${C.text};margin-top:4px">${h(trim(x.a, 220))}</div></td></tr></table>`).join('')}
+        ${btn(href, q.cta || (q.teaser ? 'Read the full Q&A' : `Read all ${n} answers`), C.sage)}`));
     }
     // stories
     const picks = (S.news && S.news.editors_picks) || [];
