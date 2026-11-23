@@ -39,7 +39,7 @@
   /* ---------------- chrome ---------------- */
   function chrome(page) {
     const c = D.config, b = c.brokerage || {};
-    const nav = [['index.html', 'Home', 'home'], ['events.html', 'Events', 'events'], ['spotlight.html', 'Community', 'spotlight'], ['qa.html', 'Ask the Attorney', 'qa'], ['issues.html', 'Past Issues', 'issues'], ['trivia.html', 'Trivia', 'trivia'], ['listings.html', 'Listings', 'listings']];
+    const nav = [['index.html', 'Home', 'home'], ['events.html', 'Events', 'events'], ['spotlight.html', 'Community', 'spotlight'], ['qa.html', 'Ask the Attorney', 'qa'], ['issues.html', 'Past Issues', 'issues'], ['trivia.html', 'Trivia', 'trivia']];
     const header = `
       <div class="topbar"><div class="wrap">
         <span>Brought to you by <a href="${esc(b.website)}" target="_blank" rel="noopener">${esc(b.name)}</a></span>
@@ -93,7 +93,7 @@
   function signupBox() {
     return `<div class="signup-box" id="subscribe"><span class="eyebrow">Free · ${esc(D.config.frequency || 'weekly')}</span>
       <h3 style="margin-top:8px">Get ${esc(D.config.newsletter_name)} in your inbox</h3>
-      <p>Market updates, new listings, local news and the best things to do around town. Plus a new Boston Trivia Challenge every week: top score wins a ${esc((D.config.giveaway || {}).prize || 'gift card')}.</p>
+      <p>Local news, community events, a quick market update and the best things to do around town. Plus a new Boston Trivia Challenge every week: top score wins a ${esc((D.config.giveaway || {}).prize || 'gift card')}.</p>
       ${signupForm()}<p class="small" style="margin:10px 0 0">No spam. Unsubscribe anytime.</p></div>`;
   }
 
@@ -151,6 +151,17 @@
   }
 
   /* ---------------- market ---------------- */
+  function marketCTA() {
+    const m = D.market || {}, c = m.cta || {}, b = D.config.brokerage || {};
+    const url = c.url || 'https://www.bowdoinrealestate.com';
+    return `<div class="market-cta"><div><span class="eyebrow">Stay in the know</span><h3>${esc(c.title || 'Want property alerts & market updates?')}</h3><p>${esc(c.text || 'Register at bowdoinrealestate.com to get new-listing alerts, market info and more.')}</p></div>
+      <div class="acts"><a class="btn brass" href="${esc(url)}" target="_blank" rel="noopener">${esc(c.label || 'Register at bowdoinrealestate.com')} →</a>${b.email ? `<a class="small" href="mailto:${esc(b.email)}?subject=${encodeURIComponent('Real estate question')}">or ask us a question</a>` : ''}</div></div>`;
+  }
+  function marketHTML() {
+    const m = D.market || {};
+    const r = m.rates || {}, has = (r['30yr'] || ((m.local_stats || []).some((s) => s.value)));
+    return `${m.note ? `<div class="market-note">${md(m.note)}${m.note_source ? `<p class="small muted">${esc(m.note_source)}</p>` : ''}</div>` : ''}${has ? ratesHTML() : ''}${marketCTA()}`;
+  }
   function ratesHTML() {
     const r = (D.market || {}).rates || {};
     const items = [['30yr', '30-yr fixed'], ['15yr', '15-yr fixed']].filter(([k]) => r[k]);
@@ -235,6 +246,7 @@
       case 'listings': return `<div class="grid g2">${sortedListings().map((l) => listingCard(l)).join('')}</div>`;
       case 'events': { const list = upcoming().slice(0, +arg || 4); return list.length ? `<div class="grid" data-evlist>${list.map(eventCard).join('')}</div>` : '<div class="card empty">No upcoming events right now. Check back soon!</div>'; }
       case 'rates': return ratesHTML();
+      case 'market': return marketHTML();
       case 'giveaway': case 'trivia': return giveawayBox(true);
       case 'signup': return signupBox();
       default: return (window.LLShortcodes && window.LLShortcodes[name]) ? window.LLShortcodes[name](arg) : '';
@@ -269,9 +281,7 @@
         <h3 style="font-size:1.6rem;margin-top:10px">${esc(latest.title)}</h3><p class="muted">${esc(latest.summary)}</p>
         <div class="small muted">${longDate(latest.date)}</div><div style="margin-top:14px"><span class="btn sm">Read it →</span></div></a>` : '';
     $('#hero-signup').innerHTML = signupForm();
-    $('#market').innerHTML = ratesHTML();
-    $('#listings').innerHTML = D.listings.length ? sortedListings().slice(0, 4).map((l) => listingCard(l)).join('') : '<div class="card empty">New listings coming soon.</div>';
-    $('#listings-more').href = D.config.brokerage.listings_page;
+    const mb = $('#market-block'); if (mb) { mb.innerHTML = marketHTML(); const mt = $('#market-title'); if (mt && D.market && D.market.headline) mt.textContent = D.market.headline; }
     newsBlock($('#news'));
     const ev = upcoming().slice(0, 4);
     $('#events').innerHTML = ev.length ? ev.map(eventCard).join('') : '<div class="card empty">No upcoming events yet.</div>';
@@ -280,8 +290,8 @@
     const f = D.config.forms || {}, b = D.config.brokerage;
     $('#ask-btn').href = f.ask_an_agent_url || `mailto:${b.email}?subject=${encodeURIComponent('Ask an agent – ' + D.config.newsletter_name)}`;
     $('#event-btn').href = f.submit_event_url || `mailto:${b.email}?subject=${encodeURIComponent('Event submission')}&body=${encodeURIComponent('Event name:\nDate & time:\nLocation / town:\nCost:\nLink:\nShort description:')}`;
-    $('#quick').innerHTML = Object.entries(b.links || {}).map(([t, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`).join('');
-    $('#agents').innerHTML = (b.agents || []).map((a) => `<div class="card agent-card"><b>${esc(a.name)}</b><span class="small muted">${esc(b.name)}</span>
+    if ($('#quick')) $('#quick').innerHTML = Object.entries(b.links || {}).map(([t, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`).join('');
+    if ($('#agents')) $('#agents').innerHTML = (b.agents || []).map((a) => `<div class="card agent-card"><b>${esc(a.name)}</b><span class="small muted">${esc(b.name)}</span>
       <a href="tel:${a.phone.replace(/\D/g, '')}">${esc(a.phone)}</a><a href="mailto:${esc(a.email)}">${esc(a.email)}</a>${a.website ? `<a href="${esc(a.website)}" target="_blank" rel="noopener">Website →</a>` : ''}</div>`).join('');
     $('#signup-box').innerHTML = signupBox();
   };

@@ -239,3 +239,11 @@ section[hidden]{display:none}
 .card.season h4 a{color:var(--ink);text-decoration:none}
 .card.season p{margin:8px 0 0}
 .qa-teaser .dek{font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:1.15rem;color:var(--harbor);margin:4px 0 12px}
+
+/* market in brief */
+.market-note{max-width:760px;font-size:1.05rem;margin-bottom:20px}
+.market-note p{margin:0 0 10px}
+.market-cta{margin-top:24px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brass-soft);border-left:4px solid var(--brass);padding:22px 26px}
+.market-cta h3{margin:6px 0 4px;font-size:1.4rem}
+.market-cta p{margin:0;color:var(--harbor)}
+.market-cta .acts{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
