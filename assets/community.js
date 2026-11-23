@@ -29,9 +29,9 @@
     const n = (q.questions || []).length;
     return `<div class="card qa-teaser"><div class="pad">
       <span class="eyebrow">${esc(q.kicker || 'Ask the Attorney')}</span><h3 style="font-size:1.6rem;margin-top:8px">${esc(q.title)}</h3>
-      ${expertLine(q.expert)}${q.intro ? `<p class="muted">${esc(trim(q.intro, 220))}</p>` : ''}
-      ${(q.questions || []).slice(0, q.teaser_count || 2).map((x) => `<div class="qa-item"><div class="q">Q. ${esc(x.q)}</div><div class="a">${esc(trim(x.a, 200))}</div></div>`).join('')}
-      <a class="btn brass" href="qa.html?id=${encodeURIComponent(q.id)}">Read all ${n} answers →</a></div></div>`;
+      ${q.dek ? `<p class="dek">${esc(q.dek)}</p>` : ''}${expertLine(q.expert)}${q.teaser ? q.teaser.split(/\n\s*\n/).map((x) => `<p>${esc(x.trim())}</p>`).join('') : q.intro ? `<p class="muted">${esc(trim(q.intro, 220))}</p>` : ''}
+      ${(q.questions || []).slice(0, q.teaser ? 0 : (q.teaser_count || 2)).map((x) => `<div class="qa-item"><div class="q">Q. ${esc(x.q)}</div><div class="a">${esc(trim(x.a, 200))}</div></div>`).join('')}
+      <a class="btn brass" href="qa.html?id=${encodeURIComponent(q.id)}">${esc(q.cta || (q.teaser ? 'Read the full Q&A' : `Read all ${n} answers`))} →</a></div></div>`;
   }
   function featureHref(f) { return f.body ? `spotlight.html?id=${encodeURIComponent(f.id)}` : (f.link_url || 'spotlight.html'); }
   function featureCard(f) {
@@ -128,7 +128,7 @@
     document.title = q.title + ' · ' + L.D.config.newsletter_name;
     const e = q.expert || {}, qs = q.questions || [];
     el.innerHTML = `<article class="prose"><a href="qa.html" class="small">← All Q&amp;As</a><br><span class="eyebrow">${esc(q.kicker || 'Ask the Attorney')}${q.date ? ' · ' + L.longDate(q.date) : ''}</span>
-      <h1 style="margin-top:12px">${esc(q.title)}</h1>${expertLine(e)}${e.bio ? `<p class="muted small">${esc(e.bio)}</p>` : ''}${q.intro ? `<p>${esc(q.intro)}</p>` : ''}
+      <h1 style="margin-top:12px">${esc(q.title)}</h1>${q.dek ? `<p class="lead">${esc(q.dek)}</p>` : ''}${expertLine(e)}${e.bio ? `<p class="muted small">${esc(e.bio)}</p>` : ''}${q.intro ? `<p>${esc(q.intro)}</p>` : q.teaser ? q.teaser.split(/\n\s*\n/).slice(0, -1).map((x) => `<p>${esc(x.trim())}</p>`).join('') : ''}
       ${q.sample ? '<div class="notice">Draft: the full Q&amp;A is being added.</div>' : ''}
       <nav class="qa-toc"><b class="small" style="letter-spacing:.12em;text-transform:uppercase;color:var(--brass)">In this Q&amp;A</b>${qs.map((x, i) => `<a href="#q${i + 1}">${i + 1}. ${esc(x.q)}</a>`).join('')}</nav>
       ${qs.map((x, i) => `<section class="qa-full" id="q${i + 1}"><h2>${i + 1}. ${esc(x.q)}</h2>${L.md(x.a || '')}</section>`).join('')}

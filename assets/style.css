@@ -238,3 +238,4 @@ section[hidden]{display:none}
 .card.season h4{margin:8px 0 4px;font-family:'Newsreader',Georgia,serif;font-size:1.15rem}
 .card.season h4 a{color:var(--ink);text-decoration:none}
 .card.season p{margin:8px 0 0}
+.qa-teaser .dek{font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:1.15rem;color:var(--harbor);margin:4px 0 12px}
