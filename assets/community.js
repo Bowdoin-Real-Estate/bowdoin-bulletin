@@ -58,7 +58,10 @@
   /* ---------- visual month calendar ---------- */
   function calendar(el) {
     const events = L.D.events; const cur = new Date(); cur.setDate(1); let sel = null;
-    const on = (d) => { const s = new Date(d); s.setHours(0, 0, 0, 0); const e = new Date(s); e.setDate(e.getDate() + 1); return events.filter((ev) => ev.start && L.parseLocal(ev.start) < e && L.eventEnd(ev) >= s); };
+    const isSeason = (ev) => L.eventEnd(ev) - L.parseLocal(ev.start) > 3 * 864e5; // markets, rinks etc. that run for weeks
+    const onAll = (d) => { const s = new Date(d); s.setHours(0, 0, 0, 0); const e = new Date(s); e.setDate(e.getDate() + 1); return events.filter((ev) => ev.start && L.parseLocal(ev.start) < e && L.eventEnd(ev) >= s); };
+    const on = (d) => onAll(d).filter((ev) => !isSeason(ev));
+    const seasonCard = (ev) => `<div class="card season"><span class="badge alt">${esc(ev.town || ev.category || '')}</span>${ev.sample ? ' <span class="badge warn">Confirm dates</span>' : ''}<h4>${ev.url ? `<a href="${esc(ev.url)}" target="_blank" rel="noopener">${esc(ev.title)}</a>` : esc(ev.title)}</h4><div class="small muted">${L.fmtDate(L.parseLocal(ev.start))} – ${L.fmtDate(L.eventEnd(ev))}${ev.cost ? ' · ' + esc(ev.cost) : ''}</div><p class="small">${esc(ev.description || '')}</p></div>`;
     function render() {
       const y = cur.getFullYear(), m = cur.getMonth(), first = new Date(y, m, 1).getDay(), days = new Date(y, m + 1, 0).getDate(), t = today0();
       let cells = '';
@@ -68,13 +71,15 @@
         const cls = ['cd', evs.length && 'has', evs.some((e) => e.featured) && 'feat', +dt === +t && 'today', sel && +sel === +dt && 'sel', dt < t && 'past'].filter(Boolean).join(' ');
         cells += `<button class="${cls}" data-d="${d}" aria-label="${L.fmtDate(dt, { month: 'long', day: 'numeric' })}${evs.length ? ', ' + evs.length + ' event' + (evs.length > 1 ? 's' : '') : ''}"><span>${d}</span>${evs.length ? `<i>${'•'.repeat(Math.min(3, evs.length))}</i>` : ''}</button>`;
       }
-      const list = sel ? on(sel) : L.upcoming().slice(0, 6);
+      const list = sel ? on(sel) : L.upcoming().filter((ev) => !isSeason(ev)).slice(0, 6);
+      const season = (sel ? onAll(sel) : L.upcoming()).filter(isSeason);
       el.innerHTML = `<div class="cal-wrap"><div class="cal card pad">
           <div class="cal-head"><button class="ib" data-nav="-1" aria-label="Previous month">‹</button><b>${new Date(y, m, 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</b><button class="ib" data-nav="1" aria-label="Next month">›</button></div>
           <div class="cal-dow">${['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((x) => `<span>${x}</span>`).join('')}</div><div class="cal-grid">${cells}</div>
           <div class="small muted" style="margin-top:12px">${sel ? '<a href="#" data-clear>← Back to everything coming up</a>' : 'Tap a date to see what\'s happening. <span class="key feat"></span> featured'}</div></div>
         <div><h3 style="margin:0 0 12px;font-size:1.4rem">${sel ? L.fmtDate(sel, { weekday: 'long', month: 'long', day: 'numeric' }) : 'Coming up'}</h3>
-          <div class="grid" style="gap:12px">${list.length ? list.map((e) => L.eventCard(e, events.indexOf(e))).join('') : '<div class="card empty">Nothing on the calendar this day yet.</div>'}</div></div></div>`;
+          <div class="grid" style="gap:12px">${list.length ? list.map((e) => L.eventCard(e, events.indexOf(e))).join('') : '<div class="card empty">Nothing on the calendar this day yet.</div>'}</div></div></div>
+        ${season.length ? `<div class="season-wrap"><h3 style="margin:0 0 12px;font-size:1.4rem">${sel ? 'Also open this day' : 'All season long'}</h3><div class="season-grid">${season.map(seasonCard).join('')}</div></div>` : ''}`;
     }
     el.addEventListener('click', (ev) => {
       const n = ev.target.closest('[data-nav]'); if (n) { cur.setMonth(cur.getMonth() + +n.dataset.nav); render(); return; }

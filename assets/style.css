@@ -230,3 +230,11 @@ iframe.form{width:100%;min-height:900px;border:0;border-radius:var(--radius);bac
 section[hidden]{display:none}
 .brand-name{white-space:nowrap}
 @media(min-width:861px){nav.main a{padding:8px 9px;font-size:.9rem}}
+
+/* all-season events (markets, rinks) */
+.season-wrap{margin-top:28px}
+.season-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.card.season{padding:16px;border-top:3px solid var(--sage)}
+.card.season h4{margin:8px 0 4px;font-family:'Newsreader',Georgia,serif;font-size:1.15rem}
+.card.season h4 a{color:var(--ink);text-decoration:none}
+.card.season p{margin:8px 0 0}
