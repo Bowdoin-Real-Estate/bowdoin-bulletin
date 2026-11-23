@@ -3,40 +3,53 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Editor · The Bowdoin Bulletin</title>
+<title>Editor · The Local Loop</title>
 <link rel="icon" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/style.css">
 <style>
-  .ed-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:start}
-  @media (max-width:960px){.ed-grid{grid-template-columns:1fr}}
-  .cand{display:grid;grid-template-columns:1fr auto;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
-  .cand:last-child{border-bottom:0}
-  .cand a{color:var(--ink);font-weight:600;text-decoration:none}
-  .cand a:hover{color:var(--harbor)}
-  .cand.picked{opacity:.45}
-  .pick{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;background:#fff}
-  .pick textarea,.pick input,.field{width:100%;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit;font-size:.92rem}
-  .pick textarea{min-height:54px;margin-top:8px;resize:vertical}
-  .pick .row{display:flex;gap:6px;align-items:center;justify-content:space-between}
-  .ib{background:none;border:1px solid var(--line);border-radius:8px;padding:4px 9px;cursor:pointer;font:600 .85rem var(--sans);color:var(--ink)}
+  body{background:#efebe3}
+  .tabs2{display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin:0 0 22px}
+  .tabs2 button{background:none;border:0;border-bottom:3px solid transparent;padding:12px 14px;font:600 .92rem var(--sans);color:var(--muted);cursor:pointer}
+  .tabs2 button.on{color:var(--ink);border-color:var(--sage)}
+  .ed{display:grid;grid-template-columns:minmax(280px,1fr) 1.25fr;gap:22px;align-items:start}
+  .ed.email{grid-template-columns:minmax(300px,380px) 1fr}
+  @media(max-width:980px){.ed,.ed.email{grid-template-columns:1fr}}
+  .item{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+  .item:last-child{border-bottom:0}
+  .item b{display:block}
+  .item.on{background:#fbf8f2;margin:0 -12px;padding:12px}
+  .field{width:100%;border:1px solid var(--line);border-radius:2px;padding:9px 11px;font:inherit;font-size:.93rem;background:#fff}
+  textarea.field{min-height:80px;resize:vertical}
+  label.f{display:block;font-weight:600;font-size:.84rem;margin:12px 0 4px;color:var(--ink)}
+  .hint{font-size:.78rem;color:var(--muted);margin-top:3px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .chk{display:flex;gap:8px;align-items:center;font-size:.9rem;margin:8px 0}
+  .ib{background:#fff;border:1px solid var(--line);border-radius:2px;padding:5px 10px;cursor:pointer;font:600 .82rem var(--sans);color:var(--ink);white-space:nowrap}
   .ib:hover{border-color:var(--brass);color:var(--brass)}
-  .scroll{max-height:70vh;overflow:auto;padding-right:6px}
-  .sticky{position:sticky;top:90px}
-  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 18px;border-radius:999px;font-weight:600;display:none;z-index:99}
-  label.f{display:block;font-weight:600;font-size:.88rem;margin:10px 0 4px}
+  .ib.del:hover{border-color:var(--bad);color:var(--bad)}
+  .qa-row{border:1px solid var(--line);background:#fff;padding:10px;margin:8px 0}
+  .qa-row .top{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:.85rem;margin-bottom:6px}
+  .imgprev{max-width:100%;max-height:160px;margin-top:6px;border:1px solid var(--line)}
+  .scroll{max-height:72vh;overflow:auto}
+  .sticky{position:sticky;top:84px}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 18px;border-radius:2px;font-weight:600;display:none;z-index:99;max-width:90vw}
+  .pick{border:1px solid var(--line);padding:12px 14px;margin-bottom:10px;background:#fff}
+  .cand.picked{opacity:.45}
+  .preview-frame{width:100%;height:78vh;border:1px solid var(--line);background:#f4f1eb}
+  .pill{display:inline-block;font:600 .68rem var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;background:var(--sea);color:var(--ink);margin-left:6px}
+  .pill.warn{background:#fde7d9;color:#8a3a1a}.pill.gold{background:var(--brass-soft);color:#6d531f}
 </style>
 </head>
 <body>
 <header class="masthead"><div class="wrap">
-  <a class="brand" href="index.html"><div><div class="brand-name">Bulletin Editor</div><div class="brand-sub">Private · for Jenny &amp; LeighAnn</div></div></a>
+  <a class="brand" href="index.html"><div><div class="brand-name">The Local Loop · Editor</div><div class="brand-sub">Private · for Jenny &amp; LeighAnn</div></div></a>
   <nav class="main" style="display:flex"><a href="index.html" target="_blank">View site ↗</a><a href="#" id="signout" style="display:none">Sign out</a></nav>
 </div></header>
 
-<main class="wrap" style="padding:28px 20px 60px">
-  <!-- Sign in -->
+<main class="wrap" style="padding:24px 20px 60px">
   <section id="login" class="card pad" style="max-width:560px;margin:40px auto;display:none">
     <span class="eyebrow">Sign in</span>
-    <h2 style="margin-top:8px">Welcome to the Bulletin editor</h2>
+    <h2 style="margin-top:8px">Welcome to The Local Loop editor</h2>
     <p class="muted">Paste the editor key Jake set up for you. You only need to do this once on each computer or phone.</p>
     <label class="f">Who's editing?</label>
     <select id="who" class="field"><option>Jenny</option><option>LeighAnn</option><option>Jake</option></select>
@@ -46,145 +59,547 @@
     <p class="small muted" id="loginmsg"></p>
   </section>
 
-  <!-- Editor -->
-  <section id="editor" style="display:none">
-    <div class="sec-head"><div><span class="eyebrow" id="weeklabel"></span><h2>Choose this week's stories</h2></div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn ghost sm" id="copy">📋 Copy for email</button><button class="btn brass" id="save">Publish to site</button></div></div>
-    <p class="small muted" id="status" style="margin-top:-10px"></p>
-
-    <div class="ed-grid">
-      <div class="card pad">
-        <div class="row" style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center">
-          <h3 style="margin:0">Story ideas <span class="muted small" id="count"></span></h3>
-          <div style="display:flex;gap:8px;flex-wrap:wrap"><select id="cat" class="field" style="width:auto"></select><input id="q" class="field" style="width:180px" placeholder="Search…"></div>
-        </div>
-        <p class="small muted" style="margin:6px 0 0">Collected automatically every morning from the past week's news. Click <b>Add</b> to put a story in the Bulletin.</p>
-        <div class="scroll" id="cands" style="margin-top:8px"></div>
-        <details style="margin-top:16px"><summary style="cursor:pointer;font-weight:600">＋ Add your own story or link</summary>
-          <label class="f">Headline</label><input id="nt" class="field">
-          <label class="f">Link</label><input id="nu" class="field" placeholder="https://">
-          <label class="f">Source (optional)</label><input id="ns" class="field" placeholder="Boston Globe, Winthrop Transcript…">
-          <p style="margin-top:10px"><button class="btn sm" id="addown">Add to this week</button></p>
-        </details>
-      </div>
-
-      <div class="sticky">
-        <div class="card pad">
-          <h3 style="margin:0 0 4px">This week's Bulletin <span class="muted small" id="pcount"></span></h3>
-          <p class="small muted" style="margin:0 0 12px">Reorder with the arrows. Add a one-line take so readers know why it matters. These show first on the site's Headlines section.</p>
-          <div id="picks"></div>
-          <p class="small muted" id="unsaved" style="color:var(--bad);display:none">You have unpublished changes.</p>
-        </div>
-      </div>
+  <section id="app" style="display:none">
+    <div class="tabs2" id="tabs">
+      <button data-tab="email" class="on">✉️ This week's email</button>
+      <button data-tab="events">📅 Events</button>
+      <button data-tab="features">⭐ Spotlights &amp; contests</button>
+      <button data-tab="qa">⚖️ Q&amp;As</button>
+      <button data-tab="stories">📰 Stories</button>
+      <button data-tab="listings">🏡 Listings</button>
     </div>
+    <p class="small muted" id="whoami" style="margin:-10px 0 18px"></p>
+    <div id="panel"></div>
   </section>
 </main>
 <div class="toast" id="toast"></div>
 
 <script>
 (function () {
-  const $ = (s) => document.querySelector(s);
+  'use strict';
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  // Repo is worked out from the site address (owner.github.io/repo); fallback below.
-  const host = location.hostname.endsWith('github.io') ? location.hostname.split('.')[0] : 'Bowdoin-Real-Estate';
-  const repoName = location.hostname.endsWith('github.io') ? (location.pathname.split('/')[1] || 'bowdoin-bulletin') : 'bowdoin-bulletin';
-  const API = `https://api.github.com/repos/${host}/${repoName}/contents/data/news.json`;
+  const slug = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50) || 'item';
+  const onGH = location.hostname.endsWith('github.io');
+  const OWNER = onGH ? location.hostname.split('.')[0] : 'Bowdoin-Real-Estate';
+  const REPO = onGH ? (location.pathname.split('/')[1] || 'bowdoin-bulletin') : 'bowdoin-bulletin';
+  const API = (p) => `https://api.github.com/repos/${OWNER}/${REPO}/contents/${p}`;
   const store = { get: (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} }, del: (k) => { try { localStorage.removeItem(k); } catch (e) {} } };
   let token = store.get('bb-editor-token'), who = store.get('bb-editor-who') || 'Jenny';
-  let news = null, sha = null, picks = [], dirty = false;
+  const S = {}; let tab = 'email';
 
+  /* ---------- GitHub file helpers ---------- */
   const b64dec = (s) => new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\n/g, '')), (c) => c.charCodeAt(0)));
-  const b64enc = (s) => { const bytes = new TextEncoder().encode(s); let bin = ''; bytes.forEach((b) => bin += String.fromCharCode(b)); return btoa(bin); };
+  const b64enc = (s) => { const bytes = new TextEncoder().encode(s); let bin = ''; for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000)); return btoa(bin); };
   const gh = (url, opts = {}) => fetch(url, { ...opts, headers: { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json', ...(opts.headers || {}) } });
-  function toast(t) { const el = $('#toast'); el.textContent = t; el.style.display = 'block'; clearTimeout(el._t); el._t = setTimeout(() => el.style.display = 'none', 2600); }
-  function weekOf() { const d = new Date(); const day = d.getDay(); const fri = new Date(d); fri.setDate(d.getDate() + ((5 - day + 7) % 7)); return fri.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }); }
-  function setDirty(v) { dirty = v; $('#unsaved').style.display = v ? 'block' : 'none'; }
-  window.addEventListener('beforeunload', (e) => { if (dirty) { e.preventDefault(); e.returnValue = ''; } });
-
-  async function load() {
-    const r = await gh(API + '?ref=main&t=' + Date.now());
-    if (r.status === 401 || r.status === 403 || r.status === 404) throw new Error('That key didn\'t work. Check it has access to the bowdoin-bulletin repository.');
+  async function getFile(p) {
+    const r = await gh(API(p) + '?ref=main&t=' + Date.now());
+    if (r.status === 404) return { text: null, sha: null };
+    if (r.status === 401 || r.status === 403) throw new Error('That key didn\'t work. Check it has access to the ' + REPO + ' repository.');
     if (!r.ok) throw new Error('GitHub error ' + r.status);
-    const j = await r.json(); sha = j.sha; news = JSON.parse(b64dec(j.content));
-    picks = (news.editors_picks || []).map((p) => ({ ...p }));
-    $('#weeklabel').textContent = 'Week of ' + weekOf() + ' · editing as ' + who;
-    $('#status').textContent = news.updated ? 'Story ideas last refreshed ' + new Date(news.updated).toLocaleString() : 'Story ideas appear after the first daily sync runs.';
-    const pool = candidates(); const cats = [...new Set(pool.map((p) => p.category).filter(Boolean))];
-    $('#cat').innerHTML = '<option value="">All topics</option>' + cats.map((c) => `<option>${esc(c)}</option>`).join('');
-    renderCands(); renderPicks(); setDirty(false);
+    const j = await r.json(); return { text: b64dec(j.content), sha: j.sha };
   }
-  function candidates() {
-    if (news.pool && news.pool.length) return news.pool;
-    const out = []; Object.entries(news.categories || {}).forEach(([c, items]) => items.forEach((i) => out.push({ ...i, category: c }))); return out;
+  async function getJSON(p, fallback) { const f = await getFile(p); return f.text ? JSON.parse(f.text) : fallback; }
+  async function putRaw(p, b64, msg) {
+    const cur = await getFile(p).catch(() => ({ sha: null }));
+    const r = await gh(API(p), { method: 'PUT', body: JSON.stringify({ message: msg, content: b64, branch: 'main', ...(cur.sha ? { sha: cur.sha } : {}) }) });
+    if (!r.ok) throw new Error(r.status === 409 ? 'Someone else just saved. Reload and try again.' : 'Save failed (' + r.status + ')');
   }
-  function renderCands() {
-    const q = $('#q').value.toLowerCase(), cat = $('#cat').value, chosen = new Set(picks.map((p) => p.url));
-    const list = candidates().filter((p) => (!cat || p.category === cat) && (!q || (p.title + ' ' + p.source).toLowerCase().includes(q)));
-    $('#count').textContent = '(' + list.length + ')';
-    $('#cands').innerHTML = list.length ? list.map((p, i) => `<div class="cand ${chosen.has(p.url) ? 'picked' : ''}"><div><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>
-        <div class="small muted">${esc(p.source || '')}${p.category ? ' · ' + esc(p.category) : ''}${p.published ? ' · ' + new Date(p.published).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }) : ''}</div></div>
-        <div>${chosen.has(p.url) ? '<span class="small muted">Added ✓</span>' : `<button class="ib" data-add="${esc(p.url)}">Add</button>`}</div></div>`).join('')
-      : '<div class="empty small">No story ideas match.</div>';
+  const putText = (p, text, msg) => putRaw(p, b64enc(text), msg);
+  const putJSON = (p, obj, msg) => putText(p, JSON.stringify(obj, null, 2) + '\n', msg + ' (by ' + who + ')');
+  function toast(t, ms) { const el = $('#toast'); el.textContent = t; el.style.display = 'block'; clearTimeout(el._t); el._t = setTimeout(() => el.style.display = 'none', ms || 3000); }
+  const siteBase = () => (S.config && S.config.site_url) || location.href.replace(/admin\.html.*$/, '');
+
+  async function loadAll() {
+    const [config, events, features, qa, news, listings, market, issues] = await Promise.all([
+      getJSON('data/config.json', {}), getJSON('data/events.json', { events: [] }), getJSON('data/features.json', { items: [] }), getJSON('data/qa.json', { items: [] }),
+      getJSON('data/news.json', {}), getJSON('data/listings.json', { listings: [] }), getJSON('data/market.json', {}), getJSON('data/issues.json', { issues: [] })]);
+    Object.assign(S, { config, events, features, qa, news, listings, market, issues });
   }
-  function renderPicks() {
-    $('#pcount').textContent = '(' + picks.length + ')';
-    $('#picks').innerHTML = picks.length ? picks.map((p, i) => `<div class="pick"><div class="row"><b style="font-size:.95rem">${i + 1}. ${esc(p.title)}</b>
-        <span style="white-space:nowrap"><button class="ib" data-up="${i}" title="Move up">↑</button> <button class="ib" data-down="${i}" title="Move down">↓</button> <button class="ib" data-del="${i}" title="Remove">✕</button></span></div>
-        <div class="small muted">${esc(p.source || '')} · <a href="${esc(p.url)}" target="_blank" rel="noopener">open</a></div>
-        <textarea data-blurb="${i}" placeholder="Our take (optional): why it matters to buyers, sellers or neighbors…">${esc(p.blurb || '')}</textarea></div>`).join('')
-      : '<div class="empty small">No stories picked yet. Add some from the left.</div>';
+
+  async function uploadImage(file, name) {
+    const img = await createImageBitmap(file);
+    const scale = Math.min(1, 1400 / img.width), c = document.createElement('canvas');
+    c.width = Math.round(img.width * scale); c.height = Math.round(img.height * scale);
+    const ctx = c.getContext('2d'); ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, c.width, c.height); ctx.drawImage(img, 0, 0, c.width, c.height);
+    const dataUrl = c.toDataURL('image/jpeg', 0.85), path = `assets/uploads/${Date.now()}-${slug(name)}.jpg`;
+    await putRaw(path, dataUrl.split(',')[1], 'Upload image (by ' + who + ')');
+    return { url: siteBase() + path, preview: dataUrl };
   }
-  document.addEventListener('click', (e) => {
-    const t = e.target;
-    if (t.dataset.add) { const p = candidates().find((x) => x.url === t.dataset.add); if (p) { picks.push({ title: p.title, url: p.url, source: p.source || '', category: p.category || '', blurb: '' }); setDirty(true); renderPicks(); renderCands(); } }
-    if (t.dataset.up) { const i = +t.dataset.up; if (i > 0) { [picks[i - 1], picks[i]] = [picks[i], picks[i - 1]]; setDirty(true); renderPicks(); } }
-    if (t.dataset.down) { const i = +t.dataset.down; if (i < picks.length - 1) { [picks[i + 1], picks[i]] = [picks[i], picks[i + 1]]; setDirty(true); renderPicks(); } }
-    if (t.dataset.del) { picks.splice(+t.dataset.del, 1); setDirty(true); renderPicks(); renderCands(); }
-  });
-  document.addEventListener('input', (e) => { if (e.target.dataset.blurb) { picks[+e.target.dataset.blurb].blurb = e.target.value; setDirty(true); } });
-  $('#q').addEventListener('input', renderCands); $('#cat').addEventListener('change', renderCands);
-  $('#addown').onclick = () => {
-    const t = $('#nt').value.trim(), u = $('#nu').value.trim();
-    if (!t || !/^https?:\/\//.test(u)) return toast('Add a headline and a full link (https://…)');
-    picks.push({ title: t, url: u, source: $('#ns').value.trim(), category: 'Our pick', blurb: '' }); ['#nt', '#nu', '#ns'].forEach((s) => $(s).value = ''); setDirty(true); renderPicks(); renderCands();
+
+  /* ---------- date helpers ---------- */
+  const parseLocal = (s) => s ? new Date(s.length === 10 ? s + 'T00:00' : s) : null;
+  const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], DOW = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const fmtD = (d, o) => d.toLocaleDateString('en-US', o || { weekday: 'short', month: 'short', day: 'numeric' });
+  const fmtT = (d) => d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }).replace(':00', '');
+  const evEnd = (e) => parseLocal(e.end) || new Date(parseLocal(e.start).getTime() + 2 * 3600e3);
+  const today0 = () => { const d = new Date(); d.setHours(0, 0, 0, 0); return d; };
+  const getPath = (o, p) => p.split('.').reduce((a, k) => (a == null ? a : a[k]), o);
+  const setPath = (o, p, v) => { const ks = p.split('.'); let a = o; ks.slice(0, -1).forEach((k) => { a[k] = a[k] || {}; a = a[k]; }); a[ks[ks.length - 1]] = v; };
+
+  /* ---------- generic collection editor ---------- */
+  function collection(cfg) {
+    // cfg: { file, key, label, fields, title(i), sub(i), sort(list), blank(), idOf(i), intro }
+    let list = (S[cfg.store][cfg.key] || []).map((x) => JSON.parse(JSON.stringify(x)));
+    let idx = -1, draft = null, dirty = false;
+    const panel = $('#panel');
+    function fieldHTML(f, item) {
+      const v = getPath(item, f.k);
+      const id = 'f_' + f.k.replace(/\./g, '_');
+      const lab = `<label class="f" for="${id}">${esc(f.label)}</label>`;
+      const hint = f.hint ? `<div class="hint">${f.hint}</div>` : '';
+      switch (f.type) {
+        case 'textarea': case 'md': return lab + `<textarea class="field" id="${id}" data-k="${f.k}" rows="${f.rows || (f.type === 'md' ? 8 : 3)}">${esc(v || '')}</textarea>` + hint;
+        case 'checkbox': return `<label class="chk"><input type="checkbox" data-k="${f.k}" ${v ? 'checked' : ''}> ${esc(f.label)}</label>` + hint;
+        case 'select': return lab + `<select class="field" id="${id}" data-k="${f.k}">${f.options.map((o) => `<option value="${esc(o[0])}" ${String(v || '') === o[0] ? 'selected' : ''}>${esc(o[1])}</option>`).join('')}</select>` + hint;
+        case 'datetime': return lab + `<input class="field" type="datetime-local" id="${id}" data-k="${f.k}" value="${esc(v || '')}">` + hint;
+        case 'date': return lab + `<input class="field" type="date" id="${id}" data-k="${f.k}" value="${esc(v || '')}">` + hint;
+        case 'number': return lab + `<input class="field" type="number" step="any" id="${id}" data-k="${f.k}" data-num="1" value="${esc(v == null ? '' : v)}">` + hint;
+        case 'image': return lab + `<input class="field" id="${id}" data-k="${f.k}" value="${esc(v || '')}" placeholder="Paste an image link, or upload →">
+          <div style="display:flex;gap:8px;align-items:center;margin-top:6px"><label class="ib" style="cursor:pointer">📷 Upload photo<input type="file" accept="image/*" data-upload="${f.k}" hidden></label><span class="hint" data-upmsg="${f.k}"></span></div>
+          ${v ? `<img class="imgprev" data-prev="${f.k}" src="${esc(v)}" alt="">` : `<img class="imgprev" data-prev="${f.k}" hidden alt="">`}` + hint;
+        case 'qa': return qaEditor(item);
+        case 'heading': return `<h4 style="margin:20px 0 0;font-family:var(--sans);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)">${esc(f.label)}</h4>`;
+        default: return lab + `<input class="field" id="${id}" data-k="${f.k}" value="${esc(v == null ? '' : v)}" ${f.ph ? `placeholder="${esc(f.ph)}"` : ''}>` + hint;
+      }
+    }
+    function qaEditor(item) {
+      const qs = item.questions || [];
+      return `<label class="f">Questions &amp; answers (${qs.length})</label>
+        <details style="margin:6px 0 10px" ${qs.length <= 2 ? 'open' : ''}><summary class="small" style="cursor:pointer;font-weight:600">📋 Paste the whole Q&amp;A at once</summary>
+          <textarea class="field" id="bulk" rows="8" placeholder="Paste everything here. Questions can start with Q:, 1., or just end with a question mark; answers follow underneath."></textarea>
+          <div style="display:flex;gap:8px;margin-top:6px"><button class="ib" data-bulk="replace">Split into questions (replace)</button><button class="ib" data-bulk="append">Add to the end</button></div></details>
+        <div id="qarows">${qs.map((x, i) => `<div class="qa-row"><div class="top"><span>Question ${i + 1}</span><span><button class="ib" data-qup="${i}">↑</button> <button class="ib" data-qdown="${i}">↓</button> <button class="ib del" data-qdel="${i}">✕</button></span></div>
+          <textarea class="field" rows="2" data-q="${i}" placeholder="Question">${esc(x.q)}</textarea>
+          <textarea class="field" rows="5" data-a="${i}" placeholder="Answer" style="margin-top:6px">${esc(x.a)}</textarea></div>`).join('')}</div>
+        <button class="ib" data-qadd="1" style="margin-top:6px">+ Add a question</button>`;
+    }
+    function render() {
+      const cur = draft;
+      panel.innerHTML = `<div class="ed"><div class="card pad"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+          <h3 style="margin:0">${esc(cfg.label)} <span class="small muted">(${list.length})</span></h3><button class="btn sm brass" data-new="1">+ New</button></div>
+          ${cfg.intro ? `<p class="small muted" style="margin:8px 0 0">${cfg.intro}</p>` : ''}
+          <div class="scroll" style="margin-top:8px">${list.length ? list.map((it, i) => `<div class="item ${i === idx ? 'on' : ''}"><div><b>${esc(cfg.title(it))}</b><div class="small muted">${cfg.sub(it)}</div></div>
+            <div style="display:flex;gap:6px"><button class="ib" data-edit="${i}">Edit</button><button class="ib del" data-delete="${i}">Delete</button></div></div>`).join('') : '<div class="empty small">Nothing here yet. Click + New.</div>'}</div></div>
+        <div class="card pad sticky">${cur ? `<h3 style="margin:0 0 4px">${idx < 0 ? 'New ' + cfg.one : 'Edit ' + cfg.one}</h3>
+          <div class="scroll" id="form">${cfg.fields.map((f) => fieldHTML(f, cur)).join('')}</div>
+          <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap"><button class="btn brass" data-save="1">Save &amp; publish</button><button class="btn ghost sm" data-cancel="1">Cancel</button>${cfg.viewUrl && idx >= 0 ? `<a class="btn ghost sm" target="_blank" href="${esc(cfg.viewUrl(cur))}">View on site ↗</a>` : ''}</div>
+          <p class="small" style="color:var(--bad);margin-top:8px;display:${dirty ? 'block' : 'none'}" id="dirty">Unsaved changes</p>`
+        : `<div class="empty">Pick something on the left to edit, or click <b>+ New</b>.</div>`}</div></div>`;
+    }
+    function readForm() {
+      if (!draft) return;
+      $$('#form [data-k]').forEach((el) => {
+        let v = el.type === 'checkbox' ? el.checked : el.value;
+        if (el.dataset.num) v = el.value === '' ? null : Number(el.value);
+        setPath(draft, el.dataset.k, v);
+      });
+      if (draft.questions) draft.questions = draft.questions.map((x, i) => ({ q: ($(`[data-q="${i}"]`) || {}).value ?? x.q, a: ($(`[data-a="${i}"]`) || {}).value ?? x.a }));
+    }
+    function splitQA(text) {
+      const paras = text.replace(/\r/g, '').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean), out = [];
+      const qre = /^\s*(?:Q(?:uestion)?\s*#?\d*\s*[:.)\-–]|\d{1,2}\s*[.)]\s+)/i, are = /^\s*A(?:nswer)?\s*[:.)\-–]\s*/i;
+      paras.forEach((p) => {
+        const inline = p.match(/^([\s\S]*?)\n\s*A(?:nswer)?\s*[:.)\-–]\s*([\s\S]*)$/i);
+        if (inline && (qre.test(inline[1]) || inline[1].trim().endsWith('?'))) { out.push({ q: inline[1].replace(qre, '').trim(), a: inline[2].trim() }); return; }
+        const firstLine = p.split('\n')[0];
+        if (qre.test(p) || (firstLine.trim().endsWith('?') && firstLine.length < 300 && !are.test(p))) {
+          const rest = p.split('\n').slice(1).join('\n').trim();
+          out.push({ q: firstLine.replace(qre, '').trim(), a: rest.replace(are, '') });
+        } else if (out.length) { const a = p.replace(are, ''); out[out.length - 1].a = (out[out.length - 1].a ? out[out.length - 1].a + '\n\n' : '') + a; }
+        else out.push({ q: '', a: p.replace(are, '') });
+      });
+      return out;
+    }
+    panel.onclick = async (e) => {
+      const t = e.target.closest('button,[data-new]'); if (!t) return;
+      const d = t.dataset;
+      if (d.new) { if (dirty && !confirm('Discard unsaved changes?')) return; idx = -1; draft = cfg.blank(); dirty = false; render(); }
+      else if (d.edit) { if (dirty && !confirm('Discard unsaved changes?')) return; idx = +d.edit; draft = JSON.parse(JSON.stringify(list[idx])); dirty = false; render(); }
+      else if (d.cancel) { draft = null; idx = -1; dirty = false; render(); }
+      else if (d.delete) {
+        const i = +d.delete; if (!confirm(`Delete "${cfg.title(list[i])}"? This removes it from the site.`)) return;
+        list.splice(i, 1); if (idx === i) { draft = null; idx = -1; }
+        await save('Delete ' + cfg.one);
+      }
+      else if (d.qadd) { readForm(); draft.questions = draft.questions || []; draft.questions.push({ q: '', a: '' }); render(); }
+      else if (d.qdel) { readForm(); draft.questions.splice(+d.qdel, 1); dirty = true; render(); }
+      else if (d.qup) { readForm(); const i = +d.qup; if (i > 0) [draft.questions[i - 1], draft.questions[i]] = [draft.questions[i], draft.questions[i - 1]]; dirty = true; render(); }
+      else if (d.qdown) { readForm(); const i = +d.qdown; if (i < draft.questions.length - 1) [draft.questions[i + 1], draft.questions[i]] = [draft.questions[i], draft.questions[i + 1]]; dirty = true; render(); }
+      else if (d.bulk) {
+        readForm(); const parsed = splitQA($('#bulk').value);
+        if (!parsed.length) return toast('Nothing to split. Paste the Q&A text first.');
+        draft.questions = d.bulk === 'replace' ? parsed : (draft.questions || []).concat(parsed);
+        dirty = true; render(); toast(`Split into ${parsed.length} questions. Check them below.`);
+      }
+      else if (d.save) {
+        readForm();
+        const err = cfg.validate && cfg.validate(draft); if (err) return toast(err);
+        if (!draft.id && cfg.idOf) draft.id = cfg.idOf(draft);
+        const wasNew = idx < 0;
+        if (idx < 0) { if (draft.id && list.some((x) => x.id === draft.id)) draft.id += '-' + Date.now().toString(36).slice(-4); list.push(draft); }
+        else list[idx] = draft;
+        if (cfg.sort) list = cfg.sort(list);
+        idx = list.indexOf(draft);
+        await save((wasNew ? 'Add ' : 'Update ') + cfg.one + ': ' + cfg.title(draft));
+      }
+    };
+    panel.oninput = (e) => { if (e.target.closest('#form')) { dirty = true; const el = $('#dirty'); if (el) el.style.display = 'block'; } };
+    panel.onchange = async (e) => {
+      const up = e.target.dataset.upload; if (!up || !e.target.files[0]) return;
+      readForm(); const msg = $(`[data-upmsg="${up}"]`); msg.textContent = 'Uploading…';
+      try { const r = await uploadImage(e.target.files[0], cfg.title(draft) || 'photo'); setPath(draft, up, r.url); dirty = true; render(); const p = $(`[data-prev="${up}"]`); if (p) { p.src = r.preview; p.hidden = false; } const m = $(`[data-upmsg="${up}"]`); if (m) m.textContent = 'Uploaded ✓ (live on the site in ~1 min)'; }
+      catch (err) { msg.textContent = err.message; }
+    };
+    async function save(msg) {
+      const btn = $('[data-save]'); if (btn) { btn.disabled = true; btn.textContent = 'Saving…'; }
+      try {
+        const fresh = await getJSON(cfg.file, {});
+        fresh[cfg.key] = list; S[cfg.store] = fresh;
+        await putJSON(cfg.file, fresh, msg);
+        dirty = false; toast('Saved! Live on the site in about a minute.');
+      } catch (err) { toast(err.message, 5000); }
+      render();
+    }
+    render();
+  }
+
+  /* ---------- tab definitions ---------- */
+  const CATS = ['Community', 'Holiday', 'Kids & Family', 'Fundraiser', 'Blood Drive', 'Food & Drink', 'Music & Arts', 'Sports & Fitness', 'Classes', 'Open House', 'Other'];
+  const TABS = {
+    events: () => collection({
+      store: 'events', file: 'data/events.json', key: 'events', label: 'Events', one: 'event',
+      intro: 'Everything here shows on the community calendar and in the email. ⭐ Featured events get the big banner. Past events hide automatically.',
+      title: (e) => e.title || '(untitled)',
+      sub: (e) => { const s = parseLocal(e.start); return (s ? fmtD(s) + ' · ' + fmtT(s) : 'No date') + (e.featured ? ' <span class="pill gold">Featured</span>' : '') + (e.sample ? ' <span class="pill warn">Details coming</span>' : '') + (s && evEnd(e) < today0() ? ' <span class="pill">Past</span>' : ''); },
+      sort: (l) => l.sort((a, b) => (a.start || '').localeCompare(b.start || '')),
+      blank: () => ({ title: '', start: '', end: '', location: '', town: '', category: 'Community', cost: 'Free', url: '', description: '', kid_friendly: false, featured: false, sample: false }),
+      idOf: (e) => slug(e.title) + '-' + (e.start || '').slice(0, 10),
+      validate: (e) => !e.title ? 'Add a title' : !e.start ? 'Add a start date & time' : '',
+      fields: [
+        { k: 'title', label: 'Event name' },
+        { k: 'start', label: 'Starts', type: 'datetime' }, { k: 'end', label: 'Ends (optional)', type: 'datetime' },
+        { k: 'location', label: 'Where', ph: 'e.g. Town Hall, 1 Metcalf Sq' }, { k: 'town', label: 'Town', ph: 'e.g. Winthrop' },
+        { k: 'category', label: 'Type', type: 'select', options: CATS.map((c) => [c, c]) },
+        { k: 'cost', label: 'Cost', ph: 'Free, $10, Donation…' }, { k: 'url', label: 'Link for details (optional)', ph: 'https://' },
+        { k: 'description', label: 'Short description', type: 'textarea', hint: 'One or two sentences. This is what shows in the email.' },
+        { k: 'kid_friendly', label: 'Kid-friendly', type: 'checkbox' }, { k: 'featured', label: '⭐ Feature this event (big banner on the site & top of the email)', type: 'checkbox' },
+        { k: 'sample', label: 'Show a "details coming" badge', type: 'checkbox' },
+      ],
+    }),
+    features: () => collection({
+      store: 'features', file: 'data/features.json', key: 'items', label: 'Spotlights & contests', one: 'spotlight',
+      intro: 'Community spotlights, contests (like the door contest) and announcements. Add a longer story and it gets its own page; the email shows the short summary with a "Read more" button.',
+      title: (f) => f.title || '(untitled)',
+      sub: (f) => ({ spotlight: 'Spotlight', contest: 'Contest', announcement: 'Announcement' }[f.type] || 'Spotlight') + (f.featured ? ' <span class="pill gold">Featured</span>' : '') + (f.published === false ? ' <span class="pill">Hidden</span>' : '') + (f.sample ? ' <span class="pill warn">Draft</span>' : ''),
+      sort: (l) => l.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0) || (b.date || '').localeCompare(a.date || '')),
+      blank: () => ({ type: 'spotlight', kicker: 'Community Spotlight', title: '', summary: '', body: '', image: '', when: '', where: '', deadline: '', prize: '', link_url: '', link_label: '', end: '', featured: false, published: true, sample: false, date: new Date().toISOString().slice(0, 10) }),
+      idOf: (f) => slug(f.title),
+      validate: (f) => !f.title ? 'Add a title' : '',
+      viewUrl: (f) => 'spotlight.html?id=' + encodeURIComponent(f.id || ''),
+      fields: [
+        { k: 'type', label: 'Type', type: 'select', options: [['spotlight', 'Community spotlight'], ['contest', 'Contest'], ['announcement', 'Announcement']] },
+        { k: 'kicker', label: 'Small label above the title', ph: 'Community Spotlight, Holiday Door Contest…' },
+        { k: 'title', label: 'Title' },
+        { k: 'summary', label: 'Short summary (shows in the email & cards)', type: 'textarea' },
+        { k: 'image', label: 'Photo', type: 'image' },
+        { k: 'when', label: 'When (optional)', ph: 'Saturdays, 10–11am' }, { k: 'where', label: 'Where (optional)', ph: 'Winthrop Community Center' },
+        { k: 'link_url', label: 'Button link (optional)', ph: 'https:// sign-up page, form, website…' }, { k: 'link_label', label: 'Button text', ph: 'Sign up, Enter now, Learn more…' },
+        { k: 'body', label: 'Full story (optional, gives it its own page)', type: 'md', hint: 'Blank line = new paragraph. **bold**, [link text](https://…), and - bullet lists work.' },
+        { label: 'Contest details', type: 'heading', k: '_h' },
+        { k: 'deadline', label: 'Entry deadline', type: 'date' }, { k: 'prize', label: 'Prize', ph: '$100 gift card…' },
+        { label: 'Display', type: 'heading', k: '_h2' },
+        { k: 'featured', label: '⭐ Feature it (shows first)', type: 'checkbox' }, { k: 'published', label: 'Show on the site', type: 'checkbox' },
+        { k: 'sample', label: 'Mark as draft ("details coming" badge)', type: 'checkbox' },
+        { k: 'end', label: 'Hide automatically after (optional)', type: 'date' },
+      ],
+    }),
+    qa: () => collection({
+      store: 'qa', file: 'data/qa.json', key: 'items', label: 'Q&As', one: 'Q&A',
+      intro: 'Q&As with attorneys and other experts. The email and home page show just the first couple of questions with a "Read all" link to the full page, so long answers never take over the newsletter.',
+      title: (q) => q.title || '(untitled)',
+      sub: (q) => ((q.expert && q.expert.name) || 'Expert TBD') + ' · ' + (q.questions || []).length + ' questions' + (q.published === false ? ' <span class="pill">Hidden</span>' : '') + (q.sample ? ' <span class="pill warn">Draft</span>' : ''),
+      sort: (l) => l.sort((a, b) => (b.date || '').localeCompare(a.date || '')),
+      blank: () => ({ kicker: 'Ask the Attorney', title: '', date: new Date().toISOString().slice(0, 10), expert: { name: '', title: 'Attorney', firm: '', bio: '', photo: '', website: '' }, intro: '', questions: [], teaser_count: 2, disclaimer: 'This Q&A is for general information only and is not legal advice. Consult an attorney about your specific situation.', published: true, sample: false }),
+      idOf: (q) => slug(q.title) + '-' + (q.date || ''),
+      validate: (q) => !q.title ? 'Add a title' : !(q.questions || []).length ? 'Add at least one question' : '',
+      viewUrl: (q) => 'qa.html?id=' + encodeURIComponent(q.id || ''),
+      fields: [
+        { k: 'kicker', label: 'Series name', ph: 'Ask the Attorney' }, { k: 'title', label: 'Title', ph: '9 Questions for a Real Estate Attorney' }, { k: 'date', label: 'Date', type: 'date' },
+        { label: 'The expert', type: 'heading', k: '_h' },
+        { k: 'expert.name', label: 'Name' }, { k: 'expert.title', label: 'Title', ph: 'Attorney, Partner…' }, { k: 'expert.firm', label: 'Firm' },
+        { k: 'expert.bio', label: 'One-line bio', type: 'textarea', rows: 2 }, { k: 'expert.photo', label: 'Headshot', type: 'image' }, { k: 'expert.website', label: 'Website or contact link', ph: 'https://' },
+        { label: 'The Q&A', type: 'heading', k: '_h2' },
+        { k: 'intro', label: 'Intro (1–2 sentences)', type: 'textarea', rows: 2 },
+        { k: 'questions', type: 'qa' },
+        { k: 'teaser_count', label: 'How many questions to preview in the email', type: 'number' },
+        { k: 'disclaimer', label: 'Disclaimer', type: 'textarea', rows: 2 },
+        { k: 'published', label: 'Show on the site', type: 'checkbox' }, { k: 'sample', label: 'Mark as draft', type: 'checkbox' },
+      ],
+    }),
+    listings: () => collection({
+      store: 'listings', file: 'data/listings.json', key: 'listings', label: 'Featured listings', one: 'listing',
+      intro: 'Listings shown on the site and in the email. Open any listing on bowdoinrealestate.com, copy its details here, and right-click the main photo → "Copy image address" for the photo link.',
+      title: (l) => l.address || '(no address)',
+      sub: (l) => [(l.price ? '$' + Number(l.price).toLocaleString() : ''), l.agent, l.status].filter(Boolean).map(esc).join(' · ') + (l.featured ? ' <span class="pill gold">Featured</span>' : '') + (l.note ? ` <span class="pill">${esc(l.note)}</span>` : ''),
+      sort: (l) => l.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0)),
+      blank: () => ({ mls: '', address: '', city: '', price: null, beds: null, baths: null, sqft: null, type: 'Single Family', status: 'Active', agent: '', url: '', image: '', featured: false, note: '' }),
+      validate: (l) => !l.address ? 'Add the address' : !l.url ? 'Add the listing link' : '',
+      fields: [
+        { k: 'address', label: 'Street address' }, { k: 'city', label: 'City, state, ZIP', ph: 'Winthrop, MA 02152' },
+        { k: 'url', label: 'Listing link on bowdoinrealestate.com', ph: 'https://www.bowdoinrealestate.com/property/…' },
+        { k: 'mls', label: 'MLS # (the number at the end of the link)' },
+        { k: 'price', label: 'Price', type: 'number' }, { k: 'beds', label: 'Beds', type: 'number' }, { k: 'baths', label: 'Baths', type: 'number' }, { k: 'sqft', label: 'Sq ft', type: 'number' },
+        { k: 'type', label: 'Type', type: 'select', options: ['Single Family', 'Condo', 'Multi-Family', 'Townhouse', 'Land', 'Rental'].map((x) => [x, x]) },
+        { k: 'status', label: 'Status', type: 'select', options: ['Active', 'Coming Soon', 'Under Agreement', 'Sold', 'For Rent'].map((x) => [x, x]) },
+        { k: 'agent', label: 'Listing agent', type: 'select', options: [['', '—']].concat(((S.config.brokerage || {}).agents || []).map((a) => [a.name, a.name])) },
+        { k: 'image', label: 'Photo', type: 'image' },
+        { k: 'note', label: 'Badge (optional)', ph: 'New price, Open house Sat 11–1…' }, { k: 'featured', label: '⭐ Feature this listing', type: 'checkbox' },
+      ],
+    }),
+    stories: storiesTab,
+    email: emailTab,
   };
 
-  $('#save').onclick = async () => {
-    $('#save').disabled = true; $('#save').textContent = 'Publishing…';
-    try {
-      // re-read first so we never overwrite the morning sync or the other editor
-      const r = await gh(API + '?ref=main&t=' + Date.now()); const j = await r.json(); const latest = JSON.parse(b64dec(j.content));
-      latest.editors_picks = picks.map(({ title, url, source, blurb, category }) => ({ title, url, source, blurb, category }));
-      latest.picks_updated = new Date().toISOString(); latest.picks_by = who;
-      const put = await gh(API, { method: 'PUT', body: JSON.stringify({ message: `Bulletin picks for week of ${weekOf()} (by ${who})`, content: b64enc(JSON.stringify(latest, null, 2) + '\n'), sha: j.sha, branch: 'main' }) });
-      if (!put.ok) throw new Error(put.status === 409 ? 'Someone else just saved. Reload and try again.' : 'Save failed (' + put.status + ')');
-      sha = (await put.json()).content.sha; news = latest; setDirty(false);
-      toast('Published! The site updates in about a minute.');
-    } catch (e) { toast(e.message); }
-    $('#save').disabled = false; $('#save').textContent = 'Publish to site';
-  };
+  /* ---------- stories (headline picks) ---------- */
+  function storiesTab() {
+    const news = S.news || {}; let picks = (news.editors_picks || []).map((p) => ({ ...p })), dirty = false;
+    const cands = () => (news.pool && news.pool.length) ? news.pool : Object.entries(news.categories || {}).flatMap(([c, items]) => items.map((i) => ({ ...i, category: c })));
+    const panel = $('#panel');
+    function render() {
+      const q = ($('#sq') || {}).value || '', cat = ($('#scat') || {}).value || '', chosen = new Set(picks.map((p) => p.url));
+      const all = cands(), cats = [...new Set(all.map((p) => p.category).filter(Boolean))];
+      const list = all.filter((p) => (!cat || p.category === cat) && (!q || (p.title + ' ' + p.source).toLowerCase().includes(q.toLowerCase())));
+      panel.innerHTML = `<div class="ed"><div class="card pad"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><h3 style="margin:0">Story ideas <span class="small muted">(${list.length})</span></h3>
+          <div style="display:flex;gap:8px"><select id="scat" class="field" style="width:auto"><option value="">All topics</option>${cats.map((c) => `<option ${c === cat ? 'selected' : ''}>${esc(c)}</option>`).join('')}</select><input id="sq" class="field" style="width:160px" placeholder="Search…" value="${esc(q)}"></div></div>
+          <p class="small muted" style="margin:6px 0 0">Collected automatically every morning from the past week's news.${news.updated ? ' Last refreshed ' + new Date(news.updated).toLocaleString() + '.' : ''}</p>
+          <div class="scroll" style="margin-top:8px">${list.map((p) => `<div class="item cand ${chosen.has(p.url) ? 'picked' : ''}"><div><a href="${esc(p.url)}" target="_blank" rel="noopener" style="font-weight:600;color:var(--ink);text-decoration:none">${esc(p.title)}</a><div class="small muted">${esc(p.source || '')}${p.category ? ' · ' + esc(p.category) : ''}</div></div>${chosen.has(p.url) ? '<span class="small muted">Added ✓</span>' : `<button class="ib" data-add="${esc(p.url)}">Add</button>`}</div>`).join('') || '<div class="empty small">No story ideas match.</div>'}</div>
+          <details style="margin-top:14px"><summary style="cursor:pointer;font-weight:600">+ Add your own story or link</summary>
+            <label class="f">Headline</label><input id="nt" class="field"><label class="f">Link</label><input id="nu" class="field" placeholder="https://"><label class="f">Source</label><input id="ns" class="field">
+            <p style="margin-top:10px"><button class="ib" id="addown">Add to this week</button></p></details></div>
+        <div class="card pad sticky"><h3 style="margin:0 0 4px">This week's stories <span class="small muted">(${picks.length})</span></h3><p class="small muted">Reorder with the arrows and add a one-line take.</p>
+          ${picks.map((p, i) => `<div class="pick"><div style="display:flex;justify-content:space-between;gap:8px"><b style="font-size:.95rem">${i + 1}. ${esc(p.title)}</b><span style="white-space:nowrap"><button class="ib" data-up="${i}">↑</button> <button class="ib" data-down="${i}">↓</button> <button class="ib del" data-del="${i}">✕</button></span></div>
+            <div class="small muted">${esc(p.source || '')}</div><textarea class="field" style="margin-top:6px" rows="2" data-blurb="${i}" placeholder="Our take (optional)">${esc(p.blurb || '')}</textarea></div>`).join('') || '<div class="empty small">No stories picked yet.</div>'}
+          <button class="btn brass" id="savepicks" style="margin-top:8px">Save &amp; publish</button> <span class="small" style="color:var(--bad);display:${dirty ? 'inline' : 'none'}">Unsaved changes</span></div></div>`;
+    }
+    panel.onclick = async (e) => {
+      const t = e.target, d = t.dataset;
+      if (d.add) { const p = cands().find((x) => x.url === d.add); if (p) { picks.push({ title: p.title, url: p.url, source: p.source || '', category: p.category || '', blurb: '' }); dirty = true; render(); } }
+      else if (d.up) { const i = +d.up; if (i > 0) { [picks[i - 1], picks[i]] = [picks[i], picks[i - 1]]; dirty = true; render(); } }
+      else if (d.down) { const i = +d.down; if (i < picks.length - 1) { [picks[i + 1], picks[i]] = [picks[i], picks[i + 1]]; dirty = true; render(); } }
+      else if (d.del) { picks.splice(+d.del, 1); dirty = true; render(); }
+      else if (t.id === 'addown') { const tt = $('#nt').value.trim(), u = $('#nu').value.trim(); if (!tt || !/^https?:\/\//.test(u)) return toast('Add a headline and a full link (https://…)'); picks.push({ title: tt, url: u, source: $('#ns').value.trim(), category: 'Our pick', blurb: '' }); dirty = true; render(); }
+      else if (t.id === 'savepicks') {
+        t.disabled = true; t.textContent = 'Saving…';
+        try { const fresh = await getJSON('data/news.json', {}); fresh.editors_picks = picks.map(({ title, url, source, blurb, category }) => ({ title, url, source, blurb, category })); fresh.picks_updated = new Date().toISOString(); fresh.picks_by = who; await putJSON('data/news.json', fresh, 'Story picks'); S.news = fresh; dirty = false; toast('Published! Live in about a minute.'); }
+        catch (err) { toast(err.message, 5000); }
+        render();
+      }
+    };
+    panel.oninput = (e) => { if (e.target.dataset.blurb) { picks[+e.target.dataset.blurb].blurb = e.target.value; dirty = true; } else if (e.target.id === 'sq') { const pos = e.target.selectionStart; render(); const el = $('#sq'); el.focus(); el.setSelectionRange(pos, pos); } };
+    panel.onchange = (e) => { if (e.target.id === 'scat') render(); };
+    render();
+  }
 
-  $('#copy').onclick = async () => {
-    if (!picks.length) return toast('Pick some stories first');
-    const html = '<h2>📰 Worth a read this week</h2><ul>' + picks.map((p) => `<li><a href="${esc(p.url)}"><b>${esc(p.title)}</b></a>${p.source ? ' <i>(' + esc(p.source) + ')</i>' : ''}${p.blurb ? '<br>' + esc(p.blurb) : ''}</li>`).join('') + '</ul>';
-    const text = 'Worth a read this week\n\n' + picks.map((p) => `• ${p.title}${p.source ? ' (' + p.source + ')' : ''}\n  ${p.url}${p.blurb ? '\n  ' + p.blurb : ''}`).join('\n\n');
-    try { await navigator.clipboard.write([new ClipboardItem({ 'text/html': new Blob([html], { type: 'text/html' }), 'text/plain': new Blob([text], { type: 'text/plain' }) })]); }
-    catch (e) { try { await navigator.clipboard.writeText(text); } catch (e2) { return toast('Copy blocked by the browser'); } }
-    toast('Copied! Paste it into your email.');
-  };
+  /* ---------- weekly email builder ---------- */
+  function upcomingEvents(days) { const now = new Date(), until = new Date(today0().getTime() + days * 864e5); return (S.events.events || []).filter((e) => e.start && evEnd(e) >= now && parseLocal(e.start) < until).sort((a, b) => a.start.localeCompare(b.start)); }
+  const activeFeatures = () => (S.features.items || []).filter((f) => f.published !== false && (!f.end || parseLocal(f.end) >= today0()));
+  const pubQA = () => (S.qa.items || []).filter((q) => q.published !== false).sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+  const nextFriday = () => { const d = today0(); d.setDate(d.getDate() + ((5 - d.getDay() + 7) % 7)); return d.toISOString().slice(0, 10); };
+  let EO = null;
+  function emailDefaults() {
+    const fe = upcomingEvents(30).find((e) => e.featured), feats = activeFeatures(), q = pubQA()[0];
+    return { date: nextFriday(), headline: fe ? `This week: ${fe.title}` : 'This week around town', subject: fe ? `🎄 ${fe.title} + what's happening this week` : 'What\'s happening around town this week',
+      intro: 'Hi neighbors,\n\nHere\'s what\'s happening around town this week, from community events to a few stories we think you\'ll love.\n\n– Jenny & LeighAnn',
+      days: 21, featured: true, calendar: true, features: feats.map((f) => f.id), qa: q ? q.id : '', stories: true, trivia: true, listings: true, rates: false };
+  }
+  function emailHTML(o) {
+    const C = { ink: '#0e2140', forest: '#1f3b2e', sage: '#8fa17a', gold: '#a07d41', cream: '#f4f1eb', line: '#e0d9cc', muted: '#5d6b80', sea: '#dce3ec', text: '#2a3442', soft: '#efe6d4' };
+    const serif = "Georgia,'Times New Roman',serif", sans = 'Arial,Helvetica,sans-serif', base = siteBase(), b = S.config.brokerage || {};
+    const h = esc, abs = (u) => !u ? '' : /^https?:/.test(u) ? u : base + u.replace(/^\//, '');
+    const trim = (s, n) => { s = String(s || '').replace(/\s+/g, ' ').trim(); return s.length > n ? s.slice(0, n).replace(/\s+\S*$/, '') + '…' : s; };
+    const btn = (href, label, bg) => `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:16px 0 4px"><tr><td bgcolor="${bg || C.sage}" style="background:${bg || C.sage}"><a href="${h(abs(href))}" target="_blank" style="display:inline-block;padding:12px 22px;font-family:${sans};font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#ffffff;text-decoration:none">${h(label)}</a></td></tr></table>`;
+    const kick = (t, color) => `<div style="font-family:${sans};font-size:11px;font-weight:bold;letter-spacing:3px;text-transform:uppercase;color:${color || C.gold}">${h(t)}</div>`;
+    const title = (t, size, color) => `<div style="font-family:${serif};font-size:${size || 26}px;line-height:1.25;color:${color || C.ink};margin:6px 0 6px">${h(t)}</div>`;
+    const p = (t, extra) => `<div style="font-family:${sans};font-size:15px;line-height:1.6;color:${C.text};${extra || ''}">${t}</div>`;
+    const sec = (inner, bg, pad) => `<tr><td bgcolor="${bg || '#ffffff'}" style="background:${bg || '#ffffff'};padding:${pad || '28px 32px'}">${inner}</td></tr>`;
+    const divider = `<tr><td style="background:#ffffff;padding:0 32px"><div style="border-top:1px solid ${C.line};font-size:0;line-height:0">&nbsp;</div></td></tr>`;
+    const gcal = (e) => { const st = (d) => d.getFullYear() + String(d.getMonth() + 1).padStart(2, '0') + String(d.getDate()).padStart(2, '0') + 'T' + String(d.getHours()).padStart(2, '0') + String(d.getMinutes()).padStart(2, '0') + '00'; return 'https://calendar.google.com/calendar/render?' + new URLSearchParams({ action: 'TEMPLATE', text: e.title, dates: st(parseLocal(e.start)) + '/' + st(evEnd(e)), ctz: 'America/New_York', details: e.description || '', location: [e.location, e.town].filter(Boolean).join(', ') }); };
+    const when = (e) => { const s = parseLocal(e.start), en = parseLocal(e.end); const multi = en && en.toDateString() !== s.toDateString(); return multi ? `${fmtD(s)} – ${fmtD(en)}` : `${fmtT(s)}${en ? ' – ' + fmtT(en) : ''}`; };
+    const rows = [];
+    const issueDate = parseLocal(o.date) || new Date();
+    // header
+    rows.push(`<tr><td bgcolor="${C.forest}" style="background:${C.forest};padding:10px 32px;font-family:${sans};font-size:12px;color:#d6e0d0">From your neighbors at ${h(b.name)}${o.webUrl ? ` · <a href="${h(o.webUrl)}" style="color:#ffffff">View in browser</a>` : ''}</td></tr>`);
+    rows.push(sec(`<div style="text-align:center">${kick(fmtD(issueDate, { month: 'long', day: 'numeric', year: 'numeric' }))}<div style="font-family:${serif};font-size:44px;line-height:1.1;color:${C.ink};margin:10px 0 6px">${h(S.config.newsletter_name || 'The Local Loop')}</div>
+      <div style="font-family:${sans};font-size:11px;letter-spacing:3px;text-transform:uppercase;color:${C.muted}">Greater Boston · North Shore · South Shore</div></div>`, C.cream, '30px 32px 26px'));
+    if (o.intro) rows.push(sec(p(h(o.intro).replace(/\n\n/g, '</p><p style="margin:0 0 12px">').replace(/\n/g, '<br>').replace(/^/, '<p style="margin:0 0 12px">') + '</p>')));
+    // featured event
+    const evs = upcomingEvents(+o.days || 21);
+    const fe = o.featured ? evs.find((e) => e.featured) : null;
+    if (fe) {
+      const s = parseLocal(fe.start);
+      rows.push(`<tr><td style="background:#ffffff;padding:0 32px 8px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+        <td width="110" valign="middle" bgcolor="${C.sage}" style="background:${C.sage};text-align:center;padding:18px 6px;color:#ffffff;font-family:${sans}"><div style="font-size:12px;font-weight:bold;letter-spacing:3px">${MON[s.getMonth()].toUpperCase()}</div><div style="font-family:${serif};font-size:48px;line-height:1">${s.getDate()}</div><div style="font-size:12px">${fmtD(s, { weekday: 'long' })}</div></td>
+        <td valign="middle" bgcolor="${C.forest}" style="background:${C.forest};padding:20px 22px">${kick('Don\'t miss it', '#e6d3a3')}${title(fe.title, 26, '#ffffff')}
+          <div style="font-family:${sans};font-size:14px;color:#dbe5d4;font-weight:bold">${h(when(fe))}${fe.location ? ' · ' + h(fe.location) : ''}${fe.town ? ', ' + h(fe.town) : ''}</div>
+          ${fe.description ? `<div style="font-family:${sans};font-size:14px;line-height:1.5;color:#e9efe5;margin-top:8px">${h(fe.description)}</div>` : ''}
+          <div style="margin-top:12px"><a href="${h(gcal(fe))}" style="font-family:${sans};font-size:12px;font-weight:bold;letter-spacing:1px;color:#ffffff">+ ADD TO CALENDAR</a></div></td></tr></table></td></tr>`);
+    }
+    // calendar
+    if (o.calendar) {
+      const list = evs.filter((e) => e !== fe);
+      const tiles = list.map((e) => { const s = parseLocal(e.start); const bg = e.featured ? C.sage : C.ink; return `<tr><td width="66" valign="top" style="padding:12px 0"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="58" bgcolor="${bg}" style="background:${bg};text-align:center;padding:7px 0;color:#ffffff;font-family:${sans}"><div style="font-size:10px;font-weight:bold;letter-spacing:2px">${MON[s.getMonth()].toUpperCase()}</div><div style="font-family:${serif};font-size:26px;line-height:1">${s.getDate()}</div><div style="font-size:10px">${DOW[s.getDay()].toUpperCase()}</div></td></tr></table></td>
+        <td valign="top" style="padding:12px 0 12px 14px;border-bottom:1px solid ${C.line}"><div style="font-family:${sans};font-size:16px;font-weight:bold;color:${C.ink}">${h(e.title)}</div>
+        <div style="font-family:${sans};font-size:13px;color:${C.muted};margin-top:2px">${h(when(e))}${e.location ? ' · ' + h(e.location) : ''}${e.town ? ', ' + h(e.town) : ''}${e.cost ? ' · ' + h(e.cost) : ''}</div>
+        ${e.description ? `<div style="font-family:${sans};font-size:14px;line-height:1.5;color:${C.text};margin-top:4px">${h(trim(e.description, 160))}</div>` : ''}
+        <div style="margin-top:6px;font-family:${sans};font-size:12px"><a href="${h(gcal(e))}" style="color:${C.gold};font-weight:bold">+ Add to calendar</a>${e.url ? ` &nbsp;·&nbsp; <a href="${h(e.url)}" style="color:${C.gold};font-weight:bold">Details</a>` : ''}</div></td></tr>`; }).join('');
+      if (tiles) rows.push(sec(`${kick('Around town')}${title('Community calendar')}<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">${tiles}</table>${btn('events.html', 'See the full calendar', C.ink)}`));
+    }
+    // spotlights & contests
+    activeFeatures().filter((f) => (o.features || []).includes(f.id)).forEach((f) => {
+      const contest = f.type === 'contest', href = f.body ? 'spotlight.html?id=' + encodeURIComponent(f.id) : (f.link_url || 'spotlight.html');
+      const inner = `${f.image ? `<img src="${h(abs(f.image))}" width="536" alt="" style="display:block;width:100%;max-width:536px;height:auto;margin:0 0 16px;border:0">` : ''}${kick(f.kicker || (contest ? 'Holiday Contest' : 'Community Spotlight'))}${title(f.title)}
+        ${(f.when || f.where) ? p(h([f.when, f.where].filter(Boolean).join(' · ')), `font-size:13px;color:${C.muted};font-weight:bold`) : ''}${p(h(f.summary || ''), 'margin-top:6px')}
+        ${contest && f.deadline ? p(`<b>Enter by ${h(fmtD(parseLocal(f.deadline), { weekday: 'long', month: 'long', day: 'numeric' }))}</b>${f.prize ? ' · Prize: ' + h(f.prize) : ''}`, 'margin-top:8px') : ''}
+        ${btn(f.link_url && !f.body ? f.link_url : href, f.body ? (contest ? 'Contest details' : 'Read the story') : (f.link_label || 'Learn more'), contest ? C.gold : C.sage)}`;
+      rows.push(divider);
+      rows.push(contest ? `<tr><td style="background:#ffffff;padding:24px 32px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="${C.soft}" style="background:${C.soft};border:2px solid ${C.gold};padding:22px 24px">${inner}</td></tr></table></td></tr>` : sec(inner));
+    });
+    // Q&A
+    const q = (S.qa.items || []).find((x) => x.id === o.qa);
+    if (q) {
+      const e = q.expert || {}, n = (q.questions || []).length, href = 'qa.html?id=' + encodeURIComponent(q.id);
+      rows.push(divider);
+      rows.push(sec(`${kick(q.kicker || 'Ask the Attorney')}${title(q.title)}${e.name ? p(`<b>${h(e.name)}</b>${(e.title || e.firm) ? ', ' + h([e.title, e.firm].filter(Boolean).join(', ')) : ''}`, `font-size:14px;color:${C.muted}`) : ''}
+        ${(q.questions || []).slice(0, Math.min(q.teaser_count || 1, 2)).map((x) => `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:14px"><tr><td width="3" bgcolor="${C.sage}" style="background:${C.sage}"></td><td style="padding:4px 0 4px 14px"><div style="font-family:${serif};font-size:18px;line-height:1.35;color:${C.ink}">Q. ${h(x.q)}</div><div style="font-family:${sans};font-size:14px;line-height:1.55;color:${C.text};margin-top:4px">${h(trim(x.a, 220))}</div></td></tr></table>`).join('')}
+        ${btn(href, `Read all ${n} answers`, C.sage)}`));
+    }
+    // stories
+    const picks = (S.news && S.news.editors_picks) || [];
+    if (o.stories && picks.length) {
+      rows.push(divider);
+      rows.push(sec(`${kick('Worth a read')}${title('In the news this week')}${picks.map((s) => `<div style="padding:10px 0;border-bottom:1px solid ${C.line}"><a href="${h(s.url)}" style="font-family:${sans};font-size:15px;font-weight:bold;color:${C.ink};text-decoration:none">${h(s.title)}</a>${s.source ? `<span style="font-family:${sans};font-size:12px;color:${C.muted}"> · ${h(s.source)}</span>` : ''}${s.blurb ? `<div style="font-family:${sans};font-size:14px;color:${C.text};margin-top:3px">${h(s.blurb)}</div>` : ''}</div>`).join('')}`));
+    }
+    // trivia
+    if (o.trivia) {
+      const g = S.config.giveaway || {};
+      rows.push(`<tr><td style="background:#ffffff;padding:24px 32px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="${C.cream}" style="background:${C.cream};padding:22px 24px;text-align:center">${kick('Weekly trivia')}${title('Think you know Boston?', 22)}${p(`Play this week's timed ${h(g.game_name || 'Boston Trivia Challenge')}. Top score wins a ${h(g.prize || 'gift card')}!`, 'text-align:center')}<div style="text-align:center"><table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="margin:14px auto 0"><tr><td bgcolor="${C.ink}" style="background:${C.ink}"><a href="${h(base + 'trivia.html')}" style="display:inline-block;padding:12px 22px;font-family:${sans};font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#ffffff;text-decoration:none">Play now</a></td></tr></table></div></td></tr></table></td></tr>`);
+    }
+    // listings
+    const ls = (S.listings.listings || []).filter((l) => l.featured).slice(0, 2);
+    if (o.listings && ls.length) {
+      rows.push(sec(`${kick('From Bowdoin Real Estate Partners')}${title(ls.length > 1 ? 'Featured homes' : 'Featured home')}${ls.map((l) => `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:14px"><tr>${l.image ? `<td width="200" valign="top"><a href="${h(l.url)}"><img src="${h(l.image)}" width="200" alt="" style="display:block;width:200px;height:auto;border:0"></a></td>` : ''}<td valign="top" style="padding-left:16px"><div style="font-family:${serif};font-size:22px;color:${C.ink}">${l.price ? '$' + Number(l.price).toLocaleString() : ''}</div><div style="font-family:${sans};font-size:15px;font-weight:bold;color:${C.ink}">${h(l.address)}</div><div style="font-family:${sans};font-size:13px;color:${C.muted}">${h(l.city || '')}</div><div style="font-family:${sans};font-size:13px;color:${C.muted};margin-top:4px">${[l.beds && l.beds + ' bd', l.baths && l.baths + ' ba', l.sqft && Number(l.sqft).toLocaleString() + ' sq ft'].filter(Boolean).join(' · ')}</div><div style="margin-top:8px"><a href="${h(l.url)}" style="font-family:${sans};font-size:12px;font-weight:bold;color:${C.gold}">SEE THE HOME →</a></div></td></tr></table>`).join('')}`, '#ffffff'));
+    }
+    if (o.rates && S.market && S.market.rates && S.market.rates['30yr']) { const r = S.market.rates; rows.push(sec(p(`<b>Mortgage rates this week:</b> 30-yr fixed ${Number(r['30yr'].rate).toFixed(2)}%${r['15yr'] ? ' · 15-yr fixed ' + Number(r['15yr'].rate).toFixed(2) + '%' : ''} <span style="color:${C.muted}">(Freddie Mac)</span>`))); }
+    // footer
+    rows.push(`<tr><td bgcolor="${C.forest}" style="background:${C.forest};padding:26px 32px;font-family:${sans};font-size:12px;line-height:1.6;color:#cfdccb;text-align:center">
+      <div style="font-family:${serif};font-size:20px;color:#ffffff">${h(b.name)}</div>${h(b.address || '')}<br><a href="tel:${h((b.phone || '').replace(/\D/g, ''))}" style="color:#ffffff">${h(b.phone || '')}</a> · <a href="mailto:${h(b.email)}" style="color:#ffffff">${h(b.email || '')}</a> · <a href="${h(b.website)}" style="color:#ffffff">bowdoinrealestate.com</a>
+      <div style="margin-top:10px;color:#9fb39a">You're receiving ${h(S.config.newsletter_name || 'The Local Loop')} because you're part of our community. Equal Housing Opportunity.</div></td></tr>`);
+    return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${h(o.subject || '')}</title></head>
+<body style="margin:0;padding:0;background:${C.cream}"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${C.cream}" style="background:${C.cream}"><tr><td align="center" style="padding:20px 10px">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;border:1px solid ${C.line}">${rows.join('\n')}</table></td></tr></table></body></html>`;
+  }
+  function issueMarkdown(o) {
+    const out = [o.intro || '', '', '{{featured}}', '', '## 📅 Around town', '', '{{calendar}}', ''];
+    activeFeatures().filter((f) => (o.features || []).includes(f.id)).forEach((f) => out.push(`## ${f.type === 'contest' ? '🎉' : '⭐'} ${f.kicker || f.title}`, '', `{{spotlight:${f.id}}}`, ''));
+    if (o.qa) out.push('## ⚖️ Ask the Attorney', '', `{{qa:${o.qa}}}`, '');
+    const picks = (S.news && S.news.editors_picks) || [];
+    if (o.stories && picks.length) { out.push('## 📰 Worth a read', ''); picks.forEach((s) => out.push(`- [${s.title}](${s.url})${s.source ? ' (' + s.source + ')' : ''}${s.blurb ? ' — ' + s.blurb : ''}`)); out.push(''); }
+    if (o.trivia) out.push('## 🧠 Weekly trivia', '', '{{trivia}}', '');
+    const ls = (S.listings.listings || []).filter((l) => l.featured && l.mls).slice(0, 2);
+    if (o.listings && ls.length) { out.push('## 🏡 From Bowdoin Real Estate Partners', ''); ls.forEach((l) => out.push(`{{listing:${l.mls}}}`, '')); }
+    return out.join('\n');
+  }
+  function emailTab() {
+    EO = EO || emailDefaults();
+    const feats = activeFeatures(), qas = pubQA(), panel = $('#panel');
+    const issueId = () => `${EO.date}-${slug(EO.headline)}`;
+    const webUrl = () => siteBase() + 'issue.html?id=' + issueId();
+    panel.innerHTML = `<div class="ed email"><div class="card pad">
+        <h3 style="margin:0">Build this week's email</h3><p class="small muted" style="margin:6px 0 0">Everything comes from the other tabs. Update an event or spotlight there, then come back here. The preview updates as you go.</p>
+        <label class="f">Email subject line</label><input class="field" data-o="subject" value="${esc(EO.subject)}">
+        <label class="f">Issue date</label><input class="field" type="date" data-o="date" value="${esc(EO.date)}">
+        <label class="f">Headline (for the web version)</label><input class="field" data-o="headline" value="${esc(EO.headline)}">
+        <label class="f">Hello note</label><textarea class="field" rows="5" data-o="intro">${esc(EO.intro)}</textarea>
+        <h4 style="margin:18px 0 4px;font-family:var(--sans);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)">Include</h4>
+        <label class="chk"><input type="checkbox" data-o="featured" ${EO.featured ? 'checked' : ''}> ⭐ Featured event banner</label>
+        <label class="chk"><input type="checkbox" data-o="calendar" ${EO.calendar ? 'checked' : ''}> 📅 Calendar: events in the next <select data-o="days" class="field" style="width:auto;padding:4px 6px">${[7, 14, 21, 30, 45].map((d) => `<option value="${d}" ${+EO.days === d ? 'selected' : ''}>${d} days</option>`).join('')}</select></label>
+        ${feats.map((f) => `<label class="chk"><input type="checkbox" data-feat="${esc(f.id)}" ${(EO.features || []).includes(f.id) ? 'checked' : ''}> ${f.type === 'contest' ? '🎉' : '⭐'} ${esc(f.title)}${f.sample ? ' <span class="pill warn">Draft</span>' : ''}</label>`).join('')}
+        <label class="chk">⚖️ Q&amp;A: <select data-o="qa" class="field" style="width:auto;padding:4px 6px"><option value="">None this week</option>${qas.map((q) => `<option value="${esc(q.id)}" ${EO.qa === q.id ? 'selected' : ''}>${esc(q.title)}</option>`).join('')}</select></label>
+        <label class="chk"><input type="checkbox" data-o="stories" ${EO.stories ? 'checked' : ''}> 📰 Story picks (${((S.news && S.news.editors_picks) || []).length})</label>
+        <label class="chk"><input type="checkbox" data-o="trivia" ${EO.trivia ? 'checked' : ''}> 🧠 Weekly trivia</label>
+        <label class="chk"><input type="checkbox" data-o="listings" ${EO.listings ? 'checked' : ''}> 🏡 Featured listings (${(S.listings.listings || []).filter((l) => l.featured).length})</label>
+        <label class="chk"><input type="checkbox" data-o="rates" ${EO.rates ? 'checked' : ''}> 📈 Mortgage rates line</label>
+        <h4 style="margin:18px 0 8px;font-family:var(--sans);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)">Send it</h4>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <button class="btn brass" id="copyrich">📋 Copy email (paste into Gmail / Outlook)</button>
+          <button class="btn ghost sm" id="copyhtml">&lt;/&gt; Copy HTML code (Mailchimp, Constant Contact…)</button>
+          <button class="btn ghost sm" id="dl">⬇ Download email file</button>
+          <button class="btn ghost sm" id="pubweb">🌐 Publish web version (adds to Past Issues)</button>
+        </div>
+        <p class="hint" style="margin-top:10px">Tip: in Mailchimp choose <b>Code your own → Paste in code</b>, or add a <b>Code</b> block and paste. In Gmail or Outlook, just paste into a new message.</p>
+      </div>
+      <div class="card pad"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><h3 style="margin:0">Preview</h3>
+        <div><button class="ib" data-w="640">Desktop</button> <button class="ib" data-w="380">Phone</button></div></div>
+        <div style="margin-top:10px;display:flex;justify-content:center"><iframe class="preview-frame" id="pv" title="Email preview" style="max-width:640px"></iframe></div></div></div>`;
+    const refresh = () => { $('#pv').srcdoc = emailHTML({ ...EO, webUrl: EO.published ? webUrl() : '' }); };
+    panel.oninput = panel.onchange = (e) => {
+      const t = e.target;
+      if (t.dataset.o) EO[t.dataset.o] = t.type === 'checkbox' ? t.checked : t.value;
+      if (t.dataset.feat) { const s = new Set(EO.features || []); t.checked ? s.add(t.dataset.feat) : s.delete(t.dataset.feat); EO.features = [...s]; }
+      refresh();
+    };
+    panel.onclick = async (e) => {
+      const t = e.target.closest('button'); if (!t) return;
+      if (t.dataset.w) { $('#pv').style.maxWidth = t.dataset.w + 'px'; return; }
+      const html = emailHTML({ ...EO, webUrl: EO.published ? webUrl() : '' });
+      if (t.id === 'copyrich') {
+        try { await navigator.clipboard.write([new ClipboardItem({ 'text/html': new Blob([html], { type: 'text/html' }), 'text/plain': new Blob([EO.subject], { type: 'text/plain' }) })]); toast('Copied! Paste it into a new email.'); }
+        catch (err) { toast('Your browser blocked rich copy. Use Download instead.', 5000); }
+      } else if (t.id === 'copyhtml') {
+        try { await navigator.clipboard.writeText(html); toast('HTML copied. Paste it into your email tool\'s code editor.'); } catch (err) { toast('Copy blocked. Use Download instead.', 5000); }
+      } else if (t.id === 'dl') {
+        const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([html], { type: 'text/html' })); a.download = `local-loop-${EO.date}.html`; a.click();
+      } else if (t.id === 'pubweb') {
+        if (!confirm('Publish this issue to the website\'s Past Issues page?')) return;
+        t.disabled = true; t.textContent = 'Publishing…';
+        try {
+          const id = issueId();
+          await putText(`issues/${id}.md`, issueMarkdown(EO) + '\n', `Issue: ${EO.headline} (by ${who})`);
+          const iss = await getJSON('data/issues.json', { issues: [] });
+          const list = (iss.issues || []).filter((x) => x.id !== id);
+          const num = Math.max(0, ...list.map((x) => +x.number || 0)) + 1;
+          const firstLine = (EO.intro || '').split('\n').map((s) => s.trim()).filter((s) => s && !/^hi\b|^hello\b/i.test(s))[0] || '';
+          list.unshift({ id, number: num, date: EO.date, title: EO.headline, summary: firstLine.slice(0, 160) });
+          iss.issues = list; await putJSON('data/issues.json', iss, 'Add issue ' + num);
+          S.issues = iss; EO.published = true; refresh();
+          toast('Published! The email now has a "View in browser" link. Copy it again before sending.', 6000);
+        } catch (err) { toast(err.message, 5000); }
+        t.disabled = false; t.textContent = '🌐 Publish web version (adds to Past Issues)';
+      }
+    };
+    refresh();
+  }
 
+  /* ---------- shell ---------- */
+  function showTab(name) { tab = name; $$('#tabs button').forEach((b) => b.classList.toggle('on', b.dataset.tab === name)); $('#panel').onclick = $('#panel').oninput = $('#panel').onchange = null; TABS[name](); }
+  $('#tabs').addEventListener('click', (e) => { const b = e.target.closest('button[data-tab]'); if (b) showTab(b.dataset.tab); });
+  async function start() {
+    await loadAll();
+    $('#whoami').textContent = `Editing as ${who}. Changes go live on the site about a minute after you save.`;
+    $('#login').style.display = 'none'; $('#app').style.display = 'block'; $('#signout').style.display = '';
+    showTab(tab);
+  }
   $('#go').onclick = async () => {
-    token = $('#tok').value.trim(); who = $('#who').value;
-    if (!token) return;
+    token = $('#tok').value.trim(); who = $('#who').value; if (!token) return;
     $('#loginmsg').textContent = 'Checking…';
-    try { await load(); store.set('bb-editor-token', token); store.set('bb-editor-who', who); show(true); }
+    try { await start(); store.set('bb-editor-token', token); store.set('bb-editor-who', who); }
     catch (e) { $('#loginmsg').textContent = e.message; }
   };
   $('#signout').onclick = (e) => { e.preventDefault(); store.del('bb-editor-token'); location.reload(); };
-  function show(ed) { $('#login').style.display = ed ? 'none' : 'block'; $('#editor').style.display = ed ? 'block' : 'none'; $('#signout').style.display = ed ? '' : 'none'; }
-
-  if (token) load().then(() => show(true)).catch(() => show(false)); else show(false);
   $('#who').value = who;
+  if (token) start().catch(() => { $('#login').style.display = 'block'; }); else $('#login').style.display = 'block';
 })();
 </script>
 </body>
