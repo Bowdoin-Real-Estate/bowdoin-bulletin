@@ -1,26 +1,20 @@
 {
-  "updated": "2026-11-22T10:53:16+00:00",
+  "updated": "2026-11-23T11:14:11+00:00",
   "_help": "'categories' is refreshed automatically every day by the GitHub Action. Put your own hand-picked stories in 'editors_picks' (title, url, source, blurb) – those are never overwritten.",
   "editors_picks": [],
   "categories": {
     "Real Estate": [
       {
+        "title": "Young Adults Living With Parents Surge Fastest in America’s Once-Affordable Regions",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYklpZFFmVC1vVDVIM1VOQnVvQks2YXRaM3lmOExqNC1LeWs1cUFJSmJLQUItWVdZcV95RzZRODlTYjVVTWY3VExiR3Yxa3VuT3BlNlF0d3RwTndiYkxXQWZCc1VTaTdUdVhTZU9Fc3czRGl6ak5qVVdGZGw0eGc5YVktV2R4dw?oc=5",
+        "source": "Realtor.com",
+        "published": "2026-11-23T10:00:00+00:00"
+      },
+      {
         "title": "Homes in a ‘low-priced town’ in Greater Boston are now $600,000, a new report says. Here are five striking findings.",
         "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOM2NsamRJYW10aWpBandVLUpYZkFnZTNlcXdJV2N6VlNzVHRhMVg5eUJkMDNrX0VrcC1CNjhFdXJwcXpNcWQ4Y013TExNaDVSX3FBMVR1R2hvY0JWQl9zaG5ydnd0MzFQXzk1MHBGSGJhWmN3X1hrOU9OakpiWTk4NUJIaVlBb3c3dVNpZHZxUG5NTHlMZGtKQTc4RHVELXIwcFJNRE0xWldfbHdnWW8wYjk4UnJ4RFBUaVhWNW93Rlg2X3NsYngtbFpQZlRzWU9MUWw2TjZDbVlnLURsQXJLMEZLR0dGVi1QNkc4VzdLSmh5bUFMRTdZZnJR?oc=5",
         "source": "Boston.com",
         "published": "2026-11-22T10:00:00+00:00"
-      },
-      {
-        "title": "Denver Investor Big 4 Properties Buys Fenway Apartment Complex for $193 Million",
-        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVnlYNERDUlI0X2R4ZFlIRUhCaFpfX0xZOU9Cb1AtYVhWS1l2ZmpQc09nZklkRGtLZ2UtRGtBTVphYlM4akQ4bGE0eXhRRUVZZFJVUWt0UHF4dUlmZEdPQ01ERzY5M3loYURySUtKdkhveHNLR2VWNll4cE5OVmI0RjcxZklLM1VrSWowXy1QZjR3amVjd1VHWFkwWDFHQXlZZG1rSTlKdUhWY0E0dVFDTXJtUQ?oc=5",
-        "source": "Boston Real Estate Times",
-        "published": "2026-11-21T03:50:12+00:00"
-      },
-      {
-        "title": "Boston Approves New Zoning for Hyde Park’s Cleary Square",
-        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPcFlpTUxyT1BNUENRY29RV2drbFNfVzlpTVZMeXJZYm04MV9JR0Q1R3M3N0hFenVodzJjU1h1RkpHaHJwRFljZm9teExwVFBocllmblJPOEhOTFIxcUJscE1YNjZwOWxMajNZdHUzb0hISnRSa1BkYzFoUmNZclZvTHJzMEhQQmktLUZTdVBsT3JyYmUz?oc=5",
-        "source": "Boston Real Estate Times",
-        "published": "2026-11-21T03:15:04+00:00"
       },
       {
         "title": "Jarvid J. Cortes: The Bilingual Realtor Redefining Luxury and Investment Real Estate on Boston's North Shore",
@@ -30,9 +24,15 @@
       },
       {
         "title": "Hovan Property Group at Compass Celebrates Four Successful Real Estate Closings in November",
-        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZS14OF9kMFVBQ2IyMlI1SlBHWW1uSkJCdGR0Z2MtYlNGbi01N2ItVWtOcTB4c3IycGZiQVhXX1U4ZWxRVFdVcUhidnFhNnVqUmtjbnpZdDc1dDhldFVienRZY0tDbTRjVm81R3h0TlB5MXBsdEJBNXhEMzVybzVlNm1mSEQwS0lmQW11eFozUXg2RF9GWlpBdEhGc0ZBa1dHTEVRdzl5M2dUUUdlaWdyc1dDM0VwT2lQcW9uTFhtLXItYWc?oc=5",
-        "source": "Sippican Week",
-        "published": "2026-11-21T00:23:13+00:00"
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNWWF2dUhaNjlNLVVudXhkUVBpMXQtQ005SEM1WnhzY0VlcHNDV0U3bi1lTXRvb3lyZ0hUczlaZUVLYjdnX2JqblpOYlhfNzZ0VW9zYk5wX1VDLWRnU0l3bkZZZmZwdVROUUdsZGlLUGNnYVRlQlI4YTdrQWdqcmJmSDFSRmJjeVoyRHZIdFpDQmlrU0stdkZZZUZIcTZvMmYzSGFTV3ZabVBfRUZkNmVoVzZtdmtPY0lqb04xb3ZDMy10MUpz?oc=5",
+        "source": "Dartmouth Week",
+        "published": "2026-11-21T00:43:08+00:00"
+      },
+      {
+        "title": "Life sciences out, apartments and retail in for Downtown Chapel Hill site",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOT2ptUVlRdjUwS3NtZTJWSGFkYS14cGtqYjQ4T1BwQVk4T1Btc185czIzQ3ZKSUlFSWREcU4zVnVmMlpreTYtMDAxRmNVd01BVWZzazVHUWR3Z25IU0NMU3BORGVaU2ZpRHNDVnNfcHR0dmNLT2JjdlhlZHpNXzdza2FlbExCdFNJTWhjQzN4RkJiV1p6NlJYUC1JZ3FFSGFOSEM1Xzdn?oc=5",
+        "source": "The Business Journals",
+        "published": "2026-11-20T19:12:00+00:00"
       },
       {
         "title": "VCA Animal Hospital in Bedford, N.H., Sells for $3.3 Million in Marcus & Millichap Deal",
@@ -43,48 +43,48 @@
     ],
     "Boston": [
       {
-        "title": "Fire at Indonesian candy factory leaves 3 dead, dozens of workers unaccounted for",
-        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOcDVuOERSNW9OLU1nTjNZMHk2aUxTb0tDMEduMmRsQjlmN0pUUlJ4SDQyQzZ1UHoyUTEwbVhsVXo4aGlBMlpmQmJIWk54a0IzNG9keGNEOVlwbDFoNm1Ydmg2SDg0TVkxYnBOeFVfZUZ0RkJjM3VoanBXRFZxSkdndURQVng?oc=5",
-        "source": "The Boston Globe",
-        "published": "2026-11-22T10:33:34+00:00"
+        "title": "A.R.T. makes its new home a canvas for Boston artist",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVm9FNkxJaHlLY2JjSEg4QWh0RnB6bUlEbDRQODhjOGxXalNVTnFrajhuMFhsb29ydzBWdW1LcXRFdVRnQUtRa3kxYlZuTzN0eEdhSmtRNjI2NldaNXZHZEhTTXdMX0FaQ2I3UlExTmZ5QjV3OGRsTy13NW5NRnRia0hlbU9CNm41ZzhTNXhiNlhGY0lwZjhMRm9aR1dBQ0Nk?oc=5",
+        "source": "Harvard Gazette",
+        "published": "2026-11-23T11:00:13+00:00"
       },
       {
-        "title": "Bruins vs. Caps RECAP: Boston explodes for a 7-5 WIN!",
-        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOaVpSUlFuY2pjaU5oamJJSnUwYk5wcks1OHRiWHZCQlpDalM0Sm5kbHV3djNiUUpmOTZ6Zjc1U2g3NGJMazZHMU9ETWdVOVk1bkpBSEE1TThrSU90M0hRSFN2SXlQdVFxUjg0YWdFcFVmWF9lVW03NERsSWpTci1SNXB3?oc=5",
-        "source": "Yahoo Sports",
-        "published": "2026-11-22T10:32:44+00:00"
+        "title": "Vertex awaits approval of its next blockbuster, but a crowded field will test it",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPN1k3aTRjWnJrM2FTYWF1QWo5RThPZkpiMmk5dEhCLXNteUQzenNJbmJWUUxJR3RYME9zSnBQUGkzRFJhYzVmZzhWLW1CUE55R2RDWHBmOWFsOGhLTHpIU1ZDZlZuSHc3akdfSGdUNGhZSzYzcnVOTXZYZy1EZVBobEx1SlRSdEJnckU4?oc=5",
+        "source": "The Business Journals",
+        "published": "2026-11-23T11:00:00+00:00"
       },
       {
-        "title": "Today in Boston Celtics history: Bradley debuts; Ford 1st 4-point play; Naulls passes",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOMllKRnRYYkt5QXNWQ05oby1kVi0yek5Ed1F2QVB4NVpKd2JQTHktNFdMUXhaUkw3QnAxQW5nb3NOZkJkd2ZxaVhCR3VRc3BmS1lxSm00bzExOURKNU9XV2ZMRWg3d2VRcU94WHNhcW83OU9PRENIWTRhRkN5ZnI4bXhTOVVZcEEwZUlyNER3?oc=5",
-        "source": "Yahoo Sports",
-        "published": "2026-11-22T10:03:36+00:00"
+        "title": "ESET to Open Boston Office to Expand U.S. Operations",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWlZ3Y2gyZUVGeTV1VmllelJKdkF0WFEyWGpURmd6NGFxYVNhcDk1MTFRM0RZZkdBYVlnaThiUGkyd0Y3WllHQlhFV254Zy00TVZucmUxaTFjTEpxUVF2M0hqYWViOWVveEVQdnJTMGc0N3g5ajFpNXVmdVFOa3U5TEVKN2xOSVk?oc=5",
+        "source": "Channel Insider",
+        "published": "2026-11-23T10:59:20+00:00"
       },
       {
-        "title": "Homes in a ‘low-priced town’ in Greater Boston are now $600,000, a new report says. Here are five striking findings.",
-        "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOM2NsamRJYW10aWpBandVLUpYZkFnZTNlcXdJV2N6VlNzVHRhMVg5eUJkMDNrX0VrcC1CNjhFdXJwcXpNcWQ4Y013TExNaDVSX3FBMVR1R2hvY0JWQl9zaG5ydnd0MzFQXzk1MHBGSGJhWmN3X1hrOU9OakpiWTk4NUJIaVlBb3c3dVNpZHZxUG5NTHlMZGtKQTc4RHVELXIwcFJNRE0xWldfbHdnWW8wYjk4UnJ4RFBUaVhWNW93Rlg2X3NsYngtbFpQZlRzWU9MUWw2TjZDbVlnLURsQXJLMEZLR0dGVi1QNkc4VzdLSmh5bUFMRTdZZnJR?oc=5",
-        "source": "Boston.com",
-        "published": "2026-11-22T10:00:00+00:00"
+        "title": "Boston 25 Morning Forecast",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQLU9ZTExnWk05a1N1Z0l2T0h0Mm1qMjhISmg2UGpUQnl0Y0trdVpMUkZzZkVEVUV2RzRmVWpyUzlORHNPeDFoZXZCYWtJeE8tSWhtdUFsWGluUnMtTjhwRk50RjFGbkphR3ZyTlFncklqTW1jeTRNMVBIQVV5M2Z4cF9ka3R2YzRrejRSUDlpa0JrYVdvQUd0eWs0Mk14MGt2VzllazRYSjF0NnkzbzBMMTVKUzZGUUE?oc=5",
+        "source": "Boston 25 News",
+        "published": "2026-11-23T10:44:14+00:00"
       },
       {
-        "title": "Looking set for an easy road win, Celtics crumble in third quarter in stunning loss to NBA-worst Kings",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd3Rfbm15aVZONnNhMU9KSjNrZkV5TDJseFhXWFcyS2MyY2p5cXR1Q3N3elJPS1JQUG5WWk9QaHBGRkR6SnhVdEw0VkhDRFI5YWVFOHl6LXRxZXh1NnlWWGM4Um52QWlrRjFSc2xfaTNPVmozSGJNbGNwX2h3RDdvcVhCRW1xZE5mQ0d4RW1zY0o?oc=5",
-        "source": "The Boston Globe",
-        "published": "2026-11-22T09:37:01+00:00"
+        "title": "Delta outage delays around 100 flights at Boston's Logan Airport",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUHZybVJPbEdpYU13ODFLRDdtNERtZVh6X1BDS3U0bFVMb2xLYmtSbTZwX2UyTkN0Wjc0VmVMSUZOMUxuWFNQTUZLaUtMcDlsMFNRblp1ZUdNZUM3RUhOWTVmSUxFOENHTVBUVXU4WVJLR3pmSGo0dk45QjhVSWgyRjNlOUNhVG1GLUxBTFJSYVJUckp2MTRmVGlVUDZUdi03Y3fSAaoBQVVfeXFMUEpsb2U3dTVPUHFJOG9lX1JzX29RV2JCaWNDYUVKYXg1UGdtb05lRXRrZ2p4UkVUZFpwR3Z1LVBYMzRGUy1GVUlvLU1LcEVCN1BsY1FmUmRuWVBGNS1ZTjI4WlVsM1J6RjBTU0hFX1Z3VU5VNld4QUZuamtxbEI1R1FlVUdWQnY4REtQZUVNeEJXRTdnWGU4ejhydjhkQUdIR0Q2UW1YZ2Fabnc?oc=5",
+        "source": "NBC Boston",
+        "published": "2026-11-23T10:37:29+00:00"
       },
       {
-        "title": "DISGUSTING: Boston Celtics LOSE To Sacramento Kings After DISASTER 3rd Quarter",
-        "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxNYThVZnI3N2c0NkVDUDBYQ1pvdjhBNUVNdnFEc04yLWRkTlU4anppREctLTRtaDFpQnJEbDBqdEZ6VmpjSnZmeVVnRU5ULUhKX3JDb1hldTZEX25Ea08xLTRWcUhJUy1BNWJXVTlmRmlPR0drb0FTUEVCNkVxUmRITFBZUlctNzh4NzcwVzdNVmJVSTc1RzV5RUxBaExfWDZxeDQ4SWhlTHYxbGFzem5mU3BjRXJYZk53M1BQNUd5M0c4eWprWnhhWVhxQVRDd1ZORDh4Q3FYSDAwYkVUZGRoaGZjMU43dGNoVEc1bVBrUUloR3EwQkFza00zLXF1WF91Y0x3azJPQkUyR2QtVHloNXpNU3E5Zw?oc=5",
-        "source": "kcentv.com",
-        "published": "2026-11-22T09:08:05+00:00"
+        "title": "Next Weather: WBZ morning forecast for Nov. 23, 2026",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNR0Q3UTF1Z0h4MFB4Q19CQlh0bmg5bHpjeVdBZ1M0ZVhBa016QmdTeXVWNzJ1RVVQMEtkRjRBS3ZaeGpjR0pMeG0ySVZ1cTV4MTBaRE9rWmc2elNIV2ZMM3M1bDZSRWRvMTBudk1MWm9DcTlZQUZOTUg0ZmxRdmg0M2dSb0JoTXBMYW85YUNWNDg?oc=5",
+        "source": "CBS News",
+        "published": "2026-11-23T10:21:00+00:00"
       }
     ],
     "Around Town": [
       {
-        "title": "2026 Massachusetts high school football final scores from state semifinals",
-        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZ0todnZjTjhiNjdPZzQxTXhIaWQwdFNPdU5oLVRFOUxVdkRZMTcyQVNVY01GX3JWR0hSQUdxOE1Kci1LVFJ3Y2pOZWtBRnhuTnBiUGdxU2E2X3h6NEgxS082OGJ1TFczR3FRUm1sZmNsSzFpam50RWxVUk9sZEFSREFfbEhIMWVORWpxQk5DMU9DWkVDUUp1VTJua3d6UVNDQ0dfTHBncDdsNVB1WFFtVTN5Yw?oc=5",
-        "source": "High School Football America",
-        "published": "2026-11-22T06:13:36+00:00"
+        "title": "Winthrop High School (MA) Football",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EZmIxQmJySXk0WnBqbWpYenpGZUZaVmVjQXMxdGlzWjZnTVpFbnV2RU1nVDExN2owbVl5cmRIQXlGYUtxR1lpWU1wTGRsaTJqWkZTLXJtRkRLeDFkbGNyUHJJZTdUTTdiZ09LdGhKVFY?oc=5",
+        "source": "MaxPreps",
+        "published": "2026-11-22T05:56:23+00:00"
       },
       {
         "title": "Thomas Desjardins Obituary (1967 - 2026) - Watertown, CT - Republican American",
@@ -99,26 +99,82 @@
         "published": "2026-11-21T23:47:54+00:00"
       },
       {
-        "title": "Pauline Ober Obituary (1928 - 2026) - Legacy Remembers",
-        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNSUNvOU5Ia0dvZmxENFVZcHFydVRmSy1pRWNmeTdjbmRXRXlmMko2OWpEWF9aRE5SanM3TWF0WV9DZHNDVUs1SXhpR0hydHlVTFphdkNGb0FvVmduWWZKVlk0Q2dSaUdzcmIxMlhrQ2FxT0xxbzFaV1JWeU1Hbl90Yjh5Vkd2SG1Fc2F4dTI5RQ?oc=5",
-        "source": "Legacy | Obituary",
-        "published": "2026-11-21T22:59:58+00:00"
-      },
-      {
         "title": "Revere Girls Varsity Basketball @ Winthrop",
         "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQY05QSzFqVVVkcmNXZVNrNDFtNVhUTnd0UVl2WXNOTXY3MlUwVHI3QnY2V2RPT2pURmpjSktuYXF5a0FNUHNZZkV4M0FtZFVhSVVBSVhYeTdkODhNWlM0WGlzaGcxeGNpSklXNVl0aGFia054Z21IUFlvcmhScm1iNDZla2kyb0dfNW5TeU1rampZZ0xBODRHNjFEUVlLQk9IS3hFQUhZMFZtS1hqT0R4S2txQjQydmp4?oc=5",
         "source": "MaxPreps",
         "published": "2026-11-21T22:28:29+00:00"
       },
       {
-        "title": "MIAA high school football semifinal scoreboard",
-        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYUZZQms1X2RWU3JFY0g0VFh1TjU0NFpWSkt4QThlbnBib3A0MUY4NW9pLWdxZkhoTnVaemREY2hjOVExdHVwNWN2Uy1qZE80QmJrOEdOZVNLMFNHYWpIZjAtRy1PVGVWRE9PWm5mRFJHbHBlYW9saEtjR3Vxbllqdm5TTFNVSXBTMXFxb1dhYUdMRERydURZa1pMdnFKQmRKNGo2dUc0NUFwWlA0MDVYLU9LckFlT19mQjc1SF9vSTVqQQ?oc=5",
-        "source": "The Patriot Ledger",
-        "published": "2026-11-21T10:10:33+00:00"
+        "title": "Team Highlights: 2026 MIAA Div 6 Football Semifinal Winthrop vs. Norwell - Winthrop",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8wbUFhcVpMS3dpRWtCaHBYdnlweGNTc1h6a3Jac21rU0pFVlVMRmdUZHZSZ1JrcUFtV2hqbFhyTzEybXNTSEtSWEZxLU1QT053QV8wQ2FVazRyOTl5S3JfaWhn?oc=5",
+        "source": "NFHS Network",
+        "published": "2026-11-21T20:00:00+00:00"
+      },
+      {
+        "title": "Game Recap: 2026 MIAA Div 6 Football Semifinal Winthrop vs. Norwell",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1VRjdEclhrQnB3eFl0c2hYcDdOTkg2VHVrb3NvS3JRYlZwSWpHR285YV8yWi1hdXl1aUxZTVRISHFOdGlMel9OMGhUeTVXUGo2UlRFbEdkMmlmR0lzVWo4Nnhn?oc=5",
+        "source": "NFHS Network",
+        "published": "2026-11-21T20:00:00+00:00"
       }
     ]
   },
   "pool": [
+    {
+      "title": "A.R.T. makes its new home a canvas for Boston artist",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVm9FNkxJaHlLY2JjSEg4QWh0RnB6bUlEbDRQODhjOGxXalNVTnFrajhuMFhsb29ydzBWdW1LcXRFdVRnQUtRa3kxYlZuTzN0eEdhSmtRNjI2NldaNXZHZEhTTXdMX0FaQ2I3UlExTmZ5QjV3OGRsTy13NW5NRnRia0hlbU9CNm41ZzhTNXhiNlhGY0lwZjhMRm9aR1dBQ0Nk?oc=5",
+      "source": "Harvard Gazette",
+      "published": "2026-11-23T11:00:13+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-23T11:14:11+00:00"
+    },
+    {
+      "title": "Vertex awaits approval of its next blockbuster, but a crowded field will test it",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPN1k3aTRjWnJrM2FTYWF1QWo5RThPZkpiMmk5dEhCLXNteUQzenNJbmJWUUxJR3RYME9zSnBQUGkzRFJhYzVmZzhWLW1CUE55R2RDWHBmOWFsOGhLTHpIU1ZDZlZuSHc3akdfSGdUNGhZSzYzcnVOTXZYZy1EZVBobEx1SlRSdEJnckU4?oc=5",
+      "source": "The Business Journals",
+      "published": "2026-11-23T11:00:00+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-23T11:14:11+00:00"
+    },
+    {
+      "title": "ESET to Open Boston Office to Expand U.S. Operations",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWlZ3Y2gyZUVGeTV1VmllelJKdkF0WFEyWGpURmd6NGFxYVNhcDk1MTFRM0RZZkdBYVlnaThiUGkyd0Y3WllHQlhFV254Zy00TVZucmUxaTFjTEpxUVF2M0hqYWViOWVveEVQdnJTMGc0N3g5ajFpNXVmdVFOa3U5TEVKN2xOSVk?oc=5",
+      "source": "Channel Insider",
+      "published": "2026-11-23T10:59:20+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-23T11:14:11+00:00"
+    },
+    {
+      "title": "Boston 25 Morning Forecast",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQLU9ZTExnWk05a1N1Z0l2T0h0Mm1qMjhISmg2UGpUQnl0Y0trdVpMUkZzZkVEVUV2RzRmVWpyUzlORHNPeDFoZXZCYWtJeE8tSWhtdUFsWGluUnMtTjhwRk50RjFGbkphR3ZyTlFncklqTW1jeTRNMVBIQVV5M2Z4cF9ka3R2YzRrejRSUDlpa0JrYVdvQUd0eWs0Mk14MGt2VzllazRYSjF0NnkzbzBMMTVKUzZGUUE?oc=5",
+      "source": "Boston 25 News",
+      "published": "2026-11-23T10:44:14+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-23T11:14:11+00:00"
+    },
+    {
+      "title": "Delta outage delays around 100 flights at Boston's Logan Airport",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUHZybVJPbEdpYU13ODFLRDdtNERtZVh6X1BDS3U0bFVMb2xLYmtSbTZwX2UyTkN0Wjc0VmVMSUZOMUxuWFNQTUZLaUtMcDlsMFNRblp1ZUdNZUM3RUhOWTVmSUxFOENHTVBUVXU4WVJLR3pmSGo0dk45QjhVSWgyRjNlOUNhVG1GLUxBTFJSYVJUckp2MTRmVGlVUDZUdi03Y3fSAaoBQVVfeXFMUEpsb2U3dTVPUHFJOG9lX1JzX29RV2JCaWNDYUVKYXg1UGdtb05lRXRrZ2p4UkVUZFpwR3Z1LVBYMzRGUy1GVUlvLU1LcEVCN1BsY1FmUmRuWVBGNS1ZTjI4WlVsM1J6RjBTU0hFX1Z3VU5VNld4QUZuamtxbEI1R1FlVUdWQnY4REtQZUVNeEJXRTdnWGU4ejhydjhkQUdIR0Q2UW1YZ2Fabnc?oc=5",
+      "source": "NBC Boston",
+      "published": "2026-11-23T10:37:29+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-23T11:14:11+00:00"
+    },
+    {
+      "title": "Next Weather: WBZ morning forecast for Nov. 23, 2026",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNR0Q3UTF1Z0h4MFB4Q19CQlh0bmg5bHpjeVdBZ1M0ZVhBa016QmdTeXVWNzJ1RVVQMEtkRjRBS3ZaeGpjR0pMeG0ySVZ1cTV4MTBaRE9rWmc2elNIV2ZMM3M1bDZSRWRvMTBudk1MWm9DcTlZQUZOTUg0ZmxRdmg0M2dSb0JoTXBMYW85YUNWNDg?oc=5",
+      "source": "CBS News",
+      "published": "2026-11-23T10:21:00+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-23T11:14:11+00:00"
+    },
+    {
+      "title": "Young Adults Living With Parents Surge Fastest in America’s Once-Affordable Regions",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYklpZFFmVC1vVDVIM1VOQnVvQks2YXRaM3lmOExqNC1LeWs1cUFJSmJLQUItWVdZcV95RzZRODlTYjVVTWY3VExiR3Yxa3VuT3BlNlF0d3RwTndiYkxXQWZCc1VTaTdUdVhTZU9Fc3czRGl6ak5qVVdGZGw0eGc5YVktV2R4dw?oc=5",
+      "source": "Realtor.com",
+      "published": "2026-11-23T10:00:00+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-23T11:14:11+00:00"
+    },
     {
       "title": "Fire at Indonesian candy factory leaves 3 dead, dozens of workers unaccounted for",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOcDVuOERSNW9OLU1nTjNZMHk2aUxTb0tDMEduMmRsQjlmN0pUUlJ4SDQyQzZ1UHoyUTEwbVhsVXo4aGlBMlpmQmJIWk54a0IzNG9keGNEOVlwbDFoNm1Ydmg2SDg0TVkxYnBOeFVfZUZ0RkJjM3VoanBXRFZxSkdndURQVng?oc=5",
@@ -176,6 +232,14 @@
       "first_seen": "2026-11-22T10:53:16+00:00"
     },
     {
+      "title": "Winthrop High School (MA) Football",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EZmIxQmJySXk0WnBqbWpYenpGZUZaVmVjQXMxdGlzWjZnTVpFbnV2RU1nVDExN2owbVl5cmRIQXlGYUtxR1lpWU1wTGRsaTJqWkZTLXJtRkRLeDFkbGNyUHJJZTdUTTdiZ09LdGhKVFY?oc=5",
+      "source": "MaxPreps",
+      "published": "2026-11-22T05:56:23+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-23T11:14:11+00:00"
+    },
+    {
       "title": "Thomas Desjardins Obituary (1967 - 2026) - Watertown, CT - Republican American",
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNT2w4OUFWX0JpS0wzZTJPZUZnblhtQlFpTUtVeDItajlZZElWZTFCWlRoY0pOYmU0TzRlYWRkYVhyU3BPQmttSGRfdGlVYTE0MFBOazBTZTZBTjZJcmRwZzBUMHA1aTZmMzJHOUtkSnJfMHVXWE93TG9Uelc2M0FCMk9YOGhPTGt4eEpCSjBCU2o?oc=5",
       "source": "Legacy | Obituary",
@@ -206,6 +270,22 @@
       "published": "2026-11-21T22:28:29+00:00",
       "category": "Around Town",
       "first_seen": "2026-11-22T10:53:16+00:00"
+    },
+    {
+      "title": "Team Highlights: 2026 MIAA Div 6 Football Semifinal Winthrop vs. Norwell - Winthrop",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8wbUFhcVpMS3dpRWtCaHBYdnlweGNTc1h6a3Jac21rU0pFVlVMRmdUZHZSZ1JrcUFtV2hqbFhyTzEybXNTSEtSWEZxLU1QT053QV8wQ2FVazRyOTl5S3JfaWhn?oc=5",
+      "source": "NFHS Network",
+      "published": "2026-11-21T20:00:00+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-23T11:14:11+00:00"
+    },
+    {
+      "title": "Game Recap: 2026 MIAA Div 6 Football Semifinal Winthrop vs. Norwell",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1VRjdEclhrQnB3eFl0c2hYcDdOTkg2VHVrb3NvS3JRYlZwSWpHR285YV8yWi1hdXl1aUxZTVRISHFOdGlMel9OMGhUeTVXUGo2UlRFbEdkMmlmR0lzVWo4Nnhn?oc=5",
+      "source": "NFHS Network",
+      "published": "2026-11-21T20:00:00+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-23T11:14:11+00:00"
     },
     {
       "title": "MIAA high school football semifinal scoreboard",
@@ -289,11 +369,27 @@
     },
     {
       "title": "Hovan Property Group at Compass Celebrates Four Successful Real Estate Closings in November",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNWWF2dUhaNjlNLVVudXhkUVBpMXQtQ005SEM1WnhzY0VlcHNDV0U3bi1lTXRvb3lyZ0hUczlaZUVLYjdnX2JqblpOYlhfNzZ0VW9zYk5wX1VDLWRnU0l3bkZZZmZwdVROUUdsZGlLUGNnYVRlQlI4YTdrQWdqcmJmSDFSRmJjeVoyRHZIdFpDQmlrU0stdkZZZUZIcTZvMmYzSGFTV3ZabVBfRUZkNmVoVzZtdmtPY0lqb04xb3ZDMy10MUpz?oc=5",
+      "source": "Dartmouth Week",
+      "published": "2026-11-21T00:43:08+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-23T11:14:11+00:00"
+    },
+    {
+      "title": "Hovan Property Group at Compass Celebrates Four Successful Real Estate Closings in November",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZS14OF9kMFVBQ2IyMlI1SlBHWW1uSkJCdGR0Z2MtYlNGbi01N2ItVWtOcTB4c3IycGZiQVhXX1U4ZWxRVFdVcUhidnFhNnVqUmtjbnpZdDc1dDhldFVienRZY0tDbTRjVm81R3h0TlB5MXBsdEJBNXhEMzVybzVlNm1mSEQwS0lmQW11eFozUXg2RF9GWlpBdEhGc0ZBa1dHTEVRdzl5M2dUUUdlaWdyc1dDM0VwT2lQcW9uTFhtLXItYWc?oc=5",
       "source": "Sippican Week",
       "published": "2026-11-21T00:23:13+00:00",
       "category": "Real Estate",
       "first_seen": "2026-11-21T10:54:10+00:00"
+    },
+    {
+      "title": "Life sciences out, apartments and retail in for Downtown Chapel Hill site",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOT2ptUVlRdjUwS3NtZTJWSGFkYS14cGtqYjQ4T1BwQVk4T1Btc185czIzQ3ZKSUlFSWREcU4zVnVmMlpreTYtMDAxRmNVd01BVWZzazVHUWR3Z25IU0NMU3BORGVaU2ZpRHNDVnNfcHR0dmNLT2JjdlhlZHpNXzdza2FlbExCdFNJTWhjQzN4RkJiV1p6NlJYUC1JZ3FFSGFOSEM1Xzdn?oc=5",
+      "source": "The Business Journals",
+      "published": "2026-11-20T19:12:00+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-23T11:14:11+00:00"
     },
     {
       "title": "VCA Animal Hospital in Bedford, N.H., Sells for $3.3 Million in Marcus & Millichap Deal",
