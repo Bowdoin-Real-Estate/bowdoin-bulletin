@@ -452,13 +452,16 @@
     }
     // calendar
     if (o.calendar) {
-      const list = evs.filter((e) => e !== fe);
+      const longRun = (e) => evEnd(e) - parseLocal(e.start) > 3 * 864e5;
+      const season = evs.filter((e) => e !== fe && longRun(e));
+      const allOne = evs.filter((e) => e !== fe && !longRun(e)), list = allOne.slice(0, 6), more = allOne.length - list.length;
       const tiles = list.map((e) => { const s = parseLocal(e.start); const bg = e.featured ? C.sage : C.ink; return `<tr><td width="66" valign="top" style="padding:12px 0"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="58" bgcolor="${bg}" style="background:${bg};text-align:center;padding:7px 0;color:#ffffff;font-family:${sans}"><div style="font-size:10px;font-weight:bold;letter-spacing:2px">${MON[s.getMonth()].toUpperCase()}</div><div style="font-family:${serif};font-size:26px;line-height:1">${s.getDate()}</div><div style="font-size:10px">${DOW[s.getDay()].toUpperCase()}</div></td></tr></table></td>
         <td valign="top" style="padding:12px 0 12px 14px;border-bottom:1px solid ${C.line}"><div style="font-family:${sans};font-size:16px;font-weight:bold;color:${C.ink}">${h(e.title)}</div>
         <div style="font-family:${sans};font-size:13px;color:${C.muted};margin-top:2px">${h(when(e))}${e.location ? ' · ' + h(e.location) : ''}${e.town ? ', ' + h(e.town) : ''}${e.cost ? ' · ' + h(e.cost) : ''}</div>
-        ${e.description ? `<div style="font-family:${sans};font-size:14px;line-height:1.5;color:${C.text};margin-top:4px">${h(trim(e.description, 160))}</div>` : ''}
+        ${e.description ? `<div style="font-family:${sans};font-size:14px;line-height:1.5;color:${C.text};margin-top:4px">${h(trim(e.description, 110))}</div>` : ''}
         <div style="margin-top:6px;font-family:${sans};font-size:12px"><a href="${h(gcal(e))}" style="color:${C.gold};font-weight:bold">+ Add to calendar</a>${e.url ? ` &nbsp;·&nbsp; <a href="${h(e.url)}" style="color:${C.gold};font-weight:bold">Details</a>` : ''}</div></td></tr>`; }).join('');
-      if (tiles) rows.push(sec(`${kick('Around town')}${title('Community calendar')}<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">${tiles}</table>${btn('events.html', 'See the full calendar', C.ink)}`));
+      const seasonHTML = season.length ? `<div style="margin-top:16px;padding:14px 16px;background:${C.cream};font-family:${sans};font-size:14px;line-height:1.6;color:${C.text}"><div style="font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:${C.gold};margin-bottom:4px">All season long</div>${season.map((e) => `<div>${e.url ? `<a href="${h(e.url)}" style="color:${C.ink};font-weight:bold;text-decoration:none">${h(e.title)}</a>` : `<b>${h(e.title)}</b>`}<span style="color:${C.muted}"> · ${h(e.town || '')}, thru ${h(fmtD(evEnd(e), { month: 'short', day: 'numeric' }))}</span></div>`).join('')}</div>` : '';
+      if (tiles || seasonHTML) rows.push(sec(`${kick('Around town')}${title('Community calendar')}<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">${tiles}</table>${seasonHTML}${btn('events.html', more > 0 ? `See all ${allOne.length + season.length} events` : 'See the full calendar', C.ink)}`));
     }
     // spotlights & contests
     activeFeatures().filter((f) => (o.features || []).includes(f.id)).forEach((f) => {
