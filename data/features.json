@@ -1,0 +1,45 @@
+{
+  "_help": "Community spotlights, contests and announcements. Edited from admin.html → Spotlights & Contests. type: spotlight | contest | announcement. 'body' (Markdown) gives the item its own page. 'end' hides it after that date.",
+  "items": [
+    {
+      "id": "holiday-door-contest-2026",
+      "type": "contest",
+      "kicker": "Holiday Door Contest",
+      "title": "Deck the Doors",
+      "summary": "Show off your holiday spirit! Decorate your front door, snap a photo, and enter for a chance to win.",
+      "body": "Show off your holiday spirit! Decorate your front door, snap a photo and send it in.\n\n**How to enter:** [details coming]\n\n**Deadline:** [details coming]\n\n**How the winner is picked:** [details coming]\n\n**Prize:** [details coming]",
+      "image": "",
+      "when": "",
+      "where": "",
+      "deadline": "",
+      "prize": "",
+      "link_url": "",
+      "link_label": "Enter the contest",
+      "end": "",
+      "featured": true,
+      "published": true,
+      "sample": true,
+      "date": "2026-11-23"
+    },
+    {
+      "id": "all-inclusive-class",
+      "type": "spotlight",
+      "kicker": "Community Spotlight",
+      "title": "An All-Inclusive Class for Everyone",
+      "summary": "A new all-inclusive class is bringing neighbors of all abilities together. Here's how to join.",
+      "body": "[Spotlight story coming: what the class is, who runs it, who it's for, and how to sign up.]",
+      "image": "",
+      "when": "",
+      "where": "",
+      "deadline": "",
+      "prize": "",
+      "link_url": "",
+      "link_label": "Learn more",
+      "end": "",
+      "featured": false,
+      "published": true,
+      "sample": true,
+      "date": "2026-11-23"
+    }
+  ]
+}
