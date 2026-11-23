@@ -1,20 +1,20 @@
 {
-  "_help": "Expert Q&As. Edited from admin.html → Q&As. The newsletter shows a short teaser (teaser_count questions) and links to the full Q&A page.",
+  "_help": "Expert Q&As. Edited from admin.html → Q&As. The newsletter shows the teaser text (or a few question previews) and links to the full Q&A page.",
   "items": [
     {
       "id": "ask-the-attorney-1",
       "kicker": "Ask the Attorney",
-      "title": "9 Questions for a Real Estate Attorney",
+      "title": "Could Your Property Have More Potential Than You Think?",
       "date": "2026-11-23",
       "expert": {
-        "name": "",
-        "title": "Attorney",
+        "name": "Attorney Delehanty",
+        "title": "",
         "firm": "",
         "bio": "",
         "photo": "",
         "website": ""
       },
-      "intro": "We sat down with a local real estate attorney to answer the questions our clients and neighbors ask most.",
+      "intro": "",
       "questions": [
         {
           "q": "[Question 1 coming]",
@@ -28,7 +28,10 @@
       "teaser_count": 2,
       "disclaimer": "This Q&A is for general information only and is not legal advice. Consult an attorney about your specific situation.",
       "published": true,
-      "sample": true
+      "sample": true,
+      "dek": "New ADU laws, zoning changes, and what Massachusetts homeowners should know.",
+      "teaser": "Could you build a second living space on your property? Subdivide your lot and sell a portion of the land? Rent out an accessory dwelling unit (ADU) for additional income?\n\nWith recent changes to Massachusetts housing laws, homeowners have more questions than ever about what's possible—and what's not.\n\nWe sat down with Attorney Delehanty to break down some of the biggest questions surrounding Massachusetts zoning regulations, the new ADU laws, and the impact of Question 7.\n\nFrom understanding what \"by right\" actually means to exploring whether your property could qualify for subdivision, we're covering the topics that could impact your home's future value and potential.\n\nCurious what these changes could mean for your property?",
+      "cta": "Read the full Q&A"
     }
   ]
 }
