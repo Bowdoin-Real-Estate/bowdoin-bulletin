@@ -66,7 +66,7 @@
       <button data-tab="features">⭐ Spotlights &amp; contests</button>
       <button data-tab="qa">⚖️ Q&amp;As</button>
       <button data-tab="stories">📰 Stories</button>
-      <button data-tab="listings">🏡 Listings</button>
+      <button data-tab="market">📈 Market</button>
     </div>
     <p class="small muted" id="whoami" style="margin:-10px 0 18px"></p>
     <div id="panel"></div>
@@ -363,6 +363,7 @@
     }),
     stories: storiesTab,
     email: emailTab,
+    market: marketTab,
   };
 
   /* ---------- stories (headline picks) ---------- */
@@ -415,7 +416,7 @@
     const fe = upcomingEvents(30).find((e) => e.featured), feats = activeFeatures(), q = pubQA()[0];
     return { date: nextFriday(), headline: fe ? `This week: ${fe.title}` : 'This week around town', subject: fe ? `🎄 ${fe.title} + what's happening this week` : 'What\'s happening around town this week',
       intro: 'Hi neighbors,\n\nHere\'s what\'s happening around town this week, from community events to a few stories we think you\'ll love.\n\n– Jenny & LeighAnn',
-      days: 21, featured: true, calendar: true, features: feats.map((f) => f.id), qa: q ? q.id : '', stories: true, trivia: true, listings: true, rates: false };
+      days: 21, featured: true, calendar: true, features: feats.map((f) => f.id), qa: q ? q.id : '', stories: true, trivia: true, listings: false, market: true, rates: false };
   }
   function emailHTML(o) {
     const C = { ink: '#0e2140', forest: '#1f3b2e', sage: '#8fa17a', gold: '#a07d41', cream: '#f4f1eb', line: '#e0d9cc', muted: '#5d6b80', sea: '#dce3ec', text: '#2a3442', soft: '#efe6d4' };
@@ -495,7 +496,20 @@
     if (o.listings && ls.length) {
       rows.push(sec(`${kick('From Bowdoin Real Estate Partners')}${title(ls.length > 1 ? 'Featured homes' : 'Featured home')}${ls.map((l) => `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:14px"><tr>${l.image ? `<td width="200" valign="top"><a href="${h(l.url)}"><img src="${h(l.image)}" width="200" alt="" style="display:block;width:200px;height:auto;border:0"></a></td>` : ''}<td valign="top" style="padding-left:16px"><div style="font-family:${serif};font-size:22px;color:${C.ink}">${l.price ? '$' + Number(l.price).toLocaleString() : ''}</div><div style="font-family:${sans};font-size:15px;font-weight:bold;color:${C.ink}">${h(l.address)}</div><div style="font-family:${sans};font-size:13px;color:${C.muted}">${h(l.city || '')}</div><div style="font-family:${sans};font-size:13px;color:${C.muted};margin-top:4px">${[l.beds && l.beds + ' bd', l.baths && l.baths + ' ba', l.sqft && Number(l.sqft).toLocaleString() + ' sq ft'].filter(Boolean).join(' · ')}</div><div style="margin-top:8px"><a href="${h(l.url)}" style="font-family:${sans};font-size:12px;font-weight:bold;color:${C.gold}">SEE THE HOME →</a></div></td></tr></table>`).join('')}`, '#ffffff'));
     }
-    if (o.rates && S.market && S.market.rates && S.market.rates['30yr']) { const r = S.market.rates; rows.push(sec(p(`<b>Mortgage rates this week:</b> 30-yr fixed ${Number(r['30yr'].rate).toFixed(2)}%${r['15yr'] ? ' · 15-yr fixed ' + Number(r['15yr'].rate).toFixed(2) + '%' : ''} <span style="color:${C.muted}">(Freddie Mac)</span>`))); }
+    if (o.market) {
+      const m = S.market || {}, c = m.cta || {}, r = m.rates || {};
+      const stats = (m.local_stats || []).filter((s) => s.value);
+      const rateLine = r['30yr'] ? p(`<b>Mortgage rates this week:</b> 30-yr fixed ${Number(r['30yr'].rate).toFixed(2)}%${r['15yr'] ? ' · 15-yr fixed ' + Number(r['15yr'].rate).toFixed(2) + '%' : ''} <span style="color:${C.muted}">(Freddie Mac)</span>`, 'font-size:14px') : '';
+      const statLine = stats.length ? p(stats.map((s) => `<b>${h(s.label)}:</b> ${h(s.value)}${s.change ? ' (' + h(s.change) + ')' : ''}`).join(' · '), 'font-size:14px') : '';
+      const note = (m.note || '').split(/\n\s*\n/).filter(Boolean).map((x) => p(h(x.trim()))).join('');
+      rows.push(divider);
+      rows.push(sec(`${kick('From Bowdoin Real Estate Partners')}${title(m.headline || 'The market, in brief')}${note}${statLine}${rateLine}${m.note_source ? p(h(m.note_source), `font-size:12px;color:${C.muted}`) : ''}
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px"><tr><td bgcolor="${C.soft}" style="background:${C.soft};border-left:3px solid ${C.gold};padding:18px 20px">
+        <div style="font-family:${serif};font-size:19px;color:${C.ink}">${h(c.title || 'Want property alerts & market updates?')}</div>
+        ${p(h(c.text || 'Register at bowdoinrealestate.com to get new-listing alerts, market info and more.'), 'font-size:14px;margin:6px 0 0')}
+        ${btn(c.url || 'https://www.bowdoinrealestate.com', c.label || 'Register at bowdoinrealestate.com', C.gold)}</td></tr></table>`));
+    }
+    if (o.rates && !o.market && S.market && S.market.rates && S.market.rates['30yr']) { const r = S.market.rates; rows.push(sec(p(`<b>Mortgage rates this week:</b> 30-yr fixed ${Number(r['30yr'].rate).toFixed(2)}%${r['15yr'] ? ' · 15-yr fixed ' + Number(r['15yr'].rate).toFixed(2) + '%' : ''} <span style="color:${C.muted}">(Freddie Mac)</span>`))); }
     // footer
     rows.push(`<tr><td bgcolor="${C.forest}" style="background:${C.forest};padding:26px 32px;font-family:${sans};font-size:12px;line-height:1.6;color:#cfdccb;text-align:center">
       <div style="font-family:${serif};font-size:20px;color:#ffffff">${h(b.name)}</div>${h(b.address || '')}<br><a href="tel:${h((b.phone || '').replace(/\D/g, ''))}" style="color:#ffffff">${h(b.phone || '')}</a> · <a href="mailto:${h(b.email)}" style="color:#ffffff">${h(b.email || '')}</a> · <a href="${h(b.website)}" style="color:#ffffff">bowdoinrealestate.com</a>
@@ -513,7 +527,32 @@
     if (o.trivia) out.push('## 🧠 Weekly trivia', '', '{{trivia}}', '');
     const ls = (S.listings.listings || []).filter((l) => l.featured && l.mls).slice(0, 2);
     if (o.listings && ls.length) { out.push('## 🏡 From Bowdoin Real Estate Partners', ''); ls.forEach((l) => out.push(`{{listing:${l.mls}}}`, '')); }
+    if (o.market) out.push('## 📈 ' + ((S.market && S.market.headline) || 'The market, in brief'), '', '{{market}}', '');
     return out.join('\n');
+  }
+  function marketTab() {
+    const m = S.market || {}; m.local_stats = m.local_stats || []; while (m.local_stats.length < 3) m.local_stats.push({ label: '', value: '', change: '', period: '' }); m.cta = m.cta || {};
+    const r = m.rates || {};
+    $('#panel').innerHTML = `<div class="card pad"><h2 style="margin-top:0">📈 The market, in brief</h2>
+      <p class="muted small">A short market update for the bottom of the site and the email, followed by a button to bowdoinrealestate.com. Mortgage rates fill in on their own every week${r['30yr'] ? ` (now ${Number(r['30yr'].rate).toFixed(2)}% for a 30-yr fixed)` : ''}.</p>
+      <label class="f">Section title</label><input class="field" id="m-headline" value="${esc(m.headline || 'The market, in brief')}">
+      <label class="f">Market note (2–3 sentences)</label><textarea class="field" id="m-note" rows="5">${esc(m.note || '')}</textarea>
+      <label class="f">Source line (optional)</label><input class="field" id="m-src" value="${esc(m.note_source || '')}" placeholder="Source: Massachusetts Association of Realtors, October 2026">
+      <h3>Numbers (optional — leave a value blank to hide it)</h3>
+      ${m.local_stats.map((s, i) => `<div class="row4" style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:8px;margin-bottom:8px"><input class="field" data-s="${i}" data-f="label" placeholder="Label, e.g. Median single-family price" value="${esc(s.label || '')}"><input class="field" data-s="${i}" data-f="value" placeholder="$715,000" value="${esc(s.value || '')}"><input class="field" data-s="${i}" data-f="change" placeholder="▲ 2.9% vs. last year" value="${esc(s.change || '')}"><input class="field" data-s="${i}" data-f="period" placeholder="Massachusetts, Oct." value="${esc(s.period || '')}"></div>`).join('')}
+      <h3>Button to the website</h3>
+      <label class="f">Heading</label><input class="field" id="m-cta-title" value="${esc(m.cta.title || 'Want property alerts & market updates?')}">
+      <label class="f">Text</label><input class="field" id="m-cta-text" value="${esc(m.cta.text || 'Register at bowdoinrealestate.com to get new-listing alerts, market info and more.')}">
+      <label class="f">Button label</label><input class="field" id="m-cta-label" value="${esc(m.cta.label || 'Register at bowdoinrealestate.com')}">
+      <label class="f">Link</label><input class="field" id="m-cta-url" value="${esc(m.cta.url || 'https://www.bowdoinrealestate.com')}">
+      <div class="acts" style="margin-top:16px"><button class="btn" id="m-save">Save</button><a class="btn ghost" href="index.html#market-block" target="_blank">View on the site</a></div></div>`;
+    $('#m-save').onclick = async () => {
+      const fresh = await getJSON('data/market.json', {});
+      fresh.headline = $('#m-headline').value.trim(); fresh.note = $('#m-note').value.trim(); fresh.note_source = $('#m-src').value.trim();
+      fresh.local_stats = m.local_stats.map((_, i) => { const o = {}; $$(`[data-s="${i}"]`).forEach((el) => { o[el.dataset.f] = el.value.trim(); }); return o; }).filter((s) => s.label || s.value);
+      fresh.cta = { title: $('#m-cta-title').value.trim(), text: $('#m-cta-text').value.trim(), label: $('#m-cta-label').value.trim(), url: $('#m-cta-url').value.trim() };
+      try { await putJSON('data/market.json', fresh, 'Market update'); S.market = fresh; toast('Saved! Live on the site in about a minute.'); } catch (err) { toast(err.message, 5000); }
+    };
   }
   function emailTab() {
     EO = EO || emailDefaults();
@@ -533,7 +572,7 @@
         <label class="chk">⚖️ Q&amp;A: <select data-o="qa" class="field" style="width:auto;padding:4px 6px"><option value="">None this week</option>${qas.map((q) => `<option value="${esc(q.id)}" ${EO.qa === q.id ? 'selected' : ''}>${esc(q.title)}</option>`).join('')}</select></label>
         <label class="chk"><input type="checkbox" data-o="stories" ${EO.stories ? 'checked' : ''}> 📰 Story picks (${((S.news && S.news.editors_picks) || []).length})</label>
         <label class="chk"><input type="checkbox" data-o="trivia" ${EO.trivia ? 'checked' : ''}> 🧠 Weekly trivia</label>
-        <label class="chk"><input type="checkbox" data-o="listings" ${EO.listings ? 'checked' : ''}> 🏡 Featured listings (${(S.listings.listings || []).filter((l) => l.featured).length})</label>
+        <label class="chk"><input type="checkbox" data-o="market" ${EO.market ? 'checked' : ''}> 📈 Market in brief + website button</label>
         <label class="chk"><input type="checkbox" data-o="rates" ${EO.rates ? 'checked' : ''}> 📈 Mortgage rates line</label>
         <h4 style="margin:18px 0 8px;font-family:var(--sans);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)">Send it</h4>
         <div style="display:flex;flex-direction:column;gap:8px">
