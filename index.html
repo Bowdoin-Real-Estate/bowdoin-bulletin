@@ -3,36 +3,44 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Home</title>
-<meta name="description" content="A free weekly newsletter from Bowdoin Real Estate Partners: real estate news, Greater Boston headlines, local events and a weekly Amazon gift card giveaway.">
-<meta property="og:title" content="The Bowdoin Bulletin"><meta property="og:description" content="Real estate, local news & things to do around Greater Boston.">
+<meta name="description" content="The Local Loop: a free community newsletter from Bowdoin Real Estate Partners. Local events, community spotlights, Q&As with local experts, Greater Boston news and real estate.">
+<meta property="og:title" content="The Local Loop"><meta property="og:description" content="Community news, events & real estate from your neighbors at Bowdoin Real Estate Partners.">
 <meta property="og:image" content="https://brndna-prod.s3.us-east-2.amazonaws.com/logos/brokerage/qqoeOxto20YeJ4pOu4V8xGbUeln1/logo_b227968c.webp">
 <link rel="icon" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/style.css">
 <script src="assets/app.js" defer></script>
+<script src="assets/community.js" defer></script>
 </head>
 <body data-page="home">
 <main>
   <section class="hero"><div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Free weekly newsletter · Greater Boston · North Shore · South Shore</span>
-      <h1 style="margin-top:14px">Your week around <em>Greater Boston</em>, all in one place.</h1>
-      <p class="lead">The housing market in plain English, fresh listings, the local headlines worth your time, and the best things to do with your family, from blood drives to tree lightings.</p>
+      <span class="eyebrow">Free community newsletter · Greater Boston · North Shore · South Shore</span>
+      <h1 style="margin-top:14px">Stay in <em>the loop</em> with what's happening around town.</h1>
+      <p class="lead">Community events, neighbors doing great things, straight answers from local experts, and the news worth your time. From your friends at Bowdoin Real Estate Partners.</p>
       <div id="hero-signup"></div>
-      <p class="small muted" style="margin-top:10px">🧠 Play the weekly Boston Trivia Challenge: top score wins an Amazon gift card.</p>
+      <p class="small muted" style="margin-top:10px">🧠 Plus a weekly Boston Trivia Challenge: top score wins an Amazon gift card.</p>
     </div>
     <div id="latest"></div>
   </div></section>
 
+  <section class="block"><div class="wrap" id="featured-event"></div></section>
+
   <section class="block"><div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow">Market pulse</span><h2>Rates &amp; the local market</h2></div>
-      <a class="more" href="https://www.bowdoinrealestate.com/mortgage-calculator" target="_blank" rel="noopener">Mortgage calculator →</a></div>
-    <div id="market"></div>
+    <div class="sec-head"><div><span class="eyebrow">Around town</span><h2>Community calendar</h2></div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap"><a class="more" id="event-btn" href="#" target="_blank" rel="noopener">Submit an event →</a><a class="more" href="events.html">Full calendar →</a></div></div>
+    <div id="calendar"></div>
+    <div id="events" hidden></div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow">Fresh from Bowdoin</span><h2>Featured listings</h2></div>
-      <a class="more" id="listings-more" href="#" target="_blank" rel="noopener">All Bowdoin listings →</a></div>
-    <div class="grid g4" id="listings"></div>
+    <div class="sec-head"><div><span class="eyebrow">Community first</span><h2>Spotlights &amp; contests</h2></div><a class="more" href="spotlight.html">See all →</a></div>
+    <div id="features"></div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">Ask the expert</span><h2>This week's Q&amp;A</h2></div><a class="more" href="qa.html">All Q&amp;As →</a></div>
+    <div id="qa-teaser"></div>
   </div></section>
 
   <section class="block"><div class="wrap two-col">
@@ -41,27 +49,26 @@
       <div id="news"></div>
     </div>
     <div>
-      <div class="sec-head"><div><span class="eyebrow">Around town</span><h2>Upcoming events</h2></div><a class="more" href="events.html">Full calendar →</a></div>
-      <div class="grid" style="gap:12px" id="events"></div>
-      <p class="small" style="margin-top:14px">Hosting something? <a id="event-btn" href="#" target="_blank" rel="noopener">Submit your event →</a></p>
+      <div class="sec-head"><div><span class="eyebrow">Just for fun</span><h2>Weekly trivia</h2></div></div>
+      <div id="giveaway"></div>
     </div>
   </div></section>
 
-  <section class="block"><div class="wrap grid g2">
-    <div id="giveaway"></div>
-    <div class="card pad" id="ask">
-      <span class="eyebrow">Ask an agent</span>
-      <h3 style="font-size:1.7rem;margin-top:8px">Got a real estate question?</h3>
-      <p>Thinking about buying, selling or renting? Curious what your home is worth, or how rates affect your budget? Send us your question. We answer one (anonymously) in every issue, and we'll always reply to you directly.</p>
-      <a class="btn" id="ask-btn" href="#" target="_blank" rel="noopener">Ask your question →</a>
-      <a class="btn ghost" style="margin-left:6px" href="https://www.bowdoinrealestate.com/home-valuation" target="_blank" rel="noopener">Free home valuation</a>
+  <section class="block" style="background:#fff"><div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">From Bowdoin Real Estate Partners</span><h2>Home &amp; market</h2></div>
+      <a class="more" id="listings-more" href="#" target="_blank" rel="noopener">All Bowdoin listings →</a></div>
+    <div id="market" style="margin-bottom:24px"></div>
+    <div class="grid g4" id="listings"></div>
+    <div class="grid g2" style="margin-top:28px">
+      <div class="card pad" id="ask">
+        <span class="eyebrow">Ask an agent</span>
+        <h3 style="font-size:1.6rem;margin-top:8px">Got a real estate question?</h3>
+        <p>Buying, selling, renting, or just curious what your home is worth? Send us your question and we'll always reply to you directly.</p>
+        <div class="acts"><a class="btn" id="ask-btn" href="#" target="_blank" rel="noopener">Ask your question →</a>
+        <a class="btn ghost" href="https://www.bowdoinrealestate.com/home-valuation" target="_blank" rel="noopener">Free home valuation</a></div>
+      </div>
+      <div><div class="quick-links" id="quick"></div><div class="grid" id="agents" style="margin-top:18px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))"></div></div>
     </div>
-  </div></section>
-
-  <section class="block"><div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow">Buying or selling?</span><h2>Start at bowdoinrealestate.com</h2></div></div>
-    <div class="quick-links" id="quick"></div>
-    <div class="grid g3" id="agents" style="margin-top:24px"></div>
   </div></section>
 
   <section class="block"><div class="wrap" id="signup-box"></div></section>

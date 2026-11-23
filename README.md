@@ -1,4 +1,6 @@
-# The Bowdoin Bulletin
+# The Local Loop
+
+*(formerly "The Bowdoin Bulletin"; the web address still uses `bowdoin-bulletin`)*
 
 The newsletter website for **Bowdoin Real Estate Partners**: real estate news, Greater Boston headlines, local events, featured listings pulled from [bowdoinrealestate.com](https://www.bowdoinrealestate.com), and a weekly timed **Boston Trivia Challenge** where the top score wins an Amazon gift card.
 
@@ -30,7 +32,7 @@ Until these are filled in, buttons fall back to emailing admin@bowdoinrealestate
 
 ## 2½. The editor page (for Jenny & LeighAnn)
 
-`https://bowdoin-real-estate.github.io/bowdoin-bulletin/admin.html` is a private page (not linked anywhere, hidden from Google) where they pick each week's stories:
+`https://bowdoin-real-estate.github.io/bowdoin-bulletin/admin.html` is a private page (not linked anywhere, hidden from Google) where they manage everything: **events, spotlights & contests, Q&As (with a paste-the-whole-thing splitter), story picks, featured listings, and a weekly email builder** that turns it all into an inbox-ready email. Story picks work like this:
 
 - **Story ideas** on the left: every headline the daily sync found over the past week, filterable by topic and searchable.
 - **Add** a story, reorder with ↑ ↓, and write a one-line "our take". They can also add any link of their own (local paper, town notice…).
