@@ -42,6 +42,26 @@
       "date": "2026-11-23"
     },
     {
+      "id": "bespoke-collective",
+      "type": "spotlight",
+      "kicker": "New in Town",
+      "title": "Coming Soon: BeSpoke Collective",
+      "summary": "A new boutique and intimate event space is on the way to Winthrop, with special collections and adorable gifts you can already shop online.",
+      "body": "There's a new spot to put on your holiday shopping list. **BeSpoke Collective** is a thoughtfully curated lifestyle boutique and intimate event space coming to **1 Michaels Mall in Winthrop**.\n\n**The shop:** Special collections and cute, one-of-a-kind gifts, from clothing for women, men, kids and babies to jewelry, beauty and skincare, candles and home décor, books and paper goods, and party supplies. You can already browse some of the unique gifts on their website.\n\n**The Studio:** An intimate event space for private parties, kids' birthdays, showers, milestone celebrations, workshops and classes.\n\nWe can't wait to see it open. Welcome to the neighborhood, BeSpoke Collective!",
+      "image": "",
+      "when": "Opening soon",
+      "where": "1 Michaels Mall, Unit A, Winthrop",
+      "deadline": "",
+      "prize": "",
+      "link_url": "https://bespokecollectivema.com",
+      "link_label": "Shop gifts online",
+      "end": "",
+      "featured": true,
+      "published": true,
+      "sample": false,
+      "date": "2026-11-23"
+    },
+    {
       "id": "know-someone-doing-good",
       "type": "announcement",
       "kicker": "Community Highlight",
