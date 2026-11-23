@@ -224,6 +224,38 @@
       <ul class="news-list">${listFor(tabs[0])}</ul>${n.updated ? `<div class="small muted" style="margin-top:8px">Updated ${esc(relTime(n.updated))}</div>` : ''}</div>`;
     el.addEventListener('click', (ev) => { const b = ev.target.closest('.tab'); if (!b) return; $$('.tab', el).forEach((x) => x.classList.toggle('on', x === b)); $('.news-list', el).innerHTML = listFor(b.dataset.t); });
   }
+  /* ---------- collapse long lists (keeps phone scrolling short) ---------- */
+  const CLAMPS = [
+    ['.news-list', 4, 4, 'headlines'],
+    ['.cal-wrap .grid', 3, 4, 'events'],
+    ['[data-evlist]', 3, 4, 'events'],
+    ['.season-grid', 2, 4, 'markets & shops'],
+    ['.features-grid', 2, 99, 'stories'],
+  ];
+  function clampAll() {
+    const phone = window.matchMedia('(max-width:700px)').matches;
+    CLAMPS.forEach(([sel, nPhone, nDesk, label]) => document.querySelectorAll(sel).forEach((el) => {
+      const n = phone ? nPhone : nDesk, kids = Array.from(el.children).filter((c) => !c.classList.contains('clamp-btn'));
+      const extra = kids.length - n;
+      let btn = el.__clampBtn && el.__clampBtn.isConnected ? el.__clampBtn : null;
+      if (extra <= 0) { kids.forEach((c) => c.classList.remove('clamp-x')); el.classList.remove('clamped'); if (btn) btn.remove(); return; }
+      const done = kids.every((c, i) => c.classList.contains('clamp-x') === (i >= n)) && btn;
+      if (done) return;
+      kids.forEach((c, i) => c.classList.toggle('clamp-x', i >= n));
+      el.classList.add('clamped');
+      if (!btn) {
+        btn = document.createElement('button'); btn.type = 'button'; btn.className = 'clamp-btn';
+        btn.addEventListener('click', () => { const open = el.classList.toggle('open'); btn.dataset.open = open ? '1' : ''; setLabel(); if (!open) el.scrollIntoView({ block: 'nearest' }); });
+        el.after(btn); el.__clampBtn = btn;
+      }
+      const setLabel = () => { const c = el.querySelectorAll(':scope > .clamp-x').length; btn.textContent = el.classList.contains('open') ? 'Show less ▴' : `Show ${c} more ${label} ▾`; };
+      setLabel();
+    }));
+  }
+  let clampT; const queueClamp = () => { clearTimeout(clampT); clampT = setTimeout(clampAll, 60); };
+  new MutationObserver(queueClamp).observe(document.documentElement, { childList: true, subtree: true });
+  window.addEventListener('resize', queueClamp);
+
   function relTime(iso) {
     const d = new Date(iso); const h = (Date.now() - d) / 36e5;
     if (isNaN(h)) return ''; if (h < 1) return 'just now'; if (h < 24) return Math.round(h) + 'h ago'; if (h < 24 * 7) return Math.round(h / 24) + 'd ago';
