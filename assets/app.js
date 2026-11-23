@@ -39,7 +39,7 @@
   /* ---------------- chrome ---------------- */
   function chrome(page) {
     const c = D.config, b = c.brokerage || {};
-    const nav = [['index.html', 'Home', 'home'], ['issues.html', 'Past Issues', 'issues'], ['events.html', 'Events', 'events'], ['listings.html', 'Listings', 'listings'], ['trivia.html', 'Weekly Trivia', 'trivia']];
+    const nav = [['index.html', 'Home', 'home'], ['events.html', 'Events', 'events'], ['spotlight.html', 'Community', 'spotlight'], ['qa.html', 'Ask the Attorney', 'qa'], ['issues.html', 'Past Issues', 'issues'], ['trivia.html', 'Trivia', 'trivia'], ['listings.html', 'Listings', 'listings']];
     const header = `
       <div class="topbar"><div class="wrap">
         <span>Brought to you by <a href="${esc(b.website)}" target="_blank" rel="noopener">${esc(b.name)}</a></span>
@@ -237,7 +237,7 @@
       case 'rates': return ratesHTML();
       case 'giveaway': case 'trivia': return giveawayBox(true);
       case 'signup': return signupBox();
-      default: return '';
+      default: return (window.LLShortcodes && window.LLShortcodes[name]) ? window.LLShortcodes[name](arg) : '';
     }
   }
   function md(src) {
@@ -445,12 +445,16 @@
     intro();
   };
 
+  // shared helpers for assets/community.js
+  window.LL = { D, $, $$, esc, md, getJSON, parseLocal, fmtDate, fmtTime, longDate, money, MONTHS, DAYS, eventCard, eventEnd, upcoming, wireICS, gcal, giveawayBox, signupBox, signupForm, ratesHTML, listingCard, sortedListings, newsBlock, relTime, pages };
+
   /* ---------------- boot ---------------- */
   document.addEventListener('DOMContentLoaded', async () => {
     await loadAll();
     const page = document.body.dataset.page;
     chrome(page);
-    if (pages[page]) await pages[page]();
+    const custom = window.LLPages && window.LLPages[page];
+    if (custom) await custom(); else if (pages[page]) await pages[page]();
     tickCountdowns(); setInterval(tickCountdowns, 1000);
   });
 })();

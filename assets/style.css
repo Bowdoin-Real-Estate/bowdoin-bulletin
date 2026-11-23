@@ -178,3 +178,55 @@ footer.site li{margin:6px 0}
 .quick-links a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 15px;text-decoration:none;color:var(--ink);font-weight:500;font-size:.9rem;border-radius:0}
 .quick-links a:hover{border-color:var(--brass);color:var(--brass)}
 iframe.form{width:100%;min-height:900px;border:0;border-radius:var(--radius);background:#fff}
+
+/* ---------- The Local Loop: community features ---------- */
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.feat-event{display:grid;grid-template-columns:160px 1fr;background:var(--forest);color:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.fe-date{background:var(--sage);text-align:center;padding:26px 10px;display:flex;flex-direction:column;justify-content:center}
+.fe-date .m{font:600 .8rem var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.fe-date .d{font:400 4.2rem/1 var(--serif)}
+.fe-date .w{font-size:.9rem;opacity:.92}
+.fe-body{padding:28px 32px}
+.fe-body h2{color:#fff;font-size:2.2rem;margin:8px 0 6px}
+.fe-body .meta{color:#dbe5d4;font-weight:500}
+.fe-body p{color:#e9efe5}
+.fe-body .eyebrow{color:#e6d3a3}
+.fe-body .btn.ghost{color:#fff;border-color:#fff}
+@media(max-width:640px){.feat-event{grid-template-columns:1fr}.fe-date{flex-direction:row;gap:12px;align-items:baseline;justify-content:center;padding:14px}.fe-date .d{font-size:2.4rem}.fe-body{padding:22px}}
+.cal-wrap{display:grid;grid-template-columns:minmax(280px,380px) 1fr;gap:28px;align-items:start}
+@media(max-width:860px){.cal-wrap{grid-template-columns:1fr}}
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.cal-head b{font:400 1.3rem var(--serif)}
+.ib{background:none;border:1px solid var(--line);border-radius:2px;padding:4px 10px;cursor:pointer;font:600 .95rem var(--sans);color:var(--ink)}
+.ib:hover{border-color:var(--brass);color:var(--brass)}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.cal-dow span{font:600 .7rem var(--sans);letter-spacing:.1em;color:var(--muted);padding:4px 0}
+.cd{aspect-ratio:1;border:1px solid transparent;background:#fff;border-radius:2px;font:500 .92rem var(--sans);color:var(--ink);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0;gap:2px}
+.cd.empty{background:none;cursor:default}
+.cd.past{color:#aab2bd}
+.cd.has{background:var(--sea);font-weight:700}
+.cd.feat{background:var(--sage);color:#fff}
+.cd.today{border-color:var(--brass)}
+.cd.sel{outline:2px solid var(--ink);outline-offset:-2px}
+.cd i{font-style:normal;font-size:.75rem;line-height:.5;color:var(--brass);letter-spacing:1px}
+.cd.feat i{color:#fff}
+.key{display:inline-block;width:10px;height:10px;vertical-align:-1px;margin-left:6px}.key.feat{background:var(--sage)}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.feature{overflow:hidden;display:flex;flex-direction:column}
+.feature .fimg{display:block;aspect-ratio:16/9;background:var(--sea) center/cover no-repeat}
+.feature h3{font-size:1.55rem;margin-top:8px}
+.feature .meta{color:var(--muted);margin-bottom:6px}
+.feature.contest{border:2px solid var(--brass);background:linear-gradient(135deg,var(--brass-soft),#fff 65%)}
+.qa-wrap{display:grid;grid-template-columns:1.6fr 1fr;gap:20px;align-items:start}
+@media(max-width:860px){.qa-wrap{grid-template-columns:1fr}}
+.qa-item{border-left:3px solid var(--sage);padding:4px 0 4px 14px;margin:14px 0}
+.qa-item .q{font:500 1.12rem/1.35 var(--serif);color:var(--ink)}
+.qa-item .a{color:#3a4a5a;font-size:.95rem;margin-top:4px}
+.expert{display:flex;gap:12px;align-items:center;margin:12px 0}
+.expert img,.expert .ini{width:52px;height:52px;border-radius:50%;object-fit:cover;background:var(--forest);color:#fff;display:flex;align-items:center;justify-content:center;font:500 1.1rem var(--serif);flex:0 0 52px}
+.qa-toc{display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid var(--line);padding:18px 22px;margin:22px 0;font-size:.98rem}
+.qa-toc a{text-decoration:none}
+.qa-full h2{font-size:1.45rem}
+section[hidden]{display:none}
+.brand-name{white-space:nowrap}
+@media(min-width:861px){nav.main a{padding:8px 9px;font-size:.9rem}}
