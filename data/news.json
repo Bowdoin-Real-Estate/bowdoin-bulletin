@@ -1,124 +1,268 @@
 {
-  "updated": "2026-11-23T11:14:11+00:00",
+  "updated": "2026-11-24T11:00:26+00:00",
   "_help": "'categories' is refreshed automatically every day by the GitHub Action. Put your own hand-picked stories in 'editors_picks' (title, url, source, blurb) – those are never overwritten.",
   "editors_picks": [],
   "categories": {
     "Real Estate": [
       {
-        "title": "Young Adults Living With Parents Surge Fastest in America’s Once-Affordable Regions",
-        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYklpZFFmVC1vVDVIM1VOQnVvQks2YXRaM3lmOExqNC1LeWs1cUFJSmJLQUItWVdZcV95RzZRODlTYjVVTWY3VExiR3Yxa3VuT3BlNlF0d3RwTndiYkxXQWZCc1VTaTdUdVhTZU9Fc3czRGl6ak5qVVdGZGw0eGc5YVktV2R4dw?oc=5",
-        "source": "Realtor.com",
-        "published": "2026-11-23T10:00:00+00:00"
+        "title": "The last Chinatown rooming house is for sale. Can it be preserved before it’s turned into luxury condos?",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMDhhU292VklXQUlFUzFnZmxyT3dVRnZXdnZ3SVhsVFg2RGFVNEduWFE0T2M4M2FzNkJJNzU3a0JPQlJRQUU4REJaUTJfNWU5OGVvYlFyZ3NtaHVzbUJfT3IzYW1GUXMxUzZKZzJFZXhtcFJXZWFpVUc5a29wYjR4ZnNvUEUwMUJ0V2NvYTcxbGFHUQ?oc=5",
+        "source": "The Boston Globe",
+        "published": "2026-11-24T10:35:17+00:00"
       },
       {
-        "title": "Homes in a ‘low-priced town’ in Greater Boston are now $600,000, a new report says. Here are five striking findings.",
-        "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOM2NsamRJYW10aWpBandVLUpYZkFnZTNlcXdJV2N6VlNzVHRhMVg5eUJkMDNrX0VrcC1CNjhFdXJwcXpNcWQ4Y013TExNaDVSX3FBMVR1R2hvY0JWQl9zaG5ydnd0MzFQXzk1MHBGSGJhWmN3X1hrOU9OakpiWTk4NUJIaVlBb3c3dVNpZHZxUG5NTHlMZGtKQTc4RHVELXIwcFJNRE0xWldfbHdnWW8wYjk4UnJ4RFBUaVhWNW93Rlg2X3NsYngtbFpQZlRzWU9MUWw2TjZDbVlnLURsQXJLMEZLR0dGVi1QNkc4VzdLSmh5bUFMRTdZZnJR?oc=5",
-        "source": "Boston.com",
-        "published": "2026-11-22T10:00:00+00:00"
+        "title": "Garden Communities Progresses with West Hartford Multifamily Development",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPTHNFWXU4ekQ2YS1SQUFwNkhyMVBLbGlMUWE1LXlocWMyUzA4VjBUT2E1YWNfcG1fMHpqZmZ2VzZNeTVGQUNKZU1kbV9USUdvUWs0dnB4eUtoQ0xJQWdtUW5lZ01pLU96eDdqY0dGekdnWXRBQ1J4NkdvdWxVV0RtU0lkY1dxU1o5LWU4YmpEdmhLU2ZVZEl5V2xuOUpTT2NZdDRWSXZpQS1BbzJV?oc=5",
+        "source": "Connect CRE",
+        "published": "2026-11-23T21:05:10+00:00"
       },
       {
-        "title": "Jarvid J. Cortes: The Bilingual Realtor Redefining Luxury and Investment Real Estate on Boston's North Shore",
-        "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQN3lMTmhqaUN1Vi0xSWtlYU9QcHpQSHNuUE01czN3SlNmNWtJUkNNcWNOVVhOZUR0cWNfcFAxT0J1LWYyVm1YNTcwN3BHTVJQNHFMak1YVlVjNXZQY3FrM2VJbjZUWjYtdjlMSG9meGgxZ2E4N1hEM0NFeGZlelFWSVRGcEFyM3NaaWlzazlxbTZ5RXFRYk5OZmR4UzFGX2trVkZ6OVlyVVloeGo0UEJXWE8yaVVWdUxQcVNoazNjYWRSTHlXQ2tWbENnNFFSdTZCbWdPTHlqWEZMenNScmY1ZEZGR3MzelFvX1VFSzBCX0N4RDktN29zeGdlWks3MmpnT0E?oc=5",
-        "source": "FinancialContent",
-        "published": "2026-11-21T01:55:00+00:00"
-      },
-      {
-        "title": "Hovan Property Group at Compass Celebrates Four Successful Real Estate Closings in November",
-        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNWWF2dUhaNjlNLVVudXhkUVBpMXQtQ005SEM1WnhzY0VlcHNDV0U3bi1lTXRvb3lyZ0hUczlaZUVLYjdnX2JqblpOYlhfNzZ0VW9zYk5wX1VDLWRnU0l3bkZZZmZwdVROUUdsZGlLUGNnYVRlQlI4YTdrQWdqcmJmSDFSRmJjeVoyRHZIdFpDQmlrU0stdkZZZUZIcTZvMmYzSGFTV3ZabVBfRUZkNmVoVzZtdmtPY0lqb04xb3ZDMy10MUpz?oc=5",
-        "source": "Dartmouth Week",
-        "published": "2026-11-21T00:43:08+00:00"
-      },
-      {
-        "title": "Life sciences out, apartments and retail in for Downtown Chapel Hill site",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOT2ptUVlRdjUwS3NtZTJWSGFkYS14cGtqYjQ4T1BwQVk4T1Btc185czIzQ3ZKSUlFSWREcU4zVnVmMlpreTYtMDAxRmNVd01BVWZzazVHUWR3Z25IU0NMU3BORGVaU2ZpRHNDVnNfcHR0dmNLT2JjdlhlZHpNXzdza2FlbExCdFNJTWhjQzN4RkJiV1p6NlJYUC1JZ3FFSGFOSEM1Xzdn?oc=5",
+        "title": "Offices are still selling at a discount. Here's what that means for 2027.",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaThuMmhzRlowb0VSdHNrbXB3NlM1bll2a0w5TDUxV29hNHVaSzFaVDc3bGdxNVdqQ0ZfRG1OX1dRd1FvUlJYZkZKQnhzbENZXzZVWUk1M3VmSEQzTDF0bFV2MTNCQ3pOWWhvbmg5ZjNiRmttY0hqNkVhVFRZT1hGVjU3YmZxRENVakhIbnpZM25DZ2kycEMzOFFzUWlTZWtpNzdHWVR3S1JUZw?oc=5",
         "source": "The Business Journals",
-        "published": "2026-11-20T19:12:00+00:00"
+        "published": "2026-11-23T17:41:00+00:00"
       },
       {
-        "title": "VCA Animal Hospital in Bedford, N.H., Sells for $3.3 Million in Marcus & Millichap Deal",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPUFlnb0JjY2tvUHVYeEVqdVhUNm84bnpISjRpV1FldlI0b292Y3dwVUJ0RUo4cHVvemZrRzNpeVRQa2hUc3BZMzFpbU5GVS0yS3BDMXk0TzNZcFVFekRIeGtfZThBT1F0UmExZFhMNFBPemJNc21LcVZOVHpnc3AxOVpSMXZSNlg4RlctWDNHbzhYWVBicGlIQjhuTWRlN1BlVmJuNm1QRkJhTm9PcVBrMGRObC1jVG8?oc=5",
+        "title": "Lessons About Massachusetts’ Competitiveness from the 2027 Tax Foundation Index",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWFdtWF9VWlI5am5zZE96M24yN2RLd29iOGlGUVlNX1BISi1pWGxNZC05NlR5ZWdFYWFBd2t5d2ZVX0I4Zk91LXNiMVdaRzJIVWY4OVNqNXBpdU1OdDNBaHh0ejV3LWZJdF9VMjVrTVIzelBLX1BoYlBJX2VhQ0JEdkFpT1RjS0s3RU9ZTGJyc2pCekZ6RXZRaEZSNV9lSk1JTFVmOEpUTjdRZW1u?oc=5",
+        "source": "Pioneer Institute",
+        "published": "2026-11-23T17:13:36+00:00"
+      },
+      {
+        "title": "The property records investors pull before rebalancing their portfolios at year-end",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQallxbG52QTg1WVZlaExGTTVPWnJxQndfOGVCbTRjM0pQbzlHOVBlZ3RkRXNZRnlkNjZWM1NsVG4zWnRKVU9GU1R1QlludHdCNlBISzNRb2dOS2F2eDBVTUdESEJmcHJkSmtLSzBUYklHRkROWENVNkZFZDg0TXFlX2EzVm7SAZgBQVVfeXFMTjhILXNpTVlaOU12U2k2T2hyM1dVcUJLTE1nUHo5dWFDQnRqYnI5UFNPM0lVU2NtN1VfWlM0MzJFYmU1TWw5U0RRS29pdkNkQTREdUwyc0tfdS04anNJUUl4ek40akM1djhHdVI0ekNvWDNoMGlwWm0xUDhJaElWcmZVN3lpam03RFJFNmVqQnZGN1BJcmlxRTE?oc=5",
+        "source": "Boston 25 News",
+        "published": "2026-11-23T17:00:08+00:00"
+      },
+      {
+        "title": "Boston Office Sales Near $2 Billion as Manhattan Surpasses $6 Billion",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPVmpJakhhNmF1dGtzOXNxNkVBQmlqQk9mWUp1V3NOeUFqQ19vTUgzdjgtWHFZR2pOVmtYY2hqWGV6YVM0NzJBdXBaeEpBRTJGdXJvdk9wX0hmNWNHZnVHZUtxb3I3NFItY1VXU3FpYTBSZmc3WnlHVlpwUG0zelZ6OThCSEJ1b2JDREI1U2dnNHJTVThBbTM3UFlpSzY1cnZKZWZXZA?oc=5",
         "source": "Boston Real Estate Times",
-        "published": "2026-11-20T18:52:38+00:00"
+        "published": "2026-11-23T16:24:16+00:00"
       }
     ],
     "Boston": [
       {
-        "title": "A.R.T. makes its new home a canvas for Boston artist",
-        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVm9FNkxJaHlLY2JjSEg4QWh0RnB6bUlEbDRQODhjOGxXalNVTnFrajhuMFhsb29ydzBWdW1LcXRFdVRnQUtRa3kxYlZuTzN0eEdhSmtRNjI2NldaNXZHZEhTTXdMX0FaQ2I3UlExTmZ5QjV3OGRsTy13NW5NRnRia0hlbU9CNm41ZzhTNXhiNlhGY0lwZjhMRm9aR1dBQ0Nk?oc=5",
-        "source": "Harvard Gazette",
-        "published": "2026-11-23T11:00:13+00:00"
+        "title": "First responders make sinking save in Duxbury",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9PN3R0bDlJX0JKZFA3YVVuUFZPYS0xcUtEVWNwYXdtbVgwOTJwX0JJTG1sT3V0M1pYbW1BWm5uTjhfLW5iV2lDV0RsaFFYcC1IYTRRRDBfVkJ6QlZWcGMyOWw0ZDFzSDlwSEc2eGJIV0daZzNLd1k0?oc=5",
+        "source": "WHDH",
+        "published": "2026-11-24T10:55:18+00:00"
       },
       {
-        "title": "Vertex awaits approval of its next blockbuster, but a crowded field will test it",
-        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPN1k3aTRjWnJrM2FTYWF1QWo5RThPZkpiMmk5dEhCLXNteUQzenNJbmJWUUxJR3RYME9zSnBQUGkzRFJhYzVmZzhWLW1CUE55R2RDWHBmOWFsOGhLTHpIU1ZDZlZuSHc3akdfSGdUNGhZSzYzcnVOTXZYZy1EZVBobEx1SlRSdEJnckU4?oc=5",
+        "title": "Joshua Boger $1M gift creates new fund at Environmental League of Mass.",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQWVViYlFSa2FNQzVxZVl0OVE5bF9aa3p2YUthczUya3o4YXZLVTc3YXltUUM0RmZISm5VSWxzaUh6OWlsa1lXckF4enF4OEFaTHdqRUFPOEdqcy12NXZudGlpNFg2SGtkMXU2R2tOT2lyNUtobk1WZThnaVJjOWJxVUlZb01yMl9JM1JiWDBGQkJEQXpfSEliRjJWdEhsUQ?oc=5",
         "source": "The Business Journals",
-        "published": "2026-11-23T11:00:00+00:00"
+        "published": "2026-11-24T10:53:00+00:00"
       },
       {
-        "title": "ESET to Open Boston Office to Expand U.S. Operations",
-        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWlZ3Y2gyZUVGeTV1VmllelJKdkF0WFEyWGpURmd6NGFxYVNhcDk1MTFRM0RZZkdBYVlnaThiUGkyd0Y3WllHQlhFV254Zy00TVZucmUxaTFjTEpxUVF2M0hqYWViOWVveEVQdnJTMGc0N3g5ajFpNXVmdVFOa3U5TEVKN2xOSVk?oc=5",
-        "source": "Channel Insider",
-        "published": "2026-11-23T10:59:20+00:00"
+        "title": "Fire at electronics recycling warehouse in Plymouth",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5PQ1I0aXFkanJNZHgtSHlpU3Jubm90MEIyYW81S3JNTFBSa283SHBaYXp5ak9XTWNpMUEzMnJCNjQ4NUdNOWxuZmJNMkxRV29HUndWbmFQYVViZEo4UnFkWEZCVGV1bUVjUlliU3N0Z0p4d1hPd2p6VXFSQW9lUWs?oc=5",
+        "source": "WHDH",
+        "published": "2026-11-24T10:28:30+00:00"
       },
       {
-        "title": "Boston 25 Morning Forecast",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQLU9ZTExnWk05a1N1Z0l2T0h0Mm1qMjhISmg2UGpUQnl0Y0trdVpMUkZzZkVEVUV2RzRmVWpyUzlORHNPeDFoZXZCYWtJeE8tSWhtdUFsWGluUnMtTjhwRk50RjFGbkphR3ZyTlFncklqTW1jeTRNMVBIQVV5M2Z4cF9ka3R2YzRrejRSUDlpa0JrYVdvQUd0eWs0Mk14MGt2VzllazRYSjF0NnkzbzBMMTVKUzZGUUE?oc=5",
-        "source": "Boston 25 News",
-        "published": "2026-11-23T10:44:14+00:00"
-      },
-      {
-        "title": "Delta outage delays around 100 flights at Boston's Logan Airport",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUHZybVJPbEdpYU13ODFLRDdtNERtZVh6X1BDS3U0bFVMb2xLYmtSbTZwX2UyTkN0Wjc0VmVMSUZOMUxuWFNQTUZLaUtMcDlsMFNRblp1ZUdNZUM3RUhOWTVmSUxFOENHTVBUVXU4WVJLR3pmSGo0dk45QjhVSWgyRjNlOUNhVG1GLUxBTFJSYVJUckp2MTRmVGlVUDZUdi03Y3fSAaoBQVVfeXFMUEpsb2U3dTVPUHFJOG9lX1JzX29RV2JCaWNDYUVKYXg1UGdtb05lRXRrZ2p4UkVUZFpwR3Z1LVBYMzRGUy1GVUlvLU1LcEVCN1BsY1FmUmRuWVBGNS1ZTjI4WlVsM1J6RjBTU0hFX1Z3VU5VNld4QUZuamtxbEI1R1FlVUdWQnY4REtQZUVNeEJXRTdnWGU4ejhydjhkQUdIR0Q2UW1YZ2Fabnc?oc=5",
-        "source": "NBC Boston",
-        "published": "2026-11-23T10:37:29+00:00"
-      },
-      {
-        "title": "Next Weather: WBZ morning forecast for Nov. 23, 2026",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNR0Q3UTF1Z0h4MFB4Q19CQlh0bmg5bHpjeVdBZ1M0ZVhBa016QmdTeXVWNzJ1RVVQMEtkRjRBS3ZaeGpjR0pMeG0ySVZ1cTV4MTBaRE9rWmc2elNIV2ZMM3M1bDZSRWRvMTBudk1MWm9DcTlZQUZOTUg0ZmxRdmg0M2dSb0JoTXBMYW85YUNWNDg?oc=5",
+        "title": "Next Weather: WBZ morning forecast for Nov. 24, 2026",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNV0RzNVBYQmVFc1doTnl1MmlPSzdUYXk4ZEtmUTkzMk9PN3Y0SGRsQ210LWNwSUg5eVdHQjZmZmJZNzJSdWtTU3RxWkFCR2lBaU54YzZJWkZtd1Yzby1tZGxhTTl3SVNaUmlFa3B3MHRMSjdkUXJpMEFoYlpOSHpXMUVOTVloTUJCMFN0aFRRUEw?oc=5",
         "source": "CBS News",
-        "published": "2026-11-23T10:21:00+00:00"
+        "published": "2026-11-24T10:27:00+00:00"
+      },
+      {
+        "title": "Wake Up Call from Boston Marathon Volunteers",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPa05nblNVaUtqSUJTRWN1LWxFV1pfRktxWnZ2ZjFvVnVpRnR2NWNjQ1RQMmhVVHBUNno5c1hZQnBIRUZmNmtJLXpPRlNBOFhWZGkyYWhFa2NJM0ZvZWtZNk9KTzA1Q3Q4NTJVVkNYOGhqaEw0NGp6M2cyRE9VMVFnajN2S3FWVUVRMGNUM0M3RnB3S3JsdFRDTA?oc=5",
+        "source": "WCVB",
+        "published": "2026-11-24T10:22:00+00:00"
+      },
+      {
+        "title": "Netflix has a new Karen Read documentary. Here's what we learned from it.",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9iUlBvVjFfbkN1S296eTJ4UXFIQXZ2ZVRTbVRQbEtkYnJRNUs4djBiZFpJQ00wVHFIa01sRklqN3BhMG1fdTlGOWxhTHhFdnpvT0VrSWRJckhOVl9ZdUJfU3l6bms0RWFyNV91bmltQUZGQ3pqSlVoeVVYcElaUQ?oc=5",
+        "source": "CBS News",
+        "published": "2026-11-24T10:18:07+00:00"
       }
     ],
     "Around Town": [
       {
-        "title": "Winthrop High School (MA) Football",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EZmIxQmJySXk0WnBqbWpYenpGZUZaVmVjQXMxdGlzWjZnTVpFbnV2RU1nVDExN2owbVl5cmRIQXlGYUtxR1lpWU1wTGRsaTJqWkZTLXJtRkRLeDFkbGNyUHJJZTdUTTdiZ09LdGhKVFY?oc=5",
-        "source": "MaxPreps",
-        "published": "2026-11-22T05:56:23+00:00"
+        "title": "Michael Strojny Obituary",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE85M0NVWlJsUm9xNlBwdUpvVnNyeGF5OGp3amJnNkw4aWJqblpFZTN1MkxvMTdoUDRzVG5pSWM0YjB2WWw1T3hlcy1JSlpoU0JHUERXb01SenJZeE56TmhTQTFobw?oc=5",
+        "source": "Taunton Daily Gazette",
+        "published": "2026-11-24T09:19:42+00:00"
       },
       {
-        "title": "Thomas Desjardins Obituary (1967 - 2026) - Watertown, CT - Republican American",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNT2w4OUFWX0JpS0wzZTJPZUZnblhtQlFpTUtVeDItajlZZElWZTFCWlRoY0pOYmU0TzRlYWRkYVhyU3BPQmttSGRfdGlVYTE0MFBOazBTZTZBTjZJcmRwZzBUMHA1aTZmMzJHOUtkSnJfMHVXWE93TG9Uelc2M0FCMk9YOGhPTGt4eEpCSjBCU2o?oc=5",
-        "source": "Legacy | Obituary",
-        "published": "2026-11-22T00:15:08+00:00"
+        "title": "No. 4 Illinois breaks single-game scoring record in win over Winthrop",
+        "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxPT01OdzkyT2FaZ09BYnpMZjFvakNRRTdYSXBlaUFzNVFPWHJJS3diMFZRZmZQMTRwTVJuRE1xSEhpTzRVX25CRXZubzFva3RLa1hHRUZVdjlmQjUxem5OYjJEOUxVMVdBRjZVOFJXT1ByRUJFRjNvSjNGQUNueEZtTndmWmdIWjNaclJZN084dllqNmNJblNkZXJ1N1BETGNCTXhrWWhHR0I1eEVKSExoaGhSM3A1bURyUzJrc0hyc2ZDYWVralk4NWgyajdrSnFRbUUta0dNRy1uU0JRbEFVNzBoZU96QV81Q1JUMmRSNThJR09VbGd0V190blFKRDZ5dktjUjg5SmlIRjJGclV4a1VmeDZBTE54MS01ZnA4S3cyT0JuaS15d0k4Qks?oc=5",
+        "source": "The Champaign Room",
+        "published": "2026-11-24T03:59:00+00:00"
       },
       {
-        "title": "2026 MIAA Div 6 Football Semifinal Winthrop vs. Norwell - 11/21/2026 | Watch Live & On Demand",
-        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB5bndzZDM5Z1ptLU1qS3V6RGFCemtEdDlaaXFFUXAyV3Z4SHFhY2dKZUkwUVhkd2lteFh5bUF5bDdQdDhiTWNpcU9XOGhhVEhxZ1N3Ukw2Qlk2em5hTGF1c0Q2WQ?oc=5",
-        "source": "NFHS Network",
-        "published": "2026-11-21T23:47:54+00:00"
+        "title": "NO. 4 ILLINOIS 133, WINTHROP 83",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxON2wzYWhQOVV2Nm5ZWjU3NkhEdEt6VWUxVmZXbmZ0Q3EwUGdpelp2YlZlMnUxTGVaSEdfd3dHMjFNdHR3Z181QXlzSnRyYWp3SGFUbUw4NzZ2cjVidHlBQ3JKdkpTa2NjUGhhS1VnZW5JNEV5SXFsZkUwbHBqTmR4NFBrWXg0UDhWSjYtejVQMzFUclZkdUNFaHRhS2l1S0t4aWxLbm5NWTBVNHFfZGtoQjJZY1ZXS09EVlE?oc=5",
+        "source": "Oskaloosa Herald",
+        "published": "2026-11-24T03:39:07+00:00"
       },
       {
-        "title": "Revere Girls Varsity Basketball @ Winthrop",
-        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQY05QSzFqVVVkcmNXZVNrNDFtNVhUTnd0UVl2WXNOTXY3MlUwVHI3QnY2V2RPT2pURmpjSktuYXF5a0FNUHNZZkV4M0FtZFVhSVVBSVhYeTdkODhNWlM0WGlzaGcxeGNpSklXNVl0aGFia054Z21IUFlvcmhScm1iNDZla2kyb0dfNW5TeU1rampZZ0xBODRHNjFEUVlLQk9IS3hFQUhZMFZtS1hqT0R4S2txQjQydmp4?oc=5",
-        "source": "MaxPreps",
-        "published": "2026-11-21T22:28:29+00:00"
+        "title": "Winthrop Eagles vs. Illinois Fighting Illini: Game Highlights",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9IaU9iTjRnTXRMSDVUMURRcmF2dkExVWFydzU4NGJQOWczMU55RkFmUXhQQ3pvdHZ2VC1qWW5OaWltR0N6WUxjUGhuSGxnRElraTdWZmNjR09yQjRhNmN6UHdWZUZzV0VnZk9EVkhB?oc=5",
+        "source": "ESPN",
+        "published": "2026-11-24T03:17:51+00:00"
       },
       {
-        "title": "Team Highlights: 2026 MIAA Div 6 Football Semifinal Winthrop vs. Norwell - Winthrop",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8wbUFhcVpMS3dpRWtCaHBYdnlweGNTc1h6a3Jac21rU0pFVlVMRmdUZHZSZ1JrcUFtV2hqbFhyTzEybXNTSEtSWEZxLU1QT053QV8wQ2FVazRyOTl5S3JfaWhn?oc=5",
-        "source": "NFHS Network",
-        "published": "2026-11-21T20:00:00+00:00"
+        "title": "Winthrop vs. Illinois (Nov 23, 2026) Live Score",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0xaFNxOWd0aWw2UkhRb1ZSUDBfZjJ3S1p3aXhQN20wVTZEYmVlQkVTX092Y0hVZkhNUGdISWM1SUtWOWY5RnFVejhpZ2FWTUJEblpyZ0FlNzdENFNMSWd5NjFKZG5wbmwzSFVROTRJbUZfd25B?oc=5",
+        "source": "ESPN",
+        "published": "2026-11-24T01:25:07+00:00"
       },
       {
-        "title": "Game Recap: 2026 MIAA Div 6 Football Semifinal Winthrop vs. Norwell",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1VRjdEclhrQnB3eFl0c2hYcDdOTkg2VHVrb3NvS3JRYlZwSWpHR285YV8yWi1hdXl1aUxZTVRISHFOdGlMel9OMGhUeTVXUGo2UlRFbEdkMmlmR0lzVWo4Nnhn?oc=5",
-        "source": "NFHS Network",
-        "published": "2026-11-21T20:00:00+00:00"
+        "title": "Illinois Basketball vs. Winthrop Game Discussion",
+        "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNZ1VpNURwLTRHeHhqY05HelBDWHhzMkxQZUViYzNDY1M3U1J5dS0zTWNwSjYtc1htRlZmWFRWU2V6ajlEUmY5SHVLTHFQd1BmRTB5UHYyQThrME5xbHdyQjdjd21fY2E4V3BaSnZ0X1VhdjVPUjZXWUtjQmFnOUpQTWt4cDFiOWtqa3ZwTmJQdDlwVHJ0ZDdTdXlyQVE1SW1VUWZSU1hxWmxtWnN4R3F2OFFRdzc0TjEwdHIxNGlQSmNaTGhENzRKMzkwR1hLVzdMVUZjQUhkU3dEaEZPMEExMnk1a3QtcldNS1R5T3hqOVJjRWViLUNwclEwd2VGWHNE?oc=5",
+        "source": "The Champaign Room",
+        "published": "2026-11-24T00:00:00+00:00"
       }
     ]
   },
   "pool": [
+    {
+      "title": "First responders make sinking save in Duxbury",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9PN3R0bDlJX0JKZFA3YVVuUFZPYS0xcUtEVWNwYXdtbVgwOTJwX0JJTG1sT3V0M1pYbW1BWm5uTjhfLW5iV2lDV0RsaFFYcC1IYTRRRDBfVkJ6QlZWcGMyOWw0ZDFzSDlwSEc2eGJIV0daZzNLd1k0?oc=5",
+      "source": "WHDH",
+      "published": "2026-11-24T10:55:18+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "Joshua Boger $1M gift creates new fund at Environmental League of Mass.",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQWVViYlFSa2FNQzVxZVl0OVE5bF9aa3p2YUthczUya3o4YXZLVTc3YXltUUM0RmZISm5VSWxzaUh6OWlsa1lXckF4enF4OEFaTHdqRUFPOEdqcy12NXZudGlpNFg2SGtkMXU2R2tOT2lyNUtobk1WZThnaVJjOWJxVUlZb01yMl9JM1JiWDBGQkJEQXpfSEliRjJWdEhsUQ?oc=5",
+      "source": "The Business Journals",
+      "published": "2026-11-24T10:53:00+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "The last Chinatown rooming house is for sale. Can it be preserved before it’s turned into luxury condos?",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMDhhU292VklXQUlFUzFnZmxyT3dVRnZXdnZ3SVhsVFg2RGFVNEduWFE0T2M4M2FzNkJJNzU3a0JPQlJRQUU4REJaUTJfNWU5OGVvYlFyZ3NtaHVzbUJfT3IzYW1GUXMxUzZKZzJFZXhtcFJXZWFpVUc5a29wYjR4ZnNvUEUwMUJ0V2NvYTcxbGFHUQ?oc=5",
+      "source": "The Boston Globe",
+      "published": "2026-11-24T10:35:17+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "Fire at electronics recycling warehouse in Plymouth",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5PQ1I0aXFkanJNZHgtSHlpU3Jubm90MEIyYW81S3JNTFBSa283SHBaYXp5ak9XTWNpMUEzMnJCNjQ4NUdNOWxuZmJNMkxRV29HUndWbmFQYVViZEo4UnFkWEZCVGV1bUVjUlliU3N0Z0p4d1hPd2p6VXFSQW9lUWs?oc=5",
+      "source": "WHDH",
+      "published": "2026-11-24T10:28:30+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "Next Weather: WBZ morning forecast for Nov. 24, 2026",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNV0RzNVBYQmVFc1doTnl1MmlPSzdUYXk4ZEtmUTkzMk9PN3Y0SGRsQ210LWNwSUg5eVdHQjZmZmJZNzJSdWtTU3RxWkFCR2lBaU54YzZJWkZtd1Yzby1tZGxhTTl3SVNaUmlFa3B3MHRMSjdkUXJpMEFoYlpOSHpXMUVOTVloTUJCMFN0aFRRUEw?oc=5",
+      "source": "CBS News",
+      "published": "2026-11-24T10:27:00+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "Wake Up Call from Boston Marathon Volunteers",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPa05nblNVaUtqSUJTRWN1LWxFV1pfRktxWnZ2ZjFvVnVpRnR2NWNjQ1RQMmhVVHBUNno5c1hZQnBIRUZmNmtJLXpPRlNBOFhWZGkyYWhFa2NJM0ZvZWtZNk9KTzA1Q3Q4NTJVVkNYOGhqaEw0NGp6M2cyRE9VMVFnajN2S3FWVUVRMGNUM0M3RnB3S3JsdFRDTA?oc=5",
+      "source": "WCVB",
+      "published": "2026-11-24T10:22:00+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "Netflix has a new Karen Read documentary. Here's what we learned from it.",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9iUlBvVjFfbkN1S296eTJ4UXFIQXZ2ZVRTbVRQbEtkYnJRNUs4djBiZFpJQ00wVHFIa01sRklqN3BhMG1fdTlGOWxhTHhFdnpvT0VrSWRJckhOVl9ZdUJfU3l6bms0RWFyNV91bmltQUZGQ3pqSlVoeVVYcElaUQ?oc=5",
+      "source": "CBS News",
+      "published": "2026-11-24T10:18:07+00:00",
+      "category": "Boston",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "Michael Strojny Obituary",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE85M0NVWlJsUm9xNlBwdUpvVnNyeGF5OGp3amJnNkw4aWJqblpFZTN1MkxvMTdoUDRzVG5pSWM0YjB2WWw1T3hlcy1JSlpoU0JHUERXb01SenJZeE56TmhTQTFobw?oc=5",
+      "source": "Taunton Daily Gazette",
+      "published": "2026-11-24T09:19:42+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "No. 4 Illinois breaks single-game scoring record in win over Winthrop",
+      "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxPT01OdzkyT2FaZ09BYnpMZjFvakNRRTdYSXBlaUFzNVFPWHJJS3diMFZRZmZQMTRwTVJuRE1xSEhpTzRVX25CRXZubzFva3RLa1hHRUZVdjlmQjUxem5OYjJEOUxVMVdBRjZVOFJXT1ByRUJFRjNvSjNGQUNueEZtTndmWmdIWjNaclJZN084dllqNmNJblNkZXJ1N1BETGNCTXhrWWhHR0I1eEVKSExoaGhSM3A1bURyUzJrc0hyc2ZDYWVralk4NWgyajdrSnFRbUUta0dNRy1uU0JRbEFVNzBoZU96QV81Q1JUMmRSNThJR09VbGd0V190blFKRDZ5dktjUjg5SmlIRjJGclV4a1VmeDZBTE54MS01ZnA4S3cyT0JuaS15d0k4Qks?oc=5",
+      "source": "The Champaign Room",
+      "published": "2026-11-24T03:59:00+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "NO. 4 ILLINOIS 133, WINTHROP 83",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxON2wzYWhQOVV2Nm5ZWjU3NkhEdEt6VWUxVmZXbmZ0Q3EwUGdpelp2YlZlMnUxTGVaSEdfd3dHMjFNdHR3Z181QXlzSnRyYWp3SGFUbUw4NzZ2cjVidHlBQ3JKdkpTa2NjUGhhS1VnZW5JNEV5SXFsZkUwbHBqTmR4NFBrWXg0UDhWSjYtejVQMzFUclZkdUNFaHRhS2l1S0t4aWxLbm5NWTBVNHFfZGtoQjJZY1ZXS09EVlE?oc=5",
+      "source": "Oskaloosa Herald",
+      "published": "2026-11-24T03:39:07+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "Winthrop Eagles vs. Illinois Fighting Illini: Game Highlights",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9IaU9iTjRnTXRMSDVUMURRcmF2dkExVWFydzU4NGJQOWczMU55RkFmUXhQQ3pvdHZ2VC1qWW5OaWltR0N6WUxjUGhuSGxnRElraTdWZmNjR09yQjRhNmN6UHdWZUZzV0VnZk9EVkhB?oc=5",
+      "source": "ESPN",
+      "published": "2026-11-24T03:17:51+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "Winthrop vs. Illinois (Nov 23, 2026) Live Score",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0xaFNxOWd0aWw2UkhRb1ZSUDBfZjJ3S1p3aXhQN20wVTZEYmVlQkVTX092Y0hVZkhNUGdISWM1SUtWOWY5RnFVejhpZ2FWTUJEblpyZ0FlNzdENFNMSWd5NjFKZG5wbmwzSFVROTRJbUZfd25B?oc=5",
+      "source": "ESPN",
+      "published": "2026-11-24T01:25:07+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "Illinois Basketball vs. Winthrop Game Discussion",
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNZ1VpNURwLTRHeHhqY05HelBDWHhzMkxQZUViYzNDY1M3U1J5dS0zTWNwSjYtc1htRlZmWFRWU2V6ajlEUmY5SHVLTHFQd1BmRTB5UHYyQThrME5xbHdyQjdjd21fY2E4V3BaSnZ0X1VhdjVPUjZXWUtjQmFnOUpQTWt4cDFiOWtqa3ZwTmJQdDlwVHJ0ZDdTdXlyQVE1SW1VUWZSU1hxWmxtWnN4R3F2OFFRdzc0TjEwdHIxNGlQSmNaTGhENzRKMzkwR1hLVzdMVUZjQUhkU3dEaEZPMEExMnk1a3QtcldNS1R5T3hqOVJjRWViLUNwclEwd2VGWHNE?oc=5",
+      "source": "The Champaign Room",
+      "published": "2026-11-24T00:00:00+00:00",
+      "category": "Around Town",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "Garden Communities Progresses with West Hartford Multifamily Development",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPTHNFWXU4ekQ2YS1SQUFwNkhyMVBLbGlMUWE1LXlocWMyUzA4VjBUT2E1YWNfcG1fMHpqZmZ2VzZNeTVGQUNKZU1kbV9USUdvUWs0dnB4eUtoQ0xJQWdtUW5lZ01pLU96eDdqY0dGekdnWXRBQ1J4NkdvdWxVV0RtU0lkY1dxU1o5LWU4YmpEdmhLU2ZVZEl5V2xuOUpTT2NZdDRWSXZpQS1BbzJV?oc=5",
+      "source": "Connect CRE",
+      "published": "2026-11-23T21:05:10+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "Offices are still selling at a discount. Here's what that means for 2027.",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaThuMmhzRlowb0VSdHNrbXB3NlM1bll2a0w5TDUxV29hNHVaSzFaVDc3bGdxNVdqQ0ZfRG1OX1dRd1FvUlJYZkZKQnhzbENZXzZVWUk1M3VmSEQzTDF0bFV2MTNCQ3pOWWhvbmg5ZjNiRmttY0hqNkVhVFRZT1hGVjU3YmZxRENVakhIbnpZM25DZ2kycEMzOFFzUWlTZWtpNzdHWVR3S1JUZw?oc=5",
+      "source": "The Business Journals",
+      "published": "2026-11-23T17:41:00+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "Lessons About Massachusetts’ Competitiveness from the 2027 Tax Foundation Index",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWFdtWF9VWlI5am5zZE96M24yN2RLd29iOGlGUVlNX1BISi1pWGxNZC05NlR5ZWdFYWFBd2t5d2ZVX0I4Zk91LXNiMVdaRzJIVWY4OVNqNXBpdU1OdDNBaHh0ejV3LWZJdF9VMjVrTVIzelBLX1BoYlBJX2VhQ0JEdkFpT1RjS0s3RU9ZTGJyc2pCekZ6RXZRaEZSNV9lSk1JTFVmOEpUTjdRZW1u?oc=5",
+      "source": "Pioneer Institute",
+      "published": "2026-11-23T17:13:36+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "The property records investors pull before rebalancing their portfolios at year-end",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQallxbG52QTg1WVZlaExGTTVPWnJxQndfOGVCbTRjM0pQbzlHOVBlZ3RkRXNZRnlkNjZWM1NsVG4zWnRKVU9GU1R1QlludHdCNlBISzNRb2dOS2F2eDBVTUdESEJmcHJkSmtLSzBUYklHRkROWENVNkZFZDg0TXFlX2EzVm7SAZgBQVVfeXFMTjhILXNpTVlaOU12U2k2T2hyM1dVcUJLTE1nUHo5dWFDQnRqYnI5UFNPM0lVU2NtN1VfWlM0MzJFYmU1TWw5U0RRS29pdkNkQTREdUwyc0tfdS04anNJUUl4ek40akM1djhHdVI0ekNvWDNoMGlwWm0xUDhJaElWcmZVN3lpam03RFJFNmVqQnZGN1BJcmlxRTE?oc=5",
+      "source": "Boston 25 News",
+      "published": "2026-11-23T17:00:08+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
+    {
+      "title": "Boston Office Sales Near $2 Billion as Manhattan Surpasses $6 Billion",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPVmpJakhhNmF1dGtzOXNxNkVBQmlqQk9mWUp1V3NOeUFqQ19vTUgzdjgtWHFZR2pOVmtYY2hqWGV6YVM0NzJBdXBaeEpBRTJGdXJvdk9wX0hmNWNHZnVHZUtxb3I3NFItY1VXU3FpYTBSZmc3WnlHVlpwUG0zelZ6OThCSEJ1b2JDREI1U2dnNHJTVThBbTM3UFlpSzY1cnZKZWZXZA?oc=5",
+      "source": "Boston Real Estate Times",
+      "published": "2026-11-23T16:24:16+00:00",
+      "category": "Real Estate",
+      "first_seen": "2026-11-24T11:00:26+00:00"
+    },
     {
       "title": "A.R.T. makes its new home a canvas for Boston artist",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVm9FNkxJaHlLY2JjSEg4QWh0RnB6bUlEbDRQODhjOGxXalNVTnFrajhuMFhsb29ydzBWdW1LcXRFdVRnQUtRa3kxYlZuTzN0eEdhSmtRNjI2NldaNXZHZEhTTXdMX0FaQ2I3UlExTmZ5QjV3OGRsTy13NW5NRnRia0hlbU9CNm41ZzhTNXhiNlhGY0lwZjhMRm9aR1dBQ0Nk?oc=5",
