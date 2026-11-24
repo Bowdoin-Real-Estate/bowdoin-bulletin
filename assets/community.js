@@ -31,7 +31,7 @@
       <span class="eyebrow">${esc(q.kicker || 'Ask the Attorney')}</span><h3 style="font-size:1.6rem;margin-top:8px">${esc(q.title)}</h3>
       ${q.dek ? `<p class="dek">${esc(q.dek)}</p>` : ''}${expertLine(q.expert)}${q.teaser ? q.teaser.split(/\n\s*\n/).map((x) => `<p>${esc(x.trim())}</p>`).join('') : q.intro ? `<p class="muted">${esc(trim(q.intro, 220))}</p>` : ''}
       ${(q.questions || []).slice(0, q.teaser ? 0 : (q.teaser_count || 2)).map((x) => `<div class="qa-item"><div class="q">Q. ${esc(x.q)}</div><div class="a">${esc(trim(x.a, 200))}</div></div>`).join('')}
-      <a class="btn brass" href="qa.html?id=${encodeURIComponent(q.id)}">${esc(q.cta || (q.teaser ? 'Read the full Q&A' : `Read all ${n} answers`))} →</a></div></div>`;
+      <a class="btn brass" href="${esc(q.url || 'qa.html?id=' + encodeURIComponent(q.id))}"${q.url ? ' target="_blank" rel="noopener"' : ''}>${esc(q.cta || (q.teaser ? 'Read the full Q&A' : `Read all ${n} answers`))} →</a></div></div>`;
   }
   function featureHref(f) { return f.body ? `spotlight.html?id=${encodeURIComponent(f.id)}` : (f.link_url || 'spotlight.html'); }
   function featureCard(f) {
@@ -125,6 +125,7 @@
         ${X.qa.length ? `<div class="grid g2" style="margin-top:24px">${X.qa.map(qaTeaser).join('')}</div>` : '<div class="card empty">Our first Q&amp;A is on its way.</div>'}`;
       return;
     }
+    if (q.url) { location.replace(q.url); return; }
     document.title = q.title + ' · ' + L.D.config.newsletter_name;
     const e = q.expert || {}, qs = q.questions || [];
     el.innerHTML = `<article class="prose"><a href="qa.html" class="small">← All Q&amp;As</a><br><span class="eyebrow">${esc(q.kicker || 'Ask the Attorney')}${q.date ? ' · ' + L.longDate(q.date) : ''}</span>
