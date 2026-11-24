@@ -31,9 +31,10 @@
   },
 
   "signup": {
-    "_help": "provider: 'mailchimp' (paste the form action URL from Mailchimp's embedded form), 'link' (any signup page: Beehiiv, Substack, Google Form...), or 'none'.",
-    "provider": "none",
-    "action_url": "",
+    "_help": "provider: 'google_form' (subscribers go to the Bowdoin Google Form / Sheet), 'mailchimp' (paste the form action URL from Mailchimp's embedded form), 'link' (any signup page: Beehiiv, Substack, Google Form...), or 'none'.",
+    "provider": "google_form",
+    "action_url": "https://docs.google.com/forms/d/e/1FAIpQLScO6HoDYa9yEpI_JmaWBJK1r0yR0Tw7odxhvXIvZj_8H8tmbQ/formResponse",
+    "fields": { "name": "entry.1023210536", "email": "entry.656293901", "town": "entry.1627152915", "optin": "entry.1743896865" },
     "link_url": ""
   },
 
