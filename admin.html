@@ -334,6 +334,7 @@
         { k: 'dek', label: 'Subtitle', ph: 'New ADU laws, zoning changes, and what homeowners should know.' },
         { k: 'teaser', label: 'Email teaser (shown in the newsletter instead of question previews; blank line between paragraphs)', type: 'textarea', rows: 8 },
         { k: 'cta', label: 'Button label', ph: 'Read the full Q&A' },
+        { k: 'url', label: 'Link to the full Q&A (e.g. the article on bowdoinrealestate.com). Leave blank to use the questions below.', ph: 'https://www.bowdoinrealestate.com/insights/…' },
         { k: 'intro', label: 'Intro on the full Q&A page (1–2 sentences)', type: 'textarea', rows: 2 },
         { k: 'questions', type: 'qa' },
         { k: 'teaser_count', label: 'How many questions to preview in the email', type: 'number' },
@@ -476,7 +477,7 @@
     // Q&A
     const q = (S.qa.items || []).find((x) => x.id === o.qa);
     if (q) {
-      const e = q.expert || {}, n = (q.questions || []).length, href = 'qa.html?id=' + encodeURIComponent(q.id);
+      const e = q.expert || {}, n = (q.questions || []).length, href = q.url || ('qa.html?id=' + encodeURIComponent(q.id));
       rows.push(divider);
       rows.push(sec(`${kick(q.kicker || 'Ask the Attorney')}${title(q.title)}${q.dek ? p(`<i>${h(q.dek)}</i>`, `font-size:16px;color:${C.muted}`) : ''}${e.name ? p(`<b>${h(e.name)}</b>${(e.title || e.firm) ? ', ' + h([e.title, e.firm].filter(Boolean).join(', ')) : ''}`, `font-size:14px;color:${C.muted}`) : ''}
         ${q.teaser ? q.teaser.split(/\n\s*\n/).map((x) => p(h(x.trim()))).join('') : ''}
