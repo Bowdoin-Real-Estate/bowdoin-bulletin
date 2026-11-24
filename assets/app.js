@@ -198,7 +198,7 @@
     return `<div class="give"><div class="gift" aria-hidden="true">🧠</div>
       <span class="eyebrow">${esc(g.game_name || 'Boston Trivia Challenge')}</span>
       <h3 style="margin-top:8px">Know Boston? Win a ${esc(g.prize)}</h3>
-      <p style="margin:0">${set ? `Theme: <b>${esc(set.title)}</b>. ` : ''}${set ? set.questions.length : 10} questions, ${esc((D.trivia || {}).seconds_per_question || 15)} seconds each. Highest score wins; ties go to the fastest time. Closes <b>${fmtDate(draw, { weekday: 'long', month: 'short', day: 'numeric' })} at ${fmtTime(draw)}</b>.</p>
+      <p style="margin:0">${set ? `Theme: <b>${esc(set.title)}</b>. ` : ''}${set ? set.questions.length : 10} questions, ${esc((D.trivia || {}).seconds_per_question || 15)} seconds each. Free for ${esc(D.config.newsletter_name)} subscribers. Highest score wins; ties go to the fastest time. Closes <b>${fmtDate(draw, { weekday: 'long', month: 'short', day: 'numeric' })} at ${fmtTime(draw)}</b>.</p>
       <div class="count" data-countdown="${draw.toISOString()}"><div><b>–</b><span>days</span></div><div><b>–</b><span>hrs</span></div><div><b>–</b><span>min</span></div>${compact ? '' : '<div><b>–</b><span>sec</span></div>'}</div>
       ${compact ? '<a class="btn brass" href="trivia.html#play">Play the trivia →</a>' : ''}
       <div class="fine">Free to play. No purchase necessary. Open to ${esc(g.eligible_area || 'Massachusetts')} residents ${esc(g.min_age || 18)}+. <a href="trivia.html#rules">Official rules</a>.</div></div>`;
@@ -411,13 +411,13 @@
           <label>Town<br><input required name="town" value="${esc(player.town || '')}" class="tin"></label>
           <label style="grid-column:1/-1">Email (so we can reach you if you win)<br><input required type="email" name="email" value="${esc(player.email || '')}" class="tin"></label>
           <label style="grid-column:1/-1" class="small"><input type="checkbox" required name="eligible"> I'm ${esc(g.min_age || 18)}+ and a ${esc(g.eligible_area || 'Massachusetts')} resident, and I agree to the <a href="#rules">official rules</a>.</label>
-          <label style="grid-column:1/-1" class="small"><input type="checkbox" name="optin" checked> Send me ${esc(D.config.newsletter_name)} (free, unsubscribe anytime).</label>
+          <label style="grid-column:1/-1" class="small"><input type="checkbox" name="optin" required checked> <b>Subscribe me to ${esc(D.config.newsletter_name)}.</b> Trivia is for subscribers only. It's free and you can unsubscribe anytime.</label>
           <div style="grid-column:1/-1"><button class="btn brass" type="submit">${prev ? 'Play again for fun' : 'Start the clock ⏱'}</button></div>
         </form></div>`;
       $$('.tin', game).forEach((i) => Object.assign(i.style, { width: '100%', padding: '11px 14px', border: '1px solid var(--line)', borderRadius: '10px', font: 'inherit', marginTop: '4px' }));
       $('#tform').addEventListener('submit', (e) => {
         e.preventDefault(); const f = new FormData(e.target);
-        player = { name: f.get('name').trim(), town: f.get('town').trim(), email: f.get('email').trim(), optin: !!f.get('optin') };
+        player = { name: f.get('name').trim(), town: f.get('town').trim(), email: f.get('email').trim(), optin: true };
         store('bb-player', player); practice = !!prev; play();
       });
     }

@@ -43,7 +43,7 @@
       <p>${esc(f.summary || '')}</p>
       ${contest && f.deadline ? `<p class="small"><b>Enter by ${L.longDate(f.deadline)}</b>${days > 0 ? ` · ${days} day${days === 1 ? '' : 's'} left` : ''}</p>` : ''}
       ${contest && f.prize ? `<p class="small"><b>Prize:</b> ${esc(f.prize)}</p>` : ''}
-      <div class="acts">${f.body ? `<a class="btn sm" href="${esc(href)}">Read more →</a>` : ''}${f.link_url ? `<a class="btn sm ${f.body ? 'ghost' : 'brass'}" href="${esc(f.link_url)}" target="_blank" rel="noopener">${esc(f.link_label || (contest ? 'Enter now' : 'Learn more'))} →</a>` : ''}</div></div></article>`;
+      <div class="acts">${f.body ? `<a class="btn sm" href="${esc(href)}">Read more →</a>` : ''}${f.link_url ? `<a class="btn sm ${f.body ? 'ghost' : 'brass'}" href="${esc(f.link_url)}"${/^https?:/.test(f.link_url) ? ' target="_blank" rel="noopener"' : ''}>${esc(f.link_label || (contest ? 'Enter now' : 'Learn more'))} →</a>` : ''}</div></div></article>`;
   }
   function featuredEvent() {
     const e = L.upcoming().find((x) => x.featured); if (!e) return '';
@@ -152,7 +152,7 @@
       ${f.sample ? '<div class="notice">Draft: details are being added.</div>' : ''}
       ${f.type === 'contest' && f.deadline ? `<div class="notice"><b>Enter by ${L.longDate(f.deadline)}</b>${f.prize ? ' · Prize: ' + esc(f.prize) : ''}</div>` : ''}
       ${L.md(f.body || f.summary || '')}
-      ${f.link_url ? `<p><a class="btn brass" href="${esc(f.link_url)}" target="_blank" rel="noopener">${esc(f.link_label || 'Learn more')} →</a></p>` : ''}
+      ${f.link_url ? `<p><a class="btn brass" href="${esc(f.link_url)}"${/^https?:/.test(f.link_url) ? ' target="_blank" rel="noopener"' : ''}>${esc(f.link_label || 'Learn more')} →</a></p>` : ''}
       <div style="margin-top:30px">${L.signupBox()}</div></article>`;
   };
 })();
