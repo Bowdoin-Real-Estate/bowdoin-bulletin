@@ -61,7 +61,7 @@
 
   <section id="app" style="display:none">
     <div class="tabs2" id="tabs">
-      <button data-tab="email" class="on">✉️ This week's email</button>
+      <button data-tab="email" class="on">✉️ Build the email</button>
       <button data-tab="events">📅 Events</button>
       <button data-tab="features">⭐ Spotlights &amp; contests</button>
       <button data-tab="qa">⚖️ Q&amp;As</button>
@@ -381,8 +381,8 @@
           <div class="scroll" style="margin-top:8px">${list.map((p) => `<div class="item cand ${chosen.has(p.url) ? 'picked' : ''}"><div><a href="${esc(p.url)}" target="_blank" rel="noopener" style="font-weight:600;color:var(--ink);text-decoration:none">${esc(p.title)}</a><div class="small muted">${esc(p.source || '')}${p.category ? ' · ' + esc(p.category) : ''}</div></div>${chosen.has(p.url) ? '<span class="small muted">Added ✓</span>' : `<button class="ib" data-add="${esc(p.url)}">Add</button>`}</div>`).join('') || '<div class="empty small">No story ideas match.</div>'}</div>
           <details style="margin-top:14px"><summary style="cursor:pointer;font-weight:600">+ Add your own story or link</summary>
             <label class="f">Headline</label><input id="nt" class="field"><label class="f">Link</label><input id="nu" class="field" placeholder="https://"><label class="f">Source</label><input id="ns" class="field">
-            <p style="margin-top:10px"><button class="ib" id="addown">Add to this week</button></p></details></div>
-        <div class="card pad sticky"><h3 style="margin:0 0 4px">This week's stories <span class="small muted">(${picks.length})</span></h3><p class="small muted">Reorder with the arrows and add a one-line take.</p>
+            <p style="margin-top:10px"><button class="ib" id="addown">Add to this email</button></p></details></div>
+        <div class="card pad sticky"><h3 style="margin:0 0 4px">Stories in this email <span class="small muted">(${picks.length})</span></h3><p class="small muted">Reorder with the arrows and add a one-line take.</p>
           ${picks.map((p, i) => `<div class="pick"><div style="display:flex;justify-content:space-between;gap:8px"><b style="font-size:.95rem">${i + 1}. ${esc(p.title)}</b><span style="white-space:nowrap"><button class="ib" data-up="${i}">↑</button> <button class="ib" data-down="${i}">↓</button> <button class="ib del" data-del="${i}">✕</button></span></div>
             <div class="small muted">${esc(p.source || '')}</div><textarea class="field" style="margin-top:6px" rows="2" data-blurb="${i}" placeholder="Our take (optional)">${esc(p.blurb || '')}</textarea></div>`).join('') || '<div class="empty small">No stories picked yet.</div>'}
           <button class="btn brass" id="savepicks" style="margin-top:8px">Save &amp; publish</button> <span class="small" style="color:var(--bad);display:${dirty ? 'inline' : 'none'}">Unsaved changes</span></div></div>`;
@@ -406,7 +406,7 @@
     render();
   }
 
-  /* ---------- weekly email builder ---------- */
+  /* ---------- email builder ---------- */
   function upcomingEvents(days) { const now = new Date(), until = new Date(today0().getTime() + days * 864e5); return (S.events.events || []).filter((e) => e.start && evEnd(e) >= now && parseLocal(e.start) < until).sort((a, b) => a.start.localeCompare(b.start)); }
   const activeFeatures = () => (S.features.items || []).filter((f) => f.published !== false && (!f.end || parseLocal(f.end) >= today0()));
   const pubQA = () => (S.qa.items || []).filter((q) => q.published !== false).sort((a, b) => (b.date || '').localeCompare(a.date || ''));
@@ -414,8 +414,8 @@
   let EO = null;
   function emailDefaults() {
     const fe = upcomingEvents(30).find((e) => e.featured), feats = activeFeatures(), q = pubQA()[0];
-    return { date: nextFriday(), headline: fe ? `This week: ${fe.title}` : 'This week around town', subject: fe ? `🎄 ${fe.title} + what's happening this week` : 'What\'s happening around town this week',
-      intro: 'Hi neighbors,\n\nHere\'s what\'s happening around town this week, from community events to a few stories we think you\'ll love.\n\n– Jenny & LeighAnn',
+    return { date: nextFriday(), headline: fe ? `${fe.title}` : 'What\'s happening around town', subject: fe ? `🎄 ${fe.title} + what's happening around town` : 'What\'s happening around town',
+      intro: 'Hi neighbors,\n\nHere\'s what\'s happening around town, from community events to a few stories we think you\'ll love.\n\n– Jenny & LeighAnn',
       days: 21, featured: true, calendar: true, features: feats.map((f) => f.id), qa: q ? q.id : '', stories: true, trivia: true, listings: false, market: true, rates: false };
   }
   function emailHTML(o) {
@@ -487,12 +487,12 @@
     const picks = (S.news && S.news.editors_picks) || [];
     if (o.stories && picks.length) {
       rows.push(divider);
-      rows.push(sec(`${kick('Worth a read')}${title('In the news this week')}${picks.map((s) => `<div style="padding:10px 0;border-bottom:1px solid ${C.line}"><a href="${h(s.url)}" style="font-family:${sans};font-size:15px;font-weight:bold;color:${C.ink};text-decoration:none">${h(s.title)}</a>${s.source ? `<span style="font-family:${sans};font-size:12px;color:${C.muted}"> · ${h(s.source)}</span>` : ''}${s.blurb ? `<div style="font-family:${sans};font-size:14px;color:${C.text};margin-top:3px">${h(s.blurb)}</div>` : ''}</div>`).join('')}`));
+      rows.push(sec(`${kick('Worth a read')}${title('In the news')}${picks.map((s) => `<div style="padding:10px 0;border-bottom:1px solid ${C.line}"><a href="${h(s.url)}" style="font-family:${sans};font-size:15px;font-weight:bold;color:${C.ink};text-decoration:none">${h(s.title)}</a>${s.source ? `<span style="font-family:${sans};font-size:12px;color:${C.muted}"> · ${h(s.source)}</span>` : ''}${s.blurb ? `<div style="font-family:${sans};font-size:14px;color:${C.text};margin-top:3px">${h(s.blurb)}</div>` : ''}</div>`).join('')}`));
     }
     // trivia
     if (o.trivia) {
       const g = S.config.giveaway || {};
-      rows.push(`<tr><td style="background:#ffffff;padding:24px 32px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="${C.cream}" style="background:${C.cream};padding:22px 24px;text-align:center">${kick('Weekly trivia')}${title('Think you know Boston?', 22)}${p(`Play this week's timed ${h(g.game_name || 'Boston Trivia Challenge')}. Top score wins a ${h(g.prize || 'gift card')}!`, 'text-align:center')}<div style="text-align:center"><table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="margin:14px auto 0"><tr><td bgcolor="${C.ink}" style="background:${C.ink}"><a href="${h(base + 'trivia.html')}" style="display:inline-block;padding:12px 22px;font-family:${sans};font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#ffffff;text-decoration:none">Play now</a></td></tr></table></div></td></tr></table></td></tr>`);
+      rows.push(`<tr><td style="background:#ffffff;padding:24px 32px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="${C.cream}" style="background:${C.cream};padding:22px 24px;text-align:center">${kick('Boston trivia')}${title('Think you know Boston?', 22)}${p(`Play our timed ${h(g.game_name || 'Boston Trivia Challenge')}. Top score wins a ${h(g.prize || 'gift card')}!`, 'text-align:center')}<div style="text-align:center"><table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="margin:14px auto 0"><tr><td bgcolor="${C.ink}" style="background:${C.ink}"><a href="${h(base + 'trivia.html')}" style="display:inline-block;padding:12px 22px;font-family:${sans};font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#ffffff;text-decoration:none">Play now</a></td></tr></table></div></td></tr></table></td></tr>`);
     }
     // listings
     const ls = (S.listings.listings || []).filter((l) => l.featured).slice(0, 2);
@@ -502,7 +502,7 @@
     if (o.market) {
       const m = S.market || {}, c = m.cta || {}, r = m.rates || {};
       const stats = (m.local_stats || []).filter((s) => s.value);
-      const rateLine = r['30yr'] ? p(`<b>Mortgage rates this week:</b> 30-yr fixed ${Number(r['30yr'].rate).toFixed(2)}%${r['15yr'] ? ' · 15-yr fixed ' + Number(r['15yr'].rate).toFixed(2) + '%' : ''} <span style="color:${C.muted}">(Freddie Mac)</span>`, 'font-size:14px') : '';
+      const rateLine = r['30yr'] ? p(`<b>Current mortgage rates:</b> 30-yr fixed ${Number(r['30yr'].rate).toFixed(2)}%${r['15yr'] ? ' · 15-yr fixed ' + Number(r['15yr'].rate).toFixed(2) + '%' : ''} <span style="color:${C.muted}">(Freddie Mac)</span>`, 'font-size:14px') : '';
       const statLine = stats.length ? p(stats.map((s) => `<b>${h(s.label)}:</b> ${h(s.value)}${s.change ? ' (' + h(s.change) + ')' : ''}`).join(' · '), 'font-size:14px') : '';
       const note = (m.note || '').split(/\n\s*\n/).filter(Boolean).map((x) => p(h(x.trim()))).join('');
       rows.push(divider);
@@ -512,7 +512,7 @@
         ${p(h(c.text || 'Register at bowdoinrealestate.com to get new-listing alerts, market info and more.'), 'font-size:14px;margin:6px 0 0')}
         ${btn(c.url || 'https://www.bowdoinrealestate.com', c.label || 'Register at bowdoinrealestate.com', C.gold)}</td></tr></table>`));
     }
-    if (o.rates && !o.market && S.market && S.market.rates && S.market.rates['30yr']) { const r = S.market.rates; rows.push(sec(p(`<b>Mortgage rates this week:</b> 30-yr fixed ${Number(r['30yr'].rate).toFixed(2)}%${r['15yr'] ? ' · 15-yr fixed ' + Number(r['15yr'].rate).toFixed(2) + '%' : ''} <span style="color:${C.muted}">(Freddie Mac)</span>`))); }
+    if (o.rates && !o.market && S.market && S.market.rates && S.market.rates['30yr']) { const r = S.market.rates; rows.push(sec(p(`<b>Current mortgage rates:</b> 30-yr fixed ${Number(r['30yr'].rate).toFixed(2)}%${r['15yr'] ? ' · 15-yr fixed ' + Number(r['15yr'].rate).toFixed(2) + '%' : ''} <span style="color:${C.muted}">(Freddie Mac)</span>`))); }
     // footer
     rows.push(`<tr><td bgcolor="${C.forest}" style="background:${C.forest};padding:26px 32px;font-family:${sans};font-size:12px;line-height:1.6;color:#cfdccb;text-align:center">
       <div style="font-family:${serif};font-size:20px;color:#ffffff">${h(b.name)}</div>${h(b.address || '')}<br><a href="tel:${h((b.phone || '').replace(/\D/g, ''))}" style="color:#ffffff">${h(b.phone || '')}</a> · <a href="mailto:${h(b.email)}" style="color:#ffffff">${h(b.email || '')}</a> · <a href="${h(b.website)}" style="color:#ffffff">bowdoinrealestate.com</a>
@@ -527,7 +527,7 @@
     if (o.qa) out.push('## ⚖️ Ask the Attorney', '', `{{qa:${o.qa}}}`, '');
     const picks = (S.news && S.news.editors_picks) || [];
     if (o.stories && picks.length) { out.push('## 📰 Worth a read', ''); picks.forEach((s) => out.push(`- [${s.title}](${s.url})${s.source ? ' (' + s.source + ')' : ''}${s.blurb ? ' — ' + s.blurb : ''}`)); out.push(''); }
-    if (o.trivia) out.push('## 🧠 Weekly trivia', '', '{{trivia}}', '');
+    if (o.trivia) out.push('## 🧠 Boston trivia', '', '{{trivia}}', '');
     const ls = (S.listings.listings || []).filter((l) => l.featured && l.mls).slice(0, 2);
     if (o.listings && ls.length) { out.push('## 🏡 From Bowdoin Real Estate Partners', ''); ls.forEach((l) => out.push(`{{listing:${l.mls}}}`, '')); }
     if (o.market) out.push('## 📈 ' + ((S.market && S.market.headline) || 'The market, in brief'), '', '{{market}}', '');
@@ -537,7 +537,7 @@
     const m = S.market || {}; m.local_stats = m.local_stats || []; while (m.local_stats.length < 3) m.local_stats.push({ label: '', value: '', change: '', period: '' }); m.cta = m.cta || {};
     const r = m.rates || {};
     $('#panel').innerHTML = `<div class="card pad"><h2 style="margin-top:0">📈 The market, in brief</h2>
-      <p class="muted small">A short market update for the bottom of the site and the email, followed by a button to bowdoinrealestate.com. Mortgage rates fill in on their own every week${r['30yr'] ? ` (now ${Number(r['30yr'].rate).toFixed(2)}% for a 30-yr fixed)` : ''}.</p>
+      <p class="muted small">A short market update for the bottom of the site and the email, followed by a button to bowdoinrealestate.com. Mortgage rates fill in on their own${r['30yr'] ? ` (now ${Number(r['30yr'].rate).toFixed(2)}% for a 30-yr fixed)` : ''}.</p>
       <label class="f">Section title</label><input class="field" id="m-headline" value="${esc(m.headline || 'The market, in brief')}">
       <label class="f">Market note (2–3 sentences)</label><textarea class="field" id="m-note" rows="5">${esc(m.note || '')}</textarea>
       <label class="f">Source line (optional)</label><input class="field" id="m-src" value="${esc(m.note_source || '')}" placeholder="Source: Massachusetts Association of Realtors, October 2026">
@@ -563,7 +563,7 @@
     const issueId = () => `${EO.date}-${slug(EO.headline)}`;
     const webUrl = () => siteBase() + 'issue.html?id=' + issueId();
     panel.innerHTML = `<div class="ed email"><div class="card pad">
-        <h3 style="margin:0">Build this week's email</h3><p class="small muted" style="margin:6px 0 0">Everything comes from the other tabs. Update an event or spotlight there, then come back here. The preview updates as you go.</p>
+        <h3 style="margin:0">Build the email</h3><p class="small muted" style="margin:6px 0 0">Everything comes from the other tabs. Update an event or spotlight there, then come back here. The preview updates as you go.</p>
         <label class="f">Email subject line</label><input class="field" data-o="subject" value="${esc(EO.subject)}">
         <label class="f">Issue date</label><input class="field" type="date" data-o="date" value="${esc(EO.date)}">
         <label class="f">Headline (for the web version)</label><input class="field" data-o="headline" value="${esc(EO.headline)}">
@@ -572,9 +572,9 @@
         <label class="chk"><input type="checkbox" data-o="featured" ${EO.featured ? 'checked' : ''}> ⭐ Featured event banner</label>
         <label class="chk"><input type="checkbox" data-o="calendar" ${EO.calendar ? 'checked' : ''}> 📅 Calendar: events in the next <select data-o="days" class="field" style="width:auto;padding:4px 6px">${[7, 14, 21, 30, 45].map((d) => `<option value="${d}" ${+EO.days === d ? 'selected' : ''}>${d} days</option>`).join('')}</select></label>
         ${feats.map((f) => `<label class="chk"><input type="checkbox" data-feat="${esc(f.id)}" ${(EO.features || []).includes(f.id) ? 'checked' : ''}> ${f.type === 'contest' ? '🎉' : '⭐'} ${esc(f.title)}${f.sample ? ' <span class="pill warn">Draft</span>' : ''}</label>`).join('')}
-        <label class="chk">⚖️ Q&amp;A: <select data-o="qa" class="field" style="width:auto;padding:4px 6px"><option value="">None this week</option>${qas.map((q) => `<option value="${esc(q.id)}" ${EO.qa === q.id ? 'selected' : ''}>${esc(q.title)}</option>`).join('')}</select></label>
+        <label class="chk">⚖️ Q&amp;A: <select data-o="qa" class="field" style="width:auto;padding:4px 6px"><option value="">None</option>${qas.map((q) => `<option value="${esc(q.id)}" ${EO.qa === q.id ? 'selected' : ''}>${esc(q.title)}</option>`).join('')}</select></label>
         <label class="chk"><input type="checkbox" data-o="stories" ${EO.stories ? 'checked' : ''}> 📰 Story picks (${((S.news && S.news.editors_picks) || []).length})</label>
-        <label class="chk"><input type="checkbox" data-o="trivia" ${EO.trivia ? 'checked' : ''}> 🧠 Weekly trivia</label>
+        <label class="chk"><input type="checkbox" data-o="trivia" ${EO.trivia ? 'checked' : ''}> 🧠 Boston trivia</label>
         <label class="chk"><input type="checkbox" data-o="market" ${EO.market ? 'checked' : ''}> 📈 Market in brief + website button</label>
         <label class="chk"><input type="checkbox" data-o="rates" ${EO.rates ? 'checked' : ''}> 📈 Mortgage rates line</label>
         <h4 style="margin:18px 0 8px;font-family:var(--sans);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)">Send it</h4>
