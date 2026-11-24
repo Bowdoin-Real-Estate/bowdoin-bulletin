@@ -76,8 +76,29 @@
   }
 
   /* ---------------- signup ---------------- */
+  function gfPost(v) {
+    const s = (D.config.signup || {}), F = s.fields || {}, body = new URLSearchParams();
+    if (!(s.provider === 'google_form' && s.action_url)) return Promise.resolve(false);
+    Object.entries(F).forEach(([k, id]) => { if (id && v[k]) body.append(id, v[k]); });
+    return fetch(s.action_url, { method: 'POST', mode: 'no-cors', body }).then(() => { try { localStorage.setItem('bb-subscribed', '1'); } catch (e) {} return true; }).catch(() => false);
+  }
+  document.addEventListener('submit', (e) => {
+    const f = e.target.closest && e.target.closest('form[data-gf]'); if (!f) return;
+    e.preventDefault(); const d = new FormData(f), btn = f.querySelector('button'); btn.disabled = true; btn.textContent = 'Sending…';
+    gfPost({ name: (d.get('name') || '').trim(), email: (d.get('email') || '').trim(), town: (d.get('town') || '').trim(), optin: 'Yes!' }).then((ok) => {
+      f.outerHTML = ok ? '<div class="signup"><p style="margin:0;font-weight:600">🎉 You\'re in! Watch your inbox for the next ' + esc(D.config.newsletter_name) + '.</p></div>'
+        : '<div class="signup"><p style="margin:0">Something went wrong. Please try again in a minute.</p></div>';
+    });
+  });
   function signupForm(label) {
     const s = (D.config.signup || {});
+    if (s.provider === 'google_form' && s.action_url) {
+      return `<form class="signup" data-gf>
+        <input type="text" name="name" placeholder="First & last name" required aria-label="First and last name" autocomplete="name">
+        <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address" autocomplete="email">
+        <input type="text" name="town" placeholder="Your town (optional)" aria-label="Town">
+        <button class="btn brass" type="submit">${esc(label || 'Subscribe free')}</button></form>`;
+    }
     if (s.provider === 'mailchimp' && s.action_url) {
       return `<form class="signup" action="${esc(s.action_url)}" method="post" target="_blank">
         <input type="email" name="EMAIL" placeholder="you@email.com" required aria-label="Email address">
@@ -468,6 +489,7 @@
     }
 
     async function submit(r) {
+      gfPost({ name: player.name, email: player.email, town: player.town, optin: 'Yes!' });
       const sf = g.score_form || {}, F = sf.fields || {};
       const vals = { name: player.name, email: player.email, town: player.town, score: r.score, seconds: r.seconds, answers: r.answers, set_id: set.id, newsletter_optin: player.optin ? 'Yes' : 'No' };
       if (sf.action_url && F.email) {
