@@ -180,6 +180,21 @@
       "title": "Derby Street Shops Holiday Season",
       "start": "2026-11-28T10:00",
       "end": "2026-12-24T20:00"
+    },
+    {
+      "location": "Bespoke Events, 8 Michaels Mall",
+      "town": "Winthrop",
+      "category": "Shopping",
+      "cost": "Free to browse",
+      "url": "https://bespokecollectivema.com",
+      "description": "Get a sneak peek at Winthrop's new boutique before it opens: gifts, clothing, accessories and holiday essentials. Hours vary: Tue 11/24 9–7, Wed 11/25 9–4, closed Thanksgiving, Fri 11/27 12–6, Sat 11/28 9–2, Sun 11/29 12–3, Mon 11/30 10–6. Shop online anytime with shipping or local pickup.",
+      "kid_friendly": true,
+      "featured": false,
+      "sample": false,
+      "id": "bespoke-collective-popup-2026",
+      "title": "Bespoke Collective Holiday Pop-Up",
+      "start": "2026-11-24T09:00",
+      "end": "2026-12-02T18:00"
     }
   ]
 }
