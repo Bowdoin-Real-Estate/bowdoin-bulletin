@@ -46,7 +46,7 @@
         <span><a href="tel:${esc((b.phone || '').replace(/\D/g, ''))}">${esc(b.phone)}</a> · <a href="mailto:${esc(b.email)}">${esc(b.email)}</a></span>
       </div></div>
       <header class="masthead"><div class="wrap">
-        <a class="brand" href="index.html"><img class="brand-logo" src="${esc(b.logo)}" alt="${esc(b.name)}"><div><div class="brand-name">${esc(c.newsletter_name)}</div><div class="brand-sub">${esc(c.frequency || 'weekly')} newsletter</div></div></a>
+        <a class="brand" href="index.html"><img class="brand-logo" src="${esc(b.logo)}" alt="${esc(b.name)}"><div><div class="brand-name">${esc(c.newsletter_name)}</div><div class="brand-sub">Community newsletter</div></div></a>
         <button class="menu-btn" aria-label="Menu">☰ Menu</button>
         <nav class="main">${nav.map(([h, t, k]) => `<a href="${h}" class="${k === page ? 'active' : ''}">${t}</a>`).join('')}
           <a class="cta" href="index.html#subscribe">Subscribe</a></nav>
@@ -57,7 +57,7 @@
         <div class="foot-grid">
           <div>
             <a class="logo-chip" href="${esc(b.website)}" target="_blank" rel="noopener"><img src="${esc(b.logo)}" alt="${esc(b.name)}" onerror="this.parentNode.textContent='${esc(b.name)}'"></a>
-            <p style="margin-top:14px">${esc(c.newsletter_name)} is a free ${esc(c.frequency || 'weekly')} newsletter from ${esc(b.name)}: a Winthrop-based real estate team helping buyers, sellers and renters across Greater Boston, the North Shore and the South Shore.</p>
+            <p style="margin-top:14px">${esc(c.newsletter_name)} is a free community newsletter from ${esc(b.name)}: a Winthrop-based real estate team helping buyers, sellers and renters across Greater Boston, the North Shore and the South Shore.</p>
             <p>${esc(b.address)}<br><a href="tel:${esc((b.phone || '').replace(/\D/g, ''))}">${esc(b.phone)}</a> · <a href="mailto:${esc(b.email)}">${esc(b.email)}</a></p>
             ${b.instagram ? `<p><a href="${esc(b.instagram)}" target="_blank" rel="noopener">Instagram →</a></p>` : ''}
           </div>
@@ -91,9 +91,9 @@
     return `<div class="signup"><a class="btn brass" href="mailto:${esc(b.email)}?subject=${encodeURIComponent('Please add me to ' + D.config.newsletter_name)}">${esc(label || 'Subscribe free')} →</a></div>`;
   }
   function signupBox() {
-    return `<div class="signup-box" id="subscribe"><span class="eyebrow">Free · ${esc(D.config.frequency || 'weekly')}</span>
+    return `<div class="signup-box" id="subscribe"><span class="eyebrow">Free · Community newsletter</span>
       <h3 style="margin-top:8px">Get ${esc(D.config.newsletter_name)} in your inbox</h3>
-      <p>Local news, community events, a quick market update and the best things to do around town. Plus a new Boston Trivia Challenge every week: top score wins a ${esc((D.config.giveaway || {}).prize || 'gift card')}.</p>
+      <p>Local news, community events, a quick market update and the best things to do around town. Plus our Boston Trivia Challenge: top score wins a ${esc((D.config.giveaway || {}).prize || 'gift card')}.</p>
       ${signupForm()}<p class="small" style="margin:10px 0 0">No spam. Unsubscribe anytime.</p></div>`;
   }
 
@@ -196,11 +196,11 @@
     const g = D.config.giveaway || {}; if (g.enabled === false) return '';
     const draw = nextDraw(), set = currentSet();
     return `<div class="give"><div class="gift" aria-hidden="true">🧠</div>
-      <span class="eyebrow">${esc(cap(g.frequency || 'weekly'))} ${esc(g.game_name || 'Boston Trivia Challenge')}</span>
+      <span class="eyebrow">${esc(g.game_name || 'Boston Trivia Challenge')}</span>
       <h3 style="margin-top:8px">Know Boston? Win a ${esc(g.prize)}</h3>
-      <p style="margin:0">${set ? `This week: <b>${esc(set.title)}</b>. ` : ''}${set ? set.questions.length : 10} questions, ${esc((D.trivia || {}).seconds_per_question || 15)} seconds each. Highest score wins; ties go to the fastest time. Closes <b>${fmtDate(draw, { weekday: 'long', month: 'short', day: 'numeric' })} at ${fmtTime(draw)}</b>.</p>
+      <p style="margin:0">${set ? `Theme: <b>${esc(set.title)}</b>. ` : ''}${set ? set.questions.length : 10} questions, ${esc((D.trivia || {}).seconds_per_question || 15)} seconds each. Highest score wins; ties go to the fastest time. Closes <b>${fmtDate(draw, { weekday: 'long', month: 'short', day: 'numeric' })} at ${fmtTime(draw)}</b>.</p>
       <div class="count" data-countdown="${draw.toISOString()}"><div><b>–</b><span>days</span></div><div><b>–</b><span>hrs</span></div><div><b>–</b><span>min</span></div>${compact ? '' : '<div><b>–</b><span>sec</span></div>'}</div>
-      ${compact ? '<a class="btn brass" href="trivia.html#play">Play this week\'s trivia →</a>' : ''}
+      ${compact ? '<a class="btn brass" href="trivia.html#play">Play the trivia →</a>' : ''}
       <div class="fine">Free to play. No purchase necessary. Open to ${esc(g.eligible_area || 'Massachusetts')} residents ${esc(g.min_age || 18)}+. <a href="trivia.html#rules">Official rules</a>.</div></div>`;
   }
   const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
@@ -307,11 +307,6 @@
   const pages = {};
 
   pages.home = function () {
-    const latest = D.issues[0];
-    $('#latest').innerHTML = latest ? `<a class="card pad" href="issue.html?id=${esc(latest.id)}" style="display:block;text-decoration:none;color:inherit">
-        <span class="eyebrow">Latest issue · No. ${esc(latest.number)}</span>
-        <h3 style="font-size:1.6rem;margin-top:10px">${esc(latest.title)}</h3><p class="muted">${esc(latest.summary)}</p>
-        <div class="small muted">${longDate(latest.date)}</div><div style="margin-top:14px"><span class="btn sm">Read it →</span></div></a>` : '';
     $('#hero-signup').innerHTML = signupForm();
     const mb = $('#market-block'); if (mb) { mb.innerHTML = marketHTML(); const mt = $('#market-title'); if (mt && D.market && D.market.headline) mt.textContent = D.market.headline; }
     newsBlock($('#news'));
@@ -399,7 +394,7 @@
     $('#winners').innerHTML = winners.length ? `<ul class="news-list">${winners.map((w) => `<li><b>${esc(w.name)}</b> of ${esc(w.town)}${w.score ? ` · ${esc(w.score)}` : ''} <span class="src">· ${longDate(w.date)}</span>${w.sample ? ' <span class="badge warn">Sample</span>' : ''}</li>`).join('')}</ul>` : '<p class="muted">Our first champion will be crowned soon!</p>';
 
     const game = $('#game');
-    if (!set) { game.innerHTML = '<div class="card empty">This week\'s questions are on their way. Check back soon!</div>'; return; }
+    if (!set) { game.innerHTML = '<div class="card empty">New questions are on their way. Check back soon!</div>'; return; }
     const store = (k, v) => { try { if (v === undefined) return JSON.parse(localStorage.getItem(k)); localStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; } };
     const KEY = 'bb-trivia-' + set.id;
     const prev = store(KEY);
@@ -407,10 +402,10 @@
 
     function intro() {
       game.innerHTML = `<div class="card pad">
-        <span class="eyebrow">This week · ${esc(set.title)}</span>
+        <span class="eyebrow">This round · ${esc(set.title)}</span>
         <h3 style="font-size:1.6rem;margin-top:8px">${set.questions.length} questions · ${secs} seconds each</h3>
-        <p class="muted">Score = correct answers. Ties go to whoever finished fastest. One official play per person per week.</p>
-        ${prev ? `<div class="notice">You already played this week: <b>${prev.score}/${set.questions.length}</b> in ${prev.seconds}s. ${prev.submitted ? 'Your entry is in. Good luck! 🍀' : ''} You can play again for fun, but only your first game counts.</div>` : ''}
+        <p class="muted">Score = correct answers. Ties go to whoever finished fastest. One official play per person per round.</p>
+        ${prev ? `<div class="notice">You already played this round: <b>${prev.score}/${set.questions.length}</b> in ${prev.seconds}s. ${prev.submitted ? 'Your entry is in. Good luck! 🍀' : ''} You can play again for fun, but only your first game counts.</div>` : ''}
         <form id="tform" class="grid g2" style="gap:12px;margin-top:12px">
           <label>Name<br><input required name="name" value="${esc(player.name || '')}" class="tin"></label>
           <label>Town<br><input required name="town" value="${esc(player.town || '')}" class="tin"></label>
@@ -459,12 +454,12 @@
         const seconds = +times.reduce((a, c) => a + c, 0).toFixed(2);
         const official = !practice;
         if (official) store(KEY, { score, seconds, submitted: false });
-        const shareText = `I scored ${score}/${set.questions.length} on this week's ${g.game_name || 'Boston Trivia Challenge'}. Think you can beat me?`;
+        const shareText = `I scored ${score}/${set.questions.length} on the ${g.game_name || 'Boston Trivia Challenge'}. Think you can beat me?`;
         game.innerHTML = `<div class="card pad" style="text-align:center">
           <span class="eyebrow">${official ? 'Final score' : 'Practice score'}</span>
           <div style="font:600 4rem/1 var(--serif);margin:12px 0">${score}<span class="muted" style="font-size:2rem">/${set.questions.length}</span></div>
           <p class="muted">Total time: ${seconds.toFixed(1)} seconds</p>
-          <div id="sub" style="margin:14px 0">${official ? 'Submitting your entry…' : 'Practice games aren\'t entered. Only your first game this week counts.'}</div>
+          <div id="sub" style="margin:14px 0">${official ? 'Submitting your entry…' : 'Practice games aren\'t entered. Only your first game this round counts.'}</div>
           <button class="btn ghost sm" id="share">Challenge a friend</button></div>`;
         $('#share').onclick = async () => { const url = location.href.split('#')[0]; try { if (navigator.share) await navigator.share({ text: shareText, url }); else { await navigator.clipboard.writeText(shareText + ' ' + url); $('#share').textContent = 'Link copied!'; } } catch (e) {} };
         if (official) submit({ score, seconds, answers: answers.join(','), times: times.join(',') });
