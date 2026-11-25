@@ -517,7 +517,7 @@
     // footer
     rows.push(`<tr><td bgcolor="${C.forest}" style="background:${C.forest};padding:26px 32px;font-family:${sans};font-size:12px;line-height:1.6;color:#cfdccb;text-align:center">
       <div style="font-family:${serif};font-size:20px;color:#ffffff">${h(b.name)}</div>${h(b.address || '')}<br><a href="tel:${h((b.phone || '').replace(/\D/g, ''))}" style="color:#ffffff">${h(b.phone || '')}</a> · <a href="mailto:${h(b.email)}" style="color:#ffffff">${h(b.email || '')}</a> · <a href="${h(b.website)}" style="color:#ffffff">bowdoinrealestate.com</a>
-      <div style="margin-top:10px;color:#9fb39a">You're receiving ${h(S.config.newsletter_name || 'The Local Loop')} because you're part of our community. Equal Housing Opportunity.</div></td></tr>`);
+      <div style="margin-top:10px;color:#9fb39a">You're receiving ${h(S.config.newsletter_name || 'The Local Loop')} because you're part of our community. Equal Housing Opportunity.<br><a href="mailto:${h(b.email)}?subject=Unsubscribe%20from%20The%20Local%20Loop" style="color:#cfdccb">Unsubscribe</a></div></td></tr>`);
     return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${h(o.subject || '')}</title></head>
 <body style="margin:0;padding:0;background:${C.cream}"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${C.cream}" style="background:${C.cream}"><tr><td align="center" style="padding:20px 10px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;border:1px solid ${C.line}">${rows.join('\n')}</table></td></tr></table></body></html>`;
@@ -584,6 +584,7 @@
           <button class="btn ghost sm" id="copyhtml">&lt;/&gt; Copy HTML code (Mailchimp, Constant Contact…)</button>
           <button class="btn ghost sm" id="dl">⬇ Download email file</button>
           <button class="btn ghost sm" id="pubweb">🌐 Publish web version (adds to Past Issues)</button>
+          <button class="btn ghost sm" id="welcome">📬 Send this to new subscribers automatically</button>
         </div>
         <p class="hint" style="margin-top:10px">Tip: in Mailchimp choose <b>Code your own → Paste in code</b>, or add a <b>Code</b> block and paste. In Gmail or Outlook, just paste into a new message.</p>
       </div>
@@ -608,6 +609,15 @@
         try { await navigator.clipboard.writeText(html); toast('HTML copied. Paste it into your email tool\'s code editor.'); } catch (err) { toast('Copy blocked. Use Download instead.', 5000); }
       } else if (t.id === 'dl') {
         const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([html], { type: 'text/html' })); a.download = `local-loop-${EO.date}.html`; a.click();
+      } else if (t.id === 'welcome') {
+        if (!confirm('Make this the email every new subscriber gets automatically?')) return;
+        t.disabled = true; t.textContent = 'Saving…';
+        try {
+          await putText('email/current.html', html, `Welcome email: ${EO.subject} (by ${who})`);
+          await putJSON('email/current.json', { id: issueId(), subject: EO.subject, date: EO.date, web_url: EO.published ? webUrl() : siteBase(), updated: new Date().toISOString() }, 'Welcome email settings');
+          toast('Saved! New subscribers will get this email from now on.', 6000);
+        } catch (err) { toast(err.message, 5000); }
+        t.disabled = false; t.textContent = '📬 Send this to new subscribers automatically';
       } else if (t.id === 'pubweb') {
         if (!confirm('Publish this issue to the website\'s Past Issues page?')) return;
         t.disabled = true; t.textContent = 'Publishing…';
