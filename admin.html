@@ -564,8 +564,12 @@
     const feats = activeFeatures(), qas = pubQA(), panel = $('#panel');
     const issueId = () => `${EO.date}-${slug(EO.headline)}`;
     const webUrl = () => siteBase() + 'issue.html?id=' + issueId();
+    const build = () => emailHTML({ ...EO, webUrl: EO.published ? webUrl() : '' });
+    const myEmail = store.get('bb-test-email') || (S.config.brokerage || {}).email || '';
     panel.innerHTML = `<div class="ed email"><div class="card pad">
-        <h3 style="margin:0">Build the email</h3><p class="small muted" style="margin:6px 0 0">Everything comes from the other tabs. Update an event or spotlight there, then come back here. The preview updates as you go.</p>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><h3 style="margin:0">Build the email</h3><span class="small muted" id="savestate">All changes saved ✓</span></div>
+        <p class="small muted" style="margin:6px 0 0">The email is built from the other tabs. Your changes here save automatically.</p>
+        <h4 style="margin:22px 0 6px;font-family:var(--sans);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)">Step 1 · Write</h4>
         <label class="f">Email subject line</label><input class="field" data-o="subject" value="${esc(EO.subject)}">
         <label class="f">Issue date</label><input class="field" type="date" data-o="date" value="${esc(EO.date)}">
         <label class="f">Headline (for the web version)</label><input class="field" data-o="headline" value="${esc(EO.headline)}">
@@ -579,59 +583,75 @@
         <label class="chk"><input type="checkbox" data-o="trivia" ${EO.trivia ? 'checked' : ''}> 🧠 Boston trivia</label>
         <label class="chk"><input type="checkbox" data-o="market" ${EO.market ? 'checked' : ''}> 📈 Market in brief + website button</label>
         <label class="chk"><input type="checkbox" data-o="rates" ${EO.rates ? 'checked' : ''}> 📈 Mortgage rates line</label>
-        <h4 style="margin:18px 0 8px;font-family:var(--sans);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)">Send it</h4>
-        <div style="display:flex;flex-direction:column;gap:8px">
-          <button class="btn" id="savedraft">💾 Save &amp; preview</button>
-          <p class="hint" style="margin:0 0 6px">Saves your subject, note and choices, then opens the full email in a new tab so you can check it before sending.</p>
-          <button class="btn brass" id="copyrich">📋 Copy email (paste into Gmail / Outlook)</button>
-          <button class="btn ghost sm" id="copyhtml">&lt;/&gt; Copy HTML code (Mailchimp, Constant Contact…)</button>
-          <button class="btn ghost sm" id="dl">⬇ Download email file</button>
-          <button class="btn ghost sm" id="pubweb">🌐 Publish web version (adds to Past Issues)</button>
-          <button class="btn ghost sm" id="welcome">📬 Send this to new subscribers automatically</button>
-        </div>
-        <p class="hint" style="margin-top:10px">Tip: in Mailchimp choose <b>Code your own → Paste in code</b>, or add a <b>Code</b> block and paste. In Gmail or Outlook, just paste into a new message.</p>
+        <h4 style="margin:22px 0 6px;font-family:var(--sans);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)">Step 2 · Send yourself a test</h4>
+        <p class="hint" style="margin:0 0 6px">Check the preview, then send a real copy to your own inbox to see it on your phone.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><input class="field" id="testto" type="email" placeholder="you@email.com" value="${esc(myEmail)}" style="flex:1;min-width:180px"><button class="btn" id="sendtest">Send test</button></div>
+        <h4 style="margin:22px 0 6px;font-family:var(--sans);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)">Step 3 · Send to subscribers</h4>
+        <label class="chk"><input type="checkbox" id="welcomeon" ${EO.welcome ? 'checked' : ''}> Also email this issue to anyone who subscribes later</label>
+        <button class="btn brass" id="sendall" style="width:100%;margin-top:6px">✉️ Send to all subscribers</button>
+        <p class="hint">Emails go out from the Bowdoin admin Gmail within about 5 minutes. A confirmation lands in the admin inbox when it's done.</p>
+        <details style="margin-top:16px"><summary class="small muted" style="cursor:pointer">More options</summary>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+            <button class="btn ghost sm" id="pubweb">🌐 Add this issue to the website's Past Issues</button>
+            <button class="btn ghost sm" id="copyrich">📋 Copy email (to paste into Gmail yourself)</button>
+            <button class="btn ghost sm" id="dl">⬇ Download email file</button>
+          </div></details>
       </div>
       <div class="card pad"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><h3 style="margin:0">Preview</h3>
-        <div><button class="ib" data-w="640">Desktop</button> <button class="ib" data-w="380">Phone</button></div></div>
+        <div><button class="ib" data-w="640">Desktop</button> <button class="ib" data-w="380">Phone</button> <button class="ib" id="fullpv">Open full size ↗</button></div></div>
         <div style="margin-top:10px;display:flex;justify-content:center"><iframe class="preview-frame" id="pv" title="Email preview" style="max-width:640px"></iframe></div></div></div>`;
-    const refresh = () => { $('#pv').srcdoc = emailHTML({ ...EO, webUrl: EO.published ? webUrl() : '' }); };
+    const refresh = () => { $('#pv').srcdoc = build(); };
+    const state = (t, bad) => { const el = $('#savestate'); if (el) { el.textContent = t; el.style.color = bad ? 'var(--bad)' : ''; } };
+    let saveT = null, saving = false, again = false;
+    const saveDraft = async () => {
+      if (saving) { again = true; return; }
+      saving = true; state('Saving…');
+      try { await putJSON('data/email-draft.json', { ...EO, saved: new Date().toISOString() }, 'Save email draft'); S.emailDraft = { ...EO }; state('All changes saved ✓'); }
+      catch (err) { state('Not saved: ' + err.message, true); }
+      saving = false; if (again) { again = false; saveDraft(); }
+    };
+    const flush = async () => { if (saveT) { clearTimeout(saveT); saveT = null; await saveDraft(); } };
+    const queue = async (mode, to) => {
+      const id = `${issueId()}-${Date.now()}`;
+      await putJSON('email/outbox.json', { id, mode, to: to || '', subject: EO.subject, html: build(), web_url: EO.published ? webUrl() : siteBase(), requested: new Date().toISOString(), by: who }, mode === 'all' ? 'Send issue to subscribers' : 'Send test email');
+    };
     panel.oninput = panel.onchange = (e) => {
       const t = e.target;
+      if (t.id === 'testto') return;
+      if (t.id === 'welcomeon') EO.welcome = t.checked;
       if (t.dataset.o) EO[t.dataset.o] = t.type === 'checkbox' ? t.checked : t.value;
       if (t.dataset.feat) { const s = new Set(EO.features || []); t.checked ? s.add(t.dataset.feat) : s.delete(t.dataset.feat); EO.features = [...s]; }
-      refresh();
+      refresh(); state('Unsaved changes…'); clearTimeout(saveT); saveT = setTimeout(() => { saveT = null; saveDraft(); }, 2500);
     };
     panel.onclick = async (e) => {
       const t = e.target.closest('button'); if (!t) return;
       if (t.dataset.w) { $('#pv').style.maxWidth = t.dataset.w + 'px'; return; }
-      const html = emailHTML({ ...EO, webUrl: EO.published ? webUrl() : '' });
-      if (t.id === 'savedraft') {
-        const w = window.open('', '_blank');
-        t.disabled = true; t.textContent = 'Saving…';
+      const html = build();
+      if (t.id === 'fullpv') {
+        const w = window.open('', '_blank'); if (w) { w.document.open(); w.document.write(html); w.document.close(); } else toast('Your browser blocked the new tab. Allow pop-ups for this site.', 5000);
+      } else if (t.id === 'sendtest') {
+        const to = $('#testto').value.trim();
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(to)) { toast('Enter the email address to send the test to.', 4000); return; }
+        store.set('bb-test-email', to); t.disabled = true; t.textContent = 'Sending…';
+        try { await flush(); await queue('test', to); toast('Test on its way to ' + to + '. It should arrive within about 5 minutes.', 7000); } catch (err) { toast(err.message, 5000); }
+        t.disabled = false; t.textContent = 'Send test';
+      } else if (t.id === 'sendall') {
+        if (!confirm('Send "' + EO.subject + '" to ALL subscribers now?\n\nThis can\'t be undone. Have you sent yourself a test first?')) return;
+        t.disabled = true; t.textContent = 'Sending…';
         try {
-          await putJSON('data/email-draft.json', { ...EO, saved: new Date().toISOString() }, 'Save email draft'); S.emailDraft = { ...EO };
-          toast('Draft saved. It will be here next time you open the editor.', 5000);
-        } catch (err) { toast(err.message, 5000); }
-        if (w) { w.document.open(); w.document.write(html); w.document.close(); }
-        t.disabled = false; t.textContent = '💾 Save & preview';
+          await flush();
+          await putJSON('email/welcome.json', { id: issueId(), off: !EO.welcome, subject: EO.subject, html, web_url: EO.published ? webUrl() : siteBase(), updated: new Date().toISOString() }, 'Welcome email');
+          await queue('all');
+          toast('Sent to the queue! Subscribers get it within about 5 minutes, and the admin inbox gets a confirmation.', 9000);
+        } catch (err) { toast(err.message, 6000); }
+        t.disabled = false; t.textContent = '✉️ Send to all subscribers';
       } else if (t.id === 'copyrich') {
         try { await navigator.clipboard.write([new ClipboardItem({ 'text/html': new Blob([html], { type: 'text/html' }), 'text/plain': new Blob([EO.subject], { type: 'text/plain' }) })]); toast('Copied! Paste it into a new email.'); }
         catch (err) { toast('Your browser blocked rich copy. Use Download instead.', 5000); }
-      } else if (t.id === 'copyhtml') {
-        try { await navigator.clipboard.writeText(html); toast('HTML copied. Paste it into your email tool\'s code editor.'); } catch (err) { toast('Copy blocked. Use Download instead.', 5000); }
       } else if (t.id === 'dl') {
         const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([html], { type: 'text/html' })); a.download = `local-loop-${EO.date}.html`; a.click();
-      } else if (t.id === 'welcome') {
-        if (!confirm('Make this the email every new subscriber gets automatically?')) return;
-        t.disabled = true; t.textContent = 'Saving…';
-        try {
-          await putText('email/current.html', html, `Welcome email: ${EO.subject} (by ${who})`);
-          await putJSON('email/current.json', { id: issueId(), subject: EO.subject, date: EO.date, web_url: EO.published ? webUrl() : siteBase(), updated: new Date().toISOString() }, 'Welcome email settings');
-          toast('Saved! New subscribers will get this email from now on.', 6000);
-        } catch (err) { toast(err.message, 5000); }
-        t.disabled = false; t.textContent = '📬 Send this to new subscribers automatically';
       } else if (t.id === 'pubweb') {
-        if (!confirm('Publish this issue to the website\'s Past Issues page?')) return;
+        if (!confirm('Add this issue to the website\'s Past Issues page?')) return;
         t.disabled = true; t.textContent = 'Publishing…';
         try {
           const id = issueId();
@@ -642,10 +662,10 @@
           const firstLine = (EO.intro || '').split('\n').map((s) => s.trim()).filter((s) => s && !/^hi\b|^hello\b/i.test(s))[0] || '';
           list.unshift({ id, number: num, date: EO.date, title: EO.headline, summary: firstLine.slice(0, 160) });
           iss.issues = list; await putJSON('data/issues.json', iss, 'Add issue ' + num);
-          S.issues = iss; EO.published = true; refresh();
-          toast('Published! The email now has a "View in browser" link. Copy it again before sending.', 6000);
+          S.issues = iss; EO.published = true; refresh(); saveDraft();
+          toast('Published! The email now has a "View in browser" link.', 6000);
         } catch (err) { toast(err.message, 5000); }
-        t.disabled = false; t.textContent = '🌐 Publish web version (adds to Past Issues)';
+        t.disabled = false; t.textContent = '🌐 Add this issue to the website\'s Past Issues';
       }
     };
     refresh();
