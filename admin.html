@@ -560,7 +560,12 @@
     };
   }
   function emailTab() {
-    EO = EO || (S.emailDraft ? { ...emailDefaults(), ...S.emailDraft } : emailDefaults());
+    if (!EO) {
+      let local = null; try { local = JSON.parse(store.get('bb-email-draft') || 'null'); } catch (e) {}
+      const remote = S.emailDraft, pick = local && (!remote || String(local.saved || '') > String(remote.saved || '')) ? local : remote;
+      EO = pick ? { ...emailDefaults(), ...pick } : emailDefaults();
+      if (pick && pick === local) setTimeout(() => saveDraft(), 500);
+    }
     const feats = activeFeatures(), qas = pubQA(), panel = $('#panel');
     const issueId = () => `${EO.date}-${slug(EO.headline)}`;
     const webUrl = () => siteBase() + 'issue.html?id=' + issueId();
@@ -607,7 +612,7 @@
       if (saving) { again = true; return; }
       saving = true; state('Saving…');
       try { await putJSON('data/email-draft.json', { ...EO, saved: new Date().toISOString() }, 'Save email draft'); S.emailDraft = { ...EO }; state('All changes saved ✓'); }
-      catch (err) { state('Not saved: ' + err.message, true); }
+      catch (err) { state('⚠ Not saved to the site: ' + err.message, true); toast('Your changes are kept on this computer, but could not be saved to the site: ' + err.message, 8000); }
       saving = false; if (again) { again = false; saveDraft(); }
     };
     const flush = async () => { if (saveT) { clearTimeout(saveT); saveT = null; await saveDraft(); } };
@@ -621,7 +626,8 @@
       if (t.id === 'welcomeon') EO.welcome = t.checked;
       if (t.dataset.o) EO[t.dataset.o] = t.type === 'checkbox' ? t.checked : t.value;
       if (t.dataset.feat) { const s = new Set(EO.features || []); t.checked ? s.add(t.dataset.feat) : s.delete(t.dataset.feat); EO.features = [...s]; }
-      refresh(); state('Unsaved changes…'); clearTimeout(saveT); saveT = setTimeout(() => { saveT = null; saveDraft(); }, 2500);
+      store.set('bb-email-draft', JSON.stringify({ ...EO, saved: new Date().toISOString() }));
+      refresh(); state('Saving…'); clearTimeout(saveT); saveT = setTimeout(() => { saveT = null; saveDraft(); }, 1200);
     };
     panel.onclick = async (e) => {
       const t = e.target.closest('button'); if (!t) return;
