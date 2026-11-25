@@ -116,6 +116,7 @@
       getJSON('data/config.json', {}), getJSON('data/events.json', { events: [] }), getJSON('data/features.json', { items: [] }), getJSON('data/qa.json', { items: [] }),
       getJSON('data/news.json', {}), getJSON('data/listings.json', { listings: [] }), getJSON('data/market.json', {}), getJSON('data/issues.json', { issues: [] })]);
     Object.assign(S, { config, events, features, qa, news, listings, market, issues });
+    S.emailDraft = await getJSON('data/email-draft.json', null).catch(() => null);
   }
 
   async function uploadImage(file, name) {
@@ -184,7 +185,7 @@
             <div style="display:flex;gap:6px"><button class="ib" data-edit="${i}">Edit</button><button class="ib del" data-delete="${i}">Delete</button></div></div>`).join('') : '<div class="empty small">Nothing here yet. Click + New.</div>'}</div></div>
         <div class="card pad sticky">${cur ? `<h3 style="margin:0 0 4px">${idx < 0 ? 'New ' + cfg.one : 'Edit ' + cfg.one}</h3>
           <div class="scroll" id="form">${cfg.fields.map((f) => fieldHTML(f, cur)).join('')}</div>
-          <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap"><button class="btn brass" data-save="1">Save &amp; publish</button><button class="btn ghost sm" data-cancel="1">Cancel</button>${cfg.viewUrl && idx >= 0 ? `<a class="btn ghost sm" target="_blank" href="${esc(cfg.viewUrl(cur))}">View on site ↗</a>` : ''}</div>
+          <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;position:sticky;bottom:0;background:#fff;padding:12px 0;border-top:1px solid #e6e1d6;z-index:5"><button class="btn brass" data-save="1">Save &amp; publish</button><button class="btn ghost sm" data-cancel="1">Cancel</button>${cfg.viewUrl && idx >= 0 ? `<a class="btn ghost sm" target="_blank" href="${esc(cfg.viewUrl(cur))}">View on site ↗</a>` : ''}</div>
           <p class="small" style="color:var(--bad);margin-top:8px;display:${dirty ? 'block' : 'none'}" id="dirty">Unsaved changes</p>`
         : `<div class="empty">Pick something on the left to edit, or click <b>+ New</b>.</div>`}</div></div>`;
     }
@@ -559,7 +560,7 @@
     };
   }
   function emailTab() {
-    EO = EO || emailDefaults();
+    EO = EO || (S.emailDraft ? { ...emailDefaults(), ...S.emailDraft } : emailDefaults());
     const feats = activeFeatures(), qas = pubQA(), panel = $('#panel');
     const issueId = () => `${EO.date}-${slug(EO.headline)}`;
     const webUrl = () => siteBase() + 'issue.html?id=' + issueId();
@@ -580,6 +581,8 @@
         <label class="chk"><input type="checkbox" data-o="rates" ${EO.rates ? 'checked' : ''}> 📈 Mortgage rates line</label>
         <h4 style="margin:18px 0 8px;font-family:var(--sans);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)">Send it</h4>
         <div style="display:flex;flex-direction:column;gap:8px">
+          <button class="btn" id="savedraft">💾 Save &amp; preview</button>
+          <p class="hint" style="margin:0 0 6px">Saves your subject, note and choices, then opens the full email in a new tab so you can check it before sending.</p>
           <button class="btn brass" id="copyrich">📋 Copy email (paste into Gmail / Outlook)</button>
           <button class="btn ghost sm" id="copyhtml">&lt;/&gt; Copy HTML code (Mailchimp, Constant Contact…)</button>
           <button class="btn ghost sm" id="dl">⬇ Download email file</button>
@@ -602,7 +605,16 @@
       const t = e.target.closest('button'); if (!t) return;
       if (t.dataset.w) { $('#pv').style.maxWidth = t.dataset.w + 'px'; return; }
       const html = emailHTML({ ...EO, webUrl: EO.published ? webUrl() : '' });
-      if (t.id === 'copyrich') {
+      if (t.id === 'savedraft') {
+        const w = window.open('', '_blank');
+        t.disabled = true; t.textContent = 'Saving…';
+        try {
+          await putJSON('data/email-draft.json', { ...EO, saved: new Date().toISOString() }, 'Save email draft'); S.emailDraft = { ...EO };
+          toast('Draft saved. It will be here next time you open the editor.', 5000);
+        } catch (err) { toast(err.message, 5000); }
+        if (w) { w.document.open(); w.document.write(html); w.document.close(); }
+        t.disabled = false; t.textContent = '💾 Save & preview';
+      } else if (t.id === 'copyrich') {
         try { await navigator.clipboard.write([new ClipboardItem({ 'text/html': new Blob([html], { type: 'text/html' }), 'text/plain': new Blob([EO.subject], { type: 'text/plain' }) })]); toast('Copied! Paste it into a new email.'); }
         catch (err) { toast('Your browser blocked rich copy. Use Download instead.', 5000); }
       } else if (t.id === 'copyhtml') {
