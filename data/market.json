@@ -1,18 +1,18 @@
 {
-  "updated": "2026-11-20T11:10:37+00:00",
+  "updated": "2026-11-26T11:04:07+00:00",
   "_help": "Edited from admin.html → Market. Mortgage rates refresh automatically (Freddie Mac weekly survey via FRED). Fill in local_stats values to show them; blank values are hidden.",
   "rates": {
     "30yr": {
-      "rate": 7.28,
-      "date": "2026-11-19",
-      "previous": 7.11,
-      "change": 0.17
+      "rate": 7.21,
+      "date": "2026-11-25",
+      "previous": 7.28,
+      "change": -0.07
     },
     "15yr": {
-      "rate": 6.66,
-      "date": "2026-11-19",
-      "previous": 6.45,
-      "change": 0.21
+      "rate": 6.54,
+      "date": "2026-11-25",
+      "previous": 6.66,
+      "change": -0.12
     }
   },
   "local_stats": [
